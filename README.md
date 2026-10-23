@@ -3,6 +3,15 @@
 Source repository for the micro-EV control study. Project layout, provenance and
 verification records live outside this folder in `D:\EUREKA-2026\docs`.
 
+## Evaluation of the report's claims
+
+- `docs/evaluation-report.md`: phase-by-phase findings (start here)
+- `protocol/preregistration.md`: hypotheses, metrics and decision rules, fixed before implementation
+- `evidence/claim_registry.yaml`: what the report claims, with exact locations
+- `evidence/evidence_matrix.{yaml,csv,json}`: what was tested, with status and artifacts
+- `docs/model.md`, `configs/parameters.yaml`: plant model and parameter provenance
+- `docs/lineage.md`, `scripts/reproduce_all.ps1`: how every result is regenerated
+
 ## Activate and test (PowerShell)
 
 ```powershell

@@ -104,6 +104,7 @@ class Status(StrEnum):
     SIMULATION_SUPPORTED = "SIMULATION_SUPPORTED"
     CONTRADICTED = "CONTRADICTED"
     REQUIRES_PHYSICAL_VALIDATION = "REQUIRES_PHYSICAL_VALIDATION"
+    CONSISTENT_WITH_RECORD = "CONSISTENT_WITH_RECORD"
 
 
 STATUS_DEFINITIONS = {
@@ -128,6 +129,10 @@ STATUS_DEFINITIONS = {
         "the claim (opposite sign, outside the claimed interval, or the report's own numbers or "
         "equations are mutually inconsistent or dimensionally invalid)."
     ),
+    Status.CONSISTENT_WITH_RECORD: (
+        "A non-quantitative statement about how the work was done (declaration, limitation) "
+        "that agrees with every artefact found. It is not evidence for any result."
+    ),
     Status.REQUIRES_PHYSICAL_VALIDATION: (
         "The claim concerns physical hardware, real batteries, real traffic data, vehicles or "
         "certification; no simulation in this repository can establish it."
@@ -135,9 +140,16 @@ STATUS_DEFINITIONS = {
 }
 
 
+PRECEDENCE = (
+    "When several statuses apply, CONTRADICTED takes precedence, then "
+    "REQUIRES_PHYSICAL_VALIDATION, then IMPLEMENTED_NOT_VALIDATED, then NOT_TESTED. "
+    "Rows N## are restated claims proposed for a revised report; rows C## are the original claims."
+)
+
+
 class MatrixRow(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    claim_id: str = Field(pattern=r"^C\d{2}$")
+    claim_id: str = Field(pattern=r"^[CN]\d{2}$")
     original_statement: str
     required_evidence: str
     implemented_experiment: str
