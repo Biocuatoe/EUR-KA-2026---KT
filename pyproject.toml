@@ -45,23 +45,23 @@ module-name = "eureka"
 default-groups = ["dev", "notebook"]
 # Fallbacks for a shell without project.env (env vars take precedence). Absolute on purpose:
 # uv resolves a relative cache-dir against the working directory, not this file.
-cache-dir = "D:/EUREKA-2026/cache/uv"
+cache-dir = "D:/EURÉKA 2026 - KT/cache/uv"
 python-downloads = "manual"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-cache_dir = "../cache/pytest"
+cache_dir = "cache/pytest"
 addopts = ["-ra", "--strict-markers", "--strict-config"]
 xfail_strict = true
 markers = [
-    "env_paths: checks that caches and runtime paths resolve under D:\\EUREKA-2026",
+    "env_paths: checks that caches and runtime paths resolve under the project root",
 ]
 
 [tool.ruff]
 line-length = 100
 target-version = "py314"
-# Same location as RUFF_CACHE_DIR in project.env, so an unactivated shell cannot create repo\.ruff_cache
-cache-dir = "../cache/ruff"
+# Same location as RUFF_CACHE_DIR in project.env, so an unactivated shell cannot create .ruff_cache
+cache-dir = "cache/ruff"
 
 [tool.ruff.lint]
 # NPY flags legacy np.random.* global-state calls; seeded Generators are required for provenance.

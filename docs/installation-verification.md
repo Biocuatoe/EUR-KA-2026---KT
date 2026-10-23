@@ -1,5 +1,7 @@
 # Installation verification
 
+> Recorded on 2026-10-23 when the project lived in `D:\EUREKA-2026` (Git repo in `repo\`). Since the move that day the project root is `D:\EURÉKA 2026 - KT`; see `migration-2026-10-23.md`.
+
 What was actually run to verify the environment, with exit codes and outputs.
 A check is marked PASS only when its command's exit code and output meet the criterion stated below.
 

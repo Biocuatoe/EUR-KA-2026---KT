@@ -1,7 +1,7 @@
 """Environment verification tests.
 
 These confirm that the installed stack computes correctly and that runtime paths
-resolve under D:\\EUREKA-2026. They are not research results: the LQR case is the
+resolve under the project root. They are not research results: the LQR case is the
 textbook double integrator, chosen because its Riccati solution is known in closed form.
 """
 
@@ -47,7 +47,7 @@ def double_integrator_lqr_closed_form(q1: float, q2: float, r: float) -> np.ndar
 
 
 def test_interpreter_is_project_venv(project_root):
-    expected = (project_root / "repo" / ".python-version").read_text().strip()
+    expected = (project_root / ".python-version").read_text().strip()
     assert platform.python_version() == expected
     assert sys.prefix != sys.base_prefix, "not running inside a virtual environment"
     assert os.path.normcase(sys.prefix) == os.path.normcase(str(project_root / ".venv"))
@@ -265,7 +265,13 @@ def test_library_runtime_dirs_resolve_under_root(project_root, pytestconfig, tmp
 
 @pytest.mark.env_paths
 def test_pip_cache_dir_under_root(project_root):
+    # The project root is not ASCII: pin the child's stdout and our decoding to UTF-8
+    # (the default here is cp1252 on this side, so "É" would otherwise come back garbled).
     out = subprocess.run(
-        [sys.executable, "-m", "pip", "cache", "dir"], capture_output=True, text=True, check=True
+        [sys.executable, "-m", "pip", "cache", "dir"],
+        capture_output=True,
+        encoding="utf-8",
+        env={**os.environ, "PYTHONIOENCODING": "utf-8"},
+        check=True,
     ).stdout.strip()
     assert is_under(out, project_root / "cache"), out

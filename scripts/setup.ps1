@@ -4,16 +4,16 @@
 
 .DESCRIPTION
     1. Creates any missing project folders (never deletes or overwrites data).
-    2. Installs the CPython version pinned in repo\.python-version into
-       D:\EUREKA-2026\tools\python (no PATH shims, no Windows registry entries).
-    3. Checks uv.lock against pyproject.toml, then syncs D:\EUREKA-2026\.venv
+    2. Installs the CPython version pinned in .python-version into
+       <project root>\tools\python (no PATH shims, no Windows registry entries).
+    3. Checks uv.lock against pyproject.toml, then syncs <project root>\.venv
        exactly to uv.lock. If the sync would uninstall packages that are not in
        the lock, it stops and lists them unless -AllowPrune is given.
     4. Refuses to touch an existing .venv that was built from another interpreter.
     5. Registers the .venv as a Jupyter kernel inside the venv (--sys-prefix).
     6. Exports requirements-lock.txt (pip-compatible, hashed) from uv.lock.
-    All caches are redirected to D:\EUREKA-2026\cache via repo\project.env.
-    A full log is written to D:\EUREKA-2026\logs\setup-<timestamp>.log.
+    All caches are redirected to <project root>\cache via project.env.
+    A full log is written to <project root>\logs\setup-<timestamp>.log.
 
 .PARAMETER Relock
     Re-resolve uv.lock from pyproject.toml (use after editing dependencies).
@@ -22,7 +22,7 @@
     Allow the sync to uninstall packages present in .venv but absent from uv.lock.
 
 .EXAMPLE
-    powershell -NoProfile -ExecutionPolicy RemoteSigned -File D:\EUREKA-2026\repo\scripts\setup.ps1
+    powershell -NoProfile -ExecutionPolicy RemoteSigned -File <project root>\scripts\setup.ps1
 #>
 [CmdletBinding()]
 param(
@@ -50,7 +50,7 @@ Write-Log $log "Relock=$Relock AllowPrune=$AllowPrune PythonVersion=$pythonVersi
 
 # 1. Folder layout -----------------------------------------------------------
 $dirs = @(
-    'repo', 'tools', 'tools\python', 'tools\jupyter\config', 'tools\jupyter\data',
+    'tools', 'tools\python', 'tools\jupyter\config', 'tools\jupyter\data',
     'cache', 'cache\uv', 'cache\pip', 'cache\matplotlib', 'cache\jupyter\runtime',
     'cache\ipython', 'cache\ruff', 'cache\coverage', 'cache\pytest', 'cache\hypothesis', 'cache\tmp',
     'data\raw', 'data\processed',

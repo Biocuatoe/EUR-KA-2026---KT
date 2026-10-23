@@ -1,9 +1,9 @@
 # Activate the EUREKA 2026 environment in the current PowerShell session:
 #
-#     . D:\EUREKA-2026\repo\scripts\activate.ps1
+#     . <project root>\scripts\activate.ps1
 #
-# Loads repo\project.env (cache and runtime paths on D:) into this process only,
-# then activates D:\EUREKA-2026\.venv. Nothing is written to the user or machine
+# Loads project.env (cache and runtime paths on D:) into this process only,
+# then activates <project root>\.venv. Nothing is written to the user or machine
 # environment; closing the terminal undoes everything.
 
 . (Join-Path $PSScriptRoot '_common.ps1')

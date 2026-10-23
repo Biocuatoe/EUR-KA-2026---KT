@@ -4,13 +4,13 @@
 
 .DESCRIPTION
     Default: recompute analyses, tables, figures and evidence exports from the existing
-    raw outputs in D:\EUREKA-2026\artifacts\raw (no simulation).
+    raw outputs in <project root>\artifacts\raw (no simulation).
     -Rerun: also run the report audit, tuning acceptance, verification gate and all
     simulations. Existing raw outputs are overwritten only with -Force.
     Stops at the first failing step.
 
 .EXAMPLE
-    powershell -NoProfile -ExecutionPolicy RemoteSigned -File D:\EUREKA-2026\repo\scripts\reproduce_all.ps1
+    powershell -NoProfile -ExecutionPolicy RemoteSigned -File <project root>\scripts\reproduce_all.ps1
 #>
 [CmdletBinding()]
 param([switch]$Rerun, [switch]$Force)

@@ -5,14 +5,14 @@
 .DESCRIPTION
     Every check runs a real command; PASS is recorded only from its exit code and
     output. Writes:
-      D:\EUREKA-2026\logs\verify-<stamp>.log                                 full output
-      D:\EUREKA-2026\artifacts\reports\environment-verification-<stamp>.json  per-check results
-      D:\EUREKA-2026\artifacts\reports\pytest-<stamp>.xml                     JUnit test report
+      <project root>\logs\verify-<stamp>.log                                 full output
+      <project root>\artifacts\reports\environment-verification-<stamp>.json  per-check results
+      <project root>\artifacts\reports\pytest-<stamp>.xml                     JUnit test report
     Exits 0 only if every check passes. Read-only apart from those outputs, the test
     figure and the project caches.
 
 .EXAMPLE
-    powershell -NoProfile -ExecutionPolicy RemoteSigned -File D:\EUREKA-2026\repo\scripts\verify.ps1
+    powershell -NoProfile -ExecutionPolicy RemoteSigned -File <project root>\scripts\verify.ps1
 #>
 [CmdletBinding()]
 param()
@@ -134,9 +134,10 @@ try {
     Add-Content -LiteralPath $log -Encoding UTF8 -Value @("> $($r.Command)", $line, "[exit $($r.ExitCode)]", '')
     Add-Check 'ruff cache dir' $r ($r.ExitCode -eq 0 -and $line -like "*$cacheRoot*")
 
-    $stray = @('.pytest_cache', '.ruff_cache', '.hypothesis', '.coverage', '.mypy_cache', '.venv') |
+    # The Git root is the project root, so .venv belongs here; only stray tool caches are flagged.
+    $stray = @('.pytest_cache', '.ruff_cache', '.hypothesis', '.coverage', '.mypy_cache') |
         ForEach-Object { Join-Path $repo $_ } | Where-Object { Test-Path -LiteralPath $_ }
-    Add-Check 'no tool caches or venv inside repo\' $null (@($stray).Count -eq 0) (@($stray) -join '; ')
+    Add-Check 'no stray tool caches in project root' $null (@($stray).Count -eq 0) (@($stray) -join '; ')
 } finally {
     Pop-Location
 }

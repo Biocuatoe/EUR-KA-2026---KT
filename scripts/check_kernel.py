@@ -7,12 +7,13 @@ interpreter, and that the kernel sees the D: runtime paths. Prints JSON; exit 1 
 import json
 import os
 import sys
+from pathlib import Path
 
 from jupyter_client.kernelspec import KernelSpecManager
 from jupyter_client.manager import start_new_kernel
 
 KERNEL = "eureka-2026"
-ROOT = os.path.normcase(os.environ.get("EUREKA_ROOT", r"D:\EUREKA-2026"))
+ROOT = os.path.normcase(os.environ.get("EUREKA_ROOT", str(Path(__file__).resolve().parents[1])))
 PROBE = (
     "import json, os, sys, tempfile, matplotlib, numpy\n"
     "print(json.dumps({'executable': sys.executable, 'prefix': sys.prefix,"

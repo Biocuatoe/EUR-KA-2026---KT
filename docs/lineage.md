@@ -1,7 +1,9 @@
 # Data lineage and regeneration commands
 
-All commands run from `D:\EUREKA-2026\repo` in an activated shell
-(`. D:\EUREKA-2026\repo\scripts\activate.ps1`).
+All commands run from the project root `D:\EURÉKA 2026 - KT` in an activated shell
+(`. .\scripts\activate.ps1`). Before 2026-10-23 the same commands ran from
+`D:\EUREKA-2026\repo`; the raw outputs below were produced there (see
+`docs/migration-2026-10-23.md`).
 
 | Step | Command | Inputs | Outputs |
 |---|---|---|---|

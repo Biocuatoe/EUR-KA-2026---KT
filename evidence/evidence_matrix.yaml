@@ -1,6 +1,7 @@
 # Scientific evidence matrix. Status definitions and precedence: src/eureka/evidence.py
 # (exported with the matrix by scripts/build_evidence.py). Artifact paths are relative to
-# D:\EUREKA-2026. Raw runs: commit 38f443a (gate passed); see evidence/artifact_hashes.json.
+# the project root (D:\EURÉKA 2026 - KT; D:\EUREKA-2026 before 2026-10-23).
+# Raw runs: commit 38f443a (gate passed); see evidence/artifact_hashes.json.
 x-artifacts:
   checks: &checks artifacts/reports/report-consistency-checks.json
   prim: &prim artifacts/reports/primary_results.json

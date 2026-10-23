@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 
-# Tool caches: redirected to ..\cache by project.env / pyproject.toml,
+# Tool caches: redirected to cache\ by project.env / pyproject.toml,
 # ignored here in case a tool is ever run without that configuration
 .pytest_cache/
 .ruff_cache/
@@ -13,8 +13,22 @@ __pycache__/
 htmlcov/
 .ipynb_checkpoints/
 
-# The project venv lives at ..\.venv; never create one inside repo\
+# Project venv (rebuilt from uv.lock by scripts/setup.ps1)
 .venv/
+
+# Kept outside Git, as before the 2026-10-23 move when these sat beside repo\:
+# managed Python, caches, and the data, results and logs. Results are tracked by
+# SHA-256 in evidence/artifact_hashes.json and regenerated per docs/lineage.md.
+/tools/
+/cache/
+/data/
+/artifacts/
+/logs/
+
+# The working thesis is the author's own document, not a project output. The copy
+# audited on 2026-10-23 is frozen at data/raw/report/EUREKA-2026-KT.docx.
+/EURÉKA 2026 - KT.docx
+~$*
 
 # Local secrets, if any are ever needed (project.env holds paths only and is tracked)
 .env

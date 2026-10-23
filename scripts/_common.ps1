@@ -4,11 +4,12 @@
 $EurekaRepoDir = Split-Path -Parent $PSScriptRoot
 
 function Import-ProjectEnv {
-    # Loads KEY=VALUE lines from repo\project.env into the current process environment.
+    # Loads KEY=VALUE lines from project.env into the current process environment.
+    # project.env is UTF-8 (the project root path is not ASCII), so never read it as ANSI.
     param([string]$Path = (Join-Path $EurekaRepoDir 'project.env'))
     if (-not (Test-Path -LiteralPath $Path)) { throw "project.env not found: $Path" }
     $vars = [ordered]@{}
-    foreach ($line in Get-Content -LiteralPath $Path) {
+    foreach ($line in Get-Content -LiteralPath $Path -Encoding UTF8) {
         $t = $line.Trim()
         if (-not $t -or $t.StartsWith('#')) { continue }
         $i = $t.IndexOf('=')

@@ -1,5 +1,7 @@
 # Environment inventory
 
+> Recorded on 2026-10-23 when the project lived in `D:\EUREKA-2026` (Git repo in `repo\`). Since the move that day the project root is `D:\EURÉKA 2026 - KT`; see `migration-2026-10-23.md`.
+
 Machine inspection (Phase A) and the resulting installed state.
 Recorded 2026-10-23 on `DESKTOP-QF465MB`, Windows 10 Pro 10.0.19045, user `HLC`.
 Every value below was read from the machine with a command during this session.

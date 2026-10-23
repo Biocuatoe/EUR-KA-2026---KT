@@ -4,5 +4,6 @@ import os
 from pathlib import Path
 
 REPO_DIR = Path(__file__).resolve().parents[2]
-ROOT_DIR = Path(os.environ.get("EUREKA_ROOT", REPO_DIR.parent))
+# The Git root is the project root (artifacts/, data/ and logs/ sit beside src/).
+ROOT_DIR = Path(os.environ.get("EUREKA_ROOT", REPO_DIR))
 REPORT_MD = ROOT_DIR / "data" / "processed" / "report" / "report.md"

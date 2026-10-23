@@ -1,5 +1,7 @@
 # Software purpose and justification
 
+> Recorded on 2026-10-23 when the project lived in `D:\EUREKA-2026` (Git repo in `repo\`). Since the move that day the project root is `D:\EURÉKA 2026 - KT`; see `migration-2026-10-23.md`.
+
 Why each component is in the environment, or why it is not yet.
 
 Rule applied: a package is installed only when a task that is already defined needs it.

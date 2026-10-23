@@ -11,7 +11,7 @@ from hypothesis import configuration
 matplotlib.use("Agg")
 
 REPO = Path(__file__).resolve().parents[1]
-ROOT = Path(os.environ.get("EUREKA_ROOT", REPO.parent))
+ROOT = Path(os.environ.get("EUREKA_ROOT", REPO))
 
 # project.env normally sets HYPOTHESIS_STORAGE_DIRECTORY; without it Hypothesis would
 # create .hypothesis/ in the current directory, so pin it to the project cache.
