@@ -1,0 +1,687 @@
+# Claim registry for the EURÉKA 2026 KT report.
+#
+# This file records what the report CLAIMS. It is never edited to fit new results:
+# test outcomes go into evidence_matrix.yaml. Quotes are verbatim substrings of
+# data/processed/report/report.md at the given line (checked by tests/test_claim_registry.py).
+# report.md = pandoc 3.11 conversion of the original .docx (hash below); the original is
+# preserved read-only at data/raw/report/EUREKA-2026-KT.docx.
+report_file: data/raw/report/EUREKA-2026-KT.docx
+report_sha256: 01363A069EEB005851F6D62AC4B9DA9E3FD13A742BEBBFDFC14C802F0EDDFF8C
+derived_markdown: data/processed/report/report.md
+
+claims:
+
+# ---------------------------------------------------------------- headline results
+- id: C01
+  title: Headline energy-efficiency improvement over fixed-gain LQR
+  category: performance
+  statement: 'The adaptive LQR achieves up to 12.5% ± 2.1% improvement in energy efficiency compared to the fixed-gain LQR baseline.'
+  locations:
+  - {line: 9, section: ABSTRACT, quote: 'up to 12.5% ± 2.1% improvement in energy efficiency'}
+  units: 'percent (relative); meaning of ± (SD, SE, CI) not stated'
+  definition: 'Not defined. Metric (Wh/km?), drive cycle, SoH, number of runs and the statistic behind ± are not given. "up to" makes it a maximum, which is incompatible with a ± interval.'
+  evidence_category: claimed_simulation_result
+  source_data: 'None found. No simulation code, run outputs or logs for the KT study exist on this machine (D:\EUREKA contains only LaTeX/Markdown and a figure script that draws random noise).'
+  calculation: 'None given. The only body values (Sec. 6.1, lines 5468-5472) are 95 -> 85.3 Wh/km, a 10.2% reduction, not 12.5%.'
+  reproducibility: not_reproducible_no_data_or_code
+  consistency_checks: [CHK-ENERGY-PCT]
+  provenance_notes: 'D:\EUREKA\AUDIT_REPORT.md line 28 ("Fix: Add realistic uncertainty ranges (e.g., \"12.5 ± 2.1%\")") and line 195 ("Add ±2.1%") show the ± interval was added as an editorial fix, not computed. The value already appears in the first LaTeX version (KT01_FINAL_REPORT.tex, 2026-09-07).'
+  disposition: WITHDRAW_PENDING_RETEST
+  disposition_note: 'Remove from abstract. Replace only with the result of the pre-registered experiment (protocol/preregistration.md), whatever its sign and size.'
+
+- id: C02
+  title: Headline battery capacity-fade reduction over 1000 cycles
+  category: battery_aging
+  statement: 'The adaptive LQR achieves 15.3% ± 2.8% reduction in battery capacity fade over 1000 operational cycles compared to the fixed-gain LQR baseline.'
+  locations:
+  - {line: 9, section: ABSTRACT, quote: '15.3% ± 2.8% reduction in battery capacity fade over 1000 operational cycles'}
+  units: 'percent (relative reduction of capacity fade); ± statistic not stated'
+  definition: 'Not defined: "operational cycle" (drive cycle? full equivalent cycle?), temperature, DoD and baseline fade are not stated.'
+  evidence_category: claimed_simulation_result
+  source_data: 'None found. The aging model (Sec. 3.2) lacks k_c and k_cal and has inconsistent units (see C05), so no aging simulation can have been run as described.'
+  calculation: 'None given. Sec. 6.1 line 5480 gives "2.3% per 1000 cycles = 14% improvement", not 15.3%.'
+  reproducibility: not_reproducible_no_data_or_code
+  consistency_checks: [CHK-FADE-PCT, CHK-FIG-CYCLES]
+  provenance_notes: 'AUDIT_REPORT.md line 196 proposed "Add ±3.2%"; the report prints ±2.8%. Neither is traceable to a calculation.'
+  disposition: WITHDRAW
+  disposition_note: 'No defensible degradation model with LFP parameter provenance exists (see C05, docs software justification for PyBaMM). Do not claim any capacity-fade effect.'
+
+- id: C03
+  title: Body energy-saving figures (economic analysis)
+  category: performance
+  statement: 'Baseline 95 Wh/km (fixed LQR), improved 85.3 Wh/km (adaptive LQR), savings 9.7 Wh/km = 9.7%.'
+  locations:
+  - {line: 5468, section: 'CHAPTER 6 / Payback Period Analysis', quote: 'Baseline energy consumption: 95 Wh/km (fixed LQR)'}
+  - {line: 5470, section: 'CHAPTER 6 / Payback Period Analysis', quote: 'Improved energy consumption: 85.3 Wh/km (adaptive LQR)'}
+  - {line: 5472, section: 'CHAPTER 6 / Payback Period Analysis', quote: 'Energy savings: 9.7 Wh/km = 9.7%'}
+  units: 'Wh/km and percent'
+  definition: 'Drive cycle, SoH and run count not given.'
+  evidence_category: claimed_simulation_result
+  source_data: 'None found.'
+  calculation: '95 - 85.3 = 9.7 Wh/km; 9.7/95 = 10.2%. The report equates an absolute difference (Wh/km) with a percentage.'
+  reproducibility: arithmetic_check_fails
+  consistency_checks: [CHK-ENERGY-PCT]
+  provenance_notes: 'Repeated verbatim in Appendix D.6 (lines 6381-6385).'
+  disposition: WITHDRAW_PENDING_RETEST
+  disposition_note: 'Replace with values computed from saved runs; fix the unit error.'
+
+- id: C04
+  title: Body capacity-fade figure (economic analysis)
+  category: battery_aging
+  statement: 'Fade reduction: 2.3% per 1000 cycles = 14% improvement.'
+  locations:
+  - {line: 5480, section: 'CHAPTER 6 / Payback Period Analysis', quote: 'Fade reduction: 2.3% per 1000 cycles = 14% improvement'}
+  units: 'percent capacity per 1000 cycles; percent relative'
+  definition: 'Baseline fade (implied 2.3/0.14 = 16.4%/1000 cycles) is not stated.'
+  evidence_category: claimed_simulation_result
+  source_data: 'None found.'
+  calculation: 'Not given; conflicts with the 15.3% headline (C02).'
+  reproducibility: internally_inconsistent
+  consistency_checks: [CHK-FADE-PCT]
+  disposition: WITHDRAW
+  disposition_note: 'Same basis as C02.'
+
+# ---------------------------------------------------------------- battery model
+- id: C05
+  title: Battery aging model is specified and calibrated for LFP
+  category: battery_aging
+  statement: 'The implementation follows the SEI growth model with parameters calibrated for LFP chemistry (Eqs. 4.21-4.29, Table 9).'
+  locations:
+  - {line: 2916, section: 'CHAPTER 3 / Battery Aging Model Implementation', quote: 'The implementation follows the SEI growth model with parameters calibrated for LFP chemistry'}
+  units: 'Q_loss mixes percent (Q_loss,0 = 2%) with Ah (alpha_0 in Ah^1/2 times sqrt(Ah)); gamma_0 in Ah^-1/2 multiplies sqrt(t) with t unitless/unspecified'
+  definition: 'Coefficients k_c and k_cal in Eq. 4.21 are never given a value; calendar term is zero at SoC = 0.5.'
+  evidence_category: model_statement
+  source_data: 'Calibration data not identified. Reference list cites Huria et al. (IEEE Trans. Ind. Appl.), an equivalent-circuit characterisation paper; Limitations cites "Huria 2018, J. Power Sources" for SEI theory (C37).'
+  calculation: 'Cannot be evaluated: missing k_c, k_cal; inconsistent units.'
+  reproducibility: underspecified
+  consistency_checks: []
+  disposition: WITHDRAW
+  disposition_note: 'Remove claims that depend on this model, or replace it with a model whose parameters have documented provenance for a named LFP cell and are validated against ageing data.'
+
+- id: C06
+  title: Aging model validated against accelerated aging experiments
+  category: validation
+  statement: 'The aging model is validated against experimental data from accelerated aging tests, showing agreement within 5% for capacity fade predictions over 1000 cycles.'
+  locations:
+  - {line: 3170, section: 'CHAPTER 3 / Battery Aging Model Implementation', quote: 'The aging model is validated against experimental data from accelerated aging tests'}
+  units: 'percent agreement'
+  definition: 'Dataset, cell, test conditions and error metric not identified.'
+  evidence_category: claimed_experimental_validation
+  source_data: 'None identified. The Declaration (line 5980) states no physical experiments were conducted.'
+  calculation: 'None.'
+  reproducibility: not_reproducible_no_data_or_code
+  consistency_checks: []
+  disposition: WITHDRAW
+  disposition_note: 'Unless a published dataset and the comparison are supplied, delete.'
+
+# ---------------------------------------------------------------- drive cycle provenance
+- id: C07
+  title: VUC derived from real-world Vietnamese traffic measurements
+  category: data_provenance
+  statement: 'The VUC is developed by analyzing traffic flow data ... derived from real-world measurements (Hanoi GTMC data, HCMC survey 2023).'
+  locations:
+  - {line: 810, section: 'CHAPTER 1 / Contribution 3', quote: 'derived from real-world measurements'}
+  - {line: 4429, section: 'CHAPTER 4 / Drive Cycle Specification', quote: 'The VUC is derived from traffic flow measurements'}
+  - {line: 4433, section: 'CHAPTER 4 / Drive Cycle Specification', quote: 'Hanoi traffic monitoring system (GTMC data)'}
+  - {line: 5996, section: Limitations, quote: 'not real measured data'}
+  units: 'n/a'
+  definition: 'No time series of the VUC is given anywhere in the report.'
+  evidence_category: claimed_measurement
+  source_data: 'No traffic data found. Limitations (line 5996) contradicts the claim: "a simplified drive cycle based on typical Hanoi driving patterns, not real measured data". D:\EUREKA\KT01_MicroEV\DATA_AND_COLAB_PROMPTS.md synthesises cycles with a generate_drive_cycle() function.'
+  calculation: 'n/a'
+  reproducibility: internally_inconsistent
+  consistency_checks: [CHK-VUC-SPEED, CHK-VUC-IDLE]
+  disposition: RELABEL_AS_ASSUMED
+  disposition_note: 'Describe the VUC (if kept) as a synthetic profile with no measured basis, and publish its time series. Do not call it measured Vietnamese traffic. Contribution 3 should be withdrawn.'
+
+- id: C08
+  title: VUC summary statistics
+  category: data_provenance
+  statement: 'VUC: 5.8 km, 600 s, max 50 km/h, average 28.5 km/h, 17 stops, average stop 22 s, idle fraction 20.1%.'
+  locations:
+  - {line: 4453, section: 'CHAPTER 4 / Drive Cycle Specification', quote: 'Total distance: 5.8 km'}
+  - {line: 4459, section: 'CHAPTER 4 / Drive Cycle Specification', quote: 'Average speed: 28.5 km/h'}
+  - {line: 4461, section: 'CHAPTER 4 / Drive Cycle Specification', quote: 'Number of stops: 17'}
+  - {line: 4463, section: 'CHAPTER 4 / Drive Cycle Specification', quote: 'Average stop duration: 22 s'}
+  - {line: 4467, section: 'CHAPTER 4 / Drive Cycle Specification', quote: 'Idle time fraction: 20.1%'}
+  units: 'km, s, km/h, count, percent'
+  definition: 'As listed.'
+  evidence_category: claimed_measurement
+  source_data: 'No time series.'
+  calculation: '5.8 km / 600 s = 34.8 km/h (not 28.5). 17 stops x 22 s = 374 s = 62.3% idle (not 20.1%).'
+  reproducibility: arithmetic_check_fails
+  consistency_checks: [CHK-VUC-SPEED, CHK-VUC-IDLE]
+  disposition: WITHDRAW
+  disposition_note: 'The statistics are mutually impossible; no cycle can have all of them.'
+
+- id: C09
+  title: Drive-cycle comparison table (NEDC, WLTP, CLTC)
+  category: data_provenance
+  statement: 'Table 12: distances 11.0 / 23.6 / 14.5 km, average speeds 33.6 / 46.5 / 29.0 km/h for NEDC / WLTP / CLTC.'
+  locations:
+  - {line: 4507, section: 'CHAPTER 4 / Table 12', quote: '| Distance        | 11.0     | 23.6     | 14.5     | 5.8       | km       |'}
+  - {line: 4509, section: 'CHAPTER 4 / Table 12', quote: '| Avg Speed       | 33.6     | 46.5     | 29.0     | 28.5      | km/h     |'}
+  units: 'km, km/h'
+  definition: 'Standard cycles; official sources not cited.'
+  evidence_category: parameter_provenance
+  source_data: 'No cycle data files found.'
+  calculation: 'NEDC 11.0/1180 s = 33.6 km/h (consistent); CLTC 14.5/1800 s = 29.0 (consistent); WLTP 23.6/1800 s = 47.2 km/h vs 46.5 stated (inconsistent).'
+  reproducibility: arithmetic_check_fails
+  consistency_checks: [CHK-CYCLE-SPEEDS]
+  disposition: REVISE
+  disposition_note: 'Cite the regulations and use the official time series.'
+
+# ---------------------------------------------------------------- Monte Carlo
+- id: C10
+  title: Monte Carlo sample count
+  category: statistics
+  statement: 'Monte Carlo with 100 trials per configuration (6 controllers x 4 cycles x 100 = 2400 simulations) vs Monte Carlo with 1,000 samples (Tables 16, 18).'
+  locations:
+  - {line: 17, section: ABSTRACT, quote: 'Monte Carlo simulations with 100 trials per configuration'}
+  - {line: 4343, section: 'CHAPTER 4 / Table 11', quote: '| Monte Carlo trials       | 100'}
+  - {line: 4375, section: 'CHAPTER 4 / Simulation Environment', quote: '100 Monte Carlo trials = 2400 simulations'}
+  - {line: 5016, section: 'CHAPTER 5 / Monte Carlo Uncertainty Analysis', quote: 'Monte Carlo simulation with 1,000 samples was conducted'}
+  units: 'count'
+  definition: 'Unclear whether 1000 is per controller, per cycle or total.'
+  evidence_category: methodological_statement
+  source_data: 'No run logs.'
+  calculation: '6 x 4 x 100 = 2400 is arithmetically right, but the study has 7 controllers (6 benchmarks + adaptive) and Table 13 lists 7 cycles, so the count does not describe the stated design; 100 and 1000 conflict.'
+  reproducibility: internally_inconsistent
+  consistency_checks: [CHK-MC-COUNT]
+  disposition: WITHDRAW_PENDING_RETEST
+  disposition_note: 'Report the actual attempted/valid/failed run counts from saved runs only.'
+
+- id: C11
+  title: Monte Carlo result tables and "all samples" statement
+  category: statistics
+  statement: 'All samples meet RMSE < 0.6 m/s; 95th percentile 0.56 m/s (Table 16) vs 0.62 m/s, 99th 0.78 m/s (Table 18) for the same N = 1000 study; 0.4% failures (RMSE >= 0.8 m/s).'
+  locations:
+  - {line: 5043, section: 'CHAPTER 5 / Monte Carlo Uncertainty Analysis', quote: 'all samples meeting the specification of tracking error RMSE below 0.6 m/s'}
+  - {line: 5038, section: 'CHAPTER 5 / Table 16', quote: '| Velocity RMSE (m/s) | 0.42 | 0.08 | 0.32 | 0.56 |'}
+  - {line: 5170, section: 'CHAPTER 5 / Table 18', quote: '| Velocity RMSE (m/s) | 0.42 | 0.41 | 0.08 | 0.28 | 0.62 | 0.78 |'}
+  - {line: 5053, section: 'CHAPTER 5 / Monte Carlo Uncertainty Analysis', quote: 'The adaptive LQR achieved 98.2% success rate, 1.4% partial success, and only 0.4% failure'}
+  units: 'm/s, percent'
+  definition: 'Success requires "energy improvement > 5%", but the comparator for a single run is not defined.'
+  evidence_category: claimed_statistical_result
+  source_data: 'None.'
+  calculation: 'If all samples had RMSE < 0.6, the failure rate (RMSE >= 0.8) would be 0% and the 95th/99th percentiles could not be 0.62/0.78.'
+  reproducibility: internally_inconsistent
+  consistency_checks: [CHK-MC-TABLES]
+  disposition: WITHDRAW
+  disposition_note: 'Mutually contradictory summaries without underlying runs.'
+
+- id: C12
+  title: Robustness superiority over fixed-gain LQR (success rate, 50% lower RMSE)
+  category: performance
+  statement: 'Adaptive LQR 98.2% success vs 72.4% for fixed LQR; 50% lower mean tracking error than fixed LQR (0.68 m/s).'
+  locations:
+  - {line: 5189, section: 'CHAPTER 5 / 4.6 Extended Monte Carlo', quote: 'The adaptive LQR achieved 98.2% success rate compared to 72.4% for fixed-gain'}
+  - {line: 5063, section: 'CHAPTER 5 / Monte Carlo Uncertainty Analysis', quote: '50% lower mean tracking error'}
+  units: 'percent; m/s'
+  definition: '0.42 vs 0.68 m/s is 38% lower, not 50%.'
+  evidence_category: claimed_simulation_result
+  source_data: 'None.'
+  calculation: '(0.68 - 0.42)/0.68 = 38.2%.'
+  reproducibility: arithmetic_check_fails
+  consistency_checks: [CHK-RMSE-PCT]
+  disposition: WITHDRAW_PENDING_RETEST
+  disposition_note: 'Tracking RMSE is a secondary outcome of the pre-registered experiment.'
+
+- id: C13
+  title: Statistical significance after Bonferroni correction
+  category: statistics
+  statement: 'All comparisons (adaptive vs 6 benchmarks x 3 metrics) are significant at p < 0.05 with Bonferroni correction maintaining FWER at 0.05.'
+  locations:
+  - {line: 6440, section: 'Appendix E', quote: 'All comparisons show statistically significant improvements'}
+  - {line: 17, section: ABSTRACT, quote: 'Bonferroni correction'}
+  units: 'p-values'
+  definition: 'Sample sizes, test type (paired?) and data not given; ANOVA over 7 controllers (line 6407) with Tukey HSD and Bonferroni mixed.'
+  evidence_category: claimed_statistical_result
+  source_data: 'None.'
+  calculation: 'With 18 tests the Bonferroni threshold is 0.05/18 = 0.0028; 9 of the reported p-values exceed it (0.008-0.048). Even per metric (0.05/6 = 0.0083), 6 exceed it.'
+  reproducibility: arithmetic_check_fails
+  consistency_checks: [CHK-BONFERRONI]
+  disposition: WITHDRAW
+  disposition_note: 'Significance testing of deterministic simulation outputs is not meaningful without a stated stochastic model; do not report p-values.'
+
+- id: C14
+  title: Normality test and LHS efficiency claims
+  category: statistics
+  statement: 'Shapiro-Wilk W = 0.987, p = 0.342; 1000 LHS samples give equivalent statistical power to about 10,000 random samples.'
+  locations:
+  - {line: 5177, section: 'CHAPTER 5 / 4.6 Extended Monte Carlo', quote: '*W* = 0*.*987, *p* = 0*.*342'}
+  - {line: 5164, section: 'CHAPTER 5 / 4.6 Extended Monte Carlo', quote: 'equivalent sta-tistical power to approximately 10,000 random samples'}
+  units: 'dimensionless'
+  definition: 'The 10x efficiency factor is asserted without reference or derivation.'
+  evidence_category: claimed_statistical_result
+  source_data: 'None.'
+  calculation: 'None.'
+  reproducibility: not_reproducible_no_data_or_code
+  disposition: WITHDRAW
+  disposition_note: 'Delete.'
+
+- id: C15
+  title: Morris sensitivity screening results
+  category: sensitivity
+  statement: 'Morris screening (Tables 17 and 19) ranks battery resistance, rolling resistance and capacity as most influential.'
+  locations:
+  - {line: 5079, section: 'CHAPTER 5 / Table 17', quote: '**Table 17.** Morris Screening Elementary Effects (10 Parameters)'}
+  - {line: 5207, section: 'CHAPTER 5 / Table 19', quote: '**Table 19.** Morris Screening Results (12 Parameters)'}
+  - {line: 5083, section: 'CHAPTER 5 / Table 17', quote: '| Battery resistance *R*<sub>0</sub> | 0.182 | 0.024 | 1 | Influential |'}
+  - {line: 5211, section: 'CHAPTER 5 / Table 19', quote: '| 1 | Battery resistance *R*<sub>0</sub> | 0.182 | 0.024 | 0.185 | High |'}
+  units: 'dimensionless elementary effects; output metric not stated'
+  definition: 'Output metric, normalisation and parameter ranges not stated; g (a physical constant) is treated as uncertain.'
+  evidence_category: claimed_simulation_result
+  source_data: 'None.'
+  calculation: 'Tables 17 (10 parameters) and 19 (12 parameters) report identical mu and sigma for the 10 shared parameters, which is not possible for two different designs with random trajectories.'
+  reproducibility: internally_inconsistent
+  consistency_checks: [CHK-MORRIS-DUP]
+  disposition: WITHDRAW
+  disposition_note: 'A sensitivity study needs a written design first (see SALib deferral).'
+
+- id: C16
+  title: Worst-case analysis outcome
+  category: robustness
+  statement: 'All worst-case scenarios pass the 1.5 m/s specification (Sec. 5.3) vs WC-5 fails at 1.52 m/s (Sec. 4.8, Table 20).'
+  locations:
+  - {line: 5140, section: 'CHAPTER 5 / Worst-Case Analysis', quote: 'All worst-case scenarios pass the 1.5 m/s specification'}
+  - {line: 5290, section: 'CHAPTER 5 / Table 20', quote: '| WC-5 (Combined) | 1.52 | 108.5 | 72.0 | 1.50 | -0.02 | FAIL |'}
+  units: 'm/s'
+  definition: 'Two different scenario sets with different parameter values and outcomes are both presented.'
+  evidence_category: claimed_simulation_result
+  source_data: 'None.'
+  calculation: 'n/a'
+  reproducibility: internally_inconsistent
+  consistency_checks: [CHK-WORSTCASE]
+  disposition: WITHDRAW_PENDING_RETEST
+  disposition_note: 'Re-run as a documented deterministic robustness test within the approved scope.'
+
+# ---------------------------------------------------------------- safety / hardware
+- id: C17
+  title: ISO 26262 ASIL B compliance with 94% diagnostic coverage
+  category: safety
+  statement: 'The controller implements all required safety mechanisms, achieving estimated diagnostic coverage of 94% (target >= 90% for ASIL B); the controller meets ISO 26262 ASIL B requirements.'
+  locations:
+  - {line: 5426, section: 'CHAPTER 5 / Testing and Validation Protocols', quote: 'achieving estimated diagnostic coverage of 94% (target: ≥ 90% for ASIL B)'}
+  - {line: 5938, section: 'CHAPTER 6 / Chapter Summary', quote: 'The controller meets ISO 26262'}
+  units: 'percent diagnostic coverage'
+  definition: 'No safety mechanisms, failure modes, FMEDA or hardware metrics are listed; no hardware exists.'
+  evidence_category: claimed_standard_compliance
+  source_data: 'None. ISO 26262 compliance requires a safety lifecycle, hardware metrics and confirmation measures on a real item; none were performed (Declaration, line 5980).'
+  calculation: 'None.'
+  reproducibility: not_reproducible_no_data_or_code
+  consistency_checks: [CHK-ASIL-LEVEL]
+  disposition: WITHDRAW
+  disposition_note: 'At most: "a preliminary hazard list was drafted (Table 24)". No compliance or coverage claim.'
+
+- id: C18
+  title: ASIL target level
+  category: safety
+  statement: 'ASIL-C target (line 5850) vs ASIL B target (line 5860, 5426).'
+  locations:
+  - {line: 5850, section: 'CHAPTER 6 / Compliance and Certification', quote: '(ASIL-C tar-get)'}
+  - {line: 5860, section: 'CHAPTER 6 / Compliance and Certification', quote: '(ASIL B target)'}
+  units: 'n/a'
+  definition: 'n/a'
+  evidence_category: claimed_standard_compliance
+  source_data: 'None.'
+  calculation: 'n/a'
+  reproducibility: internally_inconsistent
+  consistency_checks: [CHK-ASIL-LEVEL]
+  disposition: WITHDRAW
+  disposition_note: 'Same as C17.'
+
+- id: C19
+  title: Embedded hardware implementation (NXP S32K144, timing, memory)
+  category: hardware
+  statement: 'The NXP S32K144 was selected; code 86 KB, compute 0.40 ms in a 1 ms loop (Sec. 5.4) vs 1.2 ms at a 10 ms cycle (Sec. 3.6); sampling period 10 ms (Sec. 3.1).'
+  locations:
+  - {line: 5337, section: 'CHAPTER 5 / Hardware Implementation', quote: 'The NXP S32K144 microcontroller was selected'}
+  - {line: 5357, section: 'CHAPTER 5 / Hardware Implementation', quote: 'Compute time analysis for the 1 ms control loop'}
+  - {line: 3903, section: 'CHAPTER 3 / Control System Implementation', quote: 'Total: 1.2 ms (12% CPU utilization at 10 ms cycle)'}
+  - {line: 2624, section: 'CHAPTER 3 / Overall System Architecture', quote: 'The system operates with a sampling period of 10 ms'}
+  units: 'ms, KB'
+  definition: 'Timings are presented as measurements but no hardware or code exists.'
+  evidence_category: claimed_hardware_result
+  source_data: 'None.'
+  calculation: 'Loop period (1 ms vs 10 ms) and compute time (0.40 vs 1.2 ms) conflict.'
+  reproducibility: internally_inconsistent
+  consistency_checks: [CHK-SAMPLING]
+  disposition: RELABEL_AS_FUTURE_WORK
+  disposition_note: 'Present as a candidate platform; remove measured-looking timings.'
+
+- id: C20
+  title: SIL / PIL verification and code generation
+  category: validation
+  statement: 'The implementation is verified through SIL and PIL testing; the simulation runs in SIL mode with Embedded Coder.'
+  locations:
+  - {line: 3919, section: 'CHAPTER 3 / Control System Implementation', quote: 'verified through Software-in-the-Loop (SIL) and Processor-'}
+  - {line: 4325, section: 'CHAPTER 4 / Simulation Environment', quote: 'The simulation runs in Software-in-the-Loop (SIL) mode'}
+  units: 'n/a'
+  definition: 'n/a'
+  evidence_category: claimed_hardware_result
+  source_data: 'MATLAB is not installed on this machine; no Simulink models or generated code exist.'
+  calculation: 'n/a'
+  reproducibility: not_reproducible_no_data_or_code
+  disposition: WITHDRAW
+  disposition_note: 'Delete unless artefacts are produced.'
+
+- id: C21
+  title: Reliability prediction based on field data and accelerated life testing
+  category: validation
+  statement: 'Reliability prediction for the adaptive LQR controller is based on field data and accelerated life testing.'
+  locations:
+  - {line: 5681, section: 'CHAPTER 6 / Reliability Prediction', quote: 'field data and accelerated life testing'}
+  units: 'FIT, h'
+  definition: 'n/a'
+  evidence_category: claimed_measurement
+  source_data: 'None; contradicted by the Declaration (no physical experiments).'
+  calculation: 'n/a'
+  reproducibility: not_reproducible_no_data_or_code
+  disposition: WITHDRAW
+  disposition_note: 'At most a parts-count estimate per MIL-HDBK-217F, labelled as such.'
+
+- id: C22
+  title: Simulation platform and coupled model validated against published / experimental data
+  category: validation
+  statement: 'Energy consumption within 5% of published values for WLTP; coupled model accuracy within 2% of experimental data.'
+  locations:
+  - {line: 4355, section: 'CHAPTER 4 / Simulation Environment', quote: 'Energy consumption within 5% of published values for WLTP cycle'}
+  - {line: 4215, section: 'CHAPTER 3 / 3.8 Electrochemical Battery Modeling', quote: 'The coupled model achieves accuracy within 2% of experimental data'}
+  units: 'percent'
+  definition: 'Reference values and datasets not identified.'
+  evidence_category: claimed_experimental_validation
+  source_data: 'None identified.'
+  calculation: 'None.'
+  reproducibility: not_reproducible_no_data_or_code
+  disposition: WITHDRAW
+  disposition_note: 'Model validation against measured data is outside what this repository can do; label the model as unvalidated.'
+
+- id: C23
+  title: Software environment, version control and code availability
+  category: reproducibility
+  statement: 'Simulations in MATLAB R2023a / Simulink 10.6 and Python 3.10; all scripts, models and data version-controlled in Git; source available on request (Appendix C lists 16 Python modules).'
+  locations:
+  - {line: 4303, section: 'CHAPTER 4 / Simulation Environment', quote: 'MATLAB: R2023a'}
+  - {line: 4307, section: 'CHAPTER 4 / Simulation Environment', quote: 'Python: 3.10'}
+  - {line: 4351, section: 'CHAPTER 4 / Simulation Environment', quote: 'All simulation scripts, models, and data are version-controlled using Git'}
+  - {line: 6181, section: 'Appendix C', quote: 'The complete source code is available upon reasonable request'}
+  - {line: 7, section: ABSTRACT, quote: 'Extensive simulation studies were conducted using MATLAB/Simulink and Python'}
+  units: 'n/a'
+  definition: 'n/a'
+  evidence_category: software_provenance
+  source_data: 'No Git repository, Simulink model or any of the listed Python modules exists on this machine; MATLAB is not installed.'
+  calculation: 'n/a'
+  reproducibility: not_reproducible_no_data_or_code
+  disposition: WITHDRAW
+  disposition_note: 'Replace with this repository (commit hash, uv.lock) as the only software provenance.'
+
+# ---------------------------------------------------------------- model and control design
+- id: C24
+  title: Vehicle state-space model (Eq. 4.3)
+  category: model
+  statement: 'A = [[-rho Cd A v0/M, 0, G eta/(M r_w)], [0, -R_int/L_eq, K_e/L_eq], [0, -K_t/J_m, -B_m/J_m]], B = [0, 0, 1/J_m], x = [v, i_batt, omega_m].'
+  locations:
+  - {line: 2654, section: 'CHAPTER 3 / Vehicle State-Space Model', quote: 'The system matrix *A* incorporates vehicle dynamics'}
+  units: 'A entries must make each row of x_dot = A x + B u dimensionally consistent'
+  definition: 'Equation from KT01_FINAL_REPORT_v8.tex, label eq:system_matrix_review (the docx rendering is garbled).'
+  evidence_category: model_statement
+  source_data: 'n/a'
+  calculation: 'Row 1: (G eta/(M r_w)) * omega_m has units 1/(kg m) * rad/s, not m/s^2: traction depends on torque, not speed. Row 3: current enters as -K_t i (opposing torque) and no road load is reflected to the shaft. L_eq, K_e, K_t, v0 have no numerical values.'
+  reproducibility: dimensionally_inconsistent
+  consistency_checks: [CHK-AMATRIX-DIM]
+  disposition: WITHDRAW
+  disposition_note: 'Replace with the documented model in repo (configs/model.md); the report equations must not be used.'
+
+- id: C25
+  title: Controllability and observability (full rank)
+  category: model
+  statement: 'The controllability matrix has full rank (3); the observability matrix also has full rank.'
+  locations:
+  - {line: 2742, section: 'CHAPTER 3 / Vehicle State-Space Model', quote: 'the controllability matrix has full rank (3)'}
+  units: 'n/a'
+  definition: 'Depends on unspecified K_e, K_t, L_eq.'
+  evidence_category: model_statement
+  source_data: 'n/a'
+  calculation: 'Generic (symbolic) rank of the report matrices is 3, but the model itself is invalid (C24), so the statement carries no information about the vehicle.'
+  reproducibility: underspecified
+  consistency_checks: [CHK-AMATRIX-DIM]
+  disposition: REVISE
+  disposition_note: 'Recompute for the corrected model (done in tests).'
+
+- id: C26
+  title: Lyapunov stability proof for the time-varying (SoH-scheduled) LQR
+  category: model
+  statement: 'Under conditions 1-3 the closed-loop system is exponentially stable.'
+  locations:
+  - {line: 3300, section: 'CHAPTER 3 / Lyapunov Stability Proof', quote: 'the closed-loop system is exponentially stable'}
+  units: 'n/a'
+  definition: 'Condition 3 assumes the existence of the Lyapunov matrix that the proof should establish; the bound on K_dot is not evaluated numerically.'
+  evidence_category: model_statement
+  source_data: 'n/a'
+  calculation: 'Not evaluated in the report.'
+  reproducibility: underspecified
+  disposition: REVISE
+  disposition_note: 'State as a sufficient condition; check numerically for the actual gain schedule (frozen-time poles; SoH varies over months, so slow-variation arguments apply).'
+
+- id: C27
+  title: Fixed-gain LQR weights from Bryson's rule
+  category: control_design
+  statement: 'Weight selection using Bryson rule: Q = diag(10, 1, 1, 0.5), R = 1 (text) vs Q = diag(10, 1, 1) (Table 14).'
+  locations:
+  - {line: 4745, section: 'CHAPTER 4 / Benchmark Controllers', quote: 'Weight selection using Bryson rule'}
+  - {line: 4747, section: 'CHAPTER 4 / Benchmark Controllers', quote: '*Q* = diag(10*,* 1*,* 1*,* 0*.*5) *R* = 1'}
+  - {line: 4869, section: 'CHAPTER 4 / Table 14', quote: '| LQR | *Q* = *diag*(10*,* 1*,* 1)*, R* = 1 | Bryson |'}
+  units: 'Q, R in inverse squared state/input units'
+  definition: 'Bryson: Q_ii = 1/x_i,max^2, R = 1/u_max^2.'
+  evidence_category: methodological_statement
+  source_data: 'n/a'
+  calculation: 'R = 1 under Bryson implies u_max = 1 Nm, but the torque limit is 85 Nm (R would be 1.38e-4).'
+  reproducibility: arithmetic_check_fails
+  consistency_checks: [CHK-BRYSON]
+  disposition: REVISE
+  disposition_note: 'Apply Bryson with stated maxima (done in preregistration).'
+
+- id: C28
+  title: SoH gain schedule (Appendix B, Table)
+  category: control_design
+  statement: 'LQR gains at SoH 100..50% (K1 = 3.16 ... 3.88, K_i = 2.15 ... 3.00) computed by solving the DARE at each SoH; integral gain increases as SoH decreases.'
+  locations:
+  - {line: 6112, section: 'Appendix B', quote: 'The integral gain *K<sub>i</sub>* increases with decreasing SoH'}
+  units: 'Nm per state unit'
+  definition: 'Requires gamma_v, gamma_u, L_eq, K_e, K_t, v0, Ts, Q0, R0, none of which (except Ts) are given numerically.'
+  evidence_category: claimed_simulation_result
+  source_data: 'None.'
+  calculation: 'Not reproducible. Note: R(SoH) = R0 (1 + gamma_u (1 - SoH)) grows as SoH falls, which reduces LQR gains for a fixed plant; the reported increase therefore needs the (unspecified) plant change to dominate.'
+  reproducibility: underspecified
+  disposition: WITHDRAW
+  disposition_note: 'Replace with the gain schedule computed by repo code from documented parameters.'
+
+- id: C29
+  title: EKF SoH estimation accuracy
+  category: estimation
+  statement: 'After about 2 hours the EKF SoH estimate is within 1% of the true value.'
+  locations:
+  - {line: 3503, section: 'CHAPTER 3 / SoH Estimator', quote: 'the SoH estimate is within 1% of the true value'}
+  units: 'percent SoH'
+  definition: 'Noise model, true-SoH trajectory and run data not given.'
+  evidence_category: claimed_simulation_result
+  source_data: 'None.'
+  calculation: 'None.'
+  reproducibility: not_reproducible_no_data_or_code
+  disposition: OUT_OF_SCOPE
+  disposition_note: 'Not part of the minimum study; the experiment assumes SoH is known (best case for the adaptive controller) and says so.'
+
+- id: C30
+  title: Regenerative braking efficiency and benchmark ranking (P, PID, fuzzy LQR, MPC, DDPG)
+  category: performance
+  statement: 'Adaptive LQR has the highest regen efficiency on all cycles (Table 35) and near-MPC performance with lower complexity.'
+  locations:
+  - {line: 6259, section: 'Appendix D / Table 35', quote: 'The Adaptive LQR consistently achieves the highest regenerative braking efficiency'}
+  - {line: 4876, section: 'CHAPTER 4 / Benchmark Controllers', quote: 'The adaptive LQR achieves near-MPC performance'}
+  units: 'percent'
+  definition: 'Regen efficiency undefined.'
+  evidence_category: claimed_simulation_result
+  source_data: 'None; no MPC, fuzzy or DDPG implementation or training logs exist.'
+  calculation: 'None.'
+  reproducibility: not_reproducible_no_data_or_code
+  disposition: WITHDRAW
+  disposition_note: 'Benchmarks other than fixed-gain LQR are out of the minimum scope.'
+
+- id: C31
+  title: NSGA-II Pareto knee point
+  category: optimization
+  statement: 'The Pareto knee point corresponds to about 122 Wh/km and 14.0%/1000 cycles fade.'
+  locations:
+  - {line: 3593, section: 'CHAPTER 3 / NSGA-II', quote: 'knee point corresponds to approximately 122 Wh/km'}
+  units: 'Wh/km, %/1000 cycles'
+  definition: 'Decision variables (5 weights) given; fade objective depends on the unspecified aging model (C05).'
+  evidence_category: claimed_simulation_result
+  source_data: 'None.'
+  calculation: 'None.'
+  reproducibility: not_reproducible_no_data_or_code
+  disposition: WITHDRAW
+  disposition_note: 'NSGA-II excluded until a defensible second objective exists.'
+
+# ---------------------------------------------------------------- parameter provenance and declarations
+- id: C32
+  title: Parameters validated against datasheets and benchmark datasets
+  category: parameter_provenance
+  statement: 'All results use validated parameters from published datasheets and benchmark papers; parameters were validated against benchmark datasets with documented collection methodology.'
+  locations:
+  - {line: 5980, section: 'Declaration of Simulation-Based Research', quote: 'using validated parameters from published datasheets and benchmark papers'}
+  - {line: 5986, section: 'Declaration of Simulation-Based Research', quote: 'Benchmark datasets with documented collection methodology'}
+  units: 'n/a'
+  definition: 'No dataset or datasheet is cited per parameter.'
+  evidence_category: parameter_provenance
+  source_data: 'Reference list contains no vehicle datasheet; parameter tables give notes such as "Micro-EV typical".'
+  calculation: 'n/a'
+  reproducibility: not_reproducible_no_data_or_code
+  disposition: RELABEL_AS_ASSUMED
+  disposition_note: 'Parameters are labelled "assumed (as stated in report)" in configs/parameters.yaml unless a primary source is added.'
+
+- id: C33
+  title: Drag coefficient from wind tunnel data
+  category: parameter_provenance
+  statement: 'C_d = 0.35, note "Wind tunnel data" (Table 8) vs source "Micro-EV average" (Appendix A).'
+  locations:
+  - {line: 2718, section: 'CHAPTER 3 / Table 8', quote: '| Drag Coefficient | *C<sub>d</sub>* | 0.35 | \- | Wind tunnel data |'}
+  units: 'dimensionless'
+  definition: 'n/a'
+  evidence_category: parameter_provenance
+  source_data: 'No wind-tunnel source cited.'
+  calculation: 'n/a'
+  reproducibility: internally_inconsistent
+  disposition: RELABEL_AS_ASSUMED
+  disposition_note: 'Use as an assumed value with an uncertainty range.'
+
+- id: C34
+  title: Vehicle parameters derived from named vehicle datasheets
+  category: parameter_provenance
+  statement: 'Parameters derived from Citroën Ami / Wuling Mini EV datasheets (Limitations) vs calibrated against Wuling Hongguang Mini EV and VinFast VF3 (Ch. 1).'
+  locations:
+  - {line: 5994, section: Limitations, quote: 'Citroën Ami, Wul-ing Mini EV datasheets'}
+  - {line: 780, section: 'CHAPTER 1 / Research Methodology', quote: 'Wuling Hongguang Mini EV and VinFast VF3'}
+  units: 'n/a'
+  definition: 'No datasheet citation in the reference list; the named vehicles differ from each other and from the 48 V / 18 kW configuration.'
+  evidence_category: parameter_provenance
+  source_data: 'None cited.'
+  calculation: 'n/a'
+  reproducibility: internally_inconsistent
+  disposition: RELABEL_AS_ASSUMED
+  disposition_note: 'Describe the vehicle as a hypothetical micro-EV configuration.'
+
+- id: C35
+  title: Monte Carlo parameter distributions consistent with the vehicle model
+  category: parameter_provenance
+  statement: 'MC distributions: mass mean M_curb + 75 kg, wheel radius 0.265 m, drivetrain efficiency Beta on [0.92, 0.98] (vs Table 8: 850 kg incl. 150 kg payload, 0.28 m, 0.88).'
+  locations:
+  - {line: 5016, section: 'CHAPTER 5 / Monte Carlo Uncertainty Analysis', quote: 'Monte Carlo simulation with 1,000 samples was conducted'}
+  units: 'kg, m, dimensionless'
+  definition: 'Bounds "established from manufacturer specifications and experimental data" (no citation).'
+  evidence_category: parameter_provenance
+  source_data: 'None.'
+  calculation: 'Nominal values of the MC distributions differ from the model parameter table.'
+  reproducibility: internally_inconsistent
+  consistency_checks: [CHK-PARAM-MC]
+  disposition: REVISE
+  disposition_note: 'Robustness ranges in this repo are labelled assumed and centred on the documented nominal values.'
+
+- id: C36
+  title: Capacity-fade figure horizon
+  category: battery_aging
+  statement: 'Figure 11 "Capacity Fade Comparison Over 1500 Cycles" vs 1000-cycle claim.'
+  locations:
+  - {line: 3166, section: 'CHAPTER 3 / Figure 11', quote: '**Figure 11.** Capacity Fade Comparison Over 1500 Cycles'}
+  units: 'cycles'
+  definition: 'n/a'
+  evidence_category: claimed_simulation_result
+  source_data: 'Figure generated by D:\EUREKA\scripts\render_kt01_figures.py from hard-coded curves (render_battery_aging).'
+  calculation: 'n/a'
+  reproducibility: not_reproducible_no_data_or_code
+  consistency_checks: [CHK-FIG-CYCLES]
+  disposition: WITHDRAW
+  disposition_note: 'Figure is not derived from simulation.'
+
+- id: C37
+  title: Citation for the battery/SEI model (Huria)
+  category: parameter_provenance
+  statement: 'Limitations: aging model based on SEI theory from "Huria 2018, J. Power Sources"; reference [3]: Huria et al., IEEE Trans. Ind. Appl. (electrical ECM model).'
+  locations:
+  - {line: 5998, section: Limitations, quote: 'Huria 2018, J. Power Sources'}
+  - {line: 6006, section: References, quote: 'T. Huria, M. Ceraolo, J. Gazzarri, and R. Jackey'}
+  units: 'n/a'
+  definition: 'n/a'
+  evidence_category: parameter_provenance
+  source_data: 'n/a'
+  calculation: 'n/a'
+  reproducibility: internally_inconsistent
+  disposition: KEEP_WITH_CITATION_CHECK
+  disposition_note: 'Verify against the primary source which parameters (if any) come from Huria et al.; an ECM paper is not a source for ageing parameters.'
+
+- id: C38
+  title: Simulation-only declaration and limitations
+  category: reproducibility
+  statement: 'No physical experiments were conducted; all results are based on numerical simulation.'
+  locations:
+  - {line: 5980, section: 'Declaration of Simulation-Based Research', quote: 'No physical experiments were conducted'}
+  - {line: 5992, section: Limitations, quote: 'All results are based on numerical simulation'}
+  units: 'n/a'
+  definition: 'n/a'
+  evidence_category: methodological_statement
+  source_data: 'Consistent with what exists on this machine. Contradicts C06, C07, C17, C19-C22.'
+  calculation: 'n/a'
+  reproducibility: not_applicable
+  disposition: KEEP_WITH_CITATION_CHECK
+  disposition_note: 'Keep, and remove every statement it contradicts. Additionally disclose that the existing figures were generated from random noise (see docs/environment-inventory.md).'
+
+- id: C39
+  title: Lifecycle CO2 and economic payback
+  category: out_of_scope
+  statement: 'LCA shows a 45% CO2 reduction vs ICE over 150,000 km; payback period 3.86 years.'
+  locations:
+  - {line: 13, section: ABSTRACT, quote: 'Life-cycle analysis (LCA) demonstrates a'}
+  - {line: 5928, section: 'CHAPTER 6 / Chapter Summary', quote: 'payback pe-riod of 3.86 years'}
+  units: 'percent, years'
+  definition: 'Depends on the unverified 9.7-12.5% energy saving (C01, C03).'
+  evidence_category: out_of_scope_analysis
+  source_data: 'n/a'
+  calculation: 'Not audited.'
+  reproducibility: not_applicable
+  disposition: OUT_OF_SCOPE
+  disposition_note: 'Separate from the control question; any payback derived from C01/C03 must be withdrawn with them.'
+
+- id: C40
+  title: Origin of existing result figures
+  category: reproducibility
+  statement: 'Result figures (velocity tracking, Pareto front, robustness, capacity fade) are presented as simulation outputs.'
+  locations:
+  - {line: 3166, section: 'CHAPTER 3 / Figure 11', quote: '**Figure 11.** Capacity Fade Comparison Over 1500 Cycles'}
+  units: 'n/a'
+  definition: 'n/a'
+  evidence_category: software_provenance
+  source_data: 'D:\EUREKA\scripts\render_kt01_figures.py lines 245-248, 321, 565-566 generate the data with np.random around hard-coded values; DATA_AND_COLAB_PROMPTS.md line 3 states the intent to add noise so results look experimental.'
+  calculation: 'n/a'
+  reproducibility: not_reproducible_no_data_or_code
+  disposition: WITHDRAW
+  disposition_note: 'Remove all such figures; regenerate figures only from saved runs (make figures).'

@@ -1,0 +1,68 @@
+[project]
+name = "eureka-2026-kt"
+version = "0.1.0"
+description = "EUREKA 2026 KT: research environment for the micro-EV adaptive LQR study."
+requires-python = "==3.14.*"
+# Lower bounds only; exact versions are pinned in uv.lock (and requirements-lock.txt).
+dependencies = [
+    # Core scientific computing
+    "numpy>=2.5",
+    "scipy>=1.18",
+    "pandas>=3.1",
+    "matplotlib>=3.11",
+    "sympy>=1.14",
+    "control>=0.10.2",
+    # Units, configuration and data validation
+    "pint>=0.26",
+    "pyyaml>=6.0.3",
+    "pydantic>=2.14",
+    # Statistical analysis of controller comparisons (ANOVA, multiple-comparison
+    # correction, power analysis); see docs/software-purpose-and-justification.md
+    "statsmodels>=0.15",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1",
+    "pytest-cov>=7.1",
+    "hypothesis>=6.170",
+    "ruff>=0.17",
+    # pip is not seeded into uv venvs; pinned here for `pip check` and pip fallback installs
+    "pip>=25",
+]
+notebook = [
+    "ipykernel>=7.4",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "eureka"
+
+[tool.uv]
+default-groups = ["dev", "notebook"]
+# Fallbacks for a shell without project.env (env vars take precedence). Absolute on purpose:
+# uv resolves a relative cache-dir against the working directory, not this file.
+cache-dir = "D:/EUREKA-2026/cache/uv"
+python-downloads = "manual"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+cache_dir = "../cache/pytest"
+addopts = ["-ra", "--strict-markers", "--strict-config"]
+xfail_strict = true
+markers = [
+    "env_paths: checks that caches and runtime paths resolve under D:\\EUREKA-2026",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+# Same location as RUFF_CACHE_DIR in project.env, so an unactivated shell cannot create repo\.ruff_cache
+cache-dir = "../cache/ruff"
+
+[tool.ruff.lint]
+# NPY flags legacy np.random.* global-state calls; seeded Generators are required for provenance.
+select = ["E", "F", "W", "I", "B", "UP", "NPY", "PT"]

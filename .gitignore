@@ -1,0 +1,20 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Tool caches: redirected to ..\cache by project.env / pyproject.toml,
+# ignored here in case a tool is ever run without that configuration
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+.ipynb_checkpoints/
+
+# The project venv lives at ..\.venv; never create one inside repo\
+.venv/
+
+# Local secrets, if any are ever needed (project.env holds paths only and is tracked)
+.env

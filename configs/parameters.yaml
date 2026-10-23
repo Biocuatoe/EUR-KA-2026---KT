@@ -1,0 +1,319 @@
+# Model parameters with provenance. Validated by eureka.params (schema + Pint units).
+#
+# provenance:
+#   measured           - measured by this project (none)
+#   literature         - from a cited primary source, location given
+#   report_unverified  - value as printed in the KT report; the report gives no primary source
+#   assumed            - chosen by this study; justification given
+#   standard           - physical constant or definition
+#
+# uncertainty: range used ONLY for robustness analysis S-D (uniform); all ranges are
+# assumptions unless a source is given.
+report_ref: &rep "KT report (data/raw/report/EUREKA-2026-KT.docx, SHA-256 01363A06...8C), retrieved from D:\\EURÉKA 2026 - KT on 2026-10-23"
+
+vehicle:
+  mass:
+    value: 850.0
+    unit: kg
+    provenance: report_unverified
+    source: *rep
+    source_location: "Table 8 (report.md L2716): 'Curb + 150 kg payload'"
+    valid_range: [700.0, 1100.0]
+    uncertainty: {low: 722.5, high: 977.5, justification: "±15 % as stated in report Sec. 5.1 (L5024), no source; treated as assumed"}
+    used_for: "translational inertia, rolling resistance"
+  frontal_area:
+    value: 2.2
+    unit: m^2
+    provenance: report_unverified
+    source: *rep
+    source_location: "Table 8 (L2717) 'Micro-EV typical'"
+    valid_range: [1.5, 2.8]
+    uncertainty: {low: 2.0, high: 2.4, justification: "assumed ±9 %; no source in report"}
+    used_for: aerodynamic drag
+  drag_coefficient:
+    value: 0.35
+    unit: dimensionless
+    provenance: report_unverified
+    source: *rep
+    source_location: "Table 8 (L2718) 'Wind tunnel data' vs Appendix A 'Micro-EV average' (claim C33)"
+    valid_range: [0.25, 0.5]
+    uncertainty: {low: 0.315, high: 0.385, justification: "±10 % as stated in report Sec. 5.1, no source"}
+    used_for: aerodynamic drag
+  rolling_resistance:
+    value: 0.008
+    unit: dimensionless
+    provenance: report_unverified
+    source: *rep
+    source_location: "Table 8 (L2735) 'New tire'"
+    valid_range: [0.006, 0.015]
+    uncertainty: {low: 0.008, high: 0.012, justification: "range as stated in report Sec. 4.6 (L5156), no source"}
+    used_for: rolling resistance
+  wheel_radius:
+    value: 0.28
+    unit: m
+    provenance: report_unverified
+    source: *rep
+    source_location: "Table 8 (L2719); note '13\" wheel diameter/2' would give 0.165 m, so the note does not explain the value"
+    valid_range: [0.25, 0.31]
+    uncertainty: {low: 0.275, high: 0.285, justification: "assumed tyre-load variation ±2 %"}
+    used_for: "speed-to-motor-speed kinematics, force-torque conversion"
+  air_density:
+    value: 1.225
+    unit: kg/m^3
+    provenance: standard
+    source: "ISA sea-level standard density"
+    source_location: "ISO 2533 standard atmosphere, sea level, 15 °C"
+    valid_range: [1.1, 1.3]
+    uncertainty: null
+    used_for: aerodynamic drag
+  gravity:
+    value: 9.81
+    unit: m/s^2
+    provenance: standard
+    source: "standard gravity 9.80665 m/s^2 rounded as in report Table 8"
+    source_location: "CGPM 1901; report L2736"
+    valid_range: [9.78, 9.83]
+    uncertainty: null
+    used_for: rolling resistance
+
+drivetrain:
+  gear_ratio:
+    value: 6.5
+    unit: dimensionless
+    provenance: report_unverified
+    source: *rep
+    source_location: "Table 8 (L2720)"
+    valid_range: [4.0, 10.0]
+    uncertainty: null
+    used_for: kinematics, torque multiplication
+  gear_efficiency:
+    value: 0.9702
+    unit: dimensionless
+    provenance: report_unverified
+    source: *rep
+    source_location: "Appendix A: eta_gear 0.98 x eta_bearing 0.99. Table 8 gives a combined 0.88, but Appendix A components multiply to 0.848 with motor and inverter; components used"
+    valid_range: [0.9, 0.99]
+    uncertainty: null
+    used_for: mechanical transmission loss
+  motor_inertia:
+    value: 0.05
+    unit: kg*m^2
+    provenance: report_unverified
+    source: *rep
+    source_location: "Table 8 (L2732)"
+    valid_range: [0.01, 0.1]
+    uncertainty: null
+    used_for: effective mass
+  motor_viscous_friction:
+    value: 0.001
+    unit: N*m*s
+    provenance: report_unverified
+    source: *rep
+    source_location: "Table 8 (L2733), N*m*s/rad"
+    valid_range: [0.0, 0.01]
+    uncertainty: null
+    used_for: shaft friction loss
+  motor_inverter_efficiency:
+    value: 0.874
+    unit: dimensionless
+    provenance: report_unverified
+    source: *rep
+    source_location: "Appendix A: eta_motor 0.92 (PMSM PEAK efficiency) x eta_inverter 0.95; a peak value used as constant overestimates efficiency at part load"
+    valid_range: [0.75, 0.95]
+    uncertainty: {low: 0.83, high: 0.918, justification: "±5 % as stated for motor efficiency in report Sec. 5.1, no source"}
+    used_for: electrical-mechanical conversion loss
+  torque_max:
+    value: 85.0
+    unit: N*m
+    provenance: report_unverified
+    source: *rep
+    source_location: "Table 8 (L2723)"
+    valid_range: [50.0, 120.0]
+    uncertainty: null
+    used_for: actuator limit
+  power_max:
+    value: 18000.0
+    unit: W
+    provenance: report_unverified
+    source: *rep
+    source_location: "Table 8 (L2722)"
+    valid_range: [10000.0, 30000.0]
+    uncertainty: null
+    used_for: actuator limit above base speed
+  speed_max:
+    value: 837.0
+    unit: rad/s
+    provenance: report_unverified
+    source: *rep
+    source_location: "Table 8 (L2724), 8000 rpm"
+    valid_range: [600.0, 1100.0]
+    uncertainty: null
+    used_for: validity check (domain 0-50 km/h stays far below)
+  torque_time_constant:
+    value: 0.02
+    unit: s
+    provenance: assumed
+    source: "report L2802 states motor electrical time constants of approximately 20 ms"
+    source_location: "report.md L2802"
+    valid_range: [0.005, 0.05]
+    uncertainty: null
+    used_for: closed-current-loop torque response
+
+battery:
+  open_circuit_voltage:
+    value: 48.0
+    unit: V
+    provenance: assumed
+    source: "report nominal voltage (Table 8, L2725); constant OCV is an assumption justified by the flat LFP plateau over the small SoC swing of one profile"
+    source_location: "report.md L2725"
+    valid_range: [40.0, 58.4]
+    uncertainty: null
+    used_for: battery power and energy
+  capacity:
+    value: 100.0
+    unit: A*h
+    provenance: report_unverified
+    source: *rep
+    source_location: "Table 8 (L2726)"
+    valid_range: [50.0, 150.0]
+    uncertainty: null
+    used_for: SoC bookkeeping only
+  r0_new:
+    value: 0.005
+    unit: ohm
+    provenance: report_unverified
+    source: *rep
+    source_location: "Appendix A motor and battery table, R_0"
+    valid_range: [0.002, 0.02]
+    uncertainty: {low: 0.004, high: 0.006, justification: "±20 % as stated in report Sec. 5.1, no source"}
+    used_for: ohmic loss
+  r1_new:
+    value: 0.003
+    unit: ohm
+    provenance: report_unverified
+    source: *rep
+    source_location: "Appendix A, R_1"
+    valid_range: [0.001, 0.01]
+    uncertainty: null
+    used_for: polarisation loss
+  c1:
+    value: 50000.0
+    unit: F
+    provenance: report_unverified
+    source: *rep
+    source_location: "Appendix A, C_1"
+    valid_range: [10000.0, 200000.0]
+    uncertainty: null
+    used_for: polarisation dynamics (tau = R1 C1 = 150 s)
+  k_r0:
+    value: 0.5
+    unit: dimensionless
+    provenance: report_unverified
+    source: *rep
+    source_location: "Eq. 4.28 (L2972-2976) 'for LFP chemistry', no source"
+    valid_range: [0.0, 2.0]
+    uncertainty: null
+    used_for: "R0(SoH) = R0_new (1 + k_r0 (1 - SoH))"
+  k_r1:
+    value: 0.3
+    unit: dimensionless
+    provenance: report_unverified
+    source: *rep
+    source_location: "Eq. 4.29 (L2974-2976)"
+    valid_range: [0.0, 2.0]
+    uncertainty: null
+    used_for: "R1(SoH) = R1_new (1 + k_r1 (1 - SoH))"
+
+controller:
+  sample_time:
+    value: 0.01
+    unit: s
+    provenance: report_unverified
+    source: *rep
+    source_location: "L2624 'sampling period of 10 ms'"
+    valid_range: [0.001, 0.05]
+    uncertainty: null
+    used_for: ZOH discretisation and control update
+  linearisation_speed:
+    value: 8.333333
+    unit: m/s
+    provenance: assumed
+    source: "30 km/h, middle of the 0-50 km/h operating domain; the report never states v0"
+    source_location: "n/a"
+    valid_range: [2.0, 14.0]
+    uncertainty: null
+    used_for: design model drag linearisation
+  bryson_velocity_error_max:
+    value: 0.5
+    unit: m/s
+    provenance: assumed
+    source: "below the report's 0.6 m/s RMSE specification (L5047)"
+    source_location: "preregistration section 5"
+    valid_range: [0.1, 4.0]
+    uncertainty: null
+    used_for: Q0[0,0] = 1/value^2
+  bryson_torque_max:
+    value: 85.0
+    unit: N*m
+    provenance: assumed
+    source: "equal to the torque limit"
+    source_location: "preregistration section 5"
+    valid_range: [10.0, 120.0]
+    uncertainty: null
+    used_for: "Q0[1,1] and R0 = 1/value^2"
+  bryson_integral_error_max:
+    value: 0.5
+    unit: m
+    provenance: assumed
+    source: "integrated velocity error equal to 0.5 m of position lag"
+    source_location: "preregistration section 5"
+    valid_range: [0.05, 5.0]
+    uncertainty: null
+    used_for: Q0[2,2] = 1/value^2
+  gamma_v:
+    value: 1.0
+    unit: dimensionless
+    provenance: assumed
+    source: "report Eq. 4.40 requires gamma_v > 0 but gives no value"
+    source_location: "report.md L3204"
+    valid_range: [0.0, 10.0]
+    uncertainty: null
+    used_for: Q schedule
+  gamma_u:
+    value: 1.0
+    unit: dimensionless
+    provenance: assumed
+    source: "report Eq. 4.41 gives no value"
+    source_location: "report.md L3210"
+    valid_range: [0.0, 10.0]
+    uncertainty: null
+    used_for: R schedule
+
+simulation:
+  integration_step:
+    value: 0.001
+    unit: s
+    provenance: assumed
+    source: "10 substeps per control period; verified against solve_ivp (rtol 1e-9)"
+    source_location: "tests/test_plant.py"
+    valid_range: [0.0001, 0.002]
+    uncertainty: null
+    used_for: RK4 plant integration
+  speed_smoothing:
+    value: 0.05
+    unit: m/s
+    provenance: assumed
+    source: "numerical smoothing of the rolling-resistance sign at standstill"
+    source_location: "docs/model.md"
+    valid_range: [0.005, 0.2]
+    uncertainty: null
+    used_for: "F_rr = C_rr M g tanh(v / value)"
+  velocity_noise_std:
+    value: 0.05
+    unit: m/s
+    provenance: assumed
+    source: "report L746 cites +/-0.5 km/h (0.14 m/s) sensor accuracy; sigma chosen so that 3 sigma ~ 0.14 m/s"
+    source_location: "report.md L746"
+    valid_range: [0.0, 0.2]
+    uncertainty: null
+    used_for: robustness analysis S-D only
