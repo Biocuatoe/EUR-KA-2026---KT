@@ -13,6 +13,14 @@ the user's repository. Every number below is read from a saved artifact named in
 - **The existing figures are not simulation output.** They were generated from random
   noise around hard-coded values (`D:\EUREKA\scripts\render_kt01_figures.py`). The ± intervals
   on the headline numbers were added as an editorial fix (`D:\EUREKA\AUDIT_REPORT.md` L28, L195).
+
+  *Note added 2026-10-23 (contribution review):*
+  - Both files cited in this bullet lie outside the project root and were not re-checked.
+  - Their status is EXTERNAL_UNVERIFIED, and they support no current conclusion; see
+    `docs/research-contribution-review.md` §3.2.
+  - What stands on in-project evidence is narrower: no code or data in the project can
+    reproduce the figures or the ± intervals. That is enough on its own to keep C01 and
+    C40 withdrawn.
 - **The report's vehicle model is dimensionally invalid** (traction depends on motor
   speed, not torque) and was replaced by a documented, verified model.
 - **Pre-registered result:** on that model, the report's SoH-scheduled LQR changes
