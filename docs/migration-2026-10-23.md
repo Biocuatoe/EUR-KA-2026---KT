@@ -96,6 +96,21 @@ provenance for the ± intervals. It was never at `D:\EUREKA-2026\AUDIT_REPORT.md
 `D:\EUREKA` is a separate folder outside this move, so it was neither opened nor copied.
 The citation stands as written.
 
-## Legacy workspace
+## Legacy workspace removal
 
-See the cleanup entry below.
+After the checks above, everything left in `D:\EUREKA-2026` was listed:
+
+- `docs\` and `repo\`: both empty.
+- `.venv\`: 20,871 files, all written 12:56–13:58 on 2026-10-23 by this workflow's
+  setup. Each file is one of:
+  - listed in an installed package's `RECORD`
+  - `.pyc` bytecode
+  - uv's venv scaffolding
+  - the `eureka-2026` kernelspec
+- No reparse points.
+
+The `.venv` no longer ran and had been rebuilt here, so it, the two empty folders and
+then the empty `D:\EUREKA-2026` were removed by explicit path, without wildcards or
+force. Afterwards `scripts/verify.ps1` again passed 19 of 19
+(`environment-verification-20261023-154018.json`), and the 56 result hashes and the
+thesis hash were unchanged.
