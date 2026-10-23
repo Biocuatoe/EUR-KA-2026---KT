@@ -1,0 +1,33 @@
+# Experiment definitions (preregistration sections 7-8). Run with scripts/run_experiment.py.
+soh_levels: &soh [1.0, 0.9, 0.8, 0.7]
+
+primary:          # H1 decision uses S1 / SoH 0.8; the rest is S-A
+  profiles: [S1, S2]
+  soh: *soh
+  controllers: [fixed, scheduled]
+  dtype: float64
+
+gamma_sweep:      # S-B
+  profiles: [S1]
+  soh: [0.8]
+  gamma_u: [0.0, 0.5, 1.0, 2.0, 5.0]
+  gamma_v: [0.0, 1.0, 5.0]
+  include_fixed: true
+  dtype: float64
+
+fixed_family:     # S-C (tests H_C)
+  profiles: [S1]
+  soh: *soh
+  r_scale: {logspace: [-1.0, 1.0, 41]}
+  dtype: float32
+
+robustness:       # S-D
+  profile: S1
+  soh: 0.8
+  base_seed: 20261023
+  pilot_draws: 50
+  max_draws: 1000
+  min_draws: 50
+  perturbed: [M, A_f, Cd, Crr, r_w, eta_mi, R0_new]
+  velocity_noise: true
+  dtype: float32

@@ -185,4 +185,13 @@ A passing test establishes only the tested property, never physical accuracy.
 
 ## 12. Deviations log
 
-(none yet)
+- **2026-10-23, clarification before any evaluation run (no S1/S2 output had been
+  produced):**
+  - (1) S-D is run at the primary condition: S1, SoH = 0.80, γ_v = γ_u = 1.
+  - (2) In S-D both controllers keep the gains designed on **nominal** parameters, and only
+    the simulated plant is perturbed. This is the usual meaning of robustness to plant
+    uncertainty, and the controller cannot know the true parameters.
+  - (3) The robustness runs record time series at the full 100 Hz control rate in float32;
+    primary-analysis runs are stored in float64.
+  - (4) The tuning acceptance check (P-TUNE) passed on attempt 1, so e_max = 0.5 m/s is
+    frozen (`artifacts/reports/tuning-acceptance.json`).
