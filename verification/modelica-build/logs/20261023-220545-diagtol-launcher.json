@@ -1,0 +1,30 @@
+﻿{
+    "label":  "diagtol",
+    "time":  "2026-10-23T22:05:48",
+    "exit_code":  0,
+    "project_root":  "D:\\EURÉKA 2026 - KT",
+    "letter":  "Y",
+    "cleanup":  {
+                    "alias_created":  true,
+                    "alias_removed":  true,
+                    "alias_still_mapped":  false,
+                    "other_mappings_unchanged":  true,
+                    "env_restored":  true
+                },
+    "steps":  [
+                  {
+                      "name":  "version",
+                      "command":  "omc --version",
+                      "exit_code":  0,
+                      "seconds":  0.05,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220545-diagtol-version.out.txt"
+                  },
+                  {
+                      "name":  "diag_openloop_tol1e-12",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\diag_openloop_tol1e-12.mos",
+                      "exit_code":  0,
+                      "seconds":  2.3,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220545-diagtol-diag_openloop_tol1e-12.out.txt"
+                  }
+              ]
+}

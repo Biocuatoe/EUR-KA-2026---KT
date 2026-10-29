@@ -1,0 +1,78 @@
+{
+ "stages": {
+  "tune": {
+   "planned": 192,
+   "present": 192,
+   "missing": 0,
+   "duplicates": 0,
+   "invalid": 0,
+   "max_closure_rel": 3.230840647052297e-10,
+   "manifest_n_runs": 192,
+   "manifest_n_invalid": 0,
+   "runtime_s": 134.2,
+   "protocol_hash_matches_freeze": true,
+   "protocol_file_unchanged_now": true,
+   "source_hash_mismatches_now": [],
+   "max_abs_gain_recompute_diff": 0.0,
+   "eval_rows_not_matching_selected_tuning": 0,
+   "dt_s": [
+    "0.001"
+   ]
+  },
+  "eval": {
+   "planned": 61,
+   "present": 61,
+   "missing": 0,
+   "duplicates": 0,
+   "invalid": 0,
+   "max_closure_rel": 8.683587225921629e-10,
+   "manifest_n_runs": 61,
+   "manifest_n_invalid": 0,
+   "runtime_s": 2109.8,
+   "protocol_hash_matches_freeze": true,
+   "protocol_file_unchanged_now": true,
+   "source_hash_mismatches_now": [],
+   "max_abs_gain_recompute_diff": 0.0,
+   "eval_rows_not_matching_selected_tuning": 0,
+   "dt_s": [
+    "0.001"
+   ]
+  },
+  "conv": {
+   "planned": 4,
+   "present": 4,
+   "missing": 0,
+   "duplicates": 0,
+   "invalid": 0,
+   "max_closure_rel": 2.7868164151616432e-11,
+   "manifest_n_runs": 4,
+   "manifest_n_invalid": null,
+   "runtime_s": 978.8,
+   "protocol_hash_matches_freeze": true,
+   "protocol_file_unchanged_now": true,
+   "source_hash_mismatches_now": [],
+   "max_abs_gain_recompute_diff": 0.0,
+   "eval_rows_not_matching_selected_tuning": 0,
+   "dt_s": [
+    "0.0005"
+   ]
+  }
+ },
+ "problems": [],
+ "R1_reproduction": {
+  "diff_relative_or_absolute_if_ref_zero": {
+   "Wh_per_km": 0.0,
+   "rmse_ms": 0.0,
+   "E_net_Wh": 0.0,
+   "friction_brake_Wh": 0.0
+  },
+  "tolerance": 1e-09,
+  "pass": true
+ },
+ "sched_equals_fixed_at_soh1_maxabs": 0.0,
+ "stdout_tracebacks": {
+  "out_conv_stdout.txt": false,
+  "out_eval_stdout.txt": false,
+  "out_tune_stdout.txt": false
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "review": "04_independent_code_review.md (read-only review agent CR-A1..CR-A21 plus author checks CR-B1..)",
+ "date": "2026-10-28",
+ "open_critical": 0,
+ "open_major": 2,
+ "open_major_items": {
+  "CR-A2": "meaning of 'infeasible on P3' (D5) not defined; both readings implemented; owner decision AMB-24 required",
+  "CR-A6": "evaluator independence: separate process, own formulas and per-run specs now; residual common mode (model equations re-written from the same model basis; traced torque limits t_pos/t_neg and P_fric start values) needs owner acceptance or further work"
+ },
+ "resolved_major": ["CR-A1", "CR-A3", "CR-A4", "CR-A5", "CR-A7"],
+ "rule": "campaign.preconditions() blocks while open_critical or open_major is non-zero; only the owner may set these to 0 by accepting or resolving the items"
+}

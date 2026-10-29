@@ -1,0 +1,133 @@
+{
+ "DEV-S1-M0-LR1-P1-B0-dt0.5ms": {
+  "E_chem_rel": {
+   "value": 6.064674997768842e-07,
+   "tol": 0.0001,
+   "ok": true,
+   "group": "protocol"
+  },
+  "E_DC_rel": {
+   "value": 6.077783933039309e-07,
+   "tol": 0.0001,
+   "ok": true,
+   "group": "protocol"
+  },
+  "distance_rel": {
+   "value": 4.65782752614366e-12,
+   "tol": 1e-06,
+   "ok": true,
+   "group": "protocol"
+  },
+  "trip_time_abs_s": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "protocol"
+  },
+  "I_over_protocol_abs_As": {
+   "value": 0.0,
+   "tol": 0.0001,
+   "ok": true,
+   "group": "protocol"
+  },
+  "rmse_rel": {
+   "value": 2.471095485509458e-15,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "protocol"
+  },
+  "E_pos_rel": {
+   "value": 3.254210270009934e-07,
+   "tol": 0.0001,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "friction_abs_Wh": {
+   "value": 2.6562595678569778e-08,
+   "tol": 1e-06,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "max_err_rel": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "I_over_window_abs_As": {
+   "value": 0.0,
+   "tol": 0.0001,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "min_Vt_abs_V": {
+   "value": 0.0,
+   "tol": 1e-06,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "batt_limited_frac_abs": {
+   "value": 0.0,
+   "tol": 1e-12,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "current_recompute_abs_A": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "friction_power_recompute_abs_W": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "regen_wheel_power_recompute_abs_W": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "tracked_profile_abs_ms": {
+   "value": 5.684341886080802e-14,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "closure_rel_abs": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "stop_ok_equal": {
+   "value": true,
+   "tol": null,
+   "ok": true,
+   "group": "protocol"
+  },
+  "complete_equal": {
+   "value": true,
+   "tol": null,
+   "ok": true,
+   "group": "protocol"
+  },
+  "tracking_ok_equal": {
+   "value": true,
+   "tol": null,
+   "ok": true,
+   "group": "protocol"
+  },
+  "constraint_ok_equal": {
+   "value": true,
+   "tol": null,
+   "ok": true,
+   "group": "protocol"
+  },
+  "protocol_ok": true,
+  "diagnostics_ok": true,
+  "all_ok": true
+ }
+}

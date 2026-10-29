@@ -1,0 +1,3 @@
+﻿S1 done 359 s
+S2 done 577 s
+UDDS done 2110 s

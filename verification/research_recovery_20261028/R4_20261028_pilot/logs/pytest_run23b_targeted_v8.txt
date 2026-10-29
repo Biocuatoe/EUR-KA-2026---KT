@@ -1,0 +1,50 @@
+.................FF                                                      [100%]
+================================== FAILURES ===================================
+_ test_rev5_candidate_is_a_draft_with_full_parent_hashes_and_matches_the_code _
+
+    def test_rev5_candidate_is_a_draft_with_full_parent_hashes_and_matches_the_code():
+        assert campaign.DRAFT_AMENDMENT_2.name == "03_protocol_v1_amendment_2_rev5_CANDIDATE.md"
+        r = campaign.read_amendment(campaign.DRAFT_AMENDMENT_2, campaign.IMPLEMENTED_2, {})
+>       assert r["exists"] and not r["errors"] and r["status"] == "DRAFT", r["errors"]
+E       AssertionError: ['file not found']
+E       assert (False)
+
+code\tests\test_owner_rulings_v8.py:353: AssertionError
+___ test_campaign_execution_stays_blocked_without_a_separate_authorization ____
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-283/test_campaign_execution_stays_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FA18D2A060>
+
+    def test_campaign_execution_stays_blocked_without_a_separate_authorization(tmp_path, monkeypatch):
+        assert not campaign.CAMPAIGN_AUTHORIZATION.exists()
+        assert any("no campaign authorisation record" in b for b in campaign.preconditions("campaign"))
+>       text = campaign.DRAFT_AMENDMENT_2.read_text(encoding="utf-8").replace('"status": "DRAFT"', '"status": "APPROVED"')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+code\tests\test_owner_rulings_v8.py:372: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\tools\python\cpython-3.14.7-windows-x86_64-none\Lib\pathlib\__init__.py:787: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/EURÉKA 2026 - KT/verification/research_recovery_20261028/R4_20261028_pilot/03_protocol_v1_amendment_2_rev5_CANDIDATE.md')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\EURÉKA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_pilot\\03_protocol_v1_amendment_2_rev5_CANDIDATE.md'
+
+..\..\..\tools\python\cpython-3.14.7-windows-x86_64-none\Lib\pathlib\__init__.py:771: FileNotFoundError
+=========================== short test summary info ===========================
+FAILED code\tests\test_owner_rulings_v8.py::test_rev5_candidate_is_a_draft_with_full_parent_hashes_and_matches_the_code
+FAILED code\tests\test_owner_rulings_v8.py::test_campaign_execution_stays_blocked_without_a_separate_authorization
+2 failed, 17 passed in 304.18s (0:05:04)

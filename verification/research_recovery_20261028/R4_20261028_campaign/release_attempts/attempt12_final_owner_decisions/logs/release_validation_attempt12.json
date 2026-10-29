@@ -1,0 +1,483 @@
+{
+ "written": "2026-10-29T09:55:28+0700",
+ "attempt": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release_attempts\\attempt12_final_owner_decisions",
+ "dry_run": "dry_run_20261029_095526",
+ "note": "no run executed, no plant evaluated, no arm-to-arm energy difference computed",
+ "schedule": {
+  "runs": 170,
+  "equals_170": true,
+  "counts_per_set": {
+   "NOM": 12,
+   "P3": 12,
+   "INS": 12,
+   "CNV": 6,
+   "SEN": 128
+  },
+  "counts_equal_protocol_10_6": true,
+  "run_ids_unique": true,
+  "all_official_prefix": true,
+  "every_condition_has_B0_and_B3": true,
+  "dry_run_schedule_checks": {
+   "total_is_170": true,
+   "counts_per_set_equal_protocol_10_6": true,
+   "run_ids_unique": true,
+   "condition_ids_unique": true,
+   "every_condition_has_B0_and_B3": true,
+   "run_ids_official_format": true,
+   "cycles_only_S1_S2": true,
+   "S1_only_in_INS": true,
+   "P3_only_in_P3_set": true,
+   "half_ms_only_in_CNV": true,
+   "CNV_has_1ms_counterpart_in_NOM": true,
+   "CNV_is_S2_LEVE_P1_all_motors": true,
+   "SEN_is_32_draws_x_M0_M1_on_S2_LEVE_P1": true,
+   "no_M2_in_SEN": true,
+   "every_profile_designed_on_P1": true,
+   "smoke_runs_not_reused_D4": true,
+   "numerics_equal_protocol": true,
+   "no_planner_parameter_selection_job": true
+  },
+  "dry_run_schedule_passed": true,
+  "smoke_run_ids": [
+   "H3-slice-S1-M0-L-R1-P1-B0-dt1ms",
+   "H3-slice-S1-M0-L-R1-P1-B3-dt1ms"
+  ],
+  "smoke_runs_excluded": true,
+  "s2_rows_all_held_out": true,
+  "s1_only_in_INS": true,
+  "every_profile_designed_on_P1": true,
+  "planner_jobs_only_profiles_or_grid": true,
+  "planner_numerics_equal_protocol": true,
+  "canonical_cycles_verified": {
+   "S1_source_segments.json": "88a04c905fdd6a3b109e0189af0347c8d6525347ae4812228e7838162cb8d6fd",
+   "S1_knots_from_yaml.csv": "e0cdb1f4a4627838a8e691d4516492e604b01be85c2afa34c1ec98be8fd120ec",
+   "S2_source_segments.json": "49093326473eb4d33dde34400a6dc741949d192e48fe25c81f1467683a0f2d13",
+   "S2_knots_from_yaml.csv": "4bf394980e928f075f7f82135aa11beba1b97b95a2d1e18ae030ea3c448dde6c",
+   "cycle_inputs_manifest.json": "3d3d6e93d19842141691d041e2363dd8f3f9fef73b362ebcd6ae2ef8b6de7ea5",
+   "S1_sampled_h1.csv": "87151e5c30c02f5f6784732a5dd619fc6c39e90913d4afcf06292de2c1f2b7da",
+   "S2_sampled_h1.csv": "def9d757dc0923afe20a91dca487c84527daff2bef5421c34aef1a61f0a6e990"
+  },
+  "sen_gain_text_all_fixed_P1": true,
+  "sen_gain_equal_nominal_P1_for_all_32_draws": true,
+  "sen_draws_checked": 32,
+  "sensitivity_gain_basis": "nominal_P1"
+ },
+ "qs_vs_dynamic_distinct": {
+  "condition_statuses": [
+   "PROFILE_UNAVAILABLE",
+   "BASELINE_UNAVAILABLE",
+   "ERROR",
+   "BASELINE_INFEASIBLE_ON_P3",
+   "ECO_INFEASIBLE_ON_P3",
+   "B0_INVALID_EXCLUDED",
+   "INVALID_COMPARISON",
+   "RECOMPUTATION_DISAGREEMENT",
+   "COMPARABLE"
+  ],
+  "pair_qs_statuses": [
+   "PASS",
+   "FAIL",
+   "REPORTED_ONLY",
+   "NOT_APPLICABLE_QS_INFEASIBLE",
+   "NOT_APPLICABLE_PROFILE_UNAVAILABLE",
+   "NOT_EVALUABLE_RUN_MISSING",
+   "NOT_EVALUABLE_QS_UNDEFINED",
+   "NOT_EVALUABLE_CONDITION_ERROR",
+   "NOT_EVALUABLE_RUN_INVALID"
+  ],
+  "vocabularies_disjoint": true,
+  "classify_pair_parameters": [
+   "b0",
+   "b3",
+   "eco_profile_ok",
+   "baseline_ok",
+   "pstate"
+  ],
+  "classify_pair_body_names": [
+   "COMPARABLE",
+   "arm_comparable",
+   "b0",
+   "b3",
+   "baseline_ok",
+   "eco_profile_ok",
+   "get",
+   "pstate"
+  ],
+  "classify_pair_reads_no_qs_name": true,
+  "implemented_2_dynamic_8_2_independent": true
+ },
+ "paired_endpoint": {
+  "energy_role_cases": 72,
+  "confirmatory_only_if_executed_valid_confirmed_and_COMPARABLE": true,
+  "paired_delta_refuses": [
+   "PROFILE_UNAVAILABLE",
+   "BASELINE_UNAVAILABLE",
+   "ERROR",
+   "BASELINE_INFEASIBLE_ON_P3",
+   "ECO_INFEASIBLE_ON_P3",
+   "B0_INVALID_EXCLUDED",
+   "INVALID_COMPARISON",
+   "RECOMPUTATION_DISAGREEMENT"
+  ],
+  "paired_delta_refuses_every_non_COMPARABLE_status": true
+ },
+ "reporting_tests": {
+  "junit_cases": 341,
+  "by_prefix": {
+   "test_missing_profile_and_invalid_arm_accounting": {
+    "tests.test_owner_rulings_v8::test_missing_profile_and_invalid_arm_accounting": "passed"
+   },
+   "test_planned_run_and_feasibility_denominators_stay_fixed": {
+    "tests.test_owner_rulings_v8::test_planned_run_and_feasibility_denominators_stay_fixed": "passed"
+   },
+   "test_no_situation_yields_a_pass_by_omission": {
+    "tests.test_owner_rulings_v8::test_no_situation_yields_a_pass_by_omission": "passed"
+   },
+   "test_amb29d_evaluation_exceptions_are_kept_without_retry": {
+    "tests.test_owner_rulings_v8::test_amb29d_evaluation_exceptions_are_kept_without_retry_or_replacement": "passed"
+   },
+   "test_valid_dynamic_energy_is_kept_when_only_the_qs_comparison_is_not_evaluable": {
+    "tests.test_owner_rulings_v8::test_valid_dynamic_energy_is_kept_when_only_the_qs_comparison_is_not_evaluable": "passed"
+   },
+   "test_amb29c_non_positive_qs_energy": {
+    "tests.test_owner_rulings_v8::test_amb29c_non_positive_qs_energy_keeps_raw_values_and_computes_no_percentage": "passed",
+    "tests.test_owner_rulings_v8::test_amb29c_non_positive_qs_energy_in_the_executor": "passed"
+   },
+   "test_a_missing_required_nominal_cell": {
+    "tests.test_owner_rulings_v8::test_a_missing_required_nominal_cell": "passed"
+   },
+   "test_amb30_": {
+    "tests.test_owner_rulings_v8::test_amb30_an_s1_pass_with_the_nominal_s2_cells_missing_is_inconclusive": "passed",
+    "tests.test_owner_rulings_v8::test_amb30_an_s1_pass_with_a_failed_nominal_s2_check_is_inconclusive": "passed",
+    "tests.test_owner_rulings_v8::test_amb30_a_nominal_pass_with_a_failure_in_another_preregistered_set_is_inconclusive[P3]": "passed",
+    "tests.test_owner_rulings_v8::test_amb30_a_nominal_pass_with_a_failure_in_another_preregistered_set_is_inconclusive[INS]": "passed",
+    "tests.test_owner_rulings_v8::test_amb30_a_nominal_pass_with_a_failure_in_another_preregistered_set_is_inconclusive[CNV]": "passed",
+    "tests.test_owner_rulings_v8::test_amb30_a_nominal_pass_with_a_failure_in_another_preregistered_set_is_inconclusive[SEN]": "passed",
+    "tests.test_owner_rulings_v8::test_amb30_all_required_checks_pass": "passed"
+   },
+   "test_amb29a_planned_run_and_feasibility_denominators": {
+    "tests.test_owner_rulings_v7::test_amb29a_planned_run_and_feasibility_denominators": "passed"
+   },
+   "test_amb31_": {
+    "tests.test_owner_rulings_v7::test_amb31_both_arms_valid_is_eligible_for_the_paired_endpoint": "passed",
+    "tests.test_owner_rulings_v7::test_amb31_an_arm_failing_8_2_keeps_its_energy_as_diagnostic_only": "passed",
+    "tests.test_owner_rulings_v7::test_amb31_an_incomplete_arm": "passed",
+    "tests.test_owner_rulings_v7::test_amb31_invalid_energy_never_passes_or_fails_the_qs_check": "passed",
+    "tests.test_owner_rulings_v7::test_amb31_an_unconfirmed_recomputation_demotes_a_qs_result": "passed",
+    "tests.test_owner_rulings_v7::test_amb31_crediting_an_invalid_arm_changes_no_status_role_denominator_or_verdict": "passed"
+   },
+   "test_case9_denominator": {
+    "tests.test_amendment2::test_case9_denominator_and_exclusion_accounting": "passed"
+   },
+   "test_case10_records_are_preserved": {
+    "tests.test_amendment2::test_case10_records_are_preserved_and_accounting_written": "passed"
+   },
+   "test_campaign_execution_stays_blocked": {
+    "tests.test_owner_rulings_v8::test_campaign_execution_stays_blocked_without_a_separate_authorization": "passed"
+   },
+   "test_r5_1_": {
+    "tests.test_review_fixes_v9::test_r5_1_a_qs_screen_exception_never_stops_or_relabels_the_dynamic_runs": "passed",
+    "tests.test_review_fixes_v9::test_r5_1_a_reporting_or_classification_exception_keeps_the_executed_runs": "passed"
+   },
+   "test_r5_2_": {
+    "tests.test_review_fixes_v9::test_r5_2_a_missing_profile_takes_precedence_over_a_failed_screen": "passed"
+   },
+   "test_r5_6_": {
+    "tests.test_review_fixes_v9::test_r5_6_a_run_whose_evaluation_raised_names_its_kept_trace_files": "passed"
+   },
+   "test_r5_8_": {
+    "tests.test_review_fixes_v9::test_r5_8_a_failed_separate_recomputation_or_fold_is_recorded_and_fails_closed": "passed",
+    "tests.test_review_fixes_v9::test_r5_8_the_separate_script_exit_codes_distinguish_results_from_failures": "passed"
+   },
+   "test_r5_9_": {
+    "tests.test_review_fixes_v9::test_r5_9_an_energy_role_failure_leaves_one_marked_row_per_planned_run": "passed"
+   },
+   "test_review_status_v7": {
+    "tests.test_review_fixes_v9::test_review_status_v7_counts_the_major_findings_until_verified_and_blocks": "passed"
+   },
+   "test_i1_": {
+    "tests.test_owner_ruling_i1_v10::test_i1_every_required_nominal_s2_cell_passes": "passed",
+    "tests.test_owner_ruling_i1_v10::test_i1_one_nominal_cell_fails_while_the_others_pass": "passed",
+    "tests.test_owner_ruling_i1_v10::test_i1_one_nominal_cell_missing": "passed",
+    "tests.test_owner_ruling_i1_v10::test_i1_one_nominal_cell_invalid_or_unevaluable": "passed",
+    "tests.test_owner_ruling_i1_v10::test_i1_one_nominal_cell_not_applicable_and_qs_and_dynamic_feasibility_stay_distinct": "passed",
+    "tests.test_owner_ruling_i1_v10::test_i1_an_s1_pass_never_substitutes_for_missing_or_failed_nominal_s2_evidence": "passed",
+    "tests.test_owner_ruling_i1_v10::test_i1_no_branch_passes_by_omission_or_by_treating_not_applicable_as_pass": "passed",
+    "tests.test_owner_ruling_i1_v10::test_i1_is_in_the_reporting_layer": "passed"
+   },
+   "test_v6_1_": {
+    "tests.test_owner_ruling_i1_v10::test_v6_1_a_start_up_failure_of_the_separate_script_exits_4": "passed",
+    "tests.test_owner_ruling_i1_v10::test_v6_1_every_start_up_or_output_failure_is_in_the_ledger_with_run_ids[exit4]": "passed",
+    "tests.test_owner_ruling_i1_v10::test_v6_1_every_start_up_or_output_failure_is_in_the_ledger_with_run_ids[exit0_no_output]": "passed",
+    "tests.test_owner_ruling_i1_v10::test_v6_1_every_start_up_or_output_failure_is_in_the_ledger_with_run_ids[launch]": "passed",
+    "tests.test_owner_ruling_i1_v10::test_v6_1_every_start_up_or_output_failure_is_in_the_ledger_with_run_ids[partial_output]": "passed"
+   },
+   "test_open_owner_decisions_block": {
+    "tests.test_owner_ruling_i1_v10::test_open_owner_decisions_block_campaign_and_readiness": "passed"
+   },
+   "test_i2_": {
+    "tests.test_owner_decisions_v11::test_i2_a_missing_profile_outside_nom_is_counted_never_a_pass_and_never_a_paired_comparison": "passed"
+   },
+   "test_i3_": {
+    "tests.test_owner_decisions_v11::test_i3_every_energy_saving_percentage_rejects_a_non_positive_denominator": "passed"
+   },
+   "test_i4_": {
+    "tests.test_owner_decisions_v11::test_i4_both_recomputations_must_confirm_a_run_used_by_the_qs_check": "passed"
+   },
+   "test_i5_": {
+    "tests.test_owner_decisions_v11::test_i5_the_qs_energy_label_is_unchanged_everywhere": "passed"
+   },
+   "test_i6_": {
+    "tests.test_owner_decisions_v11::test_i6_an_exception_makes_a_not_applicable_pair_not_evaluable": "passed",
+    "tests.test_owner_decisions_v11::test_i6_an_exception_makes_a_profile_unavailable_pair_not_evaluable": "passed",
+    "tests.test_owner_decisions_v11::test_i6_an_eligible_pair_with_a_raised_run_is_not_evaluable": "passed"
+   },
+   "test_r7_3_": {
+    "tests.test_owner_decisions_v11::test_r7_3_every_error_row_has_a_stage": "passed"
+   },
+   "test_r7_4_": {
+    "tests.test_owner_decisions_v11::test_r7_4_every_unconfirmed_executed_run_has_a_ledger_row[exit4_complete_output]": "passed",
+    "tests.test_owner_decisions_v11::test_r7_4_every_unconfirmed_executed_run_has_a_ledger_row[not_recomputed_row]": "passed",
+    "tests.test_owner_decisions_v11::test_r7_4_every_unconfirmed_executed_run_has_a_ledger_row[unreadable_output]": "passed"
+   },
+   "test_r7_5_": {
+    "tests.test_owner_decisions_v11::test_r7_5_a_failed_output_write_is_recorded_and_the_other_outputs_are_written": "passed"
+   },
+   "test_r7_7_": {
+    "tests.test_owner_decisions_v11::test_r7_7_the_live_review_status_blocks_and_r7_2_rulings_are_separate_from_release_steps": "passed"
+   },
+   "test_rev8_candidate": {
+    "tests.test_owner_decisions_v11::test_rev8_candidate_states_every_ruling_and_is_pinned": "passed"
+   },
+   "test_campaign_mode_stays_blocked": {
+    "tests.test_owner_decisions_v11::test_campaign_mode_stays_blocked_without_issue_and_authorisation": "passed",
+    "tests.test_owner_decisions_v14::test_campaign_mode_stays_blocked_in_rev14": "passed",
+    "tests.test_owner_decisions_v15::test_campaign_mode_stays_blocked_in_rev15": "passed",
+    "tests.test_review_fixes_v12::test_campaign_mode_stays_blocked_in_rev12": "passed",
+    "tests.test_review_fixes_v13::test_campaign_mode_stays_blocked_in_rev13": "passed"
+   },
+   "test_r8_1_": {
+    "tests.test_review_fixes_v12::test_r8_1_a_measured_fail_never_survives_an_exception_and_stays_visible": "passed"
+   },
+   "test_r8_2_": {
+    "tests.test_review_fixes_v12::test_r8_2_the_accounting_adds_up_two_ways_after_an_override_in_the_executor": "passed",
+    "tests.test_review_fixes_v12::test_r8_2_applicability_of_rows_without_the_field_and_unknown_values": "passed"
+   },
+   "test_r8_3_": {
+    "tests.test_review_fixes_v12::test_r8_3_candidate_section_1_6_states_the_exception_precedence": "passed"
+   },
+   "test_r8_4_": {
+    "tests.test_review_fixes_v12::test_r8_4_an_exception_at_each_stage_makes_a_not_applicable_pair_not_evaluable[classify]": "passed",
+    "tests.test_review_fixes_v12::test_r8_4_an_exception_at_each_stage_makes_a_not_applicable_pair_not_evaluable[run_report]": "passed",
+    "tests.test_review_fixes_v12::test_r8_4_an_exception_at_each_stage_makes_a_not_applicable_pair_not_evaluable[condition_report]": "passed",
+    "tests.test_review_fixes_v12::test_r8_4_the_in_process_recomputation_gates_the_qs_check": "passed"
+   },
+   "test_r8_5_": {
+    "tests.test_review_fixes_v12::test_r8_5_every_failed_output_write_is_recorded_and_listed": "passed"
+   },
+   "test_r8_9_": {
+    "tests.test_review_fixes_v12::test_r8_9_a_not_applicable_pair_is_not_evaluable_after_the_separate_recomputation_fails": "passed"
+   },
+   "test_r8_10_": {
+    "tests.test_review_fixes_v12::test_r8_10_a_failed_screen_makes_the_check_not_applicable_even_if_the_other_screen_raised": "passed"
+   },
+   "test_review_status_v10": {
+    "tests.test_review_fixes_v12::test_review_status_v10_counts_the_r8_major_findings_until_verified_and_blocks": "passed"
+   },
+   "test_rev9_candidate": {
+    "tests.test_review_fixes_v12::test_rev9_candidate_fixes_the_r8_text_and_is_pinned": "passed"
+   },
+   "test_campaign_mode_stays_blocked_in_rev12": {
+    "tests.test_review_fixes_v12::test_campaign_mode_stays_blocked_in_rev12": "passed"
+   },
+   "test_r9_1_": {
+    "tests.test_review_fixes_v13::test_r9_1_an_exception_in_the_qs_screen_diagnosis_is_recorded_and_makes_the_pair_not_evaluable": "passed"
+   },
+   "test_r9_2_": {
+    "tests.test_review_fixes_v13::test_r9_2_a_fail_relabelled_after_a_recomputation_or_fold_failure_is_kept_and_counted": "passed",
+    "tests.test_review_fixes_v13::test_r9_2_a_qs_vs_dynamic_exception_keeps_the_arm_results_and_the_fail": "passed"
+   },
+   "test_r9_4_": {
+    "tests.test_review_fixes_v13::test_r9_4_a_qs_vs_dynamic_exception_on_a_not_applicable_pair_keeps_its_label_and_failed_arms": "passed"
+   },
+   "test_r9_5_": {
+    "tests.test_review_fixes_v13::test_r9_5_the_label_reading_is_marked_in_the_block_and_r9_3_the_condition_status_rows_are_split": "passed"
+   },
+   "test_r9_6_": {
+    "tests.test_review_fixes_v13::test_r9_6_after_a_recomputation_failure_only_pairs_with_an_executed_run_become_not_evaluable": "passed"
+   },
+   "test_review_status_v11": {
+    "tests.test_review_fixes_v13::test_review_status_v11_counts_r9_1_until_verified_and_blocks": "passed"
+   },
+   "test_rev10_candidate": {
+    "tests.test_review_fixes_v13::test_rev10_candidate_is_pinned": "passed"
+   },
+   "test_campaign_mode_stays_blocked_in_rev13": {
+    "tests.test_review_fixes_v13::test_campaign_mode_stays_blocked_in_rev13": "passed"
+   },
+   "test_i6b_": {
+    "tests.test_owner_decisions_v14::test_i6b_an_attempted_run_that_raised_is_condition_error_never_run_missing": "passed",
+    "tests.test_owner_decisions_v14::test_i6b_a_genuinely_absent_run_energy_stays_on_the_missing_run_path": "passed",
+    "tests.test_owner_decisions_v14::test_i6b_neither_label_counts_as_pass_and_an_exception_overrides_a_pass": "passed"
+   },
+   "test_after_a_recomputation_or_fold_failure_": {
+    "tests.test_owner_decisions_v14::test_after_a_recomputation_or_fold_failure_only_executed_na_pairs_are_relabelled[exit4]": "passed",
+    "tests.test_owner_decisions_v14::test_after_a_recomputation_or_fold_failure_only_executed_na_pairs_are_relabelled[launch]": "passed",
+    "tests.test_owner_decisions_v14::test_after_a_recomputation_or_fold_failure_only_executed_na_pairs_are_relabelled[unreadable]": "passed",
+    "tests.test_owner_decisions_v14::test_after_a_recomputation_or_fold_failure_only_executed_na_pairs_are_relabelled[fold_failed]": "passed"
+   },
+   "test_without_a_recomputation_failure_": {
+    "tests.test_owner_decisions_v14::test_without_a_recomputation_failure_no_na_pair_is_relabelled": "passed"
+   },
+   "test_r10_1_": {
+    "tests.test_owner_decisions_v14::test_r10_1_the_block_states_only_owner_decisions_as_rulings_and_labels_the_implementer_reading": "passed"
+   },
+   "test_r10_2_": {
+    "tests.test_owner_decisions_v14::test_r10_2_after_a_process_failure_a_pair_without_an_executed_run_keeps_its_label_in_the_executor": "passed",
+    "tests.test_owner_decisions_v14::test_r10_2_the_accounting_rejects_an_unknown_pair_status": "passed",
+    "tests.test_owner_decisions_v14::test_r10_2_r3_9_eligibility_stays_known_when_the_pair_evaluation_raised": "passed"
+   },
+   "test_r10_3_": {
+    "tests.test_owner_decisions_v14::test_r10_3_the_candidate_states_counts_and_lineage_accurately": "passed"
+   },
+   "test_r10_4_": {
+    "tests.test_owner_decisions_v14::test_r10_4_fold_failed_with_fewer_conditions_than_rows_does_not_raise": "passed"
+   },
+   "test_review_status_v13": {
+    "tests.test_owner_decisions_v14::test_review_status_v13_keeps_the_six_major_findings_open_pending_owner_acceptance": "passed"
+   },
+   "test_rev12_candidate": {
+    "tests.test_owner_decisions_v14::test_rev12_candidate_is_pinned_and_earlier_candidates_are_pinned": "passed"
+   },
+   "test_campaign_mode_stays_blocked_in_rev14": {
+    "tests.test_owner_decisions_v14::test_campaign_mode_stays_blocked_in_rev14": "passed"
+   },
+   "test_r11_1_": {
+    "tests.test_owner_decisions_v15::test_r11_1_the_owner_clauses_hold_only_the_owner_sentences_and_the_reading_has_three_labelled_parts": "passed"
+   },
+   "test_r11_2_": {
+    "tests.test_owner_decisions_v15::test_r11_2_r11_3_r11_5_the_candidate_quotes_the_owner_in_full_and_states_the_effects": "passed"
+   },
+   "test_r11_4_": {
+    "tests.test_owner_decisions_v15::test_r11_4_a_raised_run_with_a_failing_other_arm_is_condition_error_with_the_fail_kept": "passed"
+   },
+   "test_r11_6_": {
+    "tests.test_owner_decisions_v15::test_r11_6_the_fold_rejects_a_length_mismatch": "passed"
+   },
+   "test_r11_7_": {
+    "tests.test_owner_decisions_v15::test_r11_7_an_exception_overrides_a_forced_pass": "passed",
+    "tests.test_owner_decisions_v15::test_r11_7_an_attempted_run_that_raised_is_condition_error_for_m1_and_m2[M1]": "passed",
+    "tests.test_owner_decisions_v15::test_r11_7_an_attempted_run_that_raised_is_condition_error_for_m1_and_m2[M2]": "passed",
+    "tests.test_owner_decisions_v15::test_r11_7_an_attempted_run_that_raised_beside_an_unconfirmed_arm_is_condition_error": "passed",
+    "tests.test_owner_decisions_v15::test_r11_7_a_fold_exception_keeps_the_label_of_a_pair_without_an_executed_run": "passed"
+   },
+   "test_r11_8_": {
+    "tests.test_owner_decisions_v15::test_r11_8_the_reason_cites_i6b_only_for_a_qs_eligible_pair": "passed"
+   },
+   "test_review_status_v14": {
+    "tests.test_owner_decisions_v15::test_review_status_v14_counts_r11_1_and_records_no_owner_acceptance": "passed"
+   },
+   "test_rev13_candidate": {
+    "tests.test_owner_decisions_v15::test_rev13_candidate_matches_the_code": "passed"
+   },
+   "test_campaign_mode_stays_blocked_in_rev15": {
+    "tests.test_owner_decisions_v15::test_campaign_mode_stays_blocked_in_rev15": "passed"
+   }
+  },
+  "every_prefix_found": true,
+  "all_passed": true
+ },
+ "legacy_numbers": {
+  "protocol_line_12": "the thesis's 12.5 %, 15.3 %, +/- 2.1 %, +/- 2.8 % and every other legacy number are not targets",
+  "also_scanned": [
+   "10.3",
+   "5.3"
+  ],
+  "hits_in_code": [
+   {
+    "file": "code/r4h3/campaign.py",
+    "line": 823,
+    "text": "\"recompute_protocol_ok\", \"credited\")})                # protocol 10.3 (CR-A11)"
+   },
+   {
+    "file": "code/r4h3/closedloop.py",
+    "line": 1,
+    "text": "\"\"\"Component C: fixed-LQR closed loop with 1 ms traces (protocol v1 2.1, 4, 10.3)."
+   },
+   {
+    "file": "code/r4h3/closedloop.py",
+    "line": 24,
+    "text": "TRACE_DT = 1e-3                    # every trace is sampled at 1 ms (protocol 10.3; change VC-02)"
+   },
+   {
+    "file": "code/r4h3/evaluator.py",
+    "line": 152,
+    "text": "# spec[\"dt_s\"] is the trace sample step (1 ms for every run, protocol 10.3); refuse any other spacing so that"
+   },
+   {
+    "file": "code/r4h3/frozen.py",
+    "line": 1,
+    "text": "\"\"\"Frozen inputs of the H3 pilot and their hash checks (protocol v1 sections 2.1, 2.3, 10.1)."
+   },
+   {
+    "file": "code/r4h3/frozen.py",
+    "line": 40,
+    "text": "R3_LIB: \"c2403adc2c7ef7a7ecc662f0dcfd3c107a43204ee73c28bd46f782b73cba1c97\",     # protocol 2.1"
+   },
+   {
+    "file": "code/r4h3/planner.py",
+    "line": 63,
+    "text": "\"\"\"Time-domain knots: segment k departs at ks_k h, follows the DP speeds, then rests (protocol 5.3).\"\"\""
+   },
+   {
+    "file": "code/r4h3/traces.py",
+    "line": 1,
+    "text": "\"\"\"Component F: raw-trace schema r4h3-trace-v1, writer and reader (protocol v1 10.3)."
+   },
+   {
+    "file": "code/r4h3/validator.py",
+    "line": 72,
+    "text": "# rest intervals of the task: at rest throughout (protocol 5.3, 9a)"
+   },
+   {
+    "file": "code/tests/test_frozen_and_task.py",
+    "line": 1,
+    "text": "\"\"\"Frozen inputs, nominal parameters and the sampled task (protocol 2.1, 2.2, 2.4, 3).\"\"\""
+   },
+   {
+    "file": "code/tests/test_regressions_v2.py",
+    "line": 87,
+    "text": "# ---- VC-02: 0.5 ms runs, traced every second step (protocol 10.3)"
+   },
+   {
+    "file": "code/tests/test_validator.py",
+    "line": 77,
+    "text": "# protocol 5.2-5.3: t_k <= T_k, departure at the reference time, then rest until the next departure"
+   }
+  ],
+  "acceptance_constants": {
+   "QS_DYN_MAX_PCT": 1.0,
+   "GRID_MAX_PP": 0.2,
+   "OPTIMALITY_PP": 0.2,
+   "TIMESTEP_MAX_PP": 0.01,
+   "H3_SEN_DRAWS": 32,
+   "H3_SEN_MIN": 29
+  },
+  "acceptance_constants_equal_protocol": true
+ },
+ "fail_closed": {
+  "campaign_authorization_exists": false,
+  "issued_amendment_2_exists": false,
+  "campaign_blockers": [
+   "no issued amendment 2 at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+   "protocol 10.1 gate record: pre-run gate record logs/pre_run_hashes.txt is missing",
+   "no campaign authorisation record campaign_authorization.json (protocol approval is not campaign authorisation)",
+   "campaign must run once, from the released copy in R4_20261028_campaign (AMB-15), not from attempt12_final_owner_decisions (protocol 10.1)",
+   "code review: 0 critical and 7 major findings not resolved or accepted by the owner",
+   "code review not yet performed or its closure not yet accepted by the owner: independent read-only AI review of rev15 (fixes of R11-1 to R11-9, candidate rev13) on release attempt 12, and the owner's acceptance of the closure of the rev7 to rev15 review (an AI-agent review is not a human independent audit)"
+  ],
+  "run_campaign_called": false
+ },
+ "all_checks_true": true,
+ "legacy_hits_need_inspection": 12
+}

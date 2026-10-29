@@ -1,0 +1,30 @@
+﻿{
+    "label":  "diag_maxstep",
+    "time":  "2026-10-24T00:37:57",
+    "exit_code":  0,
+    "project_root":  "D:\\EURÉKA 2026 - KT",
+    "letter":  "Y",
+    "cleanup":  {
+                    "alias_created":  true,
+                    "alias_removed":  true,
+                    "alias_still_mapped":  false,
+                    "other_mappings_unchanged":  true,
+                    "env_restored":  true
+                },
+    "steps":  [
+                  {
+                      "name":  "version",
+                      "command":  "omc --version",
+                      "exit_code":  0,
+                      "seconds":  0.05,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261024-003750-diag_maxstep-version.out.txt"
+                  },
+                  {
+                      "name":  "diag_dist_maxstep",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\diag_dist_maxstep.mos",
+                      "exit_code":  0,
+                      "seconds":  6.11,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261024-003750-diag_maxstep-diag_dist_maxstep.out.txt"
+                  }
+              ]
+}

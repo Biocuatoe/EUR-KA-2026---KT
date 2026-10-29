@@ -1,0 +1,38 @@
+{
+  "generator": "verification/scripts/generate_controller_models.py",
+  "inputs": {
+    "verification/references/controller_gains.json": "29c4df2048aaea177f0e7876af4138b7ac1a917665dcc54f536400cda495a310",
+    "configs/cycles/profiles.yaml": "90a496a36c618e216693a3d819b84739f10e6c35167c23a91b63478ef28be0a6"
+  },
+  "outputs": {
+    "ControllerProfiles.mo": "db3f4c1fda4bebcc6ca7456e3604096bda3df59b1cfc3701175fddb96a3547b3",
+    "Cases.mo": "b27ad368620219b96c0ab7eab5e141bcafbf52ff45196b57a02037d1e8d9374d",
+    "ClosedLoop.mo": "b9c8ce3f609c25b02a6728fa00323ea4601e1c68c3f75f3cd293947bed9c7be2",
+    "SampledLqr.mo": "7e4d78c970fc1ba46fa6681d6d53302345934e5dd247a7a5070be2afcd9992d9",
+    "package.mo": "96a7506d23d03b9fe7cb20a8245d24ed43021800b1fdf9adf8e5426bd2396b3e",
+    "package.order": "4c50693b7997e38b5f22bd17e453e9711d2a93cb94a13ac1300fd88745681a01",
+    "Tests/ControllerUnit.mo": "5349098a1ab551fc42fe39e8761a3b0bee9dc29bd2c4df140693ee611116608b",
+    "Tests/ControllerUnitStepOriginal.mo": "6d2000260d521e2696a4c3af4425295726d194d81021e8f37cbb7f1f2a070cad",
+    "Tests/ControllerStepSemantics.mo": "71cf163a09aeb7f45dc1c453596d466e29850dcb7bfedaa352439a3838e12280"
+  },
+  "cases": [
+    "PTUNE_fixed_soh080",
+    "PTUNE_scheduled_soh080",
+    "S1_fixed_soh100",
+    "S1_scheduled_soh100",
+    "S1_fixed_soh090",
+    "S1_scheduled_soh090",
+    "S1_fixed_soh080",
+    "S1_scheduled_soh080",
+    "S1_fixed_soh070",
+    "S1_scheduled_soh070",
+    "S2_fixed_soh100",
+    "S2_scheduled_soh100",
+    "S2_fixed_soh090",
+    "S2_scheduled_soh090",
+    "S2_fixed_soh080",
+    "S2_scheduled_soh080",
+    "S2_fixed_soh070",
+    "S2_scheduled_soh070"
+  ]
+}

@@ -1,0 +1,7 @@
+setCommandLineOptions("--unitChecking"); getErrorString();
+loadFile("../modelica/EurekaPlant/package.mo"); getErrorString();
+loadFile("../modelica/EurekaController/package.mo"); getErrorString();
+mkdir("cases_ctl"); getErrorString();
+mkdir("cases_ctl/U_unit"); cd("cases_ctl/U_unit");
+simulate(EurekaController.Tests.ControllerUnit, startTime = 0, stopTime = 10.0, numberOfIntervals = 1000, tolerance = 1e-10, method = "dassl", outputFormat = "csv", fileNamePrefix = "U_unit", simflags = ""); getErrorString();
+cd("../..");

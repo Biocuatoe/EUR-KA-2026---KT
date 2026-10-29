@@ -1,0 +1,39 @@
+{
+ "written": "2026-10-28T11:44:25+0700",
+ "snapshot": {
+  "manifest": "C:\\Users\\HLC\\EUREKA_EVIDENCE\\GATE1_20261028\\MANIFEST.sha256.csv",
+  "manifest_sha256": "A93EB44FC128DAC30E754C6EA996D67AB381B78A708A999C8BE1DE7600D4F279",
+  "manifest_sha256_expected": "A93EB44FC128DAC30E754C6EA996D67AB381B78A708A999C8BE1DE7600D4F279",
+  "manifest_sha256_matches": true,
+  "rows": 570,
+  "rows_all_checks_pass": 570
+ },
+ "preflight": {
+  "manifest_rows": 29,
+  "manifest_rows_verified": 29,
+  "files_now": 30,
+  "files_at_start": 30,
+  "added": [],
+  "removed": [],
+  "changed": []
+ },
+ "frozen": {
+  "protocol_v1": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+  "amendment_1_issued": "7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2",
+  "amendment_1_approval": "03f835e9311410095e4447840ecb2b02d95c50279527df5fdf2f6d334e15eecd",
+  "campaign_authorization_exists": false,
+  "issued_amendment_2_exists": false,
+  "amendment_2_approval_exists": false,
+  "campaign_outputs_dir_exists": false
+ },
+ "project": {
+  "before": 25037,
+  "after": 25111,
+  "added": 74,
+  "removed": 0,
+  "changed": 0,
+  "added_outside_attempt3": [],
+  "removed_list": [],
+  "changed_list": []
+ }
+}

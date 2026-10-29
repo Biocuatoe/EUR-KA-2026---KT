@@ -1,0 +1,9 @@
+setCommandLineOptions("--unitChecking"); getErrorString();
+loadFile("../modelica/EurekaPlant/package.mo"); getErrorString();
+loadFile("../modelica/EurekaController/package.mo"); getErrorString();
+checkModel(EurekaController.SampledLqr); getErrorString();
+checkModel(EurekaController.ClosedLoop); getErrorString();
+checkModel(EurekaController.Cases.S1_fixed_soh080); getErrorString();
+checkModel(EurekaController.Cases.S2_scheduled_soh070); getErrorString();
+checkModel(EurekaController.Cases.PTUNE_scheduled_soh080); getErrorString();
+checkModel(EurekaController.Tests.ControllerUnit); getErrorString();

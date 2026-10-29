@@ -1,0 +1,7 @@
+﻿PASS test_const_model_equals_r1
+PASS test_inverse_maps
+PASS test_quasistatic_matches_r1_exact_tracking
+PASS test_band_dp_zero_band_is_reference
+PASS test_eco_tables_consistency
+PASS test_dynamic_closure_copper
+EXIT=0  elapsed_s=94.8579872

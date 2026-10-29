@@ -1,0 +1,3 @@
+﻿{'motor': 'M0', 'dyn_motor_loss_Wh': np.float64(6.101), 'qs_motor_loss_Wh': 6.0949, 'dyn_loss_standstill_Wh': 0.0, 'dyn_loss_moving_Wh': 6.1011, 'standstill_time_s': 58.07, 'mean_abs_T_standstill_Nm': 15.3002, 'rms_T_dyn_moving_Nm': 19.1787}
+{'motor': 'M2', 'dyn_motor_loss_Wh': np.float64(7.2649), 'qs_motor_loss_Wh': 5.3667, 'dyn_loss_standstill_Wh': 1.5792, 'dyn_loss_moving_Wh': 5.6858, 'standstill_time_s': 58.07, 'mean_abs_T_standstill_Nm': 15.3002, 'rms_T_dyn_moving_Nm': 19.1787}
+EXIT=0 elapsed_s=192.288964

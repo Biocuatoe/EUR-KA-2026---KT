@@ -1,0 +1,54 @@
+{
+ "F0": {
+  "cand": 17,
+  "sigma": 0.2657544401542884,
+  "c": 0.04403774114749148,
+  "qT": 0.5687417012620953,
+  "gv": 0.0,
+  "gu": 0.0,
+  "mean_Wh_ref_km": 46.069360868608626,
+  "mean_rmse": 0.0173217269266255,
+  "n_feasible": 21,
+  "n_evaluated": 24,
+  "rule": "min mean Wh/ref-km among feasible"
+ },
+ "S0": {
+  "cand": 22,
+  "sigma": 0.3183403116460536,
+  "c": 0.04110031000268749,
+  "qT": 1.0,
+  "gv": 9.265488760822667,
+  "gu": 1.9890227079024412,
+  "mean_Wh_ref_km": 46.07476511155215,
+  "mean_rmse": 0.019751415946111888,
+  "n_feasible": 23,
+  "n_evaluated": 24,
+  "rule": "min mean Wh/ref-km among feasible"
+ },
+ "F1": {
+  "cand": 17,
+  "sigma": 0.2657544401542884,
+  "c": 0.04403774114749148,
+  "qT": 0.5687417012620953,
+  "gv": 0.0,
+  "gu": 0.0,
+  "mean_Wh_ref_km": 46.069360868608626,
+  "mean_rmse": 0.0173217269266255,
+  "n_feasible": 21,
+  "n_evaluated": 24,
+  "rule": "min mean Wh/ref-km among feasible"
+ },
+ "S1": {
+  "cand": 22,
+  "sigma": 0.3183403116460536,
+  "c": 0.04110031000268749,
+  "qT": 1.0,
+  "gv": 9.265488760822667,
+  "gu": 1.9890227079024412,
+  "mean_Wh_ref_km": 46.07476511155215,
+  "mean_rmse": 0.019751415946111888,
+  "n_feasible": 23,
+  "n_evaluated": 24,
+  "rule": "min mean Wh/ref-km among feasible"
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "record": "independent pre-release gate record (written by the reproducibility audit; not the protocol 10.1 gate)",
+ "status": "NOT RELEASED",
+ "written": "2026-10-28T07:31:58+0700",
+ "protocol": {
+  "path": "../R4_20261028_preflight/03_R4_protocol_v1.md",
+  "sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+  "equals_freeze_record": true
+ },
+ "amendment_candidate": {
+  "path": "../R4_20261028_pilot/03_protocol_v1_amendment_1_rev2_CANDIDATE.md",
+  "sha256": "42a7a9f51afae7c059373b9048ed9b09c6b87c975705e54c485f2f6bfc133369",
+  "status": "READY FOR OWNER APPROVAL (not approved)",
+  "reader_errors": [],
+  "open_items": []
+ },
+ "issued_amendment_present": false,
+ "approval_record_present": false,
+ "readiness_gate": {
+  "path": "../R4_20261028_pilot/logs/readiness_gate_v4.json",
+  "sha256": "057dfa044cdf235876040a6affd7b0782f3983d87a29f8251493b8e4dafa299e",
+  "code_unchanged_since": true,
+  "junit": {
+   "tests": 179,
+   "failures": 0,
+   "errors": 0,
+   "skipped": 0
+  }
+ },
+ "campaign_config": {
+  "path": "config/campaign_config_v2_DRAFT.json",
+  "sha256": "823f4ce2fd7307457d8a84ea3d24075cf5f0c56f2a7cc0ef3c793b5ac6be72e3",
+  "current": true,
+  "schedule_sha256_matches": true
+ },
+ "sensitivity": {
+  "table": "config/sensitivity_draws_v1.csv",
+  "table_sha256": "d1e42f31c5feb69c139b78fcdeb8d066be4aec8748708c539a210d24c008c703",
+  "regenerates_identically": true
+ },
+ "schedule": {
+  "passed": true,
+  "n_runs": 170,
+  "counts": {
+   "NOM": 12,
+   "P3": 12,
+   "INS": 12,
+   "CNV": 6,
+   "SEN": 128
+  },
+  "n_planner_jobs": 82,
+  "smoke_runs_excluded": [
+   "H3-slice-S1-M0-L-R1-P1-B0-dt1ms",
+   "H3-slice-S1-M0-L-R1-P1-B3-dt1ms"
+  ]
+ },
+ "dry_run": {
+  "path": "../R4_20261028_pilot/outputs/dry_run_20261028_073157",
+  "dry_run_json_sha256": "44db3ece62c4af3d3a3487f99921b3207ea3c790c84f97344f33c19374b09550"
+ },
+ "blockers_readiness_mode": [
+  "no issued amendment at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_1.md (the draft is not approved)"
+ ],
+ "blockers_campaign_mode_from_pilot": [
+  "no issued amendment at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_1.md (the draft is not approved)",
+  "protocol 10.1 gate record: code or config changed since the gate record: [('code/build_cycle_inputs.py', '47e3562c3ba5937442e1ed4a388478da824e4563c03fceee3443ddd818777a76'), ('code/r4h3/__init__.py', '2b341a989b866e7d29dccaa7123cfd771612de8c5f69fcb1edab670379dfdae3'), ('code/r4h3/__init__.py', 'f35b90bfa253d517f563a204bf69b58f667e4db7db50e5334bb039a68bd07163'), ('code/r4h3/campaign.py', '6ab724025e28f780fed8405055e3dc435b8a89f34f1f897ff823b2558023a245')]",
+  "campaign must run once, from the released copy in R4_20261028_campaign (AMB-15), not from R4_20261028_pilot (protocol 10.1)"
+ ],
+ "official_outputs_present": false
+}

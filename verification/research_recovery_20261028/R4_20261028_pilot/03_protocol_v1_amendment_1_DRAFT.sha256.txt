@@ -1,0 +1,4 @@
+SHA-256 of 03_protocol_v1_amendment_1_DRAFT.md (rev1): f4ffc4b752e93dc3eedd6efc8b1bb03f490bc12d65ade36ce17cb2b3e84cb69e
+Recorded 2026-10-28 06:19:40 +0700 as a DRAFT integrity identifier only.
+Status: DRAFT - NOT APPROVED FOR CAMPAIGN EXECUTION. Not frozen, not issued, not reviewed.
+Rev0 (archived): archive/rev0_20261028_0135/03_protocol_v1_amendment_1_DRAFT.md faf25d80391d15ffc6dc54167b25bff0f931b61fd85e863a662f7902556d5f7f

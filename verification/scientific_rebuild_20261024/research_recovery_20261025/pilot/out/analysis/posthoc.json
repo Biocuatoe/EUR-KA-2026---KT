@@ -1,0 +1,262 @@
+{
+ "rmse_attribution": {
+  "scheduled_selected": {
+   "rmse_T1_soh1.0": 0.023218948294786476,
+   "rmse_T2_soh0.8": 0.016333229734956274,
+   "E_T1": 50.75747444325076,
+   "E_T2": 51.33731214798514
+  },
+  "fixed_selected": {
+   "rmse_T1": 0.022049416938172053,
+   "rmse_T2": 0.022052200675849457,
+   "E_T1": 50.75265942720197,
+   "E_T2": 51.34405148730741
+  },
+  "n_fixed_candidates": 24,
+  "fixed_candidates_with_rmse_le_scheduled_soh0.8_at_both_soh": [],
+  "fixed_rmse_T1_equals_T2_max_abs_diff": 3.3639965774656666e-06
+ },
+ "actual_km_contrasts_max_abs_pct": 0.02280989700203332,
+ "actual_km_contrasts": [
+  {
+   "cycle": "S2",
+   "scen": "E1",
+   "contrast": "S0_vs_F0",
+   "dE_pct_actual_km": 0.003164774448362197
+  },
+  {
+   "cycle": "S2",
+   "scen": "E1",
+   "contrast": "S1_vs_F1",
+   "dE_pct_actual_km": 0.003164774448362197
+  },
+  {
+   "cycle": "S2",
+   "scen": "E1",
+   "contrast": "F1_vs_F0",
+   "dE_pct_actual_km": 0.0
+  },
+  {
+   "cycle": "S2",
+   "scen": "E1",
+   "contrast": "S1_vs_S0",
+   "dE_pct_actual_km": 0.0
+  },
+  {
+   "cycle": "S2",
+   "scen": "E2",
+   "contrast": "S0_vs_F0",
+   "dE_pct_actual_km": -0.018099442975854488
+  },
+  {
+   "cycle": "S2",
+   "scen": "E2",
+   "contrast": "S1_vs_F1",
+   "dE_pct_actual_km": -0.018099442975854488
+  },
+  {
+   "cycle": "S2",
+   "scen": "E2",
+   "contrast": "F1_vs_F0",
+   "dE_pct_actual_km": 0.0
+  },
+  {
+   "cycle": "S2",
+   "scen": "E2",
+   "contrast": "S1_vs_S0",
+   "dE_pct_actual_km": 0.0
+  },
+  {
+   "cycle": "S2",
+   "scen": "E2b",
+   "contrast": "S0_vs_F0",
+   "dE_pct_actual_km": -0.01721146128982756
+  },
+  {
+   "cycle": "S2",
+   "scen": "E2b",
+   "contrast": "S1_vs_F1",
+   "dE_pct_actual_km": -0.01721146128982756
+  },
+  {
+   "cycle": "S2",
+   "scen": "E2b",
+   "contrast": "F1_vs_F0",
+   "dE_pct_actual_km": 0.0
+  },
+  {
+   "cycle": "S2",
+   "scen": "E2b",
+   "contrast": "S1_vs_S0",
+   "dE_pct_actual_km": 0.0
+  },
+  {
+   "cycle": "S2",
+   "scen": "E3",
+   "contrast": "S0_vs_F0",
+   "dE_pct_actual_km": 0.0005175389269339763
+  },
+  {
+   "cycle": "S2",
+   "scen": "E3",
+   "contrast": "S1_vs_F1",
+   "dE_pct_actual_km": 0.0005175389269339763
+  },
+  {
+   "cycle": "S2",
+   "scen": "E3",
+   "contrast": "F1_vs_F0",
+   "dE_pct_actual_km": 0.0
+  },
+  {
+   "cycle": "S2",
+   "scen": "E3",
+   "contrast": "S1_vs_S0",
+   "dE_pct_actual_km": 0.0
+  },
+  {
+   "cycle": "S2",
+   "scen": "E4",
+   "contrast": "S0_vs_F0",
+   "dE_pct_actual_km": 0.008782081815706356
+  },
+  {
+   "cycle": "S2",
+   "scen": "E4",
+   "contrast": "S1_vs_F1",
+   "dE_pct_actual_km": 0.008782081815706356
+  },
+  {
+   "cycle": "S2",
+   "scen": "E4",
+   "contrast": "F1_vs_F0",
+   "dE_pct_actual_km": 0.0
+  },
+  {
+   "cycle": "S2",
+   "scen": "E4",
+   "contrast": "S1_vs_S0",
+   "dE_pct_actual_km": 0.0
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E1",
+   "contrast": "S0_vs_F0",
+   "dE_pct_actual_km": 0.013647137677470306
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E1",
+   "contrast": "S1_vs_F1",
+   "dE_pct_actual_km": 0.013315069270070144
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E1",
+   "contrast": "F1_vs_F0",
+   "dE_pct_actual_km": -0.0022078155489606327
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E1",
+   "contrast": "S1_vs_S0",
+   "dE_pct_actual_km": -0.0025398313142542613
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E2",
+   "contrast": "S0_vs_F0",
+   "dE_pct_actual_km": -0.014121041929063593
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E2",
+   "contrast": "S1_vs_F1",
+   "dE_pct_actual_km": -0.013507328975554607
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E2",
+   "contrast": "F1_vs_F0",
+   "dE_pct_actual_km": -0.00312253794382646
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E2",
+   "contrast": "S1_vs_S0",
+   "dE_pct_actual_km": -0.0025087574815408813
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E2b",
+   "contrast": "S0_vs_F0",
+   "dE_pct_actual_km": -0.013562655455877174
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E2b",
+   "contrast": "S1_vs_F1",
+   "dE_pct_actual_km": -0.013030052711147955
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E2b",
+   "contrast": "F1_vs_F0",
+   "dE_pct_actual_km": -0.0024645782831530186
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E2b",
+   "contrast": "S1_vs_S0",
+   "dE_pct_actual_km": -0.0019319164217423742
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E3",
+   "contrast": "S0_vs_F0",
+   "dE_pct_actual_km": -0.022050007976889503
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E3",
+   "contrast": "S1_vs_F1",
+   "dE_pct_actual_km": -0.020076962928974103
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E3",
+   "contrast": "F1_vs_F0",
+   "dE_pct_actual_km": -0.00893068772970412
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E3",
+   "contrast": "S1_vs_S0",
+   "dE_pct_actual_km": -0.006957383774601209
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E4",
+   "contrast": "S0_vs_F0",
+   "dE_pct_actual_km": -0.02280989700203332
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E4",
+   "contrast": "S1_vs_F1",
+   "dE_pct_actual_km": -0.020989002880599166
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E4",
+   "contrast": "F1_vs_F0",
+   "dE_pct_actual_km": -0.009942633417003601
+  },
+  {
+   "cycle": "UDDS",
+   "scen": "E4",
+   "contrast": "S1_vs_S0",
+   "dE_pct_actual_km": -0.008121504942867624
+  }
+ ]
+}

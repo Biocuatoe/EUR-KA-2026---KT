@@ -1,0 +1,45 @@
+r4h3.checks <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev12_attempt9_20261028_2308\code\r4h3\checks.py
+r4h3.campaign <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev12_attempt9_20261028_2308\code\r4h3\campaign.py
+FF                                                                       [100%]
+================================== FAILURES ===================================
+_ test_r10_2_after_a_process_failure_a_pair_without_an_executed_run_keeps_its_label_in_the_executor _
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-309/test_r10_2_after_a_process_fai0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002ADEF2A5CD0>
+
+    def test_r10_2_after_a_process_failure_a_pair_without_an_executed_run_keeps_its_label_in_the_executor(tmp_path,
+                                                                                                             monkeypatch):
+        real_design, real_run = campaign.plan_design, subprocess.run
+    
+        def no_profiles(*a, **k):
+            d = real_design(*a, **k)
+            return dict(d, baseline_ok=False, eco_ok=False, val_e=None,
+                        eco={"status": "unavailable", "rows": d["eco"]["rows"], "t": None, "v": None})
+    
+        def fake(args, **k):
+            res = real_run(args, **k)
+            return subprocess.CompletedProcess(args, 4, res.stdout, "RuntimeError: injected crash")
+        task = _task()
+        monkeypatch.setattr(campaign, "plan_design", no_profiles)
+        monkeypatch.setattr(campaign.subprocess, "run", fake)
+        rows = campaign.execute_schedule([_cond("R102")], lambda n: task, tmp_path / "R102")
+        monkeypatch.undo()
+>       assert rows[0]["qs_vs_dyn_pair_status"] == NA_PROFILE and rows[0]["status"] in checks.PROFILE_FAILURE_STATUSES
+E       AssertionError: assert ('NOT_EVALUABL...NDITION_ERROR' == 'NOT_APPLICAB...E_UNAVAILABLE'
+E         
+E         - NOT_APPLICABLE_PROFILE_UNAVAILABLE
+E         + NOT_EVALUABLE_CONDITION_ERROR)
+
+code\tests\test_owner_decisions_v14.py:191: AssertionError
+__________ test_r10_2_the_accounting_rejects_an_unknown_pair_status ___________
+
+    def test_r10_2_the_accounting_rejects_an_unknown_pair_status():
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+code\tests\test_owner_decisions_v14.py:195: Failed
+=========================== short test summary info ===========================
+FAILED code\tests\test_owner_decisions_v14.py::test_r10_2_after_a_process_failure_a_pair_without_an_executed_run_keeps_its_label_in_the_executor
+FAILED code\tests\test_owner_decisions_v14.py::test_r10_2_the_accounting_rejects_an_unknown_pair_status
+2 failed, 14 deselected in 0.96s

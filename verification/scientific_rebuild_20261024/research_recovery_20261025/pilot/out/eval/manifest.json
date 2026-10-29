@@ -1,0 +1,56 @@
+{
+ "stage": "eval",
+ "context": {
+  "utc": "2026-10-25T01:21:19+00:00",
+  "git": {
+   "commit": "f264eca354d67dcdf786063ca36ae246466217d2",
+   "dirty": true
+  },
+  "software": {
+   "python": "3.14.7",
+   "executable": "D:\\EUR\u00c9KA 2026 - KT\\.venv\\Scripts\\python.exe",
+   "numpy": "2.5.4",
+   "scipy": "1.18.1",
+   "pandas": "3.1.0",
+   "matplotlib": "3.11.2",
+   "control": "0.10.2",
+   "pint": "0.26.2",
+   "pydantic": "2.14.1",
+   "pyyaml": "6.0.3",
+   "statsmodels": "0.15.0",
+   "sympy": "1.14.0"
+  },
+  "machine": "DESKTOP-QF465MB"
+ },
+ "seed": 20261025,
+ "n_candidates": 24,
+ "protocol_sha256": "ebebc1570704b26f01290e34f6206c8980c41445e7d6f322c585b34fbd112b5a",
+ "protocol_sha256_at_freeze": "ebebc1570704b26f01290e34f6206c8980c41445e7d6f322c585b34fbd112b5a",
+ "file_sha256": {
+  "verification\\scientific_rebuild_20261024\\research_recovery_20261025\\pilot_protocol.md": "ebebc1570704b26f01290e34f6206c8980c41445e7d6f322c585b34fbd112b5a",
+  "verification\\scientific_rebuild_20261024\\research_recovery_20261025\\pilot\\sim.py": "8cb53042611659ffe30a61f91751f4f09b7b24dbe6780354bb6110c3a30b8458",
+  "verification\\scientific_rebuild_20261024\\research_recovery_20261025\\pilot\\run_pilot.py": "d7a074c675093b0809bf388412c5e484c476f0735554f11d59be0ae04c9b4ab0",
+  "verification\\scientific_rebuild_20261024\\src\\rebuild\\__init__.py": "10958da31879aa50d31e7cdf38b3e8fc70ab517481813dd323c90eddf3bb5afc",
+  "verification\\scientific_rebuild_20261024\\src\\rebuild\\analyze.py": "a9175bc76340adb1d799f637c65392d8c6c734b14b18a972e223a675c9bdc697",
+  "verification\\scientific_rebuild_20261024\\src\\rebuild\\model.py": "2050111b0860d1552c180b25ffbfbdb16c098c0e262632be6ecdb95d876003de",
+  "verification\\scientific_rebuild_20261024\\src\\rebuild\\precheck.py": "3c92d36360205080067f15d42b6261db0821555030eb9bfeab90e9145a2f843c",
+  "verification\\scientific_rebuild_20261024\\src\\rebuild\\registry.py": "b2daeca880cdd4ab568a6d5b89ddff334f07f706f85492660ce16f1336e08fb6",
+  "verification\\scientific_rebuild_20261024\\src\\rebuild\\report_tables.py": "51da6e75955d97c4fe1427f9bd42ebd933815038e6b4d64971abd03956dd7406",
+  "verification\\scientific_rebuild_20261024\\src\\rebuild\\run.py": "7336a295f407134f6d7aa38ba1749edcb3aea9cdbddf7114c2f8a7bbdb185001",
+  "src\\eureka\\__init__.py": "8c647f0f88b6ce07067a6f09b2448516900cfcc6640de5feaf3b8622b05ecf0e",
+  "src\\eureka\\controllers.py": "2d57b757407dac725891219aa93102ce8be20294a97723fb35ea862ac76d8660",
+  "src\\eureka\\cycles.py": "f09ed877efe3aece1d4990c79d55c4902999758ef67ab2603591703ae49b8cec",
+  "src\\eureka\\evidence.py": "a5b63b286cbe3fec31d0b3936cbcc6415d59875b2a35cc66086a616c1e29ea0b",
+  "src\\eureka\\experiment.py": "b1ef5d0278bb8da528cb950e9ca5ac7dcd1db8cebc81b8e477ce3e93a13a3299",
+  "src\\eureka\\lineage.py": "9ea4e2546e04dc150ce30a1001ce998cf8223e46ed105d0288bd226869b4c044",
+  "src\\eureka\\metrics.py": "0ed37076d1198f9a8056e3cd30b1b288996c571772fa5986bedbe7df9a21ce87",
+  "src\\eureka\\params.py": "192ad65933b2786910104f3755601938758a161f603e2cce02d9eaa74907369e",
+  "src\\eureka\\plant.py": "e5701bce018f37bebba525dfc58d0e347c63cc1a5b385badf74fe6d0ea772907",
+  "src\\eureka\\simulate.py": "dccc267c09af403a22fac9042e53bf0e7dc0502d659875d6b1f17a8efb0003c2",
+  "configs\\parameters.yaml": "0efe2d1a413a51d425043691c857807b021d62908935adfda9b757de6f9f374f"
+ },
+ "n_runs": 61,
+ "runtime_s": 2109.8,
+ "sched_equals_fixed_at_soh1_maxabs": 0.0,
+ "n_invalid": 0
+}

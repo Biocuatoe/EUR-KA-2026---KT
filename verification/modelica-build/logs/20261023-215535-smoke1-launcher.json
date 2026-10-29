@@ -1,0 +1,30 @@
+﻿{
+    "label":  "smoke1",
+    "time":  "2026-10-23T21:55:37",
+    "exit_code":  1,
+    "project_root":  "D:\\EURÉKA 2026 - KT",
+    "letter":  "Y",
+    "cleanup":  {
+                    "alias_created":  true,
+                    "alias_removed":  true,
+                    "alias_still_mapped":  false,
+                    "other_mappings_unchanged":  true,
+                    "env_restored":  true
+                },
+    "steps":  [
+                  {
+                      "name":  "version",
+                      "command":  "omc --version",
+                      "exit_code":  null,
+                      "seconds":  0.05,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-215535-smoke1-version.out.txt"
+                  },
+                  {
+                      "name":  "smoke",
+                      "command":  "omc Y:\\verification\\modelica-build\\launcher-smoke\\smoke.mos",
+                      "exit_code":  null,
+                      "seconds":  2.33,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-215535-smoke1-smoke.out.txt"
+                  }
+              ]
+}

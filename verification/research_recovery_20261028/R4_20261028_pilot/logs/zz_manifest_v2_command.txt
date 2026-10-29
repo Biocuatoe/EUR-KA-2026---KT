@@ -1,0 +1,6 @@
+Command (run from R4_20261028_pilot, 2026-10-28):
+  .venv/Scripts/python.exe -I -B <inline script>
+The script: (1) checks that code/ and config/ still equal the SHA-256 recorded in logs/readiness_gate_v2.json;
+(2) walks every file under this directory, excluding zz_sha256_manifest_v2.csv, logs/zz_manifest_v2_sha256.txt,
+__pycache__ and *.pyc; (3) writes path,bytes,sha256 (paths relative, '/' separators, sorted) to
+zz_sha256_manifest_v2.csv, refusing to overwrite; (4) writes the manifest's own SHA-256 to logs/zz_manifest_v2_sha256.txt.

@@ -1,0 +1,42 @@
+{
+ "record": "campaign release gate record (independent audit summary; the protocol 10.1 gate itself is logs/pre_run_hashes.txt)",
+ "written": "2026-10-28T08:37:52+0700",
+ "campaign_status": "BLOCKED",
+ "protocol_v1_sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+ "released_amendment": {
+  "path": "release/03_R4_protocol_v1_amendment_1.md",
+  "sha256": "7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2",
+  "status": "APPROVED"
+ },
+ "approval_record": {
+  "path": "release/amendment_1_approval.json",
+  "sha256": "03f835e9311410095e4447840ecb2b02d95c50279527df5fdf2f6d334e15eecd"
+ },
+ "release_package_source_gate": {
+  "path": "../R4_20261028_pilot/logs/readiness_gate_v6.json",
+  "sha256": "bbe069dcb8fd60b099d3d8b62c35702976bd16fcb8d352076b669b6d627cfeb0"
+ },
+ "release_tests": {
+  "log": "logs/pytest_release.txt",
+  "junit": "logs/pytest_release.xml",
+  "tests": 184,
+  "failures": 0,
+  "errors": 0,
+  "earlier_failed_attempt": "release_attempts/attempt1/ (183 passed, 1 failed: test defect; preserved)"
+ },
+ "protocol_10_1_gate": {
+  "path": "logs/pre_run_hashes.txt",
+  "sha256": "b4108d85c2bc35937e7c067aa922cca44e9b24f8d0a3e0a0286cf07fd7d69759",
+  "code_matches": true
+ },
+ "dry_run": {
+  "path": "release/dry_run_20261028_083731",
+  "dry_run_json_sha256": "028be3072ead2dc69d31e5553fbf7608bf6e847851ed112075de77c12e00845f"
+ },
+ "campaign_mode_blockers": [
+  "no campaign authorisation record campaign_authorization.json (protocol approval is not campaign authorisation)",
+  "code review item awaiting an owner decision: N-A2"
+ ],
+ "official_outputs_present": false,
+ "campaign_mode_invoked": false
+}

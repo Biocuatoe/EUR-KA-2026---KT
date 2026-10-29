@@ -1,0 +1,25 @@
+﻿python : Traceback (most recent call last):
+At line:1 char:495
++ ... -m rebuild.report_tables 2>&1; python -m rebuild.analyze 2>&1 | Tee-O ...
++                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\EURÉKA 2026 - KT\verification\scientific_rebuild_20261024\src\rebuild\analyze.py", line 201, in <module>
+    main()
+    ~~~~^^
+  File "D:\EURÉKA 2026 - KT\verification\scientific_rebuild_20261024\src\rebuild\analyze.py", line 143, in main
+    write("convergence.csv", conv)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\EURÉKA 2026 - KT\verification\scientific_rebuild_20261024\src\rebuild\analyze.py", line 38, in write
+    w.writerows(rows)
+    ~~~~~~~~~~~^^^^^^
+  File "D:\EURÉKA 2026 - KT\tools\python\cpython-3.14.7-windows-x86_64-none\Lib\csv.py", line 228, in writerows
+    return self.writer.writerows(map(self._dict_to_list, rowdicts))
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\EURÉKA 2026 - KT\tools\python\cpython-3.14.7-windows-x86_64-none\Lib\csv.py", line 220, in _dict_to_list
+    raise ValueError("dict contains fields not in fieldnames: "
+                     + ", ".join([repr(x) for x in wrong_fields]))
+ValueError: dict contains fields not in fieldnames: 'E_S_rel_change', 'pass', 'dE_change_pp', 'E_F_rel_change'

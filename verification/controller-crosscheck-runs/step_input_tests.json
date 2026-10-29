@@ -1,0 +1,99 @@
+{
+ "A_original_method_on_original_test": {
+  "max_abs_u": 105.28091142582139,
+  "max_abs_e_k": 0.3500000000000014,
+  "max_abs_z": 0.000500000000000056,
+  "sat_mismatches": 1,
+  "samples": 1001,
+  "file_sha256": "583868ffa3e9deffeaa5174f7915cbed10f048e4c5630b3dd0c288b7dd6d9fd8",
+  "note": "reproduces the recorded first failure: input rows and controller rows disagree at the steps because two events lie 1e-13 s apart"
+ },
+ "B_U_step_original": {
+  "max_abs_u": 1.4210854715202004e-14,
+  "max_abs_e_k": 0.0,
+  "max_abs_z": 5.551115123125783e-17,
+  "sat_mismatches": 0,
+  "samples": 1001,
+  "file_sha256": "583868ffa3e9deffeaa5174f7915cbed10f048e4c5630b3dd0c288b7dd6d9fd8",
+  "simulation_status": "finished successfully",
+  "updates": 1001,
+  "max_event_time_dev_s": 1.687538997430238e-13,
+  "steps": [
+   {
+    "step_time": 4.0,
+    "distance_to_nearest_update_s": 0.0,
+    "event_time_of_update_k_near": 3.999999999999959,
+    "event_time_minus_step_time_s": -4.085620730620576e-14,
+    "first_sample_that_saw_the_new_input": 401,
+    "its_event_time": 4.009999999999959,
+    "controller_used_new_input_at_first_sample_after_step": true,
+    "controller_used_old_input_at_last_sample_before_step": true
+   },
+   {
+    "step_time": 8.0,
+    "distance_to_nearest_update_s": 0.0,
+    "event_time_of_update_k_near": 7.999999999999874,
+    "event_time_minus_step_time_s": -1.2612133559741778e-13,
+    "first_sample_that_saw_the_new_input": 801,
+    "its_event_time": 8.009999999999874,
+    "controller_used_new_input_at_first_sample_after_step": true,
+    "controller_used_old_input_at_last_sample_before_step": false
+   }
+  ],
+  "pass_defined_semantics": true
+ },
+ "B_U_step_semantics": {
+  "max_abs_u": 5.684341886080802e-14,
+  "max_abs_e_k": 0.0,
+  "max_abs_z": 5.551115123125783e-17,
+  "sat_mismatches": 0,
+  "samples": 1201,
+  "file_sha256": "29dab0f271d4d94ed53c268d72b27fbaaa16fa94f422734a69e82ab3f1c93a4a",
+  "simulation_status": "finished successfully",
+  "updates": 1201,
+  "max_event_time_dev_s": 2.113864638886298e-13,
+  "steps": [
+   {
+    "step_time": 2.005,
+    "distance_to_nearest_update_s": 0.004999999999999893,
+    "event_time_of_update_k_near": 2.000000000000001,
+    "event_time_minus_step_time_s": -0.004999999999999005,
+    "first_sample_that_saw_the_new_input": 201,
+    "its_event_time": 2.010000000000001,
+    "controller_used_new_input_at_first_sample_after_step": true,
+    "controller_used_old_input_at_last_sample_before_step": true
+   },
+   {
+    "step_time": 5.999999,
+    "distance_to_nearest_update_s": 1.000000000139778e-06,
+    "event_time_of_update_k_near": 5.999999999999917,
+    "event_time_minus_step_time_s": 9.99999917539185e-07,
+    "first_sample_that_saw_the_new_input": 600,
+    "its_event_time": 5.999999999999917,
+    "controller_used_new_input_at_first_sample_after_step": true,
+    "controller_used_old_input_at_last_sample_before_step": true
+   },
+   {
+    "step_time": 8.0,
+    "distance_to_nearest_update_s": 0.0,
+    "event_time_of_update_k_near": 7.999999999999874,
+    "event_time_minus_step_time_s": -1.2612133559741778e-13,
+    "first_sample_that_saw_the_new_input": 801,
+    "its_event_time": 8.009999999999874,
+    "controller_used_new_input_at_first_sample_after_step": true,
+    "controller_used_old_input_at_last_sample_before_step": true
+   },
+   {
+    "step_time": 10.000001,
+    "distance_to_nearest_update_s": 9.999999992515995e-07,
+    "event_time_of_update_k_near": 9.999999999999831,
+    "event_time_minus_step_time_s": -1.0000001680054993e-06,
+    "first_sample_that_saw_the_new_input": 1001,
+    "its_event_time": 10.00999999999983,
+    "controller_used_new_input_at_first_sample_after_step": true,
+    "controller_used_old_input_at_last_sample_before_step": true
+   }
+  ],
+  "pass_defined_semantics": true
+ }
+}

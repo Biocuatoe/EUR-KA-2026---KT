@@ -1,0 +1,7 @@
+setCommandLineOptions("--unitChecking"); getErrorString();
+loadFile("../modelica/EurekaPlant/package.mo"); getErrorString();
+loadFile("../modelica/negative_fixtures/NegativeFixtures.mo"); getErrorString();
+checkModel(WrongUnitForce); getErrorString();
+checkModel(WrongTractionUnits); getErrorString();
+checkModel(NegCoastDownWrongBranch); getErrorString();
+checkModel(WrongUnitChargeIntegral); getErrorString();

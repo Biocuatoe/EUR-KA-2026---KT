@@ -1,0 +1,13 @@
+{
+ "source": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_pilot",
+ "target": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release_attempts\\attempt7_final_review",
+ "files_copied": 70,
+ "copy_mismatches": [],
+ "readiness_gate": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_pilot\\logs\\readiness_gate_v11.json",
+ "readiness_gate_sha256": "d8f9bd4ccc8d10a068e824514f3071b73c980dd165adb2b06f899e6d2f5c751d",
+ "gate_code_files": 62,
+ "gate_mismatches": [],
+ "copied_code_or_config_files_not_in_gate": [
+  "config/sensitivity_draws_v1.csv"
+ ]
+}

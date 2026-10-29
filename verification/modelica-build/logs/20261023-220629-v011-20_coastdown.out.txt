@@ -1,0 +1,134 @@
+true
+""
+true
+""
+true
+""
+true
+""
+true
+"Y:/verification/modelica-build/cases/C1_toy_linear_drag"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/C1_toy_linear_drag/C1_toy_linear_drag_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 20.0, numberOfIntervals = 2000, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'C1_toy_linear_drag', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0022423,
+    timeBackend = 0.0070126,
+    timeSimCode = 7.536e-4,
+    timeTemplates = 0.016084,
+    timeCompile = 1.9180341,
+    timeSimulation = 0.0924196,
+    timeTotal = 2.0369243
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/C2_project_tol1e-06"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/C2_project_tol1e-06/C2_project_tol1e-06_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 20.0, numberOfIntervals = 2000, tolerance = 1e-6, method = 'dassl', fileNamePrefix = 'C2_project_tol1e-06', options = '', outputFormat = 'csv', variableFilter = '^(time|v|omega|F_w|F_rr|F_aero|F_net|a|T|closure)$', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0030261,
+    timeBackend = 0.0299602,
+    timeSimCode = 0.0052657,
+    timeTemplates = 0.0176814,
+    timeCompile = 1.8628801,
+    timeSimulation = 0.1014179,
+    timeTotal = 2.0205235
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/C2_project_tol1e-08"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/C2_project_tol1e-08/C2_project_tol1e-08_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 20.0, numberOfIntervals = 2000, tolerance = 1e-8, method = 'dassl', fileNamePrefix = 'C2_project_tol1e-08', options = '', outputFormat = 'csv', variableFilter = '^(time|v|omega|F_w|F_rr|F_aero|F_net|a|T|closure)$', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0031213,
+    timeBackend = 0.0245762,
+    timeSimCode = 0.0051066,
+    timeTemplates = 0.0192128,
+    timeCompile = 1.7919532,
+    timeSimulation = 0.0979262,
+    timeTotal = 1.9421749
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/C2_project_tol1e-10"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/C2_project_tol1e-10/C2_project_tol1e-10_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 20.0, numberOfIntervals = 2000, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'C2_project_tol1e-10', options = '', outputFormat = 'csv', variableFilter = '^(time|v|omega|F_w|F_rr|F_aero|F_net|a|T|closure)$', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0032752,
+    timeBackend = 0.0219362,
+    timeSimCode = 0.008831,
+    timeTemplates = 0.0159881,
+    timeCompile = 1.8023138,
+    timeSimulation = 0.0996169,
+    timeTotal = 1.9522341
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/C2_project_tol1e-12"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/C2_project_tol1e-12/C2_project_tol1e-12_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 20.0, numberOfIntervals = 2000, tolerance = 1e-12, method = 'dassl', fileNamePrefix = 'C2_project_tol1e-12', options = '', outputFormat = 'csv', variableFilter = '^(time|v|omega|F_w|F_rr|F_aero|F_net|a|T|closure)$', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0066855,
+    timeBackend = 0.0208662,
+    timeSimCode = 0.0048984,
+    timeTemplates = 0.0223044,
+    timeCompile = 1.8144751,
+    timeSimulation = 0.0980875,
+    timeTotal = 1.9675864
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/E_C2_wrong_branch_fixture"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/E_C2_wrong_branch_fixture/E_C2_wrong_branch_fixture_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 20.0, numberOfIntervals = 2000, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'E_C2_wrong_branch_fixture', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0020976,
+    timeBackend = 0.0078695,
+    timeSimCode = 0.0012172,
+    timeTemplates = 0.0086519,
+    timeCompile = 1.7719295,
+    timeSimulation = 0.0892251,
+    timeTotal = 1.8812588
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/E_C2_Crr_plus1pct"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/E_C2_Crr_plus1pct/E_C2_Crr_plus1pct_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 20.0, numberOfIntervals = 2000, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'E_C2_Crr_plus1pct', options = '', outputFormat = 'csv', variableFilter = '^(time|v)$', cflags = '', simflags = '-override=C_rr=0.00808'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.00306,
+    timeBackend = 0.0246794,
+    timeSimCode = 0.0049284,
+    timeTemplates = 0.0177982,
+    timeCompile = 1.8127021,
+    timeSimulation = 0.0895416,
+    timeTotal = 1.9529959
+end SimulationResult;
+""
+"Y:/verification/modelica-build"

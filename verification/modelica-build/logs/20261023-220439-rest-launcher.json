@@ -1,0 +1,44 @@
+﻿{
+    "label":  "rest",
+    "time":  "2026-10-23T22:05:19",
+    "exit_code":  0,
+    "project_root":  "D:\\EURÉKA 2026 - KT",
+    "letter":  "Y",
+    "cleanup":  {
+                    "alias_created":  true,
+                    "alias_removed":  true,
+                    "alias_still_mapped":  false,
+                    "other_mappings_unchanged":  true,
+                    "env_restored":  true
+                },
+    "steps":  [
+                  {
+                      "name":  "version",
+                      "command":  "omc --version",
+                      "exit_code":  0,
+                      "seconds":  0.04,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220439-rest-version.out.txt"
+                  },
+                  {
+                      "name":  "20_coastdown",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\20_coastdown.mos",
+                      "exit_code":  0,
+                      "seconds":  15.57,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220439-rest-20_coastdown.out.txt"
+                  },
+                  {
+                      "name":  "30_ideal",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\30_ideal.mos",
+                      "exit_code":  0,
+                      "seconds":  15.44,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220439-rest-30_ideal.out.txt"
+                  },
+                  {
+                      "name":  "40_openloop",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\40_openloop.mos",
+                      "exit_code":  0,
+                      "seconds":  9.35,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220439-rest-40_openloop.out.txt"
+                  }
+              ]
+}

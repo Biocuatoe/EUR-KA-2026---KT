@@ -1,0 +1,26 @@
+r4h3.checks <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev11_attempt8_20261028_2126\code\r4h3\checks.py
+r4h3.campaign <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev11_attempt8_20261028_2126\code\r4h3\campaign.py
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_r11_4_a_raised_run_with_a_failing_other_arm_is_condition_error_with_the_fail_kept _
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-319/test_r11_4_a_raised_run_with_a0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002B1EB0D5940>
+
+    def test_r11_4_a_raised_run_with_a_failing_other_arm_is_condition_error_with_the_fail_kept(tmp_path, monkeypatch):
+        task = _task()
+        design = _design(task)
+        _raise_b3(monkeypatch)
+        monkeypatch.setattr(checks, "qs_vs_dynamic", _qs("FAIL (branch INCONCLUSIVE, protocol 9)", 2.0))   # B0 FAILs
+        r = _run(_cond("R114"), design, task, tmp_path)
+>       assert r["qs_vs_dyn_pair_status"] == "NOT_EVALUABLE_CONDITION_ERROR"                  # rev13: RUN_MISSING; rev11: FAIL
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: assert 'FAIL' == 'NOT_EVALUABL...NDITION_ERROR'
+E         
+E         - NOT_EVALUABLE_CONDITION_ERROR
+E         + FAIL
+
+code\tests\test_owner_decisions_v15.py:130: AssertionError
+=========================== short test summary info ===========================
+FAILED code\tests\test_owner_decisions_v15.py::test_r11_4_a_raised_run_with_a_failing_other_arm_is_condition_error_with_the_fail_kept
+1 failed, 12 deselected in 18.56s

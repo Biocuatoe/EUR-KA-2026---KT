@@ -1,0 +1,24 @@
+........................................................................ [ 51%]
+.....................F.............................................      [100%]
+================================== FAILURES ===================================
+____________ test_validator_cannot_be_satisfied_by_a_planner_flag _____________
+
+    def test_validator_cannot_be_satisfied_by_a_planner_flag():
+        params = list(inspect.signature(validator.validate_trajectory).parameters)
+        assert params == ["task", "t", "v", "plant", "label"]
+>       assert "planner" not in inspect.getsource(validator).split('"""', 2)[2]
+E       AssertionError: assert 'planner' not in '\n\nfrom __...return out\n'
+E         
+E         'planner' is contained here:
+E           he frozen planner (r3_lib.eco_segment_tables)
+E         ?           +++++++
+E           
+E           
+E           def _integral(t, v, a, b):...
+E         
+E         ...Full output truncated (105 lines hidden), use '-vv' to show
+
+code\tests\test_regressions_v2.py:80: AssertionError
+=========================== short test summary info ===========================
+FAILED code\tests\test_regressions_v2.py::test_validator_cannot_be_satisfied_by_a_planner_flag
+1 failed, 138 passed in 213.71s (0:03:33)

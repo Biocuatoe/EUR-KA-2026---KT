@@ -1,0 +1,30 @@
+﻿{
+    "label":  "ctlg_PT_fixed_cvode_tol1e-10",
+    "time":  "2026-10-23T23:40:25",
+    "exit_code":  0,
+    "project_root":  "D:\\EURÉKA 2026 - KT",
+    "letter":  "Y",
+    "cleanup":  {
+                    "alias_created":  true,
+                    "alias_removed":  true,
+                    "alias_still_mapped":  false,
+                    "other_mappings_unchanged":  true,
+                    "env_restored":  true
+                },
+    "steps":  [
+                  {
+                      "name":  "version",
+                      "command":  "omc --version",
+                      "exit_code":  0,
+                      "seconds":  0.06,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-233952-ctlg_PT_fixed_cvode_tol1e-10-version.out.txt"
+                  },
+                  {
+                      "name":  "_single_PT_fixed_cvode_tol1e-10",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\_single_PT_fixed_cvode_tol1e-10.mos",
+                      "exit_code":  0,
+                      "seconds":  32.91,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-233952-ctlg_PT_fixed_cvode_tol1e-10-_single_PT_fixed_cvode_tol1e-10.out.txt"
+                  }
+              ]
+}

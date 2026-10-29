@@ -1,0 +1,7 @@
+setCommandLineOptions("--unitChecking"); getErrorString();
+loadFile("../modelica/EurekaPlant/package.mo"); getErrorString();
+loadFile("../modelica/EurekaController/package.mo"); getErrorString();
+mkdir("cases_ctl"); getErrorString();
+mkdir("cases_ctl/DIAG_ida_events"); cd("cases_ctl/DIAG_ida_events");
+simulate(EurekaController.Cases.PTUNE_fixed_soh080, startTime = 0, stopTime = 18.05, numberOfIntervals = 1805, tolerance = 1e-12, method = "ida", outputFormat = "csv", fileNamePrefix = "DIAG_ida_events", simflags = "-lv=LOG_EVENTS"); getErrorString();
+cd("../..");

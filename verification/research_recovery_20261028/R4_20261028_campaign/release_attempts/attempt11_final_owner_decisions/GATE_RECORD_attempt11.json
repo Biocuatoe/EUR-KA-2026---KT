@@ -1,0 +1,303 @@
+{
+ "record": "release attempt 11 gate record (owner decisions of 2026-10-29: I-6b and the relabelling scope after a separate-recomputation or fold failure; fixes of review R10; amendment 2 candidate rev12). NOT a release, NOT the protocol 10.1 gate",
+ "written": "2026-10-29T08:27:24+0700",
+ "campaign_status": "BLOCKED",
+ "attempt_status": "REVIEWED - 1 MAJOR finding open (R11-1: an implementer gloss inside the owner decision I-6b clause of the machine block; wording, no outcome effect; independent AI-agent review, not a human audit). NOT RELEASABLE. Preserved unchanged as reviewed; the corrections go into a new attempt, release_attempts/attempt12_final_owner_decisions/ (a CRITICAL or MAJOR finding is never downgraded)",
+ "superseded_by": "release_attempts/attempt12_final_owner_decisions/",
+ "built_from": "the unchanged attempt-10 state: at the start of the task the pilot's code/ and config/ equalled attempt 10's copy file by file (logs/zz_start_state_v10.json, baseline_pilot_equals_attempt10)",
+ "attempt_directory": "R4_20261028_campaign/release_attempts/attempt11_final_owner_decisions/",
+ "protocol_v1": {
+  "path": "R4_20261028_preflight/03_R4_protocol_v1.md",
+  "sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab"
+ },
+ "amendment_1": {
+  "path": "R4_20261028_campaign/release/03_R4_protocol_v1_amendment_1.md",
+  "sha256": "7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2",
+  "status": "APPROVED (issued 2026-10-28; unchanged)",
+  "approval_record_sha256": "03f835e9311410095e4447840ecb2b02d95c50279527df5fdf2f6d334e15eecd"
+ },
+ "amendment_2": {
+  "draft_path": "R4_20261028_pilot/03_protocol_v1_amendment_2_rev12_CANDIDATE.md",
+  "draft_sha256": "ac376c0b362c2e99a9d3777fa849205844487e0be50a41dd1c5f1b2410b5ae1b",
+  "revision": "candidate rev12",
+  "status": "CANDIDATE - DRAFT - NOT APPROVED FOR RELEASE",
+  "superseded_unused": {
+   "rev11": "162b688d2a1665831705bc3a1bc68273f5ede15cc87b0d226837cf4f015998e9",
+   "why": "its section 1.1 heading said 'first stated in rev3'; the N-A2 section is in rev0. Written and superseded before any test or review"
+  },
+  "earlier_drafts_unchanged": {
+   "rev3": "fdaf193de510488733f0e0899d50def86cbeafabdbecdd3bc7a144099b6f492c",
+   "rev4": "c726560d1e87036cbd94fe58724cafdc1e4746647f6cfacbb320f3e14ed143ab",
+   "rev5": "e7ba73c11784b3cf38f48e32b69a7a7c21b070d039118547d638bc1bf06d4f5f",
+   "rev6": "0dcb767e97e19f40c00735d9efaecf8d21c396c23952b70e60ccb21a3f711e1f",
+   "rev7": "0e3ef3112c979237e7079f176b21dd4f2ce682c7ab435f36f33321ffe67a5996",
+   "rev8": "f6430bf5512cb56065a2465bcfda1c4c42e244b80f73fcd3e88d985ac8811f7c",
+   "rev9": "cdeea032c520f408f1f300a53cf1bc8b1ec4582d80340d3df2c2c94fa5d45719",
+   "rev10": "5479f0e81b981c7977ea5a416762972d2a332d4fdb75beee7ad8379ade399804"
+  },
+  "owner_decisions_2026_10_29": [
+   "I-6b: a QS-eligible pair whose run was attempted and raised is NOT_EVALUABLE_CONDITION_ERROR, not NOT_EVALUABLE_RUN_MISSING",
+   "after a separate-recomputation or fold failure only a NOT_APPLICABLE_* pair with an actually executed run is relabelled"
+  ],
+  "dry_run_reading": {
+   "status": "DRAFT",
+   "errors": []
+  },
+  "issued_copy_present": false,
+  "approval_record_present": false
+ },
+ "source": {
+  "pilot_readiness_gate": {
+   "path": "R4_20261028_pilot/logs/readiness_gate_v15.json",
+   "sha256": "3b829dc3af35c01a870f2c8e47c14380a83c55a83f204ad7e14bccb93a4ac7fa",
+   "junit": {
+    "tests": 328,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+   },
+   "junit_sha256": "61ac84171c7ffaf36e0f04d0cb8014e2df8ce80487a1d2f9fb1d1086b06a666b"
+  },
+  "copy_verification": {
+   "files_copied": 83,
+   "copy_mismatches": [],
+   "gate_code_files": 75,
+   "gate_mismatches": [],
+   "not_in_gate": [
+    "config/sensitivity_draws_v1.csv"
+   ],
+   "summary_sha256": "e5e01be739cafe9021c1ee60787cbb2fd6d8e4c7f4b21944c406d8edc2ea7ce1",
+   "rows_sha256": "bd8ff3eb8903c8cb81548c48b675004b711d96f3d421286fcd501b630864acf8"
+  },
+  "line_endings": {
+   "baseline": "R4_20261028_pilot/logs/zz_line_endings_rev13_baseline.csv",
+   "final_check": "R4_20261028_pilot/logs/zz_line_endings_rev13_to_rev14_final.csv",
+   "final_check_sha256": "600e0605a2b83f979c7c7f733d09757b163d08079be727550e79c2a8a2616710",
+   "byte_aware_diff": "R4_20261028_pilot/logs/zz_diff_rev13_to_rev14_final.txt",
+   "result": "every changed or added file keeps its convention (campaign.py CRLF, the tests and configs LF); no mixed file; closedloop.py's historical mixed endings untouched"
+  },
+  "mutation_checks": {
+   "first_invocation_failed": "zz_mutation_check_{v14_tests_on_rev13,v14_r10_2_tests_on_rev12,v11_i6_tests_on_rev13,a2_r3_9_test_on_rev11}.txt: ModuleNotFoundError before any test ran (an unquoted path split into several arguments); kept",
+   "run2_and_later": "behavioural on the old modules: I-6b and R10-4 (rev13), I6EL (rev13), R10-2's executor and unknown-status tests (rev12), R3-9 through the new test (rev11); API-level only: the old R3-9 assertion (rev11). Reviewer R11: I6FL was never reached in these runs"
+  }
+ },
+ "attempt_tests": {
+  "log": "logs/pytest_release_attempt11.txt",
+  "junit": "logs/pytest_release_attempt11.xml",
+  "tests": 328,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "junit_sha256": "12016e107a996e341e787eff73dcb37769e07e855adb0edaf9d13df91dadc6d3",
+  "attempt_readiness_gate": {
+   "path": "logs/readiness_gate_v1.json",
+   "sha256": "2512ac83ba551170b252770e694480ac336abda593342fbf9ca2d12baec6602a"
+  }
+ },
+ "release_validation": {
+  "path": "logs/release_validation_attempt11.json",
+  "sha256": "f61c568f7825ad0c6fedc6e907b0badc7a19461fa478c680909ca071b2f648a2",
+  "all_checks_true": true,
+  "reporting_test_prefixes_all_found_and_passed": true,
+  "legacy_number_hits": 12,
+  "legacy_number_hits_identical_to_attempt_10": true
+ },
+ "independent_review": {
+  "reviewer": "a new, separate AI review agent ('Plan' agent type, no Edit or Write tools; Read, Grep and Glob only). NOT a human independent audit",
+  "timing": "scope recorded 2026-10-29 07:45:53 (+0700); agent launched right after (before 07:46:36); ran without interruption for 1,112.0 s; delivered 08:05:04. Saved programmatically from the session transcript and checked to equal the hand-back text (26,143 characters)",
+  "brief": {
+   "path": "review/review_brief_attempt11_as_sent.md",
+   "sha256": "e24b4c2aed788789eb9f9faee862ff9dc5af68ce24e7f331302056c6935c3ca7"
+  },
+  "scope_record": {
+   "path": "review/review_scope_attempt11.json",
+   "sha256": "77a839e7fa6927b7cea1b1bb76c1768571b7ea0d9485a67eea52ee16d52b447b"
+  },
+  "report": {
+   "path": "review/R11_attempt11_review_agent_report_20261029.md",
+   "sha256": "8acd666ee6b3079c395ea8553c389657cffc795d4af7196cb02fa42ffdf8e522",
+   "pilot_copy": "R4_20261028_pilot/review/R11_attempt11_review_agent_report_20261029.md (identical)"
+  },
+  "counts": {
+   "CRITICAL": 0,
+   "MAJOR": 1,
+   "MINOR": 3,
+   "NOTE": 5
+  },
+  "owner_decisions_verdict": {
+   "I-6b": "implemented correctly and narrowly in the code (text: R11-1, R11-2)",
+   "relabelling scope": "implemented (behaviour unchanged from rev13; docstrings cite the decision)"
+  },
+  "closure_of_R10": {
+   "R10-1": "PARTLY FIXED (residuals R11-1, R11-3)",
+   "R10-2": "PARTLY ADDRESSED (I6FL, fold_failed)",
+   "R10-3": "FIXED",
+   "R10-4": "FIXED"
+  },
+  "open_major": [
+   "R11-1 under 'Owner decision I-6b' the block glossed the owner's 'genuinely absent run' as 'an executed run without a finite simulator energy, no exception' without labelling it as an implementer reading (no outcome effect)"
+  ],
+  "open_minor": [
+   "R11-2 the I-6b owner quote in the candidate omits 'Do not perform a broad label rewrite.'",
+   "R11-3 implementer reading (a) is called outcome-free; it is not",
+   "R11-4 the status file claims I6FL mutation evidence that does not exist"
+  ],
+  "open_notes": [
+   "R11-5 pointers to non-final logs and to report 21",
+   "R11-6 fold fallback without executed IDs; zip truncation; unguarded fold_failed",
+   "R11-7 test gaps (forced PASS, other motors and arms, fold_failed mutation, stale comment)",
+   "R11-8 R8-1 record and the I-6b reason text",
+   "R11-9 implementer additions inside other owner-ruling clauses (I-1, I-4)"
+  ],
+  "critical_or_major_open": true,
+  "formal_status": "code_review_status_v13.json (in this attempt, written before the review) counts open_major 6, records no owner acceptance, lists one implementer reading and a reviews_pending item; each blocks",
+  "status_file_in_this_attempt": {
+   "path": "config/code_review_status_v13.json",
+   "sha256": "ddb8700b1cf851e9c5e491b6d4fc9bf2d1472ea121a3615f464a61eca369644a"
+  }
+ },
+ "dry_run": {
+  "path": "dry_run_20261029_082618/",
+  "dry_run_json_sha256": "1c175c0461d1dde17eb6e6381edf06e30905fe726a7aecf48465de2037b8de12",
+  "schedule_170_csv_sha256": "6011e3572ed6f99b0f306251de28580574b54ea18df495286baf8f4917a77dfc",
+  "counts_per_set": {
+   "NOM": 12,
+   "P3": 12,
+   "INS": 12,
+   "CNV": 6,
+   "SEN": 128
+  },
+  "total_runs": 170,
+  "schedule_passed": true,
+  "schedule_identical_to_attempt_2": true,
+  "planner_jobs_identical_to_attempt_2": true,
+  "config": {
+   "path": "config/campaign_config_v14_DRAFT.json",
+   "sha256": "f16d69cfd243b2a6472780faa6fcd27485d928084da41cc7b287b3de6330cc0b",
+   "current": true,
+   "schedule_sha256_matches": true
+  },
+  "sensitivity_table_regenerates": true
+ },
+ "schedule_validation": {
+  "runs": 170,
+  "counts_per_set": {
+   "NOM": 12,
+   "P3": 12,
+   "INS": 12,
+   "CNV": 6,
+   "SEN": 128
+  },
+  "run_ids_unique": true,
+  "all_official_prefix": true,
+  "smoke_runs_excluded": true,
+  "s2_rows_all_held_out": true,
+  "s1_only_in_INS": true,
+  "every_profile_designed_on_P1": true,
+  "sen_gain_equal_nominal_P1_for_all_32_draws": true,
+  "sen_draws_checked": 32
+ },
+ "preconditions": {
+  "record": "logs/preconditions_attempt11.json",
+  "sha256": "7478c4a0fbad79ff7ccc14f7f984c02f09cea464e61985f453579cf0ec6c2929",
+  "readiness_blockers": [
+   "no issued amendment 2 at D:\\EURÉKA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+   "code review: 0 critical and 6 major findings not resolved or accepted by the owner",
+   "code review not yet performed or its closure not yet accepted by the owner: independent read-only AI review of rev14 (owner decisions I-6b and the relabelling scope of 2026-10-29, fixes of R10-1 to R10-4, candidate rev12) on release attempt 11, and the owner's acceptance of the closure of the rev7 to rev14 review (an AI-agent review is not a human independent audit)"
+  ],
+  "campaign_mode_blockers": [
+   "no issued amendment 2 at D:\\EURÉKA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+   "protocol 10.1 gate record: pre-run gate record logs/pre_run_hashes.txt is missing",
+   "no campaign authorisation record campaign_authorization.json (protocol approval is not campaign authorisation)",
+   "campaign must run once, from the released copy in R4_20261028_campaign (AMB-15), not from attempt11_final_owner_decisions (protocol 10.1)",
+   "code review: 0 critical and 6 major findings not resolved or accepted by the owner",
+   "code review not yet performed or its closure not yet accepted by the owner: independent read-only AI review of rev14 (owner decisions I-6b and the relabelling scope of 2026-10-29, fixes of R10-1 to R10-4, candidate rev12) on release attempt 11, and the owner's acceptance of the closure of the rev7 to rev14 review (an AI-agent review is not a human independent audit)"
+  ]
+ },
+ "gate_criteria": [
+  {
+   "criterion": "0. owner rulings and decisions implemented as ruled",
+   "met": false,
+   "evidence": "the code is confirmed correct; the machine block's I-6b clause carries an unlabelled interpretation (R11-1, MAJOR)"
+  },
+  {
+   "criterion": "1. amendment 2 approved by the owner and issued",
+   "met": false,
+   "evidence": "no release/03_R4_protocol_v1_amendment_2.md and no release/amendment_2_approval.json"
+  },
+  {
+   "criterion": "2. release attempt passes all mandatory tests and independent reviews",
+   "met": false,
+   "evidence": "tests: {'tests': 328, 'failures': 0, 'errors': 0, 'skipped': 0} from this copy; AI-agent review: 1 MAJOR open"
+  },
+  {
+   "criterion": "3. final release manifest and protocol hashes verified",
+   "met": false,
+   "evidence": "this attempt's manifest and the protocol, amendment 1 and draft hashes are verified; the FINAL release manifest only exists after promotion to the campaign root"
+  },
+  {
+   "criterion": "4. promotion to the campaign root with its own protocol 10.1 gate",
+   "met": false,
+   "evidence": "not promoted; the campaign root still holds release attempt 2 (amendment 1 only), unchanged"
+  },
+  {
+   "criterion": "5. separate explicit owner authorisation (release/campaign_authorization.json)",
+   "met": false,
+   "evidence": "absent; no code path writes it"
+  }
+ ],
+ "prior_attempts": {
+  "attempt_1": "release_attempts/attempt1/ (preserved)",
+  "attempt_2": {
+   "location": "campaign root",
+   "manifest_sha256": "eae902275b363357674be7aed8a8b37162b687cd72ced0033dbfb84dfaff32e4",
+   "pre_run_hashes_sha256": "b4108d85c2bc35937e7c067aa922cca44e9b24f8d0a3e0a0286cf07fd7d69759",
+   "gate_record_sha256": "c25b2cfcd899f9ea7ce1bc2e4583c6879007a5b1a9cd71e2f9cf0f790b41f8e8",
+   "status": "preserved unchanged (amendment 1 only)"
+  },
+  "attempt_3": {
+   "location": "release_attempts/attempt3_amendment2/",
+   "manifest_sha256": "e33cdcb9b9ff6c9e50d34ab00acdc53a21dac4fe87c20e79c41158f84f5da9d3",
+   "status": "preserved unchanged"
+  },
+  "attempt_4": {
+   "location": "release_attempts/attempt4_owner_rulings/",
+   "manifest_sha256": "0727aa086b3da7639c680a0bdd4f84ce58f7fe11133e64526727841cbcb91c89",
+   "status": "preserved unchanged"
+  },
+  "attempt_5": {
+   "location": "release_attempts/attempt5_owner_rulings/",
+   "manifest_sha256": "c32601c33365dc5c06f563d0ccec01c483208809499d87f3f2d7d944a4f3ca00",
+   "status": "preserved unchanged"
+  },
+  "attempt_6": {
+   "location": "release_attempts/attempt6_review_fixes/",
+   "manifest_sha256": "b19ddce7373aff8e02ae854986f3107355ea244a05e0a4b62831623b96ad4c3a",
+   "status": "preserved unchanged"
+  },
+  "attempt_7": {
+   "location": "release_attempts/attempt7_final_review/",
+   "manifest_sha256": "42e8c88f35edd49e206354173a79925050eae395a52b04a5fba7675f32a1f933",
+   "status": "preserved unchanged"
+  },
+  "attempt_8": {
+   "location": "release_attempts/attempt8_final_owner_decisions/",
+   "manifest_sha256": "2ea8714f3f492e8ceaa5cf345182ce243ef8dab51415f55413fc45bf5300a617",
+   "status": "preserved unchanged"
+  },
+  "attempt_9": {
+   "location": "release_attempts/attempt9_review_fixes/",
+   "manifest_sha256": "0e317eef0a0a7ab54af9c2c69aee4af619693dabcf5ca441d2a7c386f5766ffc",
+   "status": "preserved unchanged"
+  },
+  "attempt_10": {
+   "location": "release_attempts/attempt10_review_fixes/",
+   "manifest_sha256": "9af4b502cbc01fb1ee657ac0f509f71a59b87f8467d7e7e5a8dfc0b9aa6c84a8",
+   "status": "preserved unchanged; superseded by this attempt (reviewed with no CRITICAL or MAJOR finding)"
+  }
+ },
+ "official_outputs_present": false,
+ "campaign_mode_invoked": false,
+ "campaign_authorization_created": false,
+ "arm_to_arm_energy_differences_computed": false
+}

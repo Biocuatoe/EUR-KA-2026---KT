@@ -1,0 +1,15 @@
+PT_scheduled_cvode_tol1e-06: launcher exit 0, 36 s, csv 504.2 MB, guard_triggered=True -> evidence PT_scheduled_cvode_tol1e-06_evidence.txt, big files deleted
+PT_fixed_cvode_tol1e-08: launcher exit 0, 36 s, csv 503.2 MB, guard_triggered=True -> evidence PT_fixed_cvode_tol1e-08_evidence.txt, big files deleted
+PT_scheduled_cvode_tol1e-08: launcher exit 0, 36 s, csv 522.8 MB, guard_triggered=True -> evidence PT_scheduled_cvode_tol1e-08_evidence.txt, big files deleted
+PT_fixed_cvode_tol1e-10: launcher exit 0, 36 s, csv 504.8 MB, guard_triggered=True -> evidence PT_fixed_cvode_tol1e-10_evidence.txt, big files deleted
+PT_scheduled_cvode_tol1e-10: launcher exit 0, 36 s, csv 506.6 MB, guard_triggered=True -> evidence PT_scheduled_cvode_tol1e-10_evidence.txt, big files deleted
+PT_fixed_cvode_tol1e-12: launcher exit 0, 36 s, csv 514.3 MB, guard_triggered=True -> evidence PT_fixed_cvode_tol1e-12_evidence.txt, big files deleted
+PT_scheduled_cvode_tol1e-12: launcher exit 0, 36 s, csv 517.3 MB, guard_triggered=True -> evidence PT_scheduled_cvode_tol1e-12_evidence.txt, big files deleted
+PT_fixed_ida_tol1e-06: launcher exit 0, 6 s, csv 20.7 MB, guard_triggered=False
+PT_scheduled_ida_tol1e-06: launcher exit 0, 6 s, csv 20.7 MB, guard_triggered=False
+PT_fixed_ida_tol1e-08: launcher exit 0, 9 s, csv 20.7 MB, guard_triggered=False
+PT_scheduled_ida_tol1e-08: launcher exit 0, 9 s, csv 20.8 MB, guard_triggered=False
+PT_fixed_ida_tol1e-10: launcher exit 0, 9 s, csv 20.8 MB, guard_triggered=False
+PT_scheduled_ida_tol1e-10: launcher exit 0, 9 s, csv 20.8 MB, guard_triggered=False
+PT_fixed_ida_tol1e-12: launcher exit 0, 6 s, csv 20.8 MB, guard_triggered=False
+PT_scheduled_ida_tol1e-12: launcher exit 0, 6 s, csv 20.8 MB, guard_triggered=False

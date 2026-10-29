@@ -1,0 +1,33 @@
+{
+ "history_keys": [
+  "eff",
+  "eff_at_max_regen",
+  "eff_fwd_at_max_input",
+  "energy_elec_dyn_brake_joules",
+  "energy_elec_prop_in_joules",
+  "energy_loss_joules",
+  "energy_mech_dyn_brake_joules",
+  "energy_mech_prop_out_joules",
+  "energy_out_req_joules",
+  "i",
+  "pwr_elec_dyn_brake_watts",
+  "pwr_elec_prop_in_watts",
+  "pwr_loss_watts",
+  "pwr_mech_dyn_brake_watts",
+  "pwr_mech_fwd_out_max_watts",
+  "pwr_mech_prop_out_watts",
+  "pwr_mech_regen_max_watts",
+  "pwr_out_req_watts"
+ ],
+ "n_steps": 1370,
+ "n_motoring": 768,
+ "n_regen": 0,
+ "motoring_max_abs(eff - curve(Pmech/Pmax))": 2.220446049250313e-16,
+ "motoring_max_abs(Pmech/Pelec - eff)": 1.1102230246251565e-16,
+ "regen_max_abs(eff - curve(Pmech_brake/Pmax))": null,
+ "regen_max_abs(Pelec_brake/Pmech_brake - eff)": null,
+ "regen_max_abs(loss - (Pmech_brake - Pelec_brake))": null,
+ "max_Pmech_frac": 0.3781321284788406,
+ "max_Pbrake_frac": 0.0,
+ "sample_regen_rows": []
+}

@@ -1,0 +1,127 @@
+{
+ "file": "D:\\EURÉKA 2026 - KT\\EURÉKA 2026 - KT.docx",
+ "sha256": "01363a069eeb005851f6d62ac4b9da9e3fd13a742bebbfdfc14c802f0eddff8c",
+ "size_bytes": 434945,
+ "parts": [
+  {
+   "name": "word/document.xml",
+   "size": 6262147,
+   "zip_datetime": "2026-09-21 05:18:36"
+  },
+  {
+   "name": "word/settings.xml",
+   "size": 890,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "docProps/custom.xml",
+   "size": 789,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "[Content_Types].xml",
+   "size": 1739,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "docProps/app.xml",
+   "size": 539,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "docProps/core.xml",
+   "size": 529,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/_rels/document.xml.rels",
+   "size": 2599,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/fontTable.xml",
+   "size": 1687,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/numbering.xml",
+   "size": 247296,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/styles.xml",
+   "size": 6251,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/header1.xml",
+   "size": 4342,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/header2.xml",
+   "size": 4128,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/media/image1.png",
+   "size": 202,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/media/image2.png",
+   "size": 112,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/media/image3.png",
+   "size": 119,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/media/image4.png",
+   "size": 119,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/media/image5.png",
+   "size": 331,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/media/image6.png",
+   "size": 351,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/media/image7.png",
+   "size": 376,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/media/image8.png",
+   "size": 340,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/media/image9.png",
+   "size": 380,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "word/theme/theme1.xml",
+   "size": 8636,
+   "zip_datetime": "2026-09-21 05:18:40"
+  },
+  {
+   "name": "_rels/.rels",
+   "size": 737,
+   "zip_datetime": "2026-09-21 05:18:40"
+  }
+ ],
+ "docProps": {
+  "docProps/custom.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Properties xmlns=\"http://schemas.openxmlformats.org/officeDocument/2006/custom-properties\" xmlns:vt=\"http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes\"><property fmtid=\"{D5CDD505-2E9C-101B-9397-08002B2CF9AE}\" pid=\"2\" name=\"Converter\"><vt:lpwstr>StructuredOutput v12.0.20182.1</vt:lpwstr></property><property fmtid=\"{D5CDD505-2E9C-101B-9397-08002B2CF9AE}\" pid=\"3\" name=\"Created\"><vt:filetime>2026-09-21T00:00:00Z</vt:filetime></property><property fmtid=\"{D5CDD505-2E9C-101B-9397-08002B2CF9AE}\" pid=\"4\" name=\"LastSaved\"><vt:filetime>2026-09-21T00:00:00Z</vt:filetime></property><property fmtid=\"{D5CDD505-2E9C-101B-9397-08002B2CF9AE}\" pid=\"5\" name=\"Producer\"><vt:lpwstr>iLovePDF</vt:lpwstr></property></Properties>\n",
+  "docProps/app.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Properties xmlns=\"http://schemas.openxmlformats.org/officeDocument/2006/extended-properties\" xmlns:vt=\"http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes\"><Template>Normal</Template><TotalTime>0</TotalTime><Application>Microsoft Office Word</Application><DocSecurity>0</DocSecurity><ScaleCrop>false</ScaleCrop><LinksUpToDate>false</LinksUpToDate><SharedDoc>false</SharedDoc><HyperlinksChanged>false</HyperlinksChanged><AppVersion>12.0000</AppVersion></Properties>\n",
+  "docProps/core.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<cp:coreProperties xmlns:cp=\"http://schemas.openxmlformats.org/package/2006/metadata/core-properties\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:dcterms=\"http://purl.org/dc/terms/\" xmlns:dcmitype=\"http://purl.org/dc/dcmitype/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><dcterms:created xsi:type=\"dcterms:W3CDTF\">2026-09-21T05:18:41Z</dcterms:created><dcterms:modified xsi:type=\"dcterms:W3CDTF\">2026-09-21T05:18:41Z</dcterms:modified></cp:coreProperties>\n"
+ }
+}

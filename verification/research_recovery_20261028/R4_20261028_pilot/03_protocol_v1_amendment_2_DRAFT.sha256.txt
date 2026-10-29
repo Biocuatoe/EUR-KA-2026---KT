@@ -1,0 +1,5 @@
+SHA-256 of 03_protocol_v1_amendment_2_DRAFT.md (rev3): fdaf193de510488733f0e0899d50def86cbeafabdbecdd3bc7a144099b6f492c
+Recorded 2026-10-28 11:21:44 +0700 as an integrity identifier of the draft text only.
+Status: DRAFT - NOT APPROVED FOR RELEASE. Not issued, not frozen, not approved; it has no force.
+Earlier revisions (archived unchanged): rev2 in archive/rev5_verified_20261028_1101/, rev1 a936023af0a772ee2b81c720c76f9c462aba89afe1a8e1de38a286872a8744bf (archive/rev4b_reviewed_20261028_1051/), rev0 c3e1ddfce7dca7909bb1cd2a6186f4d5044b5dfe81eeed43df0b9fcf215957d4 (archive/rev4a_reviewed_20261028_0957/).
+Amends: amendment 1 7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2; protocol v1 f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab.

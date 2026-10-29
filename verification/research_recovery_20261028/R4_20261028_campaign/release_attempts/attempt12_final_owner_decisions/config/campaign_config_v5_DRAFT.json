@@ -1,0 +1,455 @@
+{
+ "status": "DRAFT - NOT APPROVED FOR CAMPAIGN EXECUTION",
+ "protocol": "../R4_20261028_preflight/03_R4_protocol_v1.md",
+ "protocol_sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+ "frozen_inputs_sha256": {
+  "verification/research_recovery_20261028/R4_20261028_preflight/03_R4_protocol_v1.md": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+  "verification/scientific_rebuild_20261024/research_recovery_20261025/R3_20261025/code/r3_lib.py": "c2403adc2c7ef7a7ecc662f0dcfd3c107a43204ee73c28bd46f782b73cba1c97",
+  "verification/scientific_rebuild_20261024/research_recovery_20261025/R3_20261025/data/motor_curve_m1_derived.json": "f872faa0ff96d12d26eb5c935bb145062c3ac649e4eb327136f0fa9a0868d1d9"
+ },
+ "upstream_sha256": {
+  "src/eureka/plant.py": "e5701bce018f37bebba525dfc58d0e347c63cc1a5b385badf74fe6d0ea772907",
+  "src/eureka/controllers.py": "2d57b757407dac725891219aa93102ce8be20294a97723fb35ea862ac76d8660",
+  "src/eureka/params.py": "192ad65933b2786910104f3755601938758a161f603e2cce02d9eaa74907369e",
+  "src/eureka/cycles.py": "f09ed877efe3aece1d4990c79d55c4902999758ef67ab2603591703ae49b8cec",
+  "verification/scientific_rebuild_20261024/src/rebuild/model.py": "2050111b0860d1552c180b25ffbfbdb16c098c0e262632be6ecdb95d876003de",
+  "verification/scientific_rebuild_20261024/src/rebuild/run.py": "7336a295f407134f6d7aa38ba1749edcb3aea9cdbddf7114c2f8a7bbdb185001",
+  "verification/scientific_rebuild_20261024/configs/R1.yaml": "b33d9667dacd69884c6443f7f71c229972eabb7a99eec6ae0649dfebbb980858",
+  "configs/parameters.yaml": "0efe2d1a413a51d425043691c857807b021d62908935adfda9b757de6f9f374f",
+  "configs/cycles/profiles.yaml": "90a496a36c618e216693a3d819b84739f10e6c35167c23a91b63478ef28be0a6"
+ },
+ "canonical_sampled_cycles": {
+  "S1": {
+   "path": "inputs/cycles/S1_sampled_h1.csv",
+   "sha256": "87151e5c30c02f5f6784732a5dd619fc6c39e90913d4afcf06292de2c1f2b7da"
+  },
+  "S2": {
+   "path": "inputs/cycles/S2_sampled_h1.csv",
+   "sha256": "def9d757dc0923afe20a91dca487c84527daff2bef5421c34aef1a61f0a6e990"
+  }
+ },
+ "cycle_source_artefacts_sha256": {
+  "S1_source_segments.json": "88a04c905fdd6a3b109e0189af0347c8d6525347ae4812228e7838162cb8d6fd",
+  "S1_knots_from_yaml.csv": "e0cdb1f4a4627838a8e691d4516492e604b01be85c2afa34c1ec98be8fd120ec",
+  "S2_source_segments.json": "49093326473eb4d33dde34400a6dc741949d192e48fe25c81f1467683a0f2d13",
+  "S2_knots_from_yaml.csv": "4bf394980e928f075f7f82135aa11beba1b97b95a2d1e18ae030ea3c448dde6c"
+ },
+ "cycle_inputs_manifest_sha256": "3d3d6e93d19842141691d041e2363dd8f3f9fef73b362ebcd6ae2ef8b6de7ea5",
+ "sensitivity_design": {
+  "protocol_section": "8.4",
+  "seed": 20261028,
+  "n_draws": 32,
+  "d": 7,
+  "generator": "scipy.stats.qmc.LatinHypercube(d=7, rng=numpy.random.default_rng(20261028)).random(32)",
+  "scrambling": "default (scramble=True)",
+  "mapping": "uniform: lo + u (hi - lo)",
+  "scipy": "1.18.1",
+  "numpy": "2.5.4",
+  "columns": [
+   {
+    "col": 1,
+    "ledger": "VEH-01",
+    "param": "M",
+    "unit": "kg",
+    "lo": 722.5,
+    "hi": 977.5,
+    "applies": "all draws"
+   },
+   {
+    "col": 2,
+    "ledger": "VEH-03",
+    "param": "A_f",
+    "unit": "m^2",
+    "lo": 2.0,
+    "hi": 2.4,
+    "applies": "all draws"
+   },
+   {
+    "col": 3,
+    "ledger": "VEH-04",
+    "param": "Cd",
+    "unit": "-",
+    "lo": 0.315,
+    "hi": 0.385,
+    "applies": "all draws"
+   },
+   {
+    "col": 4,
+    "ledger": "VEH-05",
+    "param": "Crr",
+    "unit": "-",
+    "lo": 0.008,
+    "hi": 0.012,
+    "applies": "all draws"
+   },
+   {
+    "col": 5,
+    "ledger": "VEH-06",
+    "param": "r_w",
+    "unit": "m",
+    "lo": 0.265,
+    "hi": 0.285,
+    "applies": "all draws"
+   },
+   {
+    "col": 6,
+    "ledger": "BAT-07",
+    "param": "R0_new",
+    "unit": "ohm",
+    "lo": 0.004,
+    "hi": 0.006,
+    "applies": "all draws"
+   },
+   {
+    "col": 7,
+    "ledger": "MOT-05",
+    "param": "eta_M0",
+    "unit": "-",
+    "lo": 0.83,
+    "hi": 0.918,
+    "applies": "M0 only; ignored by M1"
+   }
+  ],
+  "per_draw": "recompute v_b and S-eco on the draw's P1 plant; run B0 and B3 on S2, L-EVE, P1, for M0, M1",
+  "runs": 128,
+  "purpose": "coverage of the declared reference-plant ranges for the H3 sensitivity criterion of protocol 8.1 (at least 29 of 32 draws with dE_rel <= -1.0 % and none > 0, for M0 and M1 separately)",
+  "interpretation": "coverage design, not a probability statement; the spread is a sensitivity range, never a confidence interval (protocol 7.5)",
+  "gain": "nominal P1 fixed LQR gain for every draw and both branches (AMB-14, owner decision 2026-10-28)",
+  "scope": "robustness to plant-parameter uncertainty under a fixed controller; not retuned per draw"
+ },
+ "sensitivity_draws_table": "config/sensitivity_draws_v1.csv",
+ "sensitivity_draws_sha256": "d1e42f31c5feb69c139b78fcdeb8d066be4aec8748708c539a210d24c008c703",
+ "schedule_sha256": "6011e3572ed6f99b0f306251de28580574b54ea18df495286baf8f4917a77dfc",
+ "planner_jobs_sha256": "0ccc0f626bf9c5c000f70e6307c70c7133c7eba482c8b7db521b90289d161df3",
+ "planned_runs": {
+  "NOM": 12,
+  "P3": 12,
+  "INS": 12,
+  "CNV": 6,
+  "SEN": 128,
+  "total": 170
+ },
+ "implemented_decisions": {
+  "applies_to_protocol_sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+  "D1_extra_stop_rule": "reject",
+  "D1_rest_threshold_ms": 1e-09,
+  "D2_p3_profiles": "B0 tracks v_b designed on P1; B3 tracks S-eco designed on P1; both run on the P3 plant",
+  "D2_gain_design_state": "P1",
+  "D3_arrival_rule": "arrival no later than the reference arrival, then at rest until the reference departure",
+  "D3_timing_tolerance_s": 0.0,
+  "D4_smoke_runs_count_toward_campaign": false,
+  "D5_p3_infeasible_rule": "run and retain both arms; classify the condition infeasible; no paired energy difference",
+  "canonical_sampled_cycles_sha256": {
+   "S1": "87151e5c30c02f5f6784732a5dd619fc6c39e90913d4afcf06292de2c1f2b7da",
+   "S2": "def9d757dc0923afe20a91dca487c84527daff2bef5421c34aef1a61f0a6e990"
+  },
+  "recompute_gate": [
+   "E_chem_rel",
+   "E_DC_rel",
+   "distance_rel",
+   "trip_time_abs_s",
+   "I_over_protocol_abs_As",
+   "rmse_rel",
+   "stop_ok_equal",
+   "complete_equal",
+   "tracking_ok_equal",
+   "constraint_ok_equal"
+  ],
+  "recompute_tolerances": {
+   "E_chem_rel": 0.0001,
+   "E_DC_rel": 0.0001,
+   "distance_rel": 1e-06,
+   "trip_time_abs_s": 1e-09,
+   "I_over_protocol_abs_As": 1e-06,
+   "rmse_rel": 1e-09,
+   "flags": "identical"
+  },
+  "planned_runs": {
+   "NOM": 12,
+   "P3": 12,
+   "INS": 12,
+   "CNV": 6,
+   "SEN": 128,
+   "total": 170
+  },
+  "AMB_14_sensitivity_gain_basis": "nominal_P1",
+  "AMB_15_campaign_directory": "R4_20261028_campaign",
+  "AMB_24_p3_feasibility": "dynamic_8_2_decides; QS screen diagnostic only",
+  "numerical_check_order": [
+   "frozen_and_input_hashes",
+   "planner_unit_tests",
+   "infrastructure_readiness",
+   "planner_optimality",
+   "planner_grid_convergence",
+   "independent_recomputation",
+   "qs_vs_dynamic",
+   "dynamic_time_step",
+   "baseline_sanity"
+  ]
+ },
+ "open_parameters": [],
+ "numerical_checks": [
+  {
+   "order": 1,
+   "name": "frozen_and_input_hashes",
+   "when": "every process start",
+   "data": "hashes",
+   "criterion": "equal to the frozen values",
+   "on_fail": "STOP: refuse to run (protocol 9 row 1)"
+  },
+  {
+   "order": 2,
+   "name": "planner_unit_tests",
+   "when": "release gate (before any campaign run)",
+   "data": "toy tasks",
+   "criterion": "all pass (protocol 9 row 2)",
+   "on_fail": "STOP: do not release"
+  },
+  {
+   "order": 3,
+   "name": "infrastructure_readiness",
+   "when": "release gate",
+   "data": "S1 development checks and tests",
+   "criterion": "tests pass; recomputation and 0.5 ms path work",
+   "on_fail": "STOP: do not release"
+  },
+  {
+   "order": 4,
+   "name": "planner_optimality",
+   "when": "each official planner job (QS)",
+   "data": "S2 and S1 designs",
+   "criterion": "S_max - S_found <= 0.2 pp",
+   "on_fail": "GO: the gap is the stated resolution (protocol 9)"
+  },
+  {
+   "order": 5,
+   "name": "planner_grid_convergence",
+   "when": "after the six S2 fine-grid jobs (QS)",
+   "data": "S2, P1",
+   "criterion": "|dS_found| < 0.2 pp",
+   "on_fail": "GO: results stated at the observed resolution (protocol 9)"
+  },
+  {
+   "order": 6,
+   "name": "independent_recomputation",
+   "when": "every run",
+   "data": "the run's trace",
+   "criterion": "protocol group within tolerances; flags identical",
+   "on_fail": "GO: run flagged and not credited until resolved by amendment (protocol 9)"
+  },
+  {
+   "order": 7,
+   "name": "qs_vs_dynamic",
+   "when": "every pair whose B0 and B3 profiles both pass the QS screen (N-A2)",
+   "data": "the pair's runs and profiles",
+   "criterion": "M0, M1: |e_dyn - e_QS| / e_QS <= 1 % for both arms; M2 reported; QS-ineligible pairs are NOT_APPLICABLE_QS_INFEASIBLE (neither pass nor fail); no passing eligible pair -> INCONCLUSIVE",
+   "on_fail": "GO: that motor branch is INCONCLUSIVE (protocol 9)"
+  },
+  {
+   "order": 8,
+   "name": "dynamic_time_step",
+   "when": "after NOM L-EVE and CNV runs complete",
+   "data": "S2, L-EVE, P1",
+   "criterion": "|dE_rel(0.5 ms) - dE_rel(1 ms)| < 0.01 pp",
+   "on_fail": "GO: stated resolution (protocol 9, as R3)"
+  },
+  {
+   "order": 9,
+   "name": "baseline_sanity",
+   "when": "S2 designs",
+   "data": "v_b vs v_ref",
+   "criterion": "v_b = v_ref exactly checked and recorded",
+   "on_fail": "GO: shortfall and deviation reported"
+  }
+ ],
+ "campaign_directory": "R4_20261028_campaign",
+ "issued_amendment_path": "R4_20261028_campaign/release/03_R4_protocol_v1_amendment_1.md",
+ "amendment_1_sha256": "7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2",
+ "amendment_2_implemented": {
+  "applies_to_protocol_sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+  "amends_amendment_1_sha256": "7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2",
+  "N_A2_applicability": "protocol 9 QS-vs-dynamic applies to a pair only if both the B0 and the B3 profile pass the QS feasibility screen (QSPlant.step) on the condition's evaluated plant",
+  "N_A2_not_applicable_label": "NOT_APPLICABLE_QS_INFEASIBLE",
+  "N_A2_not_applicable_is_pass": false,
+  "N_A2_not_applicable_is_fail": false,
+  "N_A2_qs_energy_of_ineligible_pairs_used_for_acceptance": false,
+  "N_A2_thresholds": {
+   "M0_max_abs_pct": 1.0,
+   "M1_max_abs_pct": 1.0,
+   "M2": "reported only"
+  },
+  "N_A2_applicable_failure": "the M0/M1 motor branch is INCONCLUSIVE (protocol 9, unchanged)",
+  "N_A2_no_eligible_comparison": "the M0/M1 motor branch is INCONCLUSIVE with respect to this criterion",
+  "N_A2_dynamic_8_2_independent": true,
+  "N_A2_failed_check_record": "every failing piece with its failed QSPlant.step sub-check(s) (drive torque, battery discriminant, discharge current) and their values at each Gauss node",
+  "AMB_29_profile_unavailable": "NOT_APPLICABLE_PROFILE_UNAVAILABLE (no effect on the branch outcome)",
+  "AMB_29_eligible_run_missing": "NOT_EVALUABLE_RUN_MISSING (M0/M1 branch INCONCLUSIVE; M2 stays reported only)",
+  "AMB_29_qs_energy_undefined": "NOT_EVALUABLE_QS_UNDEFINED (branch INCONCLUSIVE)",
+  "AMB_29_condition_error": "NOT_EVALUABLE_CONDITION_ERROR (eligibility unknown; branch INCONCLUSIVE)",
+  "AMB_30_branch_scope": "every planned pair of the motor branch across all sets (literal protocol 9 reading)",
+  "AMB_31_usable_dynamic_energy": "an executed run with a finite simulator energy, whatever its protocol 8.2 verdict (literal reading); PASS pairs that are also dynamic-valid are reported separately",
+  "pair_statuses": [
+   "PASS",
+   "FAIL",
+   "REPORTED_ONLY",
+   "NOT_APPLICABLE_QS_INFEASIBLE",
+   "NOT_APPLICABLE_PROFILE_UNAVAILABLE",
+   "NOT_EVALUABLE_RUN_MISSING",
+   "NOT_EVALUABLE_QS_UNDEFINED",
+   "NOT_EVALUABLE_CONDITION_ERROR"
+  ],
+  "planned_runs": {
+   "NOM": 12,
+   "P3": 12,
+   "INS": 12,
+   "CNV": 6,
+   "SEN": 128,
+   "total": 170
+  }
+ },
+ "issued_amendment_2_path": "R4_20261028_campaign/release/03_R4_protocol_v1_amendment_2.md",
+ "scenario_record": {
+  "protocol": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_preflight\\03_R4_protocol_v1.md",
+  "protocol_sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+  "hypothesis": "H3 only",
+  "plant_branch": "RP-E (declared reference plant; not the KT-01 vehicle)",
+  "nominal_params": {
+   "M": 850.0,
+   "A_f": 2.2,
+   "Cd": 0.35,
+   "Crr": 0.008,
+   "r_w": 0.28,
+   "rho": 1.225,
+   "g": 9.81,
+   "G": 6.5,
+   "eta_g": 0.9702,
+   "J_m": 0.05,
+   "B_m": 0.001,
+   "eta_mi": 0.874,
+   "T_max": 85.0,
+   "P_max": 18000.0,
+   "w_max": 837.0,
+   "tau_T": 0.02,
+   "V_oc": 48.0,
+   "Q_Ah": 100.0,
+   "R0_new": 0.005,
+   "R1_new": 0.003,
+   "C1": 50000.0,
+   "k_r0": 0.5,
+   "k_r1": 0.3,
+   "dt": 0.001,
+   "v_eps": 0.05,
+   "noise_std": 0.05,
+   "Ts": 0.01,
+   "v0": 8.333333,
+   "e_max": 0.5,
+   "T_bryson": 85.0,
+   "z_max": 0.5,
+   "gamma_v": 1.0,
+   "gamma_u": 1.0
+  },
+  "pstates": {
+   "P1": {
+    "soh": 1.0,
+    "k_r0": 0.5
+   },
+   "P3": {
+    "soh": 0.8,
+    "k_r0": 3.5
+   }
+  },
+  "limits": {
+   "L-R1": {
+    "c_dis": 3.0,
+    "c_ch": 1.0,
+    "soh_scaled": false,
+    "v_min_ratio": 0.78125,
+    "v_max_ratio": 1.140625
+   },
+   "L-EVE": {
+    "c_dis": 2.0,
+    "c_ch": 1.0,
+    "soh_scaled": false,
+    "v_min_ratio": 0.78125,
+    "v_max_ratio": 1.140625
+   }
+  },
+  "motor_scenarios": {
+   "M0": {
+    "sid": "M0",
+    "kind": "const",
+    "ledger_id": "MOT-05",
+    "provenance_class": "C (as reference-plant assumption); D as a KT-01 value",
+    "label": "M0 constant combined motor+inverter efficiency 0.874",
+    "assumptions": "Thesis peak motor 0.92 x inverter 0.95 used as a constant in both directions; zero loss at zero power",
+    "validity_limits": "Overstates part-load efficiency; no no-load, iron or switching loss; not a KT-01 measurement",
+    "qs_usable": true,
+    "r3_lib_label": "M0 constant 0.874 (thesis)"
+   },
+   "M1": {
+    "sid": "M1",
+    "kind": "curve",
+    "ledger_id": "MOT-06",
+    "provenance_class": "D (illustrative structural bracket member)",
+    "label": "M1 FASTSim 3.1.0 generic e-machine template curve scaled to 18 kW (illustrative)",
+    "assumptions": "Efficiency vs |P_m|/18 kW by linear interpolation, same rule both directions",
+    "validity_limits": "Package template, not a measurement; NOT a Renault Zoe map and NOT the KT-01 motor",
+    "qs_usable": true,
+    "r3_lib_label": "M1 FASTSim generic e-machine curve (illustrative)"
+   },
+   "M2": {
+    "sid": "M2",
+    "kind": "copper",
+    "ledger_id": "MOT-07",
+    "provenance_class": "C (transparent stress model)",
+    "label": "M2 copper-loss stress model L = k_c T^2, k_c = 18000 (1/0.874 - 1) / 85^2",
+    "assumptions": "All loss as copper loss; charges stall loss at standstill",
+    "validity_limits": "Deliberately favourable to torque smoothing; QS energy not representative; dynamic results only",
+    "qs_usable": false,
+    "r3_lib_label": "M2 copper-loss stress model"
+   }
+  },
+  "numerics": {
+   "H": 1.0,
+   "TRACK_W": [
+    3.0,
+    6.0,
+    12.0
+   ],
+   "TRACK_DV": 0.05,
+   "ECO_DS": 2.0,
+   "ECO_DV": 0.1,
+   "LAMBDA_LOG10": [
+    -3.0,
+    6.0
+   ],
+   "LAMBDA_ITERS": 40,
+   "dt": 0.001,
+   "Ts": 0.01,
+   "SPEED_DOMAIN_MAX": 13.88888888888889
+  },
+  "rules": {
+   "shortfall_max_pct": 0.1,
+   "rmse_max_ms": 0.1,
+   "max_abs_err_ms": 1.0,
+   "stop_min_duration_s": 2.0,
+   "stop_settle_s": 1.0,
+   "stop_speed_max_ms": 0.05,
+   "stop_distance_max_m": 0.1,
+   "i_over_max_As": 0.01,
+   "v_min_tol_V": 0.01,
+   "closure_max_rel": 0.001,
+   "recompute_energy_rel": 0.0001,
+   "recompute_distance_rel": 1e-06
+  },
+  "controller": "R1 fixed Bryson LQR, eureka.controllers.gain(p_P1, 'fixed'); identical for B0 and B3",
+  "excluded": [
+   "SoH-dependent gains",
+   "SoH-dependent limits",
+   "ageing / capacity fade",
+   "retuning",
+   "supervisory layer",
+   "out-of-domain cycles"
+  ]
+ }
+}

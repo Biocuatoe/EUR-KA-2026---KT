@@ -1,0 +1,6 @@
+DEV-1 {"B0": {"valid_on_P1": true, "n_extra_stop_knots": 0, "qs_feasible_on_P3": true}, "B3": {"valid_on_P1": true, "n_extra_stop_knots": 0, "qs_feasible_on_P3": true}}
+DEV-2 {"B0": {"run_id": "H3-slice-S1-M0-L-R1-P1-B0-dt1ms", "qs_vs_dyn_pct": 0.5256210267672426, "status": "pass", "qs_feasible": true}, "B3": {"run_id": "H3-slice-S1-M0-L-R1-P1-B3-dt1ms", "qs_vs_dyn_pct": 0.1965949336202757, "status": "pass", "qs_feasible": true}, "B3_knots_QS_equals_planner_DP_sum_rel": 1.1962677798367024e-14}
+DEV-3 {"coarse": {"status": "ok", "runtime_s": 1.0380184650421143, "valid": true}, "fine": {"status": "ok", "runtime_s": 6.543945074081421, "valid": true}, "eco_QS_energy_rel_change_fine_vs_coarse": -0.0023530073794503603, "note": "eco-arm quantity only; protocol 9 judges |dS_found| on S2 in the campaign, not here"}
+DEV-4 {"recompute_protocol_ok": true, "separate_process_exit": 0, "single_run_E_rel_change_05ms_vs_1ms": -1.6541944275810367e-10, "wall_s": 354.20903062820435}
+outdir D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\outputs\dev_readiness_20261028_061453
+exit=0

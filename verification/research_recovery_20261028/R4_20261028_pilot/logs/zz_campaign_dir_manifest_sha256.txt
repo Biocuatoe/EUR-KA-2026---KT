@@ -1,0 +1,2 @@
+R4_20261028_campaign/zz_sha256_manifest.csv SHA-256 ed2d9c5dc7ecab6ecd4f8ac2a4039cb865623ead9c01ebc63b2fb18dc4f6c604
+2 files listed (self-excluded); written 2026-10-28 07:33:09 +0700

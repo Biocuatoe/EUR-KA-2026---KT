@@ -1,0 +1,204 @@
+true
+""
+true
+""
+true
+"Y:/verification/modelica-build/cases/D_S1_soh1.0"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/D_S1_soh1.0/D_S1_soh1.0_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 324.91071428571433, numberOfIntervals = 16246, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'D_S1_soh1.0', options = '', outputFormat = 'csv', variableFilter = '^(time|v_ref|a_ref|E_chem|E_rr|E_aero|E_gear|E_visc|E_mi|E_R0|E_R1|dist|V1|closure|Wh_per_km|limit_margin|T|I|F_req)$', cflags = '', simflags = '-override=SoH=1.0 -lv=LOG_STATS'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_STATS         | info    | ### STATISTICS ###
+|                 | |       | | timer
+|                 | |       | | |    0.0021745s          reading init.xml
+|                 | |       | | |     0.000386s          reading info.xml
+|                 | |       | | |    0.0003473s [  0.2%] pre-initialization
+|                 | |       | | |    0.0001171s [  0.1%] initialization
+|                 | |       | | |      1.1e-06s [  0.0%] steps
+|                 | |       | | |    0.0065255s [  3.2%] solver (excl. callbacks)
+|                 | |       | | |     0.175183s [ 86.6%] creating output-file
+|                 | |       | | |     0.005276s [  2.6%] event-handling
+|                 | |       | | |      0.00303s [  1.5%] overhead
+|                 | |       | | |     0.011778s [  5.8%] simulation
+|                 | |       | | |     0.202258s [100.0%] total
+|                 | |       | | events
+|                 | |       | | |    23 state events
+|                 | |       | | |     0 time events
+|                 | |       | | solver: dassl
+|                 | |       | | |  2044 steps taken
+|                 | |       | | |  2594 calls of functionODE
+|                 | |       | | |   637 evaluations of jacobian
+|                 | |       | | |    70 error test failures
+|                 | |       | | |     0 convergence test failures
+|                 | |       | | | 0.0002468s time of jacobian evaluation
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0039248,
+    timeBackend = 0.0409972,
+    timeSimCode = 0.0124486,
+    timeTemplates = 0.0178268,
+    timeCompile = 1.7924672,
+    timeSimulation = 0.2861467,
+    timeTotal = 2.1541178
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/D_S1_soh0.8"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/D_S1_soh0.8/D_S1_soh0.8_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 324.91071428571433, numberOfIntervals = 16246, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'D_S1_soh0.8', options = '', outputFormat = 'csv', variableFilter = '^(time|v_ref|a_ref|E_chem|E_rr|E_aero|E_gear|E_visc|E_mi|E_R0|E_R1|dist|V1|closure|Wh_per_km|limit_margin|T|I|F_req)$', cflags = '', simflags = '-override=SoH=0.8 -lv=LOG_STATS'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_STATS         | info    | ### STATISTICS ###
+|                 | |       | | timer
+|                 | |       | | |    0.0021941s          reading init.xml
+|                 | |       | | |    0.0003895s          reading info.xml
+|                 | |       | | |    0.0003745s [  0.2%] pre-initialization
+|                 | |       | | |    0.0001415s [  0.1%] initialization
+|                 | |       | | |      1.1e-06s [  0.0%] steps
+|                 | |       | | |    0.0068509s [  3.2%] solver (excl. callbacks)
+|                 | |       | | |     0.182217s [ 86.4%] creating output-file
+|                 | |       | | |    0.0055664s [  2.6%] event-handling
+|                 | |       | | |    0.0031938s [  1.5%] overhead
+|                 | |       | | |    0.0125684s [  6.0%] simulation
+|                 | |       | | |     0.210913s [100.0%] total
+|                 | |       | | events
+|                 | |       | | |    23 state events
+|                 | |       | | |     0 time events
+|                 | |       | | solver: dassl
+|                 | |       | | |  1967 steps taken
+|                 | |       | | |  2563 calls of functionODE
+|                 | |       | | |   636 evaluations of jacobian
+|                 | |       | | |    69 error test failures
+|                 | |       | | |     0 convergence test failures
+|                 | |       | | | 0.0002709s time of jacobian evaluation
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0036346,
+    timeBackend = 0.0393901,
+    timeSimCode = 0.0085686,
+    timeTemplates = 0.0190037,
+    timeCompile = 2.4939684,
+    timeSimulation = 0.2970342,
+    timeTotal = 2.8618715
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/D_S2_soh1.0"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/D_S2_soh1.0/D_S2_soh1.0_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 213.27777777777783, numberOfIntervals = 10664, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'D_S2_soh1.0', options = '', outputFormat = 'csv', variableFilter = '^(time|v_ref|a_ref|E_chem|E_rr|E_aero|E_gear|E_visc|E_mi|E_R0|E_R1|dist|V1|closure|Wh_per_km|limit_margin|T|I|F_req)$', cflags = '', simflags = '-override=SoH=1.0 -lv=LOG_STATS'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_STATS         | info    | ### STATISTICS ###
+|                 | |       | | timer
+|                 | |       | | |    0.0025734s          reading init.xml
+|                 | |       | | |    0.0004658s          reading info.xml
+|                 | |       | | |    0.0004327s [  0.3%] pre-initialization
+|                 | |       | | |    0.0001334s [  0.1%] initialization
+|                 | |       | | |      1.3e-06s [  0.0%] steps
+|                 | |       | | |    0.0055838s [  4.0%] solver (excl. callbacks)
+|                 | |       | | |     0.118328s [ 84.4%] creating output-file
+|                 | |       | | |    0.0042765s [  3.1%] event-handling
+|                 | |       | | |     0.002284s [  1.6%] overhead
+|                 | |       | | |    0.0090999s [  6.5%] simulation
+|                 | |       | | |      0.14014s [100.0%] total
+|                 | |       | | events
+|                 | |       | | |    25 state events
+|                 | |       | | |     0 time events
+|                 | |       | | solver: dassl
+|                 | |       | | |  2162 steps taken
+|                 | |       | | |  2809 calls of functionODE
+|                 | |       | | |   684 evaluations of jacobian
+|                 | |       | | |    74 error test failures
+|                 | |       | | |     0 convergence test failures
+|                 | |       | | | 0.0002827s time of jacobian evaluation
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0068336,
+    timeBackend = 0.0416007,
+    timeSimCode = 0.009022,
+    timeTemplates = 0.0197391,
+    timeCompile = 1.7976166,
+    timeSimulation = 0.2407689,
+    timeTotal = 2.1158518
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/D_S2_soh0.8"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/D_S2_soh0.8/D_S2_soh0.8_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 213.27777777777783, numberOfIntervals = 10664, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'D_S2_soh0.8', options = '', outputFormat = 'csv', variableFilter = '^(time|v_ref|a_ref|E_chem|E_rr|E_aero|E_gear|E_visc|E_mi|E_R0|E_R1|dist|V1|closure|Wh_per_km|limit_margin|T|I|F_req)$', cflags = '', simflags = '-override=SoH=0.8 -lv=LOG_STATS'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_STATS         | info    | ### STATISTICS ###
+|                 | |       | | timer
+|                 | |       | | |    0.0023051s          reading init.xml
+|                 | |       | | |    0.0003916s          reading info.xml
+|                 | |       | | |    0.0003613s [  0.3%] pre-initialization
+|                 | |       | | |     0.000113s [  0.1%] initialization
+|                 | |       | | |      1.2e-06s [  0.0%] steps
+|                 | |       | | |    0.0055937s [  4.0%] solver (excl. callbacks)
+|                 | |       | | |     0.118507s [ 84.5%] creating output-file
+|                 | |       | | |    0.0043767s [  3.1%] event-handling
+|                 | |       | | |    0.0022096s [  1.6%] overhead
+|                 | |       | | |    0.0091039s [  6.5%] simulation
+|                 | |       | | |     0.140267s [100.0%] total
+|                 | |       | | events
+|                 | |       | | |    25 state events
+|                 | |       | | |     0 time events
+|                 | |       | | solver: dassl
+|                 | |       | | |  2166 steps taken
+|                 | |       | | |  2829 calls of functionODE
+|                 | |       | | |   684 evaluations of jacobian
+|                 | |       | | |    80 error test failures
+|                 | |       | | |     0 convergence test failures
+|                 | |       | | | 0.0002835s time of jacobian evaluation
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.003747,
+    timeBackend = 0.0446956,
+    timeSimCode = 0.0094141,
+    timeTemplates = 0.019734,
+    timeCompile = 2.3874417,
+    timeSimulation = 0.2379356,
+    timeTotal = 2.7034333
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/E_D_S1_soh1.0_Cd_plus1pct"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/E_D_S1_soh1.0_Cd_plus1pct/E_D_S1_soh1.0_Cd_plus1pct_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 324.91071428571433, numberOfIntervals = 16246, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'E_D_S1_soh1.0_Cd_plus1pct', options = '', outputFormat = 'csv', variableFilter = '^(time|v_ref|a_ref|E_chem|E_rr|E_aero|E_gear|E_visc|E_mi|E_R0|E_R1|dist|V1|closure|Wh_per_km|limit_margin|T|I|F_req)$', cflags = '', simflags = '-override=C_d=0.3535'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0036131,
+    timeBackend = 0.0411603,
+    timeSimCode = 0.0139208,
+    timeTemplates = 0.0214059,
+    timeCompile = 1.9347964,
+    timeSimulation = 0.2883119,
+    timeTotal = 2.3036208
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/E_D_S1_soh1.0_etami_plus1pct"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/E_D_S1_soh1.0_etami_plus1pct/E_D_S1_soh1.0_etami_plus1pct_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 324.91071428571433, numberOfIntervals = 16246, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'E_D_S1_soh1.0_etami_plus1pct', options = '', outputFormat = 'csv', variableFilter = '^(time|v_ref|a_ref|E_chem|E_rr|E_aero|E_gear|E_visc|E_mi|E_R0|E_R1|dist|V1|closure|Wh_per_km|limit_margin|T|I|F_req)$', cflags = '', simflags = '-override=eta_mi=0.88274'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0036854,
+    timeBackend = 0.0402378,
+    timeSimCode = 0.0086728,
+    timeTemplates = 0.0264013,
+    timeCompile = 1.9780546,
+    timeSimulation = 0.2936035,
+    timeTotal = 2.3509428
+end SimulationResult;
+""
+"Y:/verification/modelica-build"

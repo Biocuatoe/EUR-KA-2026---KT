@@ -1,0 +1,88 @@
+.........FFF.......................................................      [100%]
+================================== FAILURES ===================================
+_________ test_evaluator_recomputes_simulator_metrics_from_trace[M0] __________
+
+p1 = Params(M=850.0, A_f=2.2, Cd=0.35, Crr=0.008, r_w=0.28, rho=1.225, g=9.81, G=6.5, eta_g=0.9702, J_m=0.05, B_m=0.001, et...0.001, v_eps=0.05, noise_std=0.05, Ts=0.01, v0=8.333333, e_max=0.5, T_bryson=85.0, z_max=0.5, gamma_v=1.0, gamma_u=1.0)
+K = array([196.03533806,   0.35068495, 150.85451901]), motor = 'M0'
+
+    @pytest.mark.parametrize("motor", ["M0", "M1", "M2"])
+    def test_evaluator_recomputes_simulator_metrics_from_trace(p1, K, motor):
+        prof = short_profile()
+        lim = config.LIMITS["L-R1"]
+        out, tr = simulate_traced(prof, p1, K, 1.0, lim, config.motor_model(motor))
+        d_ref = float(prof.stats()["distance_m"])
+        sim = run_metrics(out, p1, 1.0, d_ref, prof.duration, p1.Ts)
+        tr["v_ref_task_mps"] = tr["v_tracked_mps"]
+        tr["stop_ref_flag"] = np.zeros_like(tr["t_s"])
+        sim["stop_ok_sim"] = True
+        assert set(CHANNELS) == set(tr)
+        spec = {"battery": dict(V_oc=p1.V_oc, R0=p1.R0_new, Q_Ah=p1.Q_Ah, c_dis=lim.c_dis, c_ch=lim.c_ch,
+                                v_min_ratio=lim.v_min_ratio, v_max_ratio=lim.v_max_ratio),
+                "motor": evaluator.motor_spec_from_protocol(motor, frozen.M1_CURVE), "G": p1.G, "r_w": p1.r_w,
+                "Ts_s": p1.Ts, "dt_s": p1.dt, "d_ref_m": d_ref, "rest_intervals": [[0.0, 0.0]]}
+        ev = evaluator.evaluate_trace(tr, spec, config.RULES)
+        cmp = evaluator.compare_with_simulator(ev, sim, config.RULES)
+>       assert cmp["all_ok"], {k: v for k, v in cmp.items() if k != "all_ok" and not v["ok"]}
+E       AssertionError: {'friction_abs_Wh': {'value': 0.0003075180521110443, 'tol': 1e-06, 'ok': False}}
+E       assert False
+
+tests\test_closedloop.py:75: AssertionError
+_________ test_evaluator_recomputes_simulator_metrics_from_trace[M1] __________
+
+p1 = Params(M=850.0, A_f=2.2, Cd=0.35, Crr=0.008, r_w=0.28, rho=1.225, g=9.81, G=6.5, eta_g=0.9702, J_m=0.05, B_m=0.001, et...0.001, v_eps=0.05, noise_std=0.05, Ts=0.01, v0=8.333333, e_max=0.5, T_bryson=85.0, z_max=0.5, gamma_v=1.0, gamma_u=1.0)
+K = array([196.03533806,   0.35068495, 150.85451901]), motor = 'M1'
+
+    @pytest.mark.parametrize("motor", ["M0", "M1", "M2"])
+    def test_evaluator_recomputes_simulator_metrics_from_trace(p1, K, motor):
+        prof = short_profile()
+        lim = config.LIMITS["L-R1"]
+        out, tr = simulate_traced(prof, p1, K, 1.0, lim, config.motor_model(motor))
+        d_ref = float(prof.stats()["distance_m"])
+        sim = run_metrics(out, p1, 1.0, d_ref, prof.duration, p1.Ts)
+        tr["v_ref_task_mps"] = tr["v_tracked_mps"]
+        tr["stop_ref_flag"] = np.zeros_like(tr["t_s"])
+        sim["stop_ok_sim"] = True
+        assert set(CHANNELS) == set(tr)
+        spec = {"battery": dict(V_oc=p1.V_oc, R0=p1.R0_new, Q_Ah=p1.Q_Ah, c_dis=lim.c_dis, c_ch=lim.c_ch,
+                                v_min_ratio=lim.v_min_ratio, v_max_ratio=lim.v_max_ratio),
+                "motor": evaluator.motor_spec_from_protocol(motor, frozen.M1_CURVE), "G": p1.G, "r_w": p1.r_w,
+                "Ts_s": p1.Ts, "dt_s": p1.dt, "d_ref_m": d_ref, "rest_intervals": [[0.0, 0.0]]}
+        ev = evaluator.evaluate_trace(tr, spec, config.RULES)
+        cmp = evaluator.compare_with_simulator(ev, sim, config.RULES)
+>       assert cmp["all_ok"], {k: v for k, v in cmp.items() if k != "all_ok" and not v["ok"]}
+E       AssertionError: {'friction_abs_Wh': {'value': 0.00038950210437488364, 'tol': 1e-06, 'ok': False}}
+E       assert False
+
+tests\test_closedloop.py:75: AssertionError
+_________ test_evaluator_recomputes_simulator_metrics_from_trace[M2] __________
+
+p1 = Params(M=850.0, A_f=2.2, Cd=0.35, Crr=0.008, r_w=0.28, rho=1.225, g=9.81, G=6.5, eta_g=0.9702, J_m=0.05, B_m=0.001, et...0.001, v_eps=0.05, noise_std=0.05, Ts=0.01, v0=8.333333, e_max=0.5, T_bryson=85.0, z_max=0.5, gamma_v=1.0, gamma_u=1.0)
+K = array([196.03533806,   0.35068495, 150.85451901]), motor = 'M2'
+
+    @pytest.mark.parametrize("motor", ["M0", "M1", "M2"])
+    def test_evaluator_recomputes_simulator_metrics_from_trace(p1, K, motor):
+        prof = short_profile()
+        lim = config.LIMITS["L-R1"]
+        out, tr = simulate_traced(prof, p1, K, 1.0, lim, config.motor_model(motor))
+        d_ref = float(prof.stats()["distance_m"])
+        sim = run_metrics(out, p1, 1.0, d_ref, prof.duration, p1.Ts)
+        tr["v_ref_task_mps"] = tr["v_tracked_mps"]
+        tr["stop_ref_flag"] = np.zeros_like(tr["t_s"])
+        sim["stop_ok_sim"] = True
+        assert set(CHANNELS) == set(tr)
+        spec = {"battery": dict(V_oc=p1.V_oc, R0=p1.R0_new, Q_Ah=p1.Q_Ah, c_dis=lim.c_dis, c_ch=lim.c_ch,
+                                v_min_ratio=lim.v_min_ratio, v_max_ratio=lim.v_max_ratio),
+                "motor": evaluator.motor_spec_from_protocol(motor, frozen.M1_CURVE), "G": p1.G, "r_w": p1.r_w,
+                "Ts_s": p1.Ts, "dt_s": p1.dt, "d_ref_m": d_ref, "rest_intervals": [[0.0, 0.0]]}
+        ev = evaluator.evaluate_trace(tr, spec, config.RULES)
+        cmp = evaluator.compare_with_simulator(ev, sim, config.RULES)
+>       assert cmp["all_ok"], {k: v for k, v in cmp.items() if k != "all_ok" and not v["ok"]}
+E       AssertionError: {'friction_abs_Wh': {'value': 0.00030151676059186894, 'tol': 1e-06, 'ok': False}}
+E       assert False
+
+tests\test_closedloop.py:75: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_closedloop.py::test_evaluator_recomputes_simulator_metrics_from_trace[M0]
+FAILED tests/test_closedloop.py::test_evaluator_recomputes_simulator_metrics_from_trace[M1]
+FAILED tests/test_closedloop.py::test_evaluator_recomputes_simulator_metrics_from_trace[M2]
+3 failed, 64 passed in 44.10s

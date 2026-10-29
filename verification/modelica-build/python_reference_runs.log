@@ -1,0 +1,14 @@
+S1 0.001 70s
+S1 0.0005 150s
+S1 0.00025 321s
+S1 0.0001 766s
+S2 0.001 51s
+S2 0.0005 102s
+S2 0.00025 201s
+S2 0.0001 502s
+P-TUNE 0.001 25s
+P-TUNE 0.0005 49s
+P-TUNE 0.00025 104s
+P-TUNE 0.0001 308s
+reproduction max over runs: {'S1|fixed|1.00': 0.0, 'S1|scheduled|1.00': 0.0, 'S1|fixed|0.80': 0.0, 'S1|scheduled|0.80': 0.0, 'S2|fixed|1.00': 0.0, 'S2|scheduled|1.00': 0.0, 'S2|fixed|0.80': 0.0, 'S2|scheduled|0.80': 0.0}
+metric check: 0.0

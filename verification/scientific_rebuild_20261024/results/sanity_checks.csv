@@ -1,0 +1,57 @@
+check,cycle,case,value,pass
+S == F at SoH 1.0,S1,B0,0.0,True
+S == F at SoH 1.0,S1,BV,0.0,True
+S == F at SoH 1.0,S1,BV-k2,0.0,True
+S == F at SoH 1.0,S1,BCS,0.0,True
+S == F at SoH 1.0,S1,BCS-k2,0.0,True
+S == F at SoH 1.0,S1,BCN,0.0,True
+S == F at SoH 1.0,S1,BCS2,0.0,True
+BCS == BCN at SoH 1.0 (F),S1,BCS/BCN,0.0,True
+BCS == BCN at SoH 1.0 (S),S1,BCS/BCN,0.0,True
+BCS == BCN at SoH 1.0 (F01),S1,BCS/BCN,0.0,True
+S == F at SoH 1.0,S2,B0,0.0,True
+S == F at SoH 1.0,S2,BV,0.0,True
+S == F at SoH 1.0,S2,BV-k2,0.0,True
+S == F at SoH 1.0,S2,BCS,0.0,True
+S == F at SoH 1.0,S2,BCS-k2,0.0,True
+S == F at SoH 1.0,S2,BCN,0.0,True
+S == F at SoH 1.0,S2,BCS2,0.0,True
+BCS == BCN at SoH 1.0 (F),S2,BCS/BCN,0.0,True
+BCS == BCN at SoH 1.0 (S),S2,BCS/BCN,0.0,True
+BCS == BCN at SoH 1.0 (F01),S2,BCS/BCN,0.0,True
+S == F at SoH 1.0,UDDS,B0,0.0,True
+S == F at SoH 1.0,UDDS,BV,0.0,True
+S == F at SoH 1.0,UDDS,BV-k2,0.0,True
+S == F at SoH 1.0,UDDS,BCS,0.0,True
+S == F at SoH 1.0,UDDS,BCS-k2,0.0,True
+S == F at SoH 1.0,UDDS,BCN,0.0,True
+S == F at SoH 1.0,UDDS,BCS2,0.0,True
+BCS == BCN at SoH 1.0 (F),UDDS,BCS/BCN,0.0,True
+BCS == BCN at SoH 1.0 (S),UDDS,BCS/BCN,0.0,True
+BCS == BCN at SoH 1.0 (F01),UDDS,BCS/BCN,0.0,True
+S == F at SoH 1.0,US06,B0,0.0,True
+S == F at SoH 1.0,US06,BV,0.0,True
+S == F at SoH 1.0,US06,BV-k2,0.0,True
+S == F at SoH 1.0,US06,BCS,0.0,True
+S == F at SoH 1.0,US06,BCS-k2,0.0,True
+S == F at SoH 1.0,US06,BCN,0.0,True
+S == F at SoH 1.0,US06,BCS2,0.0,True
+BCS == BCN at SoH 1.0 (F),US06,BCS/BCN,0.0,True
+BCS == BCN at SoH 1.0 (S),US06,BCS/BCN,0.0,True
+BCS == BCN at SoH 1.0 (F01),US06,BCS/BCN,0.0,True
+B0 reproduces saved primary (F),S1,B0 soh 1.0,0.0,True
+B0 reproduces saved primary (S),S1,B0 soh 1.0,0.0,True
+B0 reproduces saved primary (F),S1,B0 soh 0.9,0.0,True
+B0 reproduces saved primary (S),S1,B0 soh 0.9,0.0,True
+B0 reproduces saved primary (F),S1,B0 soh 0.8,0.0,True
+B0 reproduces saved primary (S),S1,B0 soh 0.8,0.0,True
+B0 reproduces saved primary (F),S1,B0 soh 0.7,0.0,True
+B0 reproduces saved primary (S),S1,B0 soh 0.7,0.0,True
+B0 reproduces saved primary (F),S2,B0 soh 1.0,0.0,True
+B0 reproduces saved primary (S),S2,B0 soh 1.0,0.0,True
+B0 reproduces saved primary (F),S2,B0 soh 0.9,0.0,True
+B0 reproduces saved primary (S),S2,B0 soh 0.9,0.0,True
+B0 reproduces saved primary (F),S2,B0 soh 0.8,0.0,True
+B0 reproduces saved primary (S),S2,B0 soh 0.8,0.0,True
+B0 reproduces saved primary (F),S2,B0 soh 0.7,0.0,True
+B0 reproduces saved primary (S),S2,B0 soh 0.7,0.0,True

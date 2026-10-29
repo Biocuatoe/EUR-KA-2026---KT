@@ -1,0 +1,30 @@
+﻿{
+    "label":  "ctlN_N_S2_scheduled_soh080_dassl_tol1e-08",
+    "time":  "2026-10-23T23:53:24",
+    "exit_code":  0,
+    "project_root":  "D:\\EURÉKA 2026 - KT",
+    "letter":  "Y",
+    "cleanup":  {
+                    "alias_created":  true,
+                    "alias_removed":  true,
+                    "alias_still_mapped":  false,
+                    "other_mappings_unchanged":  true,
+                    "env_restored":  true
+                },
+    "steps":  [
+                  {
+                      "name":  "version",
+                      "command":  "omc --version",
+                      "exit_code":  0,
+                      "seconds":  0.04,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-235319-ctlN_N_S2_scheduled_soh080_dassl_tol1e-08-version.out.txt"
+                  },
+                  {
+                      "name":  "_single_N_S2_scheduled_soh080_dassl_tol1e-08",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\_single_N_S2_scheduled_soh080_dassl_tol1e-08.mos",
+                      "exit_code":  0,
+                      "seconds":  4.58,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-235319-ctlN_N_S2_scheduled_soh080_dassl_tol1e-08-_single_N_S2_scheduled_soh080_dassl_tol1e-08.out.txt"
+                  }
+              ]
+}

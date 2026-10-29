@@ -1,0 +1,151 @@
+{
+ "DEV-S1-M1-LEVE-P1-B0-dt1ms": {
+  "E_chem_rel": {
+   "value": 6.397140715251087e-07,
+   "tol": 0.0001,
+   "ok": true,
+   "group": "protocol"
+  },
+  "E_DC_rel": {
+   "value": 6.425192070805646e-07,
+   "tol": 0.0001,
+   "ok": true,
+   "group": "protocol"
+  },
+  "distance_rel": {
+   "value": 1.646510811949707e-11,
+   "tol": 1e-06,
+   "ok": true,
+   "group": "protocol"
+  },
+  "trip_time_abs_s": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "protocol"
+  },
+  "I_over_protocol_abs_As": {
+   "value": 0.0,
+   "tol": 1e-06,
+   "ok": true,
+   "group": "protocol"
+  },
+  "rmse_rel": {
+   "value": 4.805235087288765e-15,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "protocol"
+  },
+  "E_pos_rel": {
+   "value": 3.1522422609281445e-07,
+   "tol": 0.0001,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "friction_abs_Wh": {
+   "value": 5.5108761554123475e-08,
+   "tol": 1.4519869808173556e-05,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "max_err_rel": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "I_over_window_abs_As": {
+   "value": 4.873972182035686e-06,
+   "tol": 0.0001,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "min_Vt_abs_V": {
+   "value": 0.0,
+   "tol": 1e-06,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "batt_limited_frac_abs": {
+   "value": 0.0,
+   "tol": 1e-12,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "torque_limit_pos_abs_Nm": {
+   "value": 2.842170943040401e-14,
+   "tol": 1e-05,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "torque_limit_neg_abs_Nm": {
+   "value": 9.701171848064405e-07,
+   "tol": 1e-05,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "friction_power_own_limits_abs_W": {
+   "value": 5.177889762819632e-05,
+   "tol": 0.00031523043919052683,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "current_recompute_abs_A": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "friction_power_recompute_abs_W": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "regen_wheel_power_recompute_abs_W": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "tracked_profile_abs_ms": {
+   "value": 5.684341886080802e-14,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "closure_rel_abs": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true,
+   "group": "diagnostic"
+  },
+  "stop_ok_equal": {
+   "value": true,
+   "tol": null,
+   "ok": true,
+   "group": "protocol"
+  },
+  "complete_equal": {
+   "value": true,
+   "tol": null,
+   "ok": true,
+   "group": "protocol"
+  },
+  "tracking_ok_equal": {
+   "value": true,
+   "tol": null,
+   "ok": true,
+   "group": "protocol"
+  },
+  "constraint_ok_equal": {
+   "value": true,
+   "tol": null,
+   "ok": true,
+   "group": "protocol"
+  },
+  "protocol_ok": true,
+  "diagnostics_ok": true,
+  "all_ok": true
+ }
+}

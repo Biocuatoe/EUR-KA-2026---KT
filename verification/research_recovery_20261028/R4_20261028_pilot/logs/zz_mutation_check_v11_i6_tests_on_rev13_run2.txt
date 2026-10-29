@@ -1,0 +1,25 @@
+r4h3.checks <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev13_attempt10_20261029_0629\code\r4h3\checks.py
+r4h3.campaign <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev13_attempt10_20261029_0629\code\r4h3\campaign.py
+F                                                                        [100%]
+================================== FAILURES ===================================
+_________ test_i6_an_eligible_pair_with_a_raised_run_is_not_evaluable _________
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-310/test_i6_an_eligible_pair_with_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000158FFFD5E00>
+
+    def test_i6_an_eligible_pair_with_a_raised_run_is_not_evaluable(tmp_path, monkeypatch):     # rev14: renamed (I-6b)
+        task = _task()
+        design = _design(task)
+        _arm_raises(monkeypatch, "B3")
+        r = _run(_cond("I6EL"), design, task, tmp_path / "el")
+        # rev14 (owner decision I-6b, 2026-10-29): an attempted run that raised is CONDITION_ERROR, not RUN_MISSING
+>       assert r["qs_vs_dyn_pair_status"] == checks.QS_CONDITION_ERROR and r["qs_vs_dyn_applicability"] == "APPLICABLE"
+E       AssertionError: assert ('NOT_EVALUABLE_RUN_MISSING' == 'NOT_EVALUABL...NDITION_ERROR'
+E         
+E         - NOT_EVALUABLE_CONDITION_ERROR
+E         + NOT_EVALUABLE_RUN_MISSING)
+
+code\tests\test_owner_decisions_v11.py:116: AssertionError
+=========================== short test summary info ===========================
+FAILED code\tests\test_owner_decisions_v11.py::test_i6_an_eligible_pair_with_a_raised_run_is_not_evaluable
+1 failed, 14 deselected in 20.37s

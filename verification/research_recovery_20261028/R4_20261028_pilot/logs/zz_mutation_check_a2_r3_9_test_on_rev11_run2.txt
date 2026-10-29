@@ -1,0 +1,29 @@
+r4h3.checks <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev11_attempt8_20261028_2126\code\r4h3\checks.py
+r4h3.campaign <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev11_attempt8_20261028_2126\code\r4h3\campaign.py
+F                                                                        [100%]
+================================== FAILURES ===================================
+________ test_r3_9_an_exception_in_the_pair_evaluation_keeps_the_runs _________
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-311/test_r3_9_an_exception_in_the_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001E57E9C63F0>
+
+    def test_r3_9_an_exception_in_the_pair_evaluation_keeps_the_runs(tmp_path, monkeypatch):
+        task, mm = _gentle(), config.motor_model("M0")
+        design = campaign.plan_design(task, "L-R1", config.params_for("P1"), mm)
+    
+        def boom(*a, **k):
+            raise RuntimeError("injected pair failure")
+        monkeypatch.setattr(campaign.checks, "pair_qs_dynamic", boom)
+        r = campaign.run_condition(_cond("R39", pstate="P1"), task, design, config.params_for("P1"), 1.0,
+                                   config.LIMITS["L-R1"], mm, evaluator.motor_spec_from_protocol("M0", frozen.M1_CURVE),
+                                   fixed_gain(config.params_for("P1")), tmp_path)
+        assert r["qs_vs_dyn_pair_status"] == checks.QS_CONDITION_ERROR
+        # rev12 (review R8-2, owner ruling I-6): both profiles passed the QS screen, so applicability is known and kept apart
+>       assert r["qs_vs_dyn_applicability"] == checks.QS_APPLICABLE and r["qs_eligible_pair"] is True
+                                               ^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'r4h3.checks' has no attribute 'QS_APPLICABLE'
+
+code\tests\test_amendment2.py:319: AttributeError
+=========================== short test summary info ===========================
+FAILED code\tests\test_amendment2.py::test_r3_9_an_exception_in_the_pair_evaluation_keeps_the_runs
+1 failed, 31 deselected in 36.94s

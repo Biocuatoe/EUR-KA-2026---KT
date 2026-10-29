@@ -1,0 +1,235 @@
+{
+ "started": "2026-10-29 06:27:27 +0700",
+ "pilot_v9": {
+  "manifest": "R4_20261028_pilot\\zz_sha256_manifest_v9.csv",
+  "sha256": "5a330f19867e00aeb65269e92f67f370e197872f6db022993c40ea415e48af2f",
+  "rows": 1172,
+  "mismatched": [],
+  "unlisted": [],
+  "n_unlisted": 0
+ },
+ "pilot_v9_recorded": "5a330f19867e00aeb65269e92f67f370e197872f6db022993c40ea415e48af2f",
+ "attempt3": {
+  "manifest": "R4_20261028_campaign\\release_attempts\\attempt3_amendment2\\zz_sha256_manifest_attempt3.csv",
+  "sha256": "e33cdcb9b9ff6c9e50d34ab00acdc53a21dac4fe87c20e79c41158f84f5da9d3",
+  "rows": 73,
+  "mismatched": [],
+  "unlisted": [],
+  "n_unlisted": 0,
+  "expected": "e33cdcb9b9ff6c9e50d34ab00acdc53a21dac4fe87c20e79c41158f84f5da9d3"
+ },
+ "attempt4": {
+  "manifest": "R4_20261028_campaign\\release_attempts\\attempt4_owner_rulings\\zz_sha256_manifest_attempt4.csv",
+  "sha256": "0727aa086b3da7639c680a0bdd4f84ce58f7fe11133e64526727841cbcb91c89",
+  "rows": 76,
+  "mismatched": [],
+  "unlisted": [],
+  "n_unlisted": 0,
+  "expected": "0727aa086b3da7639c680a0bdd4f84ce58f7fe11133e64526727841cbcb91c89"
+ },
+ "attempt5": {
+  "manifest": "R4_20261028_campaign\\release_attempts\\attempt5_owner_rulings\\zz_sha256_manifest_attempt5.csv",
+  "sha256": "c32601c33365dc5c06f563d0ccec01c483208809499d87f3f2d7d944a4f3ca00",
+  "rows": 84,
+  "mismatched": [],
+  "unlisted": [],
+  "n_unlisted": 0,
+  "expected": "c32601c33365dc5c06f563d0ccec01c483208809499d87f3f2d7d944a4f3ca00"
+ },
+ "attempt6": {
+  "manifest": "R4_20261028_campaign\\release_attempts\\attempt6_review_fixes\\zz_sha256_manifest_attempt6.csv",
+  "sha256": "b19ddce7373aff8e02ae854986f3107355ea244a05e0a4b62831623b96ad4c3a",
+  "rows": 87,
+  "mismatched": [],
+  "unlisted": [],
+  "n_unlisted": 0,
+  "expected": "b19ddce7373aff8e02ae854986f3107355ea244a05e0a4b62831623b96ad4c3a"
+ },
+ "attempt7": {
+  "manifest": "R4_20261028_campaign\\release_attempts\\attempt7_final_review\\zz_sha256_manifest_attempt7.csv",
+  "sha256": "42e8c88f35edd49e206354173a79925050eae395a52b04a5fba7675f32a1f933",
+  "rows": 90,
+  "mismatched": [],
+  "unlisted": [],
+  "n_unlisted": 0,
+  "expected": "42e8c88f35edd49e206354173a79925050eae395a52b04a5fba7675f32a1f933"
+ },
+ "attempt8": {
+  "manifest": "R4_20261028_campaign\\release_attempts\\attempt8_final_owner_decisions\\zz_sha256_manifest_attempt8.csv",
+  "sha256": "2ea8714f3f492e8ceaa5cf345182ce243ef8dab51415f55413fc45bf5300a617",
+  "rows": 93,
+  "mismatched": [],
+  "unlisted": [],
+  "n_unlisted": 0,
+  "expected": "2ea8714f3f492e8ceaa5cf345182ce243ef8dab51415f55413fc45bf5300a617"
+ },
+ "attempt9": {
+  "manifest": "R4_20261028_campaign\\release_attempts\\attempt9_review_fixes\\zz_sha256_manifest_attempt9.csv",
+  "sha256": "0e317eef0a0a7ab54af9c2c69aee4af619693dabcf5ca441d2a7c386f5766ffc",
+  "rows": 96,
+  "mismatched": [],
+  "unlisted": [],
+  "n_unlisted": 0,
+  "expected": "0e317eef0a0a7ab54af9c2c69aee4af619693dabcf5ca441d2a7c386f5766ffc"
+ },
+ "attempt10": {
+  "manifest": "R4_20261028_campaign\\release_attempts\\attempt10_review_fixes\\zz_sha256_manifest_attempt10.csv",
+  "sha256": "9af4b502cbc01fb1ee657ac0f509f71a59b87f8467d7e7e5a8dfc0b9aa6c84a8",
+  "rows": 99,
+  "mismatched": [],
+  "unlisted": [],
+  "n_unlisted": 0,
+  "expected": "9af4b502cbc01fb1ee657ac0f509f71a59b87f8467d7e7e5a8dfc0b9aa6c84a8"
+ },
+ "attempt2_root": {
+  "manifest": "R4_20261028_campaign\\zz_sha256_manifest_release.csv",
+  "sha256": "eae902275b363357674be7aed8a8b37162b687cd72ced0033dbfb84dfaff32e4",
+  "rows": 122,
+  "mismatched": [],
+  "unlisted": [
+   "release_attempts/attempt10_review_fixes/ATTEMPT_NOTE_attempt10.md",
+   "release_attempts/attempt10_review_fixes/GATE_RECORD_attempt10.json",
+   "release_attempts/attempt10_review_fixes/code/build_cycle_inputs.py",
+   "release_attempts/attempt10_review_fixes/code/pytest.ini",
+   "release_attempts/attempt10_review_fixes/code/r4h3/__init__.py",
+   "release_attempts/attempt10_review_fixes/code/r4h3/campaign.py",
+   "release_attempts/attempt10_review_fixes/code/r4h3/checks.py",
+   "release_attempts/attempt10_review_fixes/code/r4h3/closedloop.py",
+   "release_attempts/attempt10_review_fixes/code/r4h3/config.py",
+   "release_attempts/attempt10_review_fixes/code/r4h3/evaluator.py",
+   "release_attempts/attempt10_review_fixes/code/r4h3/frozen.py",
+   "release_attempts/attempt10_review_fixes/code/r4h3/inputs.py",
+   "release_attempts/attempt10_review_fixes/code/r4h3/planner.py",
+   "release_attempts/attempt10_review_fixes/code/r4h3/sensitivity.py",
+   "release_attempts/attempt10_review_fixes/code/r4h3/slice.py",
+   "release_attempts/attempt10_review_fixes/code/r4h3/task.py",
+   "release_attempts/attempt10_review_fixes/code/r4h3/traces.py",
+   "release_attempts/attempt10_review_fixes/code/r4h3/validator.py",
+   "release_attempts/attempt10_review_fixes/code/recompute_from_traces.py",
+   "release_attempts/attempt10_review_fixes/code/record_gate.py",
+   "release_attempts/attempt10_review_fixes/code/record_readiness_gate.py",
+   "release_attempts/attempt10_review_fixes/code/run_campaign.py",
+   "release_attempts/attempt10_review_fixes/code/run_devchecks.py",
+   "release_attempts/attempt10_review_fixes/code/run_devchecks_rev2.py",
+   "release_attempts/attempt10_review_fixes/code/run_slice.py",
+   "release_attempts/attempt10_review_fixes/code/tests/conftest.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_amendment2.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_campaign.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_checks.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_closedloop.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_evaluator.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_frozen_and_task.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_inputs_and_sensitivity.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_owner_decisions_v11.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_owner_ruling_i1_v10.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_owner_rulings_v7.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_owner_rulings_v8.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_planner.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_regressions_v2.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_rev2.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_review_fixes_v12.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_review_fixes_v13.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_review_fixes_v9.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_scope.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_traces.py",
+   "release_attempts/attempt10_review_fixes/code/tests/test_validator.py",
+   "release_attempts/attempt10_review_fixes/config/campaign_config_v10_DRAFT.json",
+   "release_attempts/attempt10_review_fixes/config/campaign_config_v11_DRAFT.json",
+   "release_attempts/attempt10_review_fixes/config/campaign_config_v12_DRAFT.json",
+   "release_attempts/attempt10_review_fixes/config/campaign_config_v13_DRAFT.json"
+  ],
+  "n_unlisted": 706
+ },
+ "frozen": {
+  "protocol_v1": {
+   "sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+   "expected": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+   "equal": true
+  },
+  "amendment_1": {
+   "sha256": "7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2",
+   "expected": "7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2",
+   "equal": true
+  },
+  "amendment_1_approval": {
+   "sha256": "03f835e9311410095e4447840ecb2b02d95c50279527df5fdf2f6d334e15eecd",
+   "expected": "03f835e9311410095e4447840ecb2b02d95c50279527df5fdf2f6d334e15eecd",
+   "equal": true
+  }
+ },
+ "candidates": {
+  "rev3": {
+   "sha256": "fdaf193de510488733f0e0899d50def86cbeafabdbecdd3bc7a144099b6f492c",
+   "expected": "fdaf193de510488733f0e0899d50def86cbeafabdbecdd3bc7a144099b6f492c",
+   "equal": true
+  },
+  "rev4": {
+   "sha256": "c726560d1e87036cbd94fe58724cafdc1e4746647f6cfacbb320f3e14ed143ab",
+   "expected": "c726560d1e87036cbd94fe58724cafdc1e4746647f6cfacbb320f3e14ed143ab",
+   "equal": true
+  },
+  "rev5": {
+   "sha256": "e7ba73c11784b3cf38f48e32b69a7a7c21b070d039118547d638bc1bf06d4f5f",
+   "expected": "e7ba73c11784b3cf38f48e32b69a7a7c21b070d039118547d638bc1bf06d4f5f",
+   "equal": true
+  },
+  "rev6": {
+   "sha256": "0dcb767e97e19f40c00735d9efaecf8d21c396c23952b70e60ccb21a3f711e1f",
+   "expected": "0dcb767e97e19f40c00735d9efaecf8d21c396c23952b70e60ccb21a3f711e1f",
+   "equal": true
+  },
+  "rev7": {
+   "sha256": "0e3ef3112c979237e7079f176b21dd4f2ce682c7ab435f36f33321ffe67a5996",
+   "expected": "0e3ef3112c979237e7079f176b21dd4f2ce682c7ab435f36f33321ffe67a5996",
+   "equal": true
+  },
+  "rev8": {
+   "sha256": "f6430bf5512cb56065a2465bcfda1c4c42e244b80f73fcd3e88d985ac8811f7c",
+   "expected": "f6430bf5512cb56065a2465bcfda1c4c42e244b80f73fcd3e88d985ac8811f7c",
+   "equal": true
+  },
+  "rev9": {
+   "sha256": "cdeea032c520f408f1f300a53cf1bc8b1ec4582d80340d3df2c2c94fa5d45719",
+   "expected": "cdeea032c520f408f1f300a53cf1bc8b1ec4582d80340d3df2c2c94fa5d45719",
+   "equal": true
+  },
+  "rev10": {
+   "sha256": "5479f0e81b981c7977ea5a416762972d2a332d4fdb75beee7ad8379ade399804",
+   "expected": "5479f0e81b981c7977ea5a416762972d2a332d4fdb75beee7ad8379ade399804",
+   "equal": true
+  }
+ },
+ "review_reports": {
+  "CR-A2_CR-A6_rereview_agent_report_20261028.md": "49a8f65bc5c7708114a5afb30300a2eece7a2ab6f6a06c06db7cd437606f9040",
+  "CR-A_review_agent_report_20261028.md": "bfc3fe138a5874a23daa91c35afd5d030349a6554b5fd3968128c4353b8c145d",
+  "N-A2_review_agent_report_20261028.md": "7a905c7fd02b1f6cb6c677ae6b41c737f391ec12ff66243303390249ffe48614",
+  "N-A2_verification2_agent_report_20261028.md": "e7508481c63e7da2a2611c70f142288895e8ebe6a065fac7dcfea0326be23333",
+  "N-A2_verification3_agent_report_20261028.md": "a759b3db535b931abf9f07c7d29c8e651a24730fe200fce255561571998fad2f",
+  "N-A2_verification_agent_report_20261028.md": "de8f13651c3318256259f23181046d6a18842bb9d3575922b96abc7ccd211bf0",
+  "R10_attempt10_review_agent_report_20261029.md": "bc6019d4025466cc913ab511ce90567be235cf6ecd500d20655059423d1b3b9a",
+  "R5_attempt5_review_agent_report_20261028.ERRATUM.md": "0da0e944ccfd147a1d1cd6c147a63c1e2573f9991523f881c75c9f19c3c40c69",
+  "R5_attempt5_review_agent_report_20261028.md": "f77bc6818554b10fea53555436c3b3c4684de61c0117ac9ee0efa14e8a35448b",
+  "R7_attempt7_review_agent_report_20261028.md": "aa8dc0a18799d1d427935fb9478c1258f861cbb1dd990f31b94dcf0d25864e89",
+  "R8_attempt8_review_agent_report_20261028.md": "8cec721ed9e20ea562fe7e7d9eb667333d02cea5314c1df6cbeec2b9f445ca38",
+  "R9_attempt9_review_agent_report_20261028.md": "5461ae14a4c061523a6fff8917445308ea5b342fcee42e4b4c604143f339227e",
+  "V6_attempt6_verification_agent_report_20261028.md": "c6aa33952f9d27129b9648c0978072ef8801d9501b647a2c60a16fd4e8d4a62d"
+ },
+ "attempt10_gate_record": "607bf045b4026a85ef218ffc039d21138029d9858f0d9fc50a8f3826e1a25bdf",
+ "attempt11_exists": false,
+ "campaign_authorization_exists": false,
+ "issued_amendment_2_exists": false,
+ "amendment_2_approval_exists": false,
+ "campaign_outputs_exists": false,
+ "baseline_pilot_equals_attempt10": {
+  "pilot_files": 72,
+  "attempt10_files": 72,
+  "equal": true,
+  "differing": []
+ },
+ "line_endings": {
+  "CRLF": 17,
+  "LF": 25,
+  "MIXED": 1
+ },
+ "project_files": 25743
+}

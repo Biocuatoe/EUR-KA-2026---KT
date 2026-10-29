@@ -1,0 +1,16 @@
+M2 S2 L-R1 baseline dt 0.001 117 s
+M2 S2 L-R1 eco_A0 dt 0.001 115 s
+M2 S2 L-R1 eco_A5 dt 0.001 122 s
+M2 S2 L-EVE baseline dt 0.001 111 s
+M2 S2 L-EVE baseline dt 0.0005 220 s
+M2 S2 L-EVE eco_A0 dt 0.001 125 s
+M2 S2 L-EVE eco_A0 dt 0.0005 258 s
+M2 S2 L-EVE eco_A5 dt 0.001 149 s
+M2 S2 L-EVE eco_A5 dt 0.0005 296 s
+M2 UDDS L-R1 baseline dt 0.001 1008 s
+M2 UDDS L-R1 eco_A0 dt 0.001 941 s
+M2 UDDS L-R1 eco_A5 dt 0.001 989 s
+M2 UDDS L-EVE baseline dt 0.001 889 s
+M2 UDDS L-EVE baseline dt 0.0005 1671 s
+M2 UDDS L-EVE eco_A5 dt 0.001 762 s
+M2 UDDS L-EVE eco_A5 dt 0.0005 1447 s

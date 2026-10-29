@@ -1,0 +1,3 @@
+# Helper scripts of the task "Attempt 11" (2026-10-29)
+
+These are copies of the scripts and texts that produced this task's evidence: the start state, the archives, the candidate builds, the status files, the attempt builds, checks and validations, the review scopes and briefs, the verbatim saving of the review reports, the gate records, the manifests, the line-ending checks, the mutation runner and the integrity check. They ran from the session's temporary scratch area and are kept here only as a record; `SCRIPTS_SHA256.csv` lists each copy's SHA-256, equal to the file that ran at the time of copying. All Python ran with `-I -B`.

@@ -1,0 +1,300 @@
+{
+ "root": "D:\\EURÉKA 2026 - KT",
+ "audit_start_reference": "2026-10-23T00:00:00+07:00",
+ "per_top_level": {
+  ".git": {
+   "files": 467,
+   "min_mtime": "2026-10-23T13:03:24+07:00",
+   "max_mtime": "2026-10-25T08:55:40+07:00",
+   "pre_audit": 0
+  },
+  ".venv": {
+   "files": 20868,
+   "min_mtime": "2026-10-23T12:56:47+07:00",
+   "max_mtime": "2026-10-23T15:58:22+07:00",
+   "pre_audit": 0
+  },
+  ".vscode": {
+   "files": 1,
+   "min_mtime": "2026-10-23T15:32:32+07:00",
+   "max_mtime": "2026-10-23T15:32:32+07:00",
+   "pre_audit": 0
+  },
+  "<root files>": {
+   "files": 11,
+   "min_mtime": "2026-09-21T12:20:02+07:00",
+   "max_mtime": "2026-10-24T05:30:32+07:00",
+   "pre_audit": 1
+  },
+  "artifacts": {
+   "files": 53,
+   "min_mtime": "2026-10-23T13:04:21+07:00",
+   "max_mtime": "2026-10-24T21:52:31+07:00",
+   "pre_audit": 0
+  },
+  "audit": {
+   "files": 6,
+   "min_mtime": "2026-10-23T16:41:00+07:00",
+   "max_mtime": "2026-10-23T18:05:40+07:00",
+   "pre_audit": 0
+  },
+  "cache": {
+   "files": 20855,
+   "min_mtime": "2026-10-23T12:49:49+07:00",
+   "max_mtime": "2026-10-24T21:59:30+07:00",
+   "pre_audit": 0
+  },
+  "configs": {
+   "files": 3,
+   "min_mtime": "2026-10-23T13:43:52+07:00",
+   "max_mtime": "2026-10-23T13:52:02+07:00",
+   "pre_audit": 0
+  },
+  "data": {
+   "files": 21,
+   "min_mtime": "2026-09-21T12:20:02+07:00",
+   "max_mtime": "2026-10-23T17:57:03+07:00",
+   "pre_audit": 1
+  },
+  "docs": {
+   "files": 21,
+   "min_mtime": "2026-10-23T13:44:23+07:00",
+   "max_mtime": "2026-10-24T23:05:05+07:00",
+   "pre_audit": 0
+  },
+  "evidence": {
+   "files": 10,
+   "min_mtime": "2026-10-23T13:37:17+07:00",
+   "max_mtime": "2026-10-24T20:45:52+07:00",
+   "pre_audit": 0
+  },
+  "logs": {
+   "files": 25,
+   "min_mtime": "2026-10-23T12:50:11+07:00",
+   "max_mtime": "2026-10-23T15:41:40+07:00",
+   "pre_audit": 0
+  },
+  "protocol": {
+   "files": 1,
+   "min_mtime": "2026-10-23T13:52:01+07:00",
+   "max_mtime": "2026-10-23T13:52:01+07:00",
+   "pre_audit": 0
+  },
+  "scripts": {
+   "files": 15,
+   "min_mtime": "2026-10-23T13:04:40+07:00",
+   "max_mtime": "2026-10-23T15:32:31+07:00",
+   "pre_audit": 0
+  },
+  "src": {
+   "files": 26,
+   "min_mtime": "2026-10-23T13:38:16+07:00",
+   "max_mtime": "2026-10-23T15:34:21+07:00",
+   "pre_audit": 0
+  },
+  "tests": {
+   "files": 18,
+   "min_mtime": "2026-10-23T13:44:32+07:00",
+   "max_mtime": "2026-10-23T15:36:28+07:00",
+   "pre_audit": 0
+  },
+  "tools": {
+   "files": 122559,
+   "min_mtime": "2019-05-31T23:51:14+07:00",
+   "max_mtime": "2026-10-24T06:33:57+07:00",
+   "pre_audit": 118119
+  },
+  "verification": {
+   "files": 24449,
+   "min_mtime": "2026-10-23T12:56:47+07:00",
+   "max_mtime": "2026-10-25T11:46:46+07:00",
+   "pre_audit": 0
+  }
+ },
+ "pre_audit_files_outside_third_party_trees": [
+  {
+   "path": "EURÉKA 2026 - KT.docx",
+   "mtime": "2026-09-21T12:20:02+07:00",
+   "size": 434945
+  },
+  {
+   "path": "data/raw/report/EUREKA-2026-KT.docx",
+   "mtime": "2026-09-21T12:20:02+07:00",
+   "size": 434945
+  }
+ ],
+ "pre_audit_files_in_third_party_trees_by_prefix": {
+  "tools/OpenModelica/tools": 115331,
+  "tools/OpenModelica/include": 976,
+  "tools/OpenModelica/share": 792,
+  "tools/OpenModelica/lib": 601,
+  "tools/OpenModelica/bin": 411,
+  "tools/OpenModelica/icons": 8
+ },
+ "provenance_type_counts_in_third_party_trees": {
+  ".venv .c": 16,
+  ".venv .csv": 266,
+  ".venv .h": 40,
+  ".venv .json": 23,
+  ".venv .m": 13,
+  ".venv .mat": 125,
+  ".venv .npy": 12,
+  ".venv .npz": 24,
+  ".venv .pdf": 11,
+  ".venv .pkl": 2,
+  ".venv .py": 8880,
+  ".venv .xls": 6,
+  "cache .c": 16,
+  "cache .csv": 266,
+  "cache .h": 40,
+  "cache .json": 43,
+  "cache .m": 13,
+  "cache .mat": 125,
+  "cache .npy": 12,
+  "cache .npz": 27,
+  "cache .pdf": 11,
+  "cache .pkl": 2,
+  "cache .py": 10723,
+  "cache .xls": 6,
+  "cache .yaml": 6,
+  "tools .c": 416,
+  "tools .csv": 112,
+  "tools .doc": 1,
+  "tools .h": 31724,
+  "tools .json": 455,
+  "tools .log": 2,
+  "tools .m": 1,
+  "tools .mat": 111,
+  "tools .npy": 12,
+  "tools .npz": 25,
+  "tools .pdf": 23,
+  "tools .pkl": 1,
+  "tools .py": 9273,
+  "tools .tex": 9,
+  "tools .yaml": 1,
+  "tools .yml": 4,
+  "verification/omc-userdata .c": 78,
+  "verification/omc-userdata .doc": 3,
+  "verification/omc-userdata .h": 76,
+  "verification/omc-userdata .json": 12,
+  "verification/omc-userdata .mat": 24,
+  "verification/omc-userdata .pdf": 42,
+  "verification/omc-userdata .py": 3,
+  "verification/python-env .c": 5,
+  "verification/python-env .csv": 30,
+  "verification/python-env .h": 27,
+  "verification/python-env .json": 18,
+  "verification/python-env .npy": 5,
+  "verification/python-env .npz": 2,
+  "verification/python-env .pkl": 1,
+  "verification/python-env .py": 4346
+ },
+ "provenance_type_counts_outside": {
+  ".docx": 2,
+  ".csv": 186,
+  ".json": 456,
+  ".npz": 60,
+  ".py": 100,
+  ".yaml": 7,
+  ".log": 145,
+  ".c": 2478,
+  ".h": 944,
+  ".bib": 1
+ },
+ "provenance_type_files_outside_pre_audit": [
+  {
+   "path": "EURÉKA 2026 - KT.docx",
+   "ext": ".docx",
+   "size": 434945,
+   "mtime": "2026-09-21T12:20:02+07:00",
+   "pre_audit": true
+  },
+  {
+   "path": "data/raw/report/EUREKA-2026-KT.docx",
+   "ext": ".docx",
+   "size": 434945,
+   "mtime": "2026-09-21T12:20:02+07:00",
+   "pre_audit": true
+  }
+ ],
+ "name_pattern_hits": [
+  {
+   "pattern": "visualization\\.py",
+   "path": ".venv/Lib/site-packages/mpmath/visualization.py",
+   "mtime": "2026-10-23T12:56:50+07:00",
+   "size": 10627
+  },
+  {
+   "pattern": "visualization\\.py",
+   "path": ".venv/Lib/site-packages/mpmath/tests/test_visualization.py",
+   "mtime": "2026-10-23T12:56:53+07:00",
+   "size": 944
+  },
+  {
+   "pattern": "sensitivity_analysis\\.py",
+   "path": ".venv/Lib/site-packages/scipy/stats/_sensitivity_analysis.py",
+   "mtime": "2026-10-23T12:57:12+07:00",
+   "size": 25842
+  },
+  {
+   "pattern": "sensitivity_analysis\\.py",
+   "path": ".venv/Lib/site-packages/scipy/stats/tests/test_sensitivity_analysis.py",
+   "mtime": "2026-10-23T12:57:12+07:00",
+   "size": 10988
+  },
+  {
+   "pattern": "visualization\\.py",
+   "path": "cache/uv/archive-v0/3z0Ab5CvWX6i7gdc/mpmath/visualization.py",
+   "mtime": "2026-10-23T12:56:50+07:00",
+   "size": 10627
+  },
+  {
+   "pattern": "visualization\\.py",
+   "path": "cache/uv/archive-v0/3z0Ab5CvWX6i7gdc/mpmath/tests/test_visualization.py",
+   "mtime": "2026-10-23T12:56:53+07:00",
+   "size": 944
+  },
+  {
+   "pattern": "sensitivity_analysis\\.py",
+   "path": "cache/uv/archive-v0/Qv-l3lwF81Isdt0m/scipy/stats/_sensitivity_analysis.py",
+   "mtime": "2026-10-23T12:57:12+07:00",
+   "size": 25842
+  },
+  {
+   "pattern": "sensitivity_analysis\\.py",
+   "path": "cache/uv/archive-v0/Qv-l3lwF81Isdt0m/scipy/stats/tests/test_sensitivity_analysis.py",
+   "mtime": "2026-10-23T12:57:12+07:00",
+   "size": 10988
+  },
+  {
+   "pattern": "AUDIT_REPORT",
+   "path": "scripts/audit_report.py",
+   "mtime": "2026-10-23T13:44:32+07:00",
+   "size": 2788
+  },
+  {
+   "pattern": "sensitivity_analysis\\.py",
+   "path": "tools/OpenModelica/tools/msys/ucrt64/lib/python3.14/site-packages/scipy/stats/_sensitivity_analysis.py",
+   "mtime": "2026-09-09T08:09:20+07:00",
+   "size": 25123
+  },
+  {
+   "pattern": "sensitivity_analysis\\.py",
+   "path": "tools/OpenModelica/tools/msys/ucrt64/lib/python3.14/site-packages/scipy/stats/tests/test_sensitivity_analysis.py",
+   "mtime": "2026-09-09T08:09:20+07:00",
+   "size": 10678
+  }
+ ],
+ "claim_string_files": 41,
+ "claim_string_files_pre_audit": [],
+ "git_first_reflog_entry": {
+  "line": "0000000000000000000000000000000000000000 126750ae5f70eab8a2e4949ba20e208e3552cd72 Biocuatoe <hungleduc2005@gmail.com> 1792737904 +0700\tcommit (initial): Environment, Phase 1 claim registry and Phase 2 pre-registration",
+  "time": "2026-10-23T13:45:04+07:00",
+  "reflog_entries": 8
+ },
+ "not_searched": [
+  "anything outside the project root (D:\\EUREKA in particular, by owner instruction)",
+  "contents of compressed Git objects (no git command run)",
+  "binary files for the claim strings (only the TEXT_EXT types were read)"
+ ]
+}

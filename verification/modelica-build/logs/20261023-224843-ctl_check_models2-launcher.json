@@ -1,0 +1,30 @@
+﻿{
+    "label":  "ctl_check_models2",
+    "time":  "2026-10-23T22:48:44",
+    "exit_code":  0,
+    "project_root":  "D:\\EURÉKA 2026 - KT",
+    "letter":  "Y",
+    "cleanup":  {
+                    "alias_created":  true,
+                    "alias_removed":  true,
+                    "alias_still_mapped":  false,
+                    "other_mappings_unchanged":  true,
+                    "env_restored":  true
+                },
+    "steps":  [
+                  {
+                      "name":  "version",
+                      "command":  "omc --version",
+                      "exit_code":  0,
+                      "seconds":  0.06,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-224843-ctl_check_models2-version.out.txt"
+                  },
+                  {
+                      "name":  "60_controller_check_models",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\60_controller_check_models.mos",
+                      "exit_code":  0,
+                      "seconds":  0.2,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-224843-ctl_check_models2-60_controller_check_models.out.txt"
+                  }
+              ]
+}

@@ -1,0 +1,30 @@
+﻿{
+    "label":  "ctlA_A_S2_fixed_soh070",
+    "time":  "2026-10-23T23:52:13",
+    "exit_code":  0,
+    "project_root":  "D:\\EURÉKA 2026 - KT",
+    "letter":  "Y",
+    "cleanup":  {
+                    "alias_created":  true,
+                    "alias_removed":  true,
+                    "alias_still_mapped":  false,
+                    "other_mappings_unchanged":  true,
+                    "env_restored":  true
+                },
+    "steps":  [
+                  {
+                      "name":  "version",
+                      "command":  "omc --version",
+                      "exit_code":  0,
+                      "seconds":  0.05,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-235206-ctlA_A_S2_fixed_soh070-version.out.txt"
+                  },
+                  {
+                      "name":  "_single_A_S2_fixed_soh070",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\_single_A_S2_fixed_soh070.mos",
+                      "exit_code":  0,
+                      "seconds":  6.5,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-235206-ctlA_A_S2_fixed_soh070-_single_A_S2_fixed_soh070.out.txt"
+                  }
+              ]
+}

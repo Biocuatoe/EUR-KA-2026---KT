@@ -1,0 +1,34 @@
+seq,date_time_local,step,command (from R3_20261025/code unless stated),environment,exit_code,status,log,outputs,notes
+0,2026-10-25 ~15:05,preservation,"Get-FileHash of 6 pre-existing R3 files; Win32_Process listing",PowerShell,0,done,(session),(session record),"Pre-existing hashes: R3_literature 0B1D71A9..., R3_model_basis C2ABCEAF..., R3_protocol 8BA431AE..., extract_motor_curve 8A2FAF66..., r3_lib ABCAD7F3..., test_r3 10EB3ECD.... Two python.exe '-' processes (PIDs 17636/20144, started 06:50 by an earlier session's bash heredoc) found idle on stdin; not touched"
+1,2026-10-25 ~15:06,Step 1,python -I extract_motor_curve.py,verification/python-env (FASTSim 3.1.0; Python 3.14.7),0,done,(console),data/motor_curve_fastsim.json,DeprecationWarning to_pydict only
+2,2026-10-25 ~15:08,Step 1,python -I extract_fastsim_source.py,verification/python-env,0,done,(console),data/fastsim_2022_Renault_Zoe_ZE50_R135.yaml; data/fastsim_source_record.json,9 identical embedded copies; module SHA-256 18da0cec...ce40
+3,2026-10-25 ~15:10,Step 1,python -I probe_fastsim_regen.py (run 1),verification/python-env,0,superseded,(console),data/fastsim_em_probe.json (overwritten by run 2),wrong braking sign: found 0 regen samples
+4,2026-10-25 ~15:11,Step 1,python -I probe_fastsim_regen.py (run 2; sign changed),verification/python-env,0,inconclusive,(console),data/fastsim_em_probe.json,dyn_brake channels are zero in FASTSim 3.1.0; regen is negative pwr_mech_prop_out
+5,2026-10-25 ~15:12,Step 1,session temp scripts claude_r3_sign.py / claude_r3_scan.py,verification/python-env,0,done,(console),data/fastsim_embedded_em_curves.json,regen eta = curve(max(P;0)/Pmax) = 0.84; three e-machine curves share one template; later preserved as code/probe_fastsim_regen_rule.py (seq 16)
+6,2026-10-25 15:06,Step 3,python -I test_r3.py,.venv (Python 3.14.7; numpy 2.5.4),0,6/6 PASS,logs/test_r3_run1.txt,,
+7,2026-10-25 15:14,Step 2,python -I derive_m1_curve.py,.venv,0,done,(console),data/motor_curve_m1_derived.json,SHA-256 f872faa0...d1d9
+8,2026-10-25 15:15,Step 3,python -I test_r3_supplementary.py (run 1),.venv,1,11/12 PASS; 1 FAIL,logs/test_r3_supplementary_run1.txt,,test assumption error (motor envelope ignored); see R3_test_report.md section 3
+9,2026-10-25 15:20,Step 3,python -I test_r3_supplementary.py (run 2),.venv,0,12/12 PASS,logs/test_r3_supplementary_run2.txt,,
+10,2026-10-25 15:21,Step 5 prep,python -I precheck_feasibility.py,.venv,0,done,logs/precheck_feasibility.txt,outputs/precheck_feasibility.csv,feasibility counts only; no energy
+11,2026-10-25 15:24,Step 4,python -I test_r3_v1_additions.py,.venv,0,5/5 PASS,logs/test_r3_v1_additions_run1.txt,,
+12,2026-10-25 ~15:26,Step 5 prep,smoke run of run_gates task functions on a synthetic profile,.venv,0,done,(console),scratchpad only (not evidence),no real-cycle value computed
+13,2026-10-25 15:28,Step 3,"test_r3.py, test_r3_supplementary.py, test_r3_v1_additions.py (final, on frozen code)",.venv,0/0/0,6/6; 12/12; 5/5 PASS,logs/*_prefreeze_final.txt,,
+14,2026-10-25 15:32:14,Step 5,freeze R3_protocol_v1.md,PowerShell,0,frozen,logs/protocol_v1_sha256_at_freeze.txt,,protocol SHA-256 d9e82f89...bae56
+15,2026-10-25 15:32-15:44,Step 6,python -I run_gates.py --workers 6,.venv,0,47 tasks; 0 errors,logs/run_gates.txt,outputs/gates/*,run_manifest.json holds code/data/output hashes
+16,2026-10-25 15:32,Step 1 (documentation),python -I probe_fastsim_regen_rule.py,verification/python-env,0,done,logs/probe_fastsim_regen_rule.txt,,post-freeze preservation of seq 5
+17,2026-10-25 15:45,Step 6,python -I evaluate_gates.py,.venv,0,done,logs/evaluate_gates.txt,outputs/gates/gate_decisions.json,G-A FAIL-certified; G-B PASS; G-C PASS (all branches)
+18,2026-10-25 15:46,Step 6 (description),python -I describe_band_paths.py,.venv,0,done,logs/describe_band_paths.txt,outputs/checks/band_path_description.csv,found motion while baseline at rest -> amendment 1
+19,2026-10-25 15:48:29,amendment,record R3_protocol_v1_amendment_1.md hash,PowerShell,0,recorded,logs/amendment_1_sha256.txt,,SHA-256 51a2e93b...1e64
+20,2026-10-25 15:48-15:59,Step 6 (A1.1),python -I run_gates_a1.py --workers 6,.venv,0,27 tasks; 0 errors,logs/run_gates_a1.txt,outputs/gates_a1/*,
+21,2026-10-25 ~15:50,Step 6 (A1.2),python -I check_m2_regen_split.py,.venv,0,done,logs/check_m2_regen_split.txt,outputs/checks/m2_regen_split.csv,split lever <= 0.27 %
+22,2026-10-25 15:50-16:00,Step 7 pre-condition,python -I r3_pilot.py precheck,.venv,0,PASS (0.0),logs/pilot_precheck.txt,outputs/pilot_B/precheck/*,
+23,2026-10-25 ~16:00,Step 6,python -I evaluate_gates.py ..\outputs\gates_a1,.venv,0,done,logs/evaluate_gates_a1.txt,outputs/gates_a1/gate_decisions.json,G-B' PASS; G-A' FAIL-certified
+24,2026-10-25 16:01-18:34+,Step 7 R3-C,python -I r3_pilot.py C M0 | C M1 | C M2 (3 processes),.venv,1/1/1,simulations complete; manifest step crashed,logs/pilot_C_M*.txt and .err.txt,outputs/pilot_C/M*/runs.csv,TypeError at manifest (1x3 gain); runs.csv complete (17 rows each); no rerun
+25,2026-10-25 16:02-16:12,Step 7 pre-condition,python -I pilot_precheck2.py,.venv,0,PASS (0.0; governor active),logs/pilot_precheck2.txt,outputs/pilot_B/precheck/precheck2.csv,
+26,2026-10-25 ~16:10,Step 6,python -I summarise_gates.py,.venv,0,done,logs/summarise_gates.txt,outputs/gates/summary_tables.txt,
+27,2026-10-25 16:13-~18:00,Step 7 R3-B,python -I r3_pilot.py B M0 | B M1 | B M2 (3 processes),.venv,0/0/0,768 runs; 0 invalid,logs/pilot_B_M*.txt,outputs/pilot_B/M*/*,
+28,2026-10-25 ~18:40,Step 8,python -I analyse_pilots.py (partial; C for M0/M1 not yet written),.venv,0,superseded,logs/analyse_pilots_partial.txt,,
+29,2026-10-25 after 18:40,repair,python -I write_pilot_C_manifests.py,.venv,0,done,logs/write_pilot_C_manifests.txt,outputs/pilot_C/M*/manifest.json,marked as written afterwards
+30,2026-10-25 after 18:40,Step 8,python -I analyse_pilots.py,.venv,0,done,logs/analyse_pilots.txt,outputs/pilot_summary.json; outputs/pilot_summary_tables.txt,
+31,2026-10-25 after 18:40,Step 8 (diagnostic),python -I diagnose_m2_qs_gap.py,.venv,0,done,logs/diagnose_m2_qs_gap.txt,outputs/checks/m2_qs_gap.csv; m2_qs_gap_trace_S2.npz,post-hoc; explains M2 QS-dynamic gap
+32,2026-10-25 end,final,python -I build_hash_manifest.py,.venv,see log,see log,logs/build_hash_manifest.txt,R3_hash_manifest.csv,

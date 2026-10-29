@@ -1,0 +1,55 @@
+{
+ "written": "2026-10-29T09:56:26+0700",
+ "snapshot": {
+  "manifest": "C:\\Users\\HLC\\EUREKA_EVIDENCE\\GATE1_20261028\\MANIFEST.sha256.csv",
+  "manifest_sha256": "A93EB44FC128DAC30E754C6EA996D67AB381B78A708A999C8BE1DE7600D4F279",
+  "manifest_sha256_expected": "A93EB44FC128DAC30E754C6EA996D67AB381B78A708A999C8BE1DE7600D4F279",
+  "manifest_sha256_matches": true,
+  "rows": 570,
+  "rows_all_checks_pass": 570
+ },
+ "preflight": {
+  "manifest_rows": 29,
+  "manifest_rows_verified": 29,
+  "files_now": 30,
+  "files_at_start": 30,
+  "added": [],
+  "removed": [],
+  "changed": []
+ },
+ "frozen": {
+  "protocol_v1": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+  "amendment_1_issued": "7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2",
+  "amendment_1_approval": "03f835e9311410095e4447840ecb2b02d95c50279527df5fdf2f6d334e15eecd",
+  "campaign_authorization_exists": false,
+  "issued_amendment_2_exists": false,
+  "amendment_2_approval_exists": false,
+  "amendment_2_candidate_rev4": "c726560d1e87036cbd94fe58724cafdc1e4746647f6cfacbb320f3e14ed143ab",
+  "amendment_2_draft_rev3": "fdaf193de510488733f0e0899d50def86cbeafabdbecdd3bc7a144099b6f492c",
+  "amendment_2_candidate_rev5": "e7ba73c11784b3cf38f48e32b69a7a7c21b070d039118547d638bc1bf06d4f5f",
+  "amendment_2_candidate_rev6": "0dcb767e97e19f40c00735d9efaecf8d21c396c23952b70e60ccb21a3f711e1f",
+  "amendment_2_candidate_rev7": "0e3ef3112c979237e7079f176b21dd4f2ce682c7ab435f36f33321ffe67a5996",
+  "amendment_2_candidate_rev8": "f6430bf5512cb56065a2465bcfda1c4c42e244b80f73fcd3e88d985ac8811f7c",
+  "amendment_2_candidate_rev9": "cdeea032c520f408f1f300a53cf1bc8b1ec4582d80340d3df2c2c94fa5d45719",
+  "amendment_2_candidate_rev10": "5479f0e81b981c7977ea5a416762972d2a332d4fdb75beee7ad8379ade399804",
+  "amendment_2_candidate_rev11": "162b688d2a1665831705bc3a1bc68273f5ede15cc87b0d226837cf4f015998e9",
+  "amendment_2_candidate_rev12": "ac376c0b362c2e99a9d3777fa849205844487e0be50a41dd1c5f1b2410b5ae1b",
+  "amendment_2_candidate_rev13": "7f06dd1f1a825c55280fa220b740d617baf4fab1899300a4a31958f345d9759b",
+  "campaign_outputs_dir_exists": false
+ },
+ "project": {
+  "before": 25743,
+  "after": 25954,
+  "added": 211,
+  "removed": 0,
+  "changed": 0,
+  "added_outside_attempts_11_and_12": [],
+  "removed_list": [],
+  "changed_list": []
+ }
+}
+{
+ "amendment_2_drafts_all_present": true,
+ "release_manifests_all_ok": true
+}
+{"attempt2_root": [true, 122, []], "attempt3": [true, 73, []], "attempt4": [true, 76, []], "attempt5": [true, 84, []], "attempt6": [true, 87, []], "attempt7": [true, 90, []], "attempt8": [true, 93, []], "attempt9": [true, 96, []], "attempt10": [true, 99, []], "attempt11": [true, 103, []], "attempt12": [true, 106, []]}

@@ -1,0 +1,15 @@
+{
+  "rows": 2002,
+  "t_start": 0.0,
+  "t_end": 20.0,
+  "v_initial": 10.0,
+  "v_final_sim": 5.553063727179507,
+  "v_final_closed_form": 5.553063730019505,
+  "max_abs_error_vs_closed_form_m_s": 3.630665545983902e-09,
+  "max_rel_error": 5.139769534017472e-10,
+  "modelica_own_err_column_max_abs": 3.630665545983902e-09,
+  "negative_control_max_abs_error_if_c_were_26": 0.12913512567678165,
+  "any_nonfinite": false,
+  "result_file_sha256": "501723fac34042c2711e4c8364035fb448f6ff0741e96bc7f2604c843371273a",
+  "result_file_physical_path": "D:\\EUR\u00c9KA 2026 - KT\\verification\\openmodelica-smoke\\out\\CoastDown_res.csv"
+}

@@ -1,0 +1,20 @@
+........................................................................ [ 35%]
+........................................................................ [ 71%]
+...........................F.............................                [100%]
+================================== FAILURES ===================================
+_______ test_campaign_authorisation_is_separate_from_protocol_approval ________
+
+    def test_campaign_authorisation_is_separate_from_protocol_approval():
+        """VC-14: campaign mode needs an owner-written authorisation naming the issued amendment and the release gate."""
+        good = dict(authorized_by="owner", date="2026-11-01", scope=campaign.AUTHORIZATION_SCOPE,
+                    amendment_sha256="ab" * 32, pre_run_hashes_sha256="cd" * 32)
+>       assert campaign.authorization_problems(good, "ab" * 32, "cd" * 32) == []
+E       assert ["campaign au... 2's SHA-256"] == []
+E         
+E         Left contains one more item: "campaign authorisation does not carry the issued amendment 2's SHA-256"
+E         Use -v to get more diff
+
+code\tests\test_rev2.py:202: AssertionError
+=========================== short test summary info ===========================
+FAILED code\tests\test_rev2.py::test_campaign_authorisation_is_separate_from_protocol_approval
+1 failed, 200 passed in 451.81s (0:07:31)

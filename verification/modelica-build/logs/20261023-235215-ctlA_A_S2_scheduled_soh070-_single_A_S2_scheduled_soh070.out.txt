@@ -1,0 +1,49 @@
+true
+""
+true
+""
+true
+""
+true
+""
+true
+"Y:/verification/modelica-build/cases_ctl/A_S2_scheduled_soh070"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases_ctl/A_S2_scheduled_soh070/A_S2_scheduled_soh070_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 213.28, numberOfIntervals = 21328, tolerance = 1e-12, method = 'dassl', fileNamePrefix = 'A_S2_scheduled_soh070', options = '', outputFormat = 'csv', variableFilter = '^(time|v|v_ref|T|T_ref|T_lim|T_cmd|a|F_fb|F_net|I|P_batt|P_e|P_m|SoC|V1|E_chem|E_rr|E_aero|E_fb|E_gear|E_visc|E_mi|E_R0|E_R1|E_regen|dist|Ah|closure|ctrl\\\\.u|ctrl\\\\.z|ctrl\\\\.z_used|ctrl\\\\.e_k|ctrl\\\\.T_lim_k|ctrl\\\\.sat_k|ctrl\\\\.k_ctrl|ctrl\\\\.se2)$', cflags = '', simflags = '-lv=LOG_STATS'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_STATS         | info    | ### STATISTICS ###
+|                 | |       | | timer
+|                 | |       | | |    0.0030829s          reading init.xml
+|                 | |       | | |    0.0005278s          reading info.xml
+|                 | |       | | |    0.0005569s [  0.0%] pre-initialization
+|                 | |       | | |     0.000171s [  0.0%] initialization
+|                 | |       | | |      3.2e-05s [  0.0%] steps
+|                 | |       | | |      1.36838s [ 34.1%] solver (excl. callbacks)
+|                 | |       | | |      1.16542s [ 29.1%] creating output-file
+|                 | |       | | |     0.314246s [  7.8%] event-handling
+|                 | |       | | |    0.0090306s [  0.2%] overhead
+|                 | |       | | |      1.14945s [ 28.7%] simulation
+|                 | |       | | |      4.00728s [100.0%] total
+|                 | |       | | events
+|                 | |       | | |    47 state events
+|                 | |       | | | 21329 time events
+|                 | |       | | solver: dassl
+|                 | |       | | | 1034135 steps taken
+|                 | |       | | | 1209844 calls of functionODE
+|                 | |       | | | 555344 evaluations of jacobian
+|                 | |       | | | 10117 error test failures
+|                 | |       | | |     0 convergence test failures
+|                 | |       | | | 0.722029s time of jacobian evaluation
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.008288,
+    timeBackend = 0.0568964,
+    timeSimCode = 0.0119988,
+    timeTemplates = 0.0305871,
+    timeCompile = 2.1533802,
+    timeSimulation = 4.1140098,
+    timeTotal = 6.3754887
+end SimulationResult;
+""
+"Y:/verification/modelica-build"

@@ -1,0 +1,297 @@
+..................FFFFFF................................................ [ 34%]
+........................................................................ [ 68%]
+...................................................................      [100%]
+================================== FAILURES ===================================
+________ test_r3_1_a_same_named_nested_copy_cannot_enter_campaign_mode ________
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-267/test_r3_1_a_same_named_nested_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F09B8031D0>
+
+    def test_r3_1_a_same_named_nested_copy_cannot_enter_campaign_mode(tmp_path, monkeypatch):
+        nested = tmp_path / "R4_20261028_campaign"
+        nested.mkdir()
+        monkeypatch.setattr(campaign.frozen, "PILOT", nested)
+        assert nested.name == campaign.CAMPAIGN_DIR_NAME and nested.resolve() != campaign.CAMPAIGN_DIR.resolve()
+>       assert any("released copy in R4_20261028_campaign" in b for b in campaign.preconditions("campaign"))
+                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+code\tests\test_amendment2.py:244: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+code\r4h3\campaign.py:476: in preconditions
+    if CAMPAIGN_CONFIG.read_text(encoding="utf-8") != json.dumps(config_content(), indent=1, default=str) + "\n":
+                                                                 ^^^^^^^^^^^^^^^^
+code\r4h3\campaign.py:384: in config_content
+    "sensitivity_draws_table": DRAWS_TABLE.relative_to(frozen.PILOT).as_posix(),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/EURÉKA 2026 - KT/verification/research_recovery_20261028/R4_20261028_pilot/config/sensitivity_draws_v1.csv')
+other = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-267/test_r3_1_a_same_named_nested_0/R4_20261028_campaign')
+walk_up = False
+
+    def relative_to(self, other, *, walk_up=False):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        related to the other path), raise ValueError.
+    
+        The *walk_up* parameter controls whether `..` may be used to resolve
+        the path.
+        """
+        if not hasattr(other, 'with_segments'):
+            other = self.with_segments(other)
+        for step, path in enumerate(chain([other], other.parents)):
+            if path == self or path in self.parents:
+                break
+            elif not walk_up:
+>               raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+E               ValueError: 'D:\\EURÉKA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_pilot\\config\\sensitivity_draws_v1.csv' is not in the subpath of 'C:\\Users\\HLC\\AppData\\Local\\Temp\\pytest-of-HLC\\pytest-267\\test_r3_1_a_same_named_nested_0\\R4_20261028_campaign'
+
+..\..\..\tools\python\cpython-3.14.7-windows-x86_64-none\Lib\pathlib\__init__.py:490: ValueError
+_ test_r3_7_amendment_2_precondition_branches[kw0-issued amendment 2 status is 'DRAFT'] _
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-267/test_r3_7_amendment_2_precondi0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F09B7D2030>
+kw = {'status': 'DRAFT'}, expect = "issued amendment 2 status is 'DRAFT'"
+
+    @pytest.mark.parametrize("kw,expect", [
+        (dict(status="DRAFT"), "issued amendment 2 status is 'DRAFT'"),
+        (dict(amends="0" * 64), "amends_amendment_1_sha256"),
+        (dict(approval=False), "no approval record"),
+        (dict(approval_sha="f" * 64), "amendment 2 approval record does not name"),
+    ])
+    def test_r3_7_amendment_2_precondition_branches(tmp_path, monkeypatch, kw, expect):
+        _issue(tmp_path, monkeypatch, **kw)
+>       b = " | ".join(campaign.preconditions("readiness"))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+code\tests\test_amendment2.py:270: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+code\r4h3\campaign.py:476: in preconditions
+    if CAMPAIGN_CONFIG.read_text(encoding="utf-8") != json.dumps(config_content(), indent=1, default=str) + "\n":
+                                                                 ^^^^^^^^^^^^^^^^
+code\r4h3\campaign.py:396: in config_content
+    "issued_amendment_2_path": ISSUED_AMENDMENT_2.relative_to(frozen.RR).as_posix(),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-267/test_r3_7_amendment_2_precondi0/a2.md')
+other = WindowsPath('D:/EURÉKA 2026 - KT/verification/research_recovery_20261028')
+walk_up = False
+
+    def relative_to(self, other, *, walk_up=False):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        related to the other path), raise ValueError.
+    
+        The *walk_up* parameter controls whether `..` may be used to resolve
+        the path.
+        """
+        if not hasattr(other, 'with_segments'):
+            other = self.with_segments(other)
+        for step, path in enumerate(chain([other], other.parents)):
+            if path == self or path in self.parents:
+                break
+            elif not walk_up:
+>               raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+E               ValueError: 'C:\\Users\\HLC\\AppData\\Local\\Temp\\pytest-of-HLC\\pytest-267\\test_r3_7_amendment_2_precondi0\\a2.md' is not in the subpath of 'D:\\EURÉKA 2026 - KT\\verification\\research_recovery_20261028'
+
+..\..\..\tools\python\cpython-3.14.7-windows-x86_64-none\Lib\pathlib\__init__.py:490: ValueError
+_ test_r3_7_amendment_2_precondition_branches[kw1-amends_amendment_1_sha256] __
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-267/test_r3_7_amendment_2_precondi1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F0A17D8490>
+kw = {'amends': '0000000000000000000000000000000000000000000000000000000000000000'}
+expect = 'amends_amendment_1_sha256'
+
+    @pytest.mark.parametrize("kw,expect", [
+        (dict(status="DRAFT"), "issued amendment 2 status is 'DRAFT'"),
+        (dict(amends="0" * 64), "amends_amendment_1_sha256"),
+        (dict(approval=False), "no approval record"),
+        (dict(approval_sha="f" * 64), "amendment 2 approval record does not name"),
+    ])
+    def test_r3_7_amendment_2_precondition_branches(tmp_path, monkeypatch, kw, expect):
+        _issue(tmp_path, monkeypatch, **kw)
+>       b = " | ".join(campaign.preconditions("readiness"))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+code\tests\test_amendment2.py:270: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+code\r4h3\campaign.py:476: in preconditions
+    if CAMPAIGN_CONFIG.read_text(encoding="utf-8") != json.dumps(config_content(), indent=1, default=str) + "\n":
+                                                                 ^^^^^^^^^^^^^^^^
+code\r4h3\campaign.py:396: in config_content
+    "issued_amendment_2_path": ISSUED_AMENDMENT_2.relative_to(frozen.RR).as_posix(),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-267/test_r3_7_amendment_2_precondi1/a2.md')
+other = WindowsPath('D:/EURÉKA 2026 - KT/verification/research_recovery_20261028')
+walk_up = False
+
+    def relative_to(self, other, *, walk_up=False):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        related to the other path), raise ValueError.
+    
+        The *walk_up* parameter controls whether `..` may be used to resolve
+        the path.
+        """
+        if not hasattr(other, 'with_segments'):
+            other = self.with_segments(other)
+        for step, path in enumerate(chain([other], other.parents)):
+            if path == self or path in self.parents:
+                break
+            elif not walk_up:
+>               raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+E               ValueError: 'C:\\Users\\HLC\\AppData\\Local\\Temp\\pytest-of-HLC\\pytest-267\\test_r3_7_amendment_2_precondi1\\a2.md' is not in the subpath of 'D:\\EURÉKA 2026 - KT\\verification\\research_recovery_20261028'
+
+..\..\..\tools\python\cpython-3.14.7-windows-x86_64-none\Lib\pathlib\__init__.py:490: ValueError
+_____ test_r3_7_amendment_2_precondition_branches[kw2-no approval record] _____
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-267/test_r3_7_amendment_2_precondi2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F0A13D6E50>
+kw = {'approval': False}, expect = 'no approval record'
+
+    @pytest.mark.parametrize("kw,expect", [
+        (dict(status="DRAFT"), "issued amendment 2 status is 'DRAFT'"),
+        (dict(amends="0" * 64), "amends_amendment_1_sha256"),
+        (dict(approval=False), "no approval record"),
+        (dict(approval_sha="f" * 64), "amendment 2 approval record does not name"),
+    ])
+    def test_r3_7_amendment_2_precondition_branches(tmp_path, monkeypatch, kw, expect):
+        _issue(tmp_path, monkeypatch, **kw)
+>       b = " | ".join(campaign.preconditions("readiness"))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+code\tests\test_amendment2.py:270: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+code\r4h3\campaign.py:476: in preconditions
+    if CAMPAIGN_CONFIG.read_text(encoding="utf-8") != json.dumps(config_content(), indent=1, default=str) + "\n":
+                                                                 ^^^^^^^^^^^^^^^^
+code\r4h3\campaign.py:396: in config_content
+    "issued_amendment_2_path": ISSUED_AMENDMENT_2.relative_to(frozen.RR).as_posix(),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-267/test_r3_7_amendment_2_precondi2/a2.md')
+other = WindowsPath('D:/EURÉKA 2026 - KT/verification/research_recovery_20261028')
+walk_up = False
+
+    def relative_to(self, other, *, walk_up=False):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        related to the other path), raise ValueError.
+    
+        The *walk_up* parameter controls whether `..` may be used to resolve
+        the path.
+        """
+        if not hasattr(other, 'with_segments'):
+            other = self.with_segments(other)
+        for step, path in enumerate(chain([other], other.parents)):
+            if path == self or path in self.parents:
+                break
+            elif not walk_up:
+>               raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+E               ValueError: 'C:\\Users\\HLC\\AppData\\Local\\Temp\\pytest-of-HLC\\pytest-267\\test_r3_7_amendment_2_precondi2\\a2.md' is not in the subpath of 'D:\\EURÉKA 2026 - KT\\verification\\research_recovery_20261028'
+
+..\..\..\tools\python\cpython-3.14.7-windows-x86_64-none\Lib\pathlib\__init__.py:490: ValueError
+_ test_r3_7_amendment_2_precondition_branches[kw3-amendment 2 approval record does not name] _
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-267/test_r3_7_amendment_2_precondi3')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F0A13D7950>
+kw = {'approval_sha': 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'}
+expect = 'amendment 2 approval record does not name'
+
+    @pytest.mark.parametrize("kw,expect", [
+        (dict(status="DRAFT"), "issued amendment 2 status is 'DRAFT'"),
+        (dict(amends="0" * 64), "amends_amendment_1_sha256"),
+        (dict(approval=False), "no approval record"),
+        (dict(approval_sha="f" * 64), "amendment 2 approval record does not name"),
+    ])
+    def test_r3_7_amendment_2_precondition_branches(tmp_path, monkeypatch, kw, expect):
+        _issue(tmp_path, monkeypatch, **kw)
+>       b = " | ".join(campaign.preconditions("readiness"))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+code\tests\test_amendment2.py:270: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+code\r4h3\campaign.py:476: in preconditions
+    if CAMPAIGN_CONFIG.read_text(encoding="utf-8") != json.dumps(config_content(), indent=1, default=str) + "\n":
+                                                                 ^^^^^^^^^^^^^^^^
+code\r4h3\campaign.py:396: in config_content
+    "issued_amendment_2_path": ISSUED_AMENDMENT_2.relative_to(frozen.RR).as_posix(),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-267/test_r3_7_amendment_2_precondi3/a2.md')
+other = WindowsPath('D:/EURÉKA 2026 - KT/verification/research_recovery_20261028')
+walk_up = False
+
+    def relative_to(self, other, *, walk_up=False):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        related to the other path), raise ValueError.
+    
+        The *walk_up* parameter controls whether `..` may be used to resolve
+        the path.
+        """
+        if not hasattr(other, 'with_segments'):
+            other = self.with_segments(other)
+        for step, path in enumerate(chain([other], other.parents)):
+            if path == self or path in self.parents:
+                break
+            elif not walk_up:
+>               raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+E               ValueError: 'C:\\Users\\HLC\\AppData\\Local\\Temp\\pytest-of-HLC\\pytest-267\\test_r3_7_amendment_2_precondi3\\a2.md' is not in the subpath of 'D:\\EURÉKA 2026 - KT\\verification\\research_recovery_20261028'
+
+..\..\..\tools\python\cpython-3.14.7-windows-x86_64-none\Lib\pathlib\__init__.py:490: ValueError
+________ test_r3_7_a_correct_amendment_2_removes_only_its_own_blockers ________
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-267/test_r3_7_a_correct_amendment_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F0A13DB4D0>
+
+    def test_r3_7_a_correct_amendment_2_removes_only_its_own_blockers(tmp_path, monkeypatch):
+        _issue(tmp_path, monkeypatch)
+>       b = " | ".join(campaign.preconditions("campaign"))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+code\tests\test_amendment2.py:276: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+code\r4h3\campaign.py:476: in preconditions
+    if CAMPAIGN_CONFIG.read_text(encoding="utf-8") != json.dumps(config_content(), indent=1, default=str) + "\n":
+                                                                 ^^^^^^^^^^^^^^^^
+code\r4h3\campaign.py:396: in config_content
+    "issued_amendment_2_path": ISSUED_AMENDMENT_2.relative_to(frozen.RR).as_posix(),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-267/test_r3_7_a_correct_amendment_0/a2.md')
+other = WindowsPath('D:/EURÉKA 2026 - KT/verification/research_recovery_20261028')
+walk_up = False
+
+    def relative_to(self, other, *, walk_up=False):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        related to the other path), raise ValueError.
+    
+        The *walk_up* parameter controls whether `..` may be used to resolve
+        the path.
+        """
+        if not hasattr(other, 'with_segments'):
+            other = self.with_segments(other)
+        for step, path in enumerate(chain([other], other.parents)):
+            if path == self or path in self.parents:
+                break
+            elif not walk_up:
+>               raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+E               ValueError: 'C:\\Users\\HLC\\AppData\\Local\\Temp\\pytest-of-HLC\\pytest-267\\test_r3_7_a_correct_amendment_0\\a2.md' is not in the subpath of 'D:\\EURÉKA 2026 - KT\\verification\\research_recovery_20261028'
+
+..\..\..\tools\python\cpython-3.14.7-windows-x86_64-none\Lib\pathlib\__init__.py:490: ValueError
+=========================== short test summary info ===========================
+FAILED code\tests\test_amendment2.py::test_r3_1_a_same_named_nested_copy_cannot_enter_campaign_mode
+FAILED code\tests\test_amendment2.py::test_r3_7_amendment_2_precondition_branches[kw0-issued amendment 2 status is 'DRAFT']
+FAILED code\tests\test_amendment2.py::test_r3_7_amendment_2_precondition_branches[kw1-amends_amendment_1_sha256]
+FAILED code\tests\test_amendment2.py::test_r3_7_amendment_2_precondition_branches[kw2-no approval record]
+FAILED code\tests\test_amendment2.py::test_r3_7_amendment_2_precondition_branches[kw3-amendment 2 approval record does not name]
+FAILED code\tests\test_amendment2.py::test_r3_7_a_correct_amendment_2_removes_only_its_own_blockers
+6 failed, 205 passed in 448.78s (0:07:28)

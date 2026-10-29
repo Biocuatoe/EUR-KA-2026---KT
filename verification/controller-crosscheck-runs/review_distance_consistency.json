@@ -1,0 +1,88 @@
+{
+ "cruise 160-195 s (smooth)": {
+  "modelica_dassl1e-12": {
+   "dist_change_minus_simpson_v_m": -8.001002811397484e-07,
+   "E_change_minus_simpson_VocI_J": 0.14538292112411,
+   "relative_dist": -1.6458455537749331e-09,
+   "relative_E": 1.530287270027845e-06
+  },
+  "python_dt1e-3": {
+   "dist_change_minus_simpson_v_m": 1.1210659067728557e-09,
+   "E_change_minus_simpson_VocI_J": 0.14554059435613453,
+   "relative_dist": 2.3060875975213696e-12,
+   "relative_E": 1.5319469214508233e-06
+  },
+  "python_dt1e-4": {
+   "dist_change_minus_simpson_v_m": -3.0435103326453827e-09,
+   "E_change_minus_simpson_VocI_J": 0.14554021082585678,
+   "relative_dist": -6.260650144384345e-12,
+   "relative_E": 1.531942884469777e-06
+  },
+  "python_dt2e-5": {
+   "dist_change_minus_simpson_v_m": -7.036896931822412e-08,
+   "E_change_minus_simpson_VocI_J": 0.14554020516516175,
+   "relative_dist": -1.4475242395526682e-10,
+   "relative_E": 1.5319428250176561e-06
+  }
+ },
+ "cruise 65-93 s (35 km/h)": {
+  "modelica_dassl1e-12": {
+   "dist_change_minus_simpson_v_m": -9.132179457083112e-09,
+   "E_change_minus_simpson_VocI_J": 0.45930431542365113,
+   "relative_dist": -3.35319584345091e-11,
+   "relative_E": 1.2656577961420643e-05
+  },
+  "python_dt1e-3": {
+   "dist_change_minus_simpson_v_m": 3.5587390811997466e-09,
+   "E_change_minus_simpson_VocI_J": 0.4593069695038139,
+   "relative_dist": 1.3067142570434256e-11,
+   "relative_E": 1.265665109646716e-05
+  },
+  "python_dt1e-4": {
+   "dist_change_minus_simpson_v_m": 4.135017661610618e-09,
+   "E_change_minus_simpson_VocI_J": 0.45930577859689947,
+   "relative_dist": 1.5183148885758685e-11,
+   "relative_E": 1.2656618279903472e-05
+  },
+  "python_dt2e-5": {
+   "dist_change_minus_simpson_v_m": 3.5024640965275466e-09,
+   "E_change_minus_simpson_VocI_J": 0.45930578029947355,
+   "relative_dist": 1.2860509481840954e-11,
+   "relative_E": 1.2656618327746342e-05
+  }
+ },
+ "cruise 18-28 s (20 km/h)": {
+  "modelica_dassl1e-12": {
+   "dist_change_minus_simpson_v_m": 3.493461520065466e-09,
+   "E_change_minus_simpson_VocI_J": 0.23429589799343375,
+   "relative_dist": 6.273047072044005e-11,
+   "relative_E": 4.8979389404784276e-05
+  },
+  "python_dt1e-3": {
+   "dist_change_minus_simpson_v_m": 3.49179174463643e-09,
+   "E_change_minus_simpson_VocI_J": 0.23429703904002963,
+   "relative_dist": 6.270048733627887e-11,
+   "relative_E": 4.89796279344258e-05
+  },
+  "python_dt1e-4": {
+   "dist_change_minus_simpson_v_m": 3.4934046766466054e-09,
+   "E_change_minus_simpson_VocI_J": 0.23429593712171481,
+   "relative_dist": 6.272945000949582e-11,
+   "relative_E": 4.8979397584383113e-05
+  },
+  "python_dt2e-5": {
+   "dist_change_minus_simpson_v_m": 3.491045674763882e-09,
+   "E_change_minus_simpson_VocI_J": 0.23429594454682956,
+   "relative_dist": 6.268709050512616e-11,
+   "relative_E": 4.897939913652505e-05
+  }
+ },
+ "Wh_per_km_end_states": {
+  "modelica": 49.902543724415246,
+  "python_dt1e-4": 49.90254372566751,
+  "python_dt2e-5": 49.90254372503407,
+  "modelica_minus_python2e-5": -6.188258794281865e-10
+ },
+ "relative_bias_end_dist": -3.6156704932382086e-10,
+ "relative_bias_end_E": -3.739678060312736e-10
+}

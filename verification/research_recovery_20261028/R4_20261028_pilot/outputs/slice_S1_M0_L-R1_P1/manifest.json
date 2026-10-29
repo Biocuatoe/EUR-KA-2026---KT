@@ -1,0 +1,94 @@
+{
+ "kind": "H3 vertical slice (implementation smoke test; not a result)",
+ "tag": "slice_S1_M0_L-R1_P1",
+ "start": "2026-10-28T01:20:41+0700",
+ "status": "PASS",
+ "errors": [],
+ "stops": [],
+ "frozen_inputs": {
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_preflight\\03_R4_protocol_v1.md": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\research_recovery_20261025\\R3_20261025\\code\\r3_lib.py": "c2403adc2c7ef7a7ecc662f0dcfd3c107a43204ee73c28bd46f782b73cba1c97",
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\research_recovery_20261025\\R3_20261025\\data\\motor_curve_m1_derived.json": "f872faa0ff96d12d26eb5c935bb145062c3ac649e4eb327136f0fa9a0868d1d9"
+ },
+ "gate": {
+  "record": "logs\\pre_run_hashes.txt",
+  "record_sha256": "f12e058589e452f5832d04e68787927d1c5af8a4d5b9628a48d1df20419addc7",
+  "junit": {
+   "tests": 67,
+   "failures": 0,
+   "errors": 0,
+   "skipped": 0
+  }
+ },
+ "runs": {
+  "H3-slice-S1-M0-L-R1-P1-B0-dt1ms": {
+   "trace": "trace_H3-slice-S1-M0-L-R1-P1-B0-dt1ms.npz",
+   "trace_sha256": "79ecb198dcc6bd27c376a6fe8ed361bd756a0143f02e2f81375188173a3769fb",
+   "n_samples": 324001
+  },
+  "H3-slice-S1-M0-L-R1-P1-B3-dt1ms": {
+   "trace": "trace_H3-slice-S1-M0-L-R1-P1-B3-dt1ms.npz",
+   "trace_sha256": "d6487501c655b1375de444342d607b37202d902915b8e83ccd6ec6613c88c048",
+   "n_samples": 324001
+  }
+ },
+ "config_sha256": "7fcdbd18c5a3b07add273ec8f06ce4a03981719a0e5992d1efc88ffdc73f0f0c",
+ "checks": {
+  "H3-slice-S1-M0-L-R1-P1-B0-dt1ms": {
+   "sim_valid": true,
+   "complete": true,
+   "tracking_ok": true,
+   "stop_ok": true,
+   "constraint_ok": true,
+   "finite_ok": true,
+   "recompute_all_ok": true,
+   "comparable": true
+  },
+  "H3-slice-S1-M0-L-R1-P1-B3-dt1ms": {
+   "sim_valid": true,
+   "complete": true,
+   "tracking_ok": true,
+   "stop_ok": true,
+   "constraint_ok": true,
+   "finite_ok": true,
+   "recompute_all_ok": true,
+   "comparable": true
+  }
+ },
+ "end": "2026-10-28T01:27:34+0700",
+ "wall_s": 412.87348556518555,
+ "python": "3.14.7 (main, Sep  1 2026, 14:17:30) [MSC v.1944 64 bit (AMD64)]",
+ "executable": "D:\\EUR\u00c9KA 2026 - KT\\.venv\\Scripts\\python.exe",
+ "numpy": "2.5.4",
+ "machine": "DESKTOP-QF465MB",
+ "inputs": {
+  "profiles_yaml": "D:\\EUR\u00c9KA 2026 - KT\\configs\\cycles\\profiles.yaml",
+  "profiles_yaml_sha256": "90a496a36c618e216693a3d819b84739f10e6c35167c23a91b63478ef28be0a6",
+  "m1_curve": "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\research_recovery_20261025\\R3_20261025\\data\\motor_curve_m1_derived.json",
+  "r3_lib": "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\research_recovery_20261025\\R3_20261025\\code\\r3_lib.py",
+  "protocol": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_preflight\\03_R4_protocol_v1.md"
+ },
+ "seed": null,
+ "args": {
+  "cycle": "S1",
+  "motor": "M0",
+  "limits": "L-R1",
+  "pstate": "P1",
+  "dt": 0.001
+ },
+ "scipy": "1.18.1",
+ "outputs": {
+  "evaluation.csv": "2b2662631709db1572d1ecaa859b730de45763c9e27f4923806d54073c3cd458",
+  "execution_log.txt": "8778767ade8dc2ef5adebe771352410d63cc3e340c8f464a017078726b8b7664",
+  "planner_rows.csv": "2e6882bd93f9162edba7594a08d4be4c3aed8b60101a7a251212e16c33edf3f7",
+  "profiles.npz": "be3c0066ad7f4084c7a68e7386c9a471b0627b8840b5a9cbce9baf2f15543fda",
+  "recomputation.json": "7ba2b4c76a2232d2cddff36090104a1c5341255a8c1023f8a454a1919455d78d",
+  "run_config.json": "7fcdbd18c5a3b07add273ec8f06ce4a03981719a0e5992d1efc88ffdc73f0f0c",
+  "runs.csv": "b7ac4315d7440f06fa106c7386c472e90cada3165a6aca3d4a19c5f026aa0a0f",
+  "scenario_config.json": "b12232a707034fc575737b08f2511eceab13c129d40e45317b2277488d45f9d4",
+  "stop_compliance.csv": "75699a9d426543e89d83772a9d7e58ebbe661ab3eb3971fc55ab0fd3815cafe3",
+  "trace_H3-slice-S1-M0-L-R1-P1-B0-dt1ms.npz": "79ecb198dcc6bd27c376a6fe8ed361bd756a0143f02e2f81375188173a3769fb",
+  "trace_H3-slice-S1-M0-L-R1-P1-B3-dt1ms.npz": "d6487501c655b1375de444342d607b37202d902915b8e83ccd6ec6613c88c048",
+  "trajectory_validation.json": "51825d7040cf41a4a2103cddd96fd0d66b7f169a86fd979ab110a165b7194208"
+ }
+}

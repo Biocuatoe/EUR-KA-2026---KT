@@ -1,0 +1,2 @@
+536 files; 2116.561104 MB
+Counter({('sim-status-log', 'ignored-by-rule'): 293, ('source', 'untracked'): 70, ('python-reference', 'untracked'): 47, ('modelica-raw-uncompressed', 'ignored-by-rule'): 45, ('modelica-raw-gz', 'untracked'): 40, ('results', 'untracked'): 15, ('solver', 'untracked'): 9, ('baseline-readonly', 'ignored-by-rule'): 7, ('protocol', 'untracked'): 3, ('baseline-readonly', 'tracked'): 3, ('report', 'untracked'): 2, ('gains', 'untracked'): 1, ('python-reference', 'ignored-by-rule'): 1})

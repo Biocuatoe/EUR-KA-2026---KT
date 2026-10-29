@@ -1,0 +1,29 @@
+--- candidate rev2
++++ issued amendment 1
+@@ -1,6 +1,8 @@
+ # Amendment 1 to R4 protocol v1 (H3): final candidate, rev2
+ 
+-**Status: READY FOR OWNER APPROVAL — NOT APPROVED, NOT ISSUED, NOT FROZEN.** This file has no force until the owner issues it as described in §12.
++**Status: APPROVED by the project owner, 2026-10-28 07:46:23 +0700 (local system time) — protocol amendment only.** This approval does not authorise campaign execution. The official campaign remains BLOCKED until the release gate is complete and the owner writes a separate campaign authorisation (`release/campaign_authorization.json`).
++
++Issued from candidate `../../R4_20261028_pilot/03_protocol_v1_amendment_1_rev2_CANDIDATE.md` (SHA-256 `42a7a9f51afae7c059373b9048ed9b09c6b87c975705e54c485f2f6bfc133369`). The text is otherwise identical; the differences are in `release/amendment_issue_diff.txt`.
+ 
+ | Item | Value |
+ |---|---|
+@@ -224,7 +226,7 @@
+ ```json
+ {
+  "amendment": "R4 protocol v1 amendment 1 (candidate rev2)",
+- "status": "DRAFT",
++ "status": "APPROVED",
+  "applies_to_protocol_sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+  "D1_extra_stop_rule": "reject",
+  "D1_rest_threshold_ms": 1e-09,
+@@ -281,6 +283,6 @@
+   "dynamic_time_step",
+   "baseline_sanity"
+  ],
+- "note": "Not approved. status DRAFT until the owner issues it as APPROVED in R4_20261028_campaign/release/."
++ "note": "Approved by the project owner 2026-10-28 07:46:23 +0700 (amendment only). Campaign execution additionally requires release/campaign_authorization.json."
+ }
+ ```

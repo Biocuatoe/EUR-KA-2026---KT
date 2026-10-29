@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\EURÉKA 2026 - KT\verification\scientific_rebuild_20261024\research_recovery_20261025\R3_20261025\code\r3_pilot.py", line 362, in <module>
+    {"B": stage_B, "C": stage_C}[cmd](sys.argv[2])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\EURÉKA 2026 - KT\verification\scientific_rebuild_20261024\research_recovery_20261025\R3_20261025\code\r3_pilot.py", line 354, in stage_C
+    manifest(root, "C", dict(motor=mk, n_runs=len(rows), runtime_s=time.time() - t0, gain=[float(x) for x in K]))
+                                                                                           ~~~~~^^^
+TypeError: only 0-dimensional arrays can be converted to Python scalars

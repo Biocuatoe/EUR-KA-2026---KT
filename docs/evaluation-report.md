@@ -31,6 +31,8 @@ the user's repository. Every number below is read from a saved artifact named in
   tracking, averaged over SoH (competing hypothesis H_C holds).
 - **In this model no controller tracking the same profile could save 12.5 %.** Battery
   resistive losses, the part a controller can shape, are only 1.1-2.1 % of supplied energy.
+  - *[Corrected 2026-10-24: the bold sentence and "the part a controller can shape" are
+    withdrawn. See "Correction (2026-10-24)" at the end of this report.]*
 
 ## Phase 1: Claim registry
 
@@ -241,3 +243,31 @@ with the matrix.
 - a validated LFP degradation model.
 
 The pipeline accepts each of these without changing the analysis code.
+
+## Correction (2026-10-24)
+
+The Summary sentence "**In this model no controller tracking the same profile could save
+12.5 %.** Battery resistive losses, the part a controller can shape, are only 1.1-2.1 % of
+supplied energy" is withdrawn as worded. The original remains above, marked inline.
+
+**Corrected position:**
+
+- **No bound is established.** The 1.1–2.1 % is the battery resistive share of supplied
+  energy in the tested runs (`artifacts/tables/energy_breakdown.csv`). It explains the
+  small tested differences. It is not an upper bound on what any controller could save.
+- **Other terms depend on the controller.** Energy can also differ between controllers
+  through:
+  - motor/inverter and gear loss asymmetry (motoring vs regeneration);
+  - R1 loss;
+  - regenerated energy;
+  - friction braking;
+  - the final kinetic energy;
+  - tracking deviations.
+- **Open question.** The experiments do not determine whether a 1 % or a 12.5 %
+  improvement is possible with other controller designs or with a more physically complete
+  plant.
+- **C01 stays CONTRADICTED** on the pre-registered result (+0.003 %), on the thesis body's
+  own 10.2 %, and on the absence of source data.
+
+Details: `docs/research-contribution-review.md` §14 (K1);
+`docs/evidence-corrections-2026-10-24.md`.

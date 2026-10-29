@@ -1,0 +1,30 @@
+{
+ "fastsim_version": "3.1.0",
+ "module": "D:\\EUR\u00c9KA 2026 - KT\\verification\\python-env\\Lib\\site-packages\\fastsim\\fastsim.cp314-win_amd64.pyd",
+ "module_sha256": "18da0cec61c78d1be690fbdfcbd5881d3b610fae57cddc377e26bd9a72c2ce40",
+ "module_bytes": 46264832,
+ "resource": "vehicles/2022_Renault_Zoe_ZE50_R135.yaml",
+ "copies_found": 9,
+ "distinct_texts": 1,
+ "distinct_lengths": [
+  5380
+ ],
+ "offsets": [
+  38376439,
+  38539799,
+  38725535,
+  38882975,
+  39028183,
+  39187327,
+  39345719,
+  39515199,
+  39683167
+ ],
+ "extracted_file": "fastsim_2022_Renault_Zoe_ZE50_R135.yaml",
+ "extracted_sha256": "ed882ffab297a02f1558a6c89a0f0c6fd0fca1ff40d98b64c858a9d6d8180141",
+ "docs": {
+  "ElectricMachine": "Struct for modeling electric machines.  This lumps performance and efficiency of motor and power\nelectronics.",
+  "Vehicle": "Struct for simulating vehicle",
+  "ReversibleEnergyStorage": "Struct for modeling technology-naive Reversible Energy Storage (e.g. battery, flywheel)."
+ }
+}

@@ -1,0 +1,10 @@
+path,status,crlf_before,lf_before,cr_before,crlf_after,lf_after,cr_after,convention_before,convention_after,added_lines,added_lines_use_convention,ok
+code/r4h3/campaign.py,changed,1395,0,0,1412,0,0,CRLF,CRLF,49,True,True
+code/tests/test_owner_decisions_v11.py,changed,0,314,0,0,316,0,LF,LF,7,True,True
+code/tests/test_owner_decisions_v14.py,added,,,,0,304,0,,LF,304,True,True
+code/tests/test_owner_rulings_v7.py,changed,0,276,0,0,277,0,LF,LF,2,True,True
+code/tests/test_owner_rulings_v8.py,changed,0,392,0,0,393,0,LF,LF,2,True,True
+code/tests/test_review_fixes_v13.py,changed,0,235,0,0,238,0,LF,LF,11,True,True
+config/campaign_config_v14_DRAFT.json,added,,,,0,495,0,,LF,495,True,True
+config/code_review_status_v12.json,added,,,,0,132,0,,LF,132,True,True
+config/code_review_status_v13.json,added,,,,0,132,0,,LF,132,True,True

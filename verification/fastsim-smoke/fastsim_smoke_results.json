@@ -1,0 +1,40 @@
+{
+  "fastsim_file": "D:\\EUR\u00c9KA 2026 - KT\\verification\\python-env\\Lib\\site-packages\\fastsim\\__init__.py",
+  "vehicle": "2022_Renault_Zoe_ZE50_R135.yaml",
+  "runs": {
+    "udds.csv": {
+      "n_rows": 1370,
+      "n_cols": 86,
+      "cycle_distance_km_(cyc.dist)": 11.990433188724952,
+      "achieved_distance_km": 11.990433188724952,
+      "battery_chemical_out_Wh": 1393.381171397502,
+      "battery_chem_Wh_per_km": 116.20774241148767,
+      "battery_electrical_out_Wh_per_km": 113.18170159487005,
+      "soc_start": 0.98,
+      "soc_end": 0.9545082112806873,
+      "max_abs_speed_shortfall_m_s": 0.0,
+      "rmse_speed_m_s": 0.0,
+      "ledger_tractive_J": 2969645.483510753,
+      "ledger_sum_of_road_load_terms_J": 2969645.48351075,
+      "ledger_rel_gap_(tractive-vs-sum)": 1.0976492073729285e-15,
+      "all_finite": false
+    },
+    "hwfet.csv": {
+      "n_rows": 766,
+      "n_cols": 86,
+      "cycle_distance_km_(cyc.dist)": 16.506817470511123,
+      "achieved_distance_km": 16.506817470511123,
+      "battery_chemical_out_Wh": 2288.428478057091,
+      "battery_chem_Wh_per_km": 138.63535367403753,
+      "battery_electrical_out_Wh_per_km": 136.26930906984921,
+      "soc_start": 0.98,
+      "soc_end": 0.9381333977669731,
+      "max_abs_speed_shortfall_m_s": 0.0,
+      "rmse_speed_m_s": 0.0,
+      "ledger_tractive_J": 6481113.465508341,
+      "ledger_sum_of_road_load_terms_J": 6481113.465508333,
+      "ledger_rel_gap_(tractive-vs-sum)": 1.149583422134926e-15,
+      "all_finite": false
+    }
+  }
+}

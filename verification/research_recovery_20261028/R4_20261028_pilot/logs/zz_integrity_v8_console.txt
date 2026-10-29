@@ -1,0 +1,92 @@
+{
+ "written": "2026-10-28T18:40:57+0700",
+ "snapshot": {
+  "manifest": "C:\\Users\\HLC\\EUREKA_EVIDENCE\\GATE1_20261028\\MANIFEST.sha256.csv",
+  "manifest_sha256": "A93EB44FC128DAC30E754C6EA996D67AB381B78A708A999C8BE1DE7600D4F279",
+  "manifest_sha256_expected": "A93EB44FC128DAC30E754C6EA996D67AB381B78A708A999C8BE1DE7600D4F279",
+  "manifest_sha256_matches": true,
+  "rows": 570,
+  "rows_all_checks_pass": 570
+ },
+ "preflight": {
+  "manifest_rows": 29,
+  "manifest_rows_verified": 29,
+  "files_now": 30,
+  "files_at_start": 30,
+  "added": [],
+  "removed": [],
+  "changed": []
+ },
+ "frozen": {
+  "protocol_v1": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+  "amendment_1_issued": "7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2",
+  "amendment_1_approval": "03f835e9311410095e4447840ecb2b02d95c50279527df5fdf2f6d334e15eecd",
+  "campaign_authorization_exists": false,
+  "issued_amendment_2_exists": false,
+  "amendment_2_approval_exists": false,
+  "amendment_2_candidate_rev4": "c726560d1e87036cbd94fe58724cafdc1e4746647f6cfacbb320f3e14ed143ab",
+  "amendment_2_draft_rev3": "fdaf193de510488733f0e0899d50def86cbeafabdbecdd3bc7a144099b6f492c",
+  "amendment_2_candidate_rev5": "e7ba73c11784b3cf38f48e32b69a7a7c21b070d039118547d638bc1bf06d4f5f",
+  "amendment_2_candidate_rev6": "0dcb767e97e19f40c00735d9efaecf8d21c396c23952b70e60ccb21a3f711e1f",
+  "amendment_2_candidate_rev7": "0e3ef3112c979237e7079f176b21dd4f2ce682c7ab435f36f33321ffe67a5996",
+  "campaign_outputs_dir_exists": false
+ },
+ "project": {
+  "before": 25361,
+  "after": 25452,
+  "added": 91,
+  "removed": 0,
+  "changed": 0,
+  "added_outside_attempt7": [],
+  "removed_list": [],
+  "changed_list": []
+ }
+}
+{
+ "rev0": {
+  "sha256": "c3e1ddfce7dca7909bb1cd2a6186f4d5044b5dfe81eeed43df0b9fcf215957d4",
+  "present_at": [
+   "archive/rev4a_reviewed_20261028_0957/03_protocol_v1_amendment_2_DRAFT.md"
+  ]
+ },
+ "rev1": {
+  "sha256": "a936023af0a772ee2b81c720c76f9c462aba89afe1a8e1de38a286872a8744bf",
+  "present_at": [
+   "archive/rev4b_reviewed_20261028_1051/03_protocol_v1_amendment_2_DRAFT.md"
+  ]
+ },
+ "rev2": {
+  "sha256": "e0dc68827c57704b49b13886c455b281e4e3c10ce377a1f174742ff5529247cc",
+  "present_at": [
+   "archive/rev5_verified_20261028_1101/03_protocol_v1_amendment_2_DRAFT.md"
+  ]
+ },
+ "rev3": {
+  "sha256": "fdaf193de510488733f0e0899d50def86cbeafabdbecdd3bc7a144099b6f492c",
+  "present_at": [
+   "03_protocol_v1_amendment_2_DRAFT.md",
+   "archive/rev6_attempt3_20261028_1201/03_protocol_v1_amendment_2_DRAFT.md"
+  ]
+ },
+ "rev4": {
+  "sha256": "c726560d1e87036cbd94fe58724cafdc1e4746647f6cfacbb320f3e14ed143ab",
+  "present_at": [
+   "03_protocol_v1_amendment_2_rev4_CANDIDATE.md",
+   "archive/rev7_attempt4_20261028_1405/03_protocol_v1_amendment_2_rev4_CANDIDATE.md"
+  ]
+ },
+ "rev5": {
+  "sha256": "e7ba73c11784b3cf38f48e32b69a7a7c21b070d039118547d638bc1bf06d4f5f",
+  "present_at": [
+   "03_protocol_v1_amendment_2_rev5_CANDIDATE.md",
+   "archive/rev8_attempt5_20261028_1540/03_protocol_v1_amendment_2_rev5_CANDIDATE.md"
+  ]
+ },
+ "rev6": {
+  "sha256": "0dcb767e97e19f40c00735d9efaecf8d21c396c23952b70e60ccb21a3f711e1f",
+  "present_at": [
+   "03_protocol_v1_amendment_2_rev6_CANDIDATE.md",
+   "archive/rev9_attempt6_20261028_1727/03_protocol_v1_amendment_2_rev6_CANDIDATE.md"
+  ]
+ }
+}

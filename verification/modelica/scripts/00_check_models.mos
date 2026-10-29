@@ -1,0 +1,7 @@
+setCommandLineOptions("--unitChecking"); getErrorString();
+loadFile("../modelica/EurekaPlant/package.mo"); getErrorString();
+checkModel(EurekaPlant.Tests.StaticPoint); getErrorString();
+checkModel(EurekaPlant.Tests.CoastDown); getErrorString();
+checkModel(EurekaPlant.Tests.OpenLoop66); getErrorString();
+checkModel(EurekaPlant.InverseS1); getErrorString();
+checkModel(EurekaPlant.InverseS2); getErrorString();

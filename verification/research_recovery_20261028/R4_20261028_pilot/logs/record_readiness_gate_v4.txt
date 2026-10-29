@@ -1,0 +1,1 @@
+refusing: D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\logs\readiness_gate_v4.json already exists

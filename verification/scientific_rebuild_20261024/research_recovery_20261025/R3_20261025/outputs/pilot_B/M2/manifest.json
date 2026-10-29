@@ -1,0 +1,50 @@
+{
+ "stage": "B",
+ "time": "2026-10-25T17:52:57",
+ "python": "3.14.7 (main, Sep  1 2026, 14:17:30) [MSC v.1944 64 bit (AMD64)]",
+ "numpy": "2.5.4",
+ "protocol_sha256": "d9e82f8906224ca97aa02deddd5b674f8a33d3ebfb9b5d1564df130aaa3bae56",
+ "amendment_1_sha256": "51a2e93b7ab4dca04fd5e1a0eb314cf9ab486dc97f9789cb2d7129c2e53d1e64",
+ "code": {
+  "analyse_pilots.py": "8fda4e296f6045197ddcaa4759ac9b83746e12d074d0986c557457213d3a249f",
+  "build_hash_manifest.py": "ada7ee8c198f46a46b76cc9aba97d3aee9905c9c14ac7d3a0bb0f38aec6130c9",
+  "check_m2_regen_split.py": "6bf6da8bb19bb5a46938948faa3a5b6d27906e9eeb5077d3fa7c5d39b8daea29",
+  "derive_m1_curve.py": "88850e03469777f5aa7bc6cf0566ccfa221f20ce464da238a4e5abaa70de92b8",
+  "describe_band_paths.py": "cf84f7dd0cd5eb7bc37742ab4b4234b381a5cd1fb8832199dcdacc0e53a5fa55",
+  "evaluate_gates.py": "c7447e65df3949fee42e52112800a0f45b334700154635aa86ace5dc6116fe22",
+  "extract_fastsim_source.py": "d5006c00c1ffb85c69958c247cd9e4bd27fb29b220af1eaeeba45ad0f5f0b4fc",
+  "extract_motor_curve.py": "8a2faf6668c785ce32cbd0aab5a77c90a4bcc525e40363fa65e066e7bc676452",
+  "pilot_precheck2.py": "be26e9c6fa2e553f2b9676dea7cd64e9186f265e690dba7f88867f60a7aac8de",
+  "precheck_feasibility.py": "2cd1a7c664bc20dbb3fdec1b04db06c9a4842b996628b3b0370f4af575ff05a6",
+  "probe_fastsim_regen.py": "0ab52f8666519067284aa7c8e8bb3e61cb12529f1e114201243df9748e3db8a0",
+  "probe_fastsim_regen_rule.py": "a6bbbbbe8874e082d94e8987b5aaea9b4cff6aeb9ed09f0c5cf6738b8930c703",
+  "r3_lib.py": "c2403adc2c7ef7a7ecc662f0dcfd3c107a43204ee73c28bd46f782b73cba1c97",
+  "r3_pilot.py": "cec5f70b6bc3f1879cc703fd7abdc7b5849b37eea8a33818a97584d3976b2e2c",
+  "run_gates.py": "d870e096cbad828661c65682dfbd4e18ecc00bdace989af084e10def465ca85a",
+  "run_gates_a1.py": "0a5d74d7a09d7d4f410c5c754fb6aa2d31db4cdd2c6109a8860649a871f56938",
+  "summarise_gates.py": "d7b02981676042e5448711b9b2016bf984b431f30597d186efac83aa71240a27",
+  "test_r3.py": "10eb3ecd0618ee87f47e2874e588305302c67e1b3bfdcc5f9eece31f71eea538",
+  "test_r3_supplementary.py": "0dab137ecdca717954a09de64638a887103acb88e9db694ffda8825d5a6b489b",
+  "test_r3_v1_additions.py": "3985e0d97d5523a7bec121884209258a855577fb2d578c911f167b9b88fb213f"
+ },
+ "data": {
+  "fastsim_2022_Renault_Zoe_ZE50_R135.yaml": "ed882ffab297a02f1558a6c89a0f0c6fd0fca1ff40d98b64c858a9d6d8180141",
+  "fastsim_em_probe.json": "3f9df275180507d8221f5a96a70f252e1e6e15ab8317cb8af6a6e5d3e95e7b95",
+  "fastsim_embedded_em_curves.json": "6e511532d9db59cc6040e23d55ae037abae75ea2227527127b8fccf8884a05f4",
+  "fastsim_source_record.json": "54d55dc1b8aed4358fcbdeea766c1e69f3c0e99816086eab82bff926ab1d845b",
+  "motor_curve_fastsim.json": "75947bba8bce5fc7f23e8745561aa9258c52a761071ea4129d04edc791ab7448",
+  "motor_curve_m1_derived.json": "f872faa0ff96d12d26eb5c935bb145062c3ac649e4eb327136f0fa9a0868d1d9"
+ },
+ "motor": "M2",
+ "n_tune": 192,
+ "n_unstable": 0,
+ "n_eval": 60,
+ "n_conv": 4,
+ "runtime_s": {
+  "tune": 248.49221205711365,
+  "eval": 3978.660478591919,
+  "conv": 1750.8060429096222
+ },
+ "sched_equals_fixed_at_soh1_maxabs": 0.0,
+ "n_invalid": 0
+}

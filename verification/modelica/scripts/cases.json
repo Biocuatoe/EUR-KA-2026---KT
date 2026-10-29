@@ -1,0 +1,329 @@
+{
+  "B1_eq_20kmh": {
+    "script": "10_static",
+    "model": "EurekaPlant.Tests.StaticPoint",
+    "stop_time": 1.0,
+    "intervals": 100,
+    "tolerance": 1e-10,
+    "overrides": {
+      "v_init": 5.555555555555555,
+      "T_init": 3.737107988033914,
+      "T_hold": 3.737107988033914
+    },
+    "result_file": "verification/modelica-build/cases/B1_eq_20kmh/B1_eq_20kmh_res.csv",
+    "simflags": "-override=v_init=5.555555555555555,T_init=3.737107988033914,T_hold=3.737107988033914"
+  },
+  "B1_eq_30kmh": {
+    "script": "10_static",
+    "model": "EurekaPlant.Tests.StaticPoint",
+    "stop_time": 1.0,
+    "intervals": 100,
+    "tolerance": 1e-10,
+    "overrides": {
+      "v_init": 8.333333333333334,
+      "T_init": 4.609469080302414,
+      "T_hold": 4.609469080302414
+    },
+    "result_file": "verification/modelica-build/cases/B1_eq_30kmh/B1_eq_30kmh_res.csv",
+    "simflags": "-override=v_init=8.333333333333334,T_init=4.609469080302414,T_hold=4.609469080302414"
+  },
+  "B1_eq_50kmh": {
+    "script": "10_static",
+    "model": "EurekaPlant.Tests.StaticPoint",
+    "stop_time": 1.0,
+    "intervals": 100,
+    "tolerance": 1e-10,
+    "overrides": {
+      "v_init": 13.88888888888889,
+      "T_init": 7.323643623180661,
+      "T_hold": 7.323643623180661
+    },
+    "result_file": "verification/modelica-build/cases/B1_eq_50kmh/B1_eq_50kmh_res.csv",
+    "simflags": "-override=v_init=13.88888888888889,T_init=7.323643623180661,T_hold=7.323643623180661"
+  },
+  "B2_motoring_v10_T10": {
+    "script": "10_static",
+    "model": "EurekaPlant.Tests.StaticPoint",
+    "stop_time": 0.01,
+    "intervals": 1,
+    "tolerance": 1e-10,
+    "overrides": {
+      "v_init": 10.0,
+      "T_init": 10.0,
+      "T_hold": 10.0
+    },
+    "result_file": "verification/modelica-build/cases/B2_motoring_v10_T10/B2_motoring_v10_T10_res.csv",
+    "simflags": "-override=v_init=10.0,T_init=10.0,T_hold=10.0"
+  },
+  "B2_motoring_v3_T60": {
+    "script": "10_static",
+    "model": "EurekaPlant.Tests.StaticPoint",
+    "stop_time": 0.01,
+    "intervals": 1,
+    "tolerance": 1e-10,
+    "overrides": {
+      "v_init": 3.0,
+      "T_init": 60.0,
+      "T_hold": 60.0
+    },
+    "result_file": "verification/modelica-build/cases/B2_motoring_v3_T60/B2_motoring_v3_T60_res.csv",
+    "simflags": "-override=v_init=3.0,T_init=60.0,T_hold=60.0"
+  },
+  "B2_regen_v10_Tm20": {
+    "script": "10_static",
+    "model": "EurekaPlant.Tests.StaticPoint",
+    "stop_time": 0.01,
+    "intervals": 1,
+    "tolerance": 1e-10,
+    "overrides": {
+      "v_init": 10.0,
+      "T_init": -20.0,
+      "T_hold": -20.0
+    },
+    "result_file": "verification/modelica-build/cases/B2_regen_v10_Tm20/B2_regen_v10_Tm20_res.csv",
+    "simflags": "-override=v_init=10.0,T_init=-20.0,T_hold=-20.0"
+  },
+  "B2_regen_v20_Tm40": {
+    "script": "10_static",
+    "model": "EurekaPlant.Tests.StaticPoint",
+    "stop_time": 0.01,
+    "intervals": 1,
+    "tolerance": 1e-10,
+    "overrides": {
+      "v_init": 20.0,
+      "T_init": -40.0,
+      "T_hold": -40.0
+    },
+    "result_file": "verification/modelica-build/cases/B2_regen_v20_Tm40/B2_regen_v20_Tm40_res.csv",
+    "simflags": "-override=v_init=20.0,T_init=-40.0,T_hold=-40.0"
+  },
+  "B3_limit_v13": {
+    "script": "10_static",
+    "model": "EurekaPlant.Tests.StaticPoint",
+    "stop_time": 0.01,
+    "intervals": 1,
+    "tolerance": 1e-10,
+    "overrides": {
+      "v_init": 13.0,
+      "T_init": 0.0,
+      "T_hold": 1000.0
+    },
+    "result_file": "verification/modelica-build/cases/B3_limit_v13/B3_limit_v13_res.csv",
+    "simflags": "-override=v_init=13.0,T_init=0.0,T_hold=1000.0"
+  },
+  "B3_limit_v2": {
+    "script": "10_static",
+    "model": "EurekaPlant.Tests.StaticPoint",
+    "stop_time": 0.01,
+    "intervals": 1,
+    "tolerance": 1e-10,
+    "overrides": {
+      "v_init": 2.0,
+      "T_init": 0.0,
+      "T_hold": 1000.0
+    },
+    "result_file": "verification/modelica-build/cases/B3_limit_v2/B3_limit_v2_res.csv",
+    "simflags": "-override=v_init=2.0,T_init=0.0,T_hold=1000.0"
+  },
+  "E_B1_eq_30kmh_wrong_eta_g": {
+    "script": "10_static",
+    "model": "EurekaPlant.Tests.StaticPoint",
+    "stop_time": 1.0,
+    "intervals": 100,
+    "tolerance": 1e-10,
+    "overrides": {
+      "v_init": 8.333333333333334,
+      "T_init": 4.609469080302414,
+      "T_hold": 4.609469080302414,
+      "eta_g": 0.98
+    },
+    "result_file": "verification/modelica-build/cases/E_B1_eq_30kmh_wrong_eta_g/E_B1_eq_30kmh_wrong_eta_g_res.csv",
+    "simflags": "-override=v_init=8.333333333333334,T_init=4.609469080302414,T_hold=4.609469080302414,eta_g=0.98"
+  },
+  "C1_toy_linear_drag": {
+    "script": "20_coastdown",
+    "model": "CoastDown",
+    "stop_time": 20.0,
+    "intervals": 2000,
+    "tolerance": 1e-10,
+    "overrides": {},
+    "result_file": "verification/modelica-build/cases/C1_toy_linear_drag/C1_toy_linear_drag_res.csv",
+    "simflags": ""
+  },
+  "C2_project_tol1e-06": {
+    "script": "20_coastdown",
+    "model": "EurekaPlant.Tests.CoastDown",
+    "stop_time": 20.0,
+    "intervals": 2000,
+    "tolerance": 1e-06,
+    "overrides": {},
+    "result_file": "verification/modelica-build/cases/C2_project_tol1e-06/C2_project_tol1e-06_res.csv",
+    "simflags": ""
+  },
+  "C2_project_tol1e-08": {
+    "script": "20_coastdown",
+    "model": "EurekaPlant.Tests.CoastDown",
+    "stop_time": 20.0,
+    "intervals": 2000,
+    "tolerance": 1e-08,
+    "overrides": {},
+    "result_file": "verification/modelica-build/cases/C2_project_tol1e-08/C2_project_tol1e-08_res.csv",
+    "simflags": ""
+  },
+  "C2_project_tol1e-10": {
+    "script": "20_coastdown",
+    "model": "EurekaPlant.Tests.CoastDown",
+    "stop_time": 20.0,
+    "intervals": 2000,
+    "tolerance": 1e-10,
+    "overrides": {},
+    "result_file": "verification/modelica-build/cases/C2_project_tol1e-10/C2_project_tol1e-10_res.csv",
+    "simflags": ""
+  },
+  "C2_project_tol1e-12": {
+    "script": "20_coastdown",
+    "model": "EurekaPlant.Tests.CoastDown",
+    "stop_time": 20.0,
+    "intervals": 2000,
+    "tolerance": 1e-12,
+    "overrides": {},
+    "result_file": "verification/modelica-build/cases/C2_project_tol1e-12/C2_project_tol1e-12_res.csv",
+    "simflags": ""
+  },
+  "E_C2_wrong_branch_fixture": {
+    "script": "20_coastdown",
+    "model": "NegCoastDownWrongBranch",
+    "stop_time": 20.0,
+    "intervals": 2000,
+    "tolerance": 1e-10,
+    "overrides": {},
+    "result_file": "verification/modelica-build/cases/E_C2_wrong_branch_fixture/E_C2_wrong_branch_fixture_res.csv",
+    "simflags": ""
+  },
+  "E_C2_Crr_plus1pct": {
+    "script": "20_coastdown",
+    "model": "EurekaPlant.Tests.CoastDown",
+    "stop_time": 20.0,
+    "intervals": 2000,
+    "tolerance": 1e-10,
+    "overrides": {
+      "C_rr": 0.00808
+    },
+    "result_file": "verification/modelica-build/cases/E_C2_Crr_plus1pct/E_C2_Crr_plus1pct_res.csv",
+    "simflags": "-override=C_rr=0.00808"
+  },
+  "D_S1_soh1.0": {
+    "script": "30_ideal",
+    "model": "EurekaPlant.InverseS1",
+    "stop_time": 324.91071428571433,
+    "intervals": 16246,
+    "tolerance": 1e-10,
+    "overrides": {
+      "SoH": 1.0
+    },
+    "result_file": "verification/modelica-build/cases/D_S1_soh1.0/D_S1_soh1.0_res.csv",
+    "simflags": "-override=SoH=1.0 -lv=LOG_STATS"
+  },
+  "D_S1_soh0.8": {
+    "script": "30_ideal",
+    "model": "EurekaPlant.InverseS1",
+    "stop_time": 324.91071428571433,
+    "intervals": 16246,
+    "tolerance": 1e-10,
+    "overrides": {
+      "SoH": 0.8
+    },
+    "result_file": "verification/modelica-build/cases/D_S1_soh0.8/D_S1_soh0.8_res.csv",
+    "simflags": "-override=SoH=0.8 -lv=LOG_STATS"
+  },
+  "D_S2_soh1.0": {
+    "script": "30_ideal",
+    "model": "EurekaPlant.InverseS2",
+    "stop_time": 213.27777777777783,
+    "intervals": 10664,
+    "tolerance": 1e-10,
+    "overrides": {
+      "SoH": 1.0
+    },
+    "result_file": "verification/modelica-build/cases/D_S2_soh1.0/D_S2_soh1.0_res.csv",
+    "simflags": "-override=SoH=1.0 -lv=LOG_STATS"
+  },
+  "D_S2_soh0.8": {
+    "script": "30_ideal",
+    "model": "EurekaPlant.InverseS2",
+    "stop_time": 213.27777777777783,
+    "intervals": 10664,
+    "tolerance": 1e-10,
+    "overrides": {
+      "SoH": 0.8
+    },
+    "result_file": "verification/modelica-build/cases/D_S2_soh0.8/D_S2_soh0.8_res.csv",
+    "simflags": "-override=SoH=0.8 -lv=LOG_STATS"
+  },
+  "E_D_S1_soh1.0_Cd_plus1pct": {
+    "script": "30_ideal",
+    "model": "EurekaPlant.InverseS1",
+    "stop_time": 324.91071428571433,
+    "intervals": 16246,
+    "tolerance": 1e-10,
+    "overrides": {
+      "C_d": 0.3535
+    },
+    "result_file": "verification/modelica-build/cases/E_D_S1_soh1.0_Cd_plus1pct/E_D_S1_soh1.0_Cd_plus1pct_res.csv",
+    "simflags": "-override=C_d=0.3535"
+  },
+  "E_D_S1_soh1.0_etami_plus1pct": {
+    "script": "30_ideal",
+    "model": "EurekaPlant.InverseS1",
+    "stop_time": 324.91071428571433,
+    "intervals": 16246,
+    "tolerance": 1e-10,
+    "overrides": {
+      "eta_mi": 0.88274
+    },
+    "result_file": "verification/modelica-build/cases/E_D_S1_soh1.0_etami_plus1pct/E_D_S1_soh1.0_etami_plus1pct_res.csv",
+    "simflags": "-override=eta_mi=0.88274"
+  },
+  "F1_openloop66_tol1e-08": {
+    "script": "40_openloop",
+    "model": "EurekaPlant.Tests.OpenLoop66",
+    "stop_time": 66.0,
+    "intervals": 6600,
+    "tolerance": 1e-08,
+    "overrides": {},
+    "result_file": "verification/modelica-build/cases/F1_openloop66_tol1e-08/F1_openloop66_tol1e-08_res.csv",
+    "simflags": ""
+  },
+  "F1_openloop66_tol1e-10": {
+    "script": "40_openloop",
+    "model": "EurekaPlant.Tests.OpenLoop66",
+    "stop_time": 66.0,
+    "intervals": 6600,
+    "tolerance": 1e-10,
+    "overrides": {},
+    "result_file": "verification/modelica-build/cases/F1_openloop66_tol1e-10/F1_openloop66_tol1e-10_res.csv",
+    "simflags": "-lv=LOG_STATS"
+  },
+  "F1_openloop66_tol1e-12": {
+    "script": "40_openloop",
+    "model": "EurekaPlant.Tests.OpenLoop66",
+    "stop_time": 66.0,
+    "intervals": 6600,
+    "tolerance": 1e-12,
+    "overrides": {},
+    "result_file": "verification/modelica-build/cases/F1_openloop66_tol1e-12/F1_openloop66_tol1e-12_res.csv",
+    "simflags": ""
+  },
+  "E_F1_openloop66_Crr_plus1pct": {
+    "script": "40_openloop",
+    "model": "EurekaPlant.Tests.OpenLoop66",
+    "stop_time": 66.0,
+    "intervals": 6600,
+    "tolerance": 1e-10,
+    "overrides": {
+      "C_rr": 0.00808
+    },
+    "result_file": "verification/modelica-build/cases/E_F1_openloop66_Crr_plus1pct/E_F1_openloop66_Crr_plus1pct_res.csv",
+    "simflags": "-override=C_rr=0.00808"
+  }
+}

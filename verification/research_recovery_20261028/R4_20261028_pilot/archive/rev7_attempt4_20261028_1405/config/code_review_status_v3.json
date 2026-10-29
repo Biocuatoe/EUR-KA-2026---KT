@@ -1,0 +1,24 @@
+{
+ "review": "04_independent_code_review.md (CR-A, CR-B) + review/CR-A2_CR-A6_rereview_agent_report_20261028.md (independent read-only re-review, findings N-A1..N-A7, N-B1..N-B3)",
+ "supersedes": "config/code_review_status_v2.json (kept unchanged)",
+ "date": "2026-10-28",
+ "open_critical": 0,
+ "open_major": 0,
+ "rereview_verdicts": {
+  "CR-A2": "CLOSED for the campaign path (independent re-review)",
+  "CR-A6": "CLOSED as mitigated, with the residual accepted by the owner (approval record R4_20261028_campaign/release/amendment_1_approval.json)"
+ },
+ "rereview_minor_fixed": {
+  "N-A1": "executor-level test: a forced QS-screen failure on a dynamically nominal P3 condition keeps its protocol 8.2 verdict (test_qs_screen_failure_alone_never_labels_a_dynamically_valid_p3_condition)",
+  "N-A5": "condition-level and grid-job exceptions are recorded; runs.csv, conditions.csv, errors.csv and manifest.json are always written (test_condition_level_exception_is_recorded_and_accounting_completes)",
+  "N-B1": "execute_schedule runs recompute_from_traces.py in a separate process and folds its verdict into crediting: COMPARABLE only if both runs pass every protocol check there (fold_separate_recomputation; tests)",
+  "N-B2 (part)": "evaluator section header no longer says 'formulas from the protocol text'"
+ },
+ "open_owner_decisions": ["N-A2"],
+ "open_owner_decisions_text": {
+  "N-A2": "Protocol 9 'QS vs dynamic' (M0/M1 failure -> branch INCONCLUSIVE) is computed for every B0/B3 run, including P3 profiles that fail the QS screen; the QS energy of a screen-failing profile is computed with unclipped over-limit torque. AMB-24 makes the QS screen diagnostic for feasibility but does not say whether the protocol 9 QS-vs-dynamic check is decisive for such profiles. Owner ruling required (no code default is chosen; the executor records both qs_screen_* and qs_vs_dyn_* per run)."
+ },
+ "documented_notes": ["N-A3 status ordering (ERROR before B0 8.2; 8.2 before recomputation) as stated in the amendment table", "N-A4 when both P3 arms fail only BASELINE_INFEASIBLE_ON_P3 is counted; B3 failure in b3_failed_8_2", "N-A6 development slice driver keeps rev0 semantics (not used by the campaign)", "N-A7 stale text in superseded documents 02/04/08 and the issued amendment's phrase 'verifies ... the torque-limit calculation' (a diagnostic, as its own section 9 states)", "N-B3 evaluator assumes active, non-SoH-scaled limits (true for H3)"],
+ "pending_owner_acceptance": ["CR-A6 residual"],
+ "rule": "campaign.preconditions() blocks while open_critical or open_major is non-zero, while any open_owner_decisions remain, and unless the approval record accepts every pending_owner_acceptance item"
+}

@@ -1,0 +1,11 @@
+batch,planned_runs,status,completed_runs,invalid_runs,duplicate_ids,metrics_rows,series_columns,hash_mismatches,gain_mismatches,energy_recompute_max_rel,usable,runtime_s
+R1_S1,84,completed,84,0,0,84,84,,0,0.0,True,462.8
+R1_S2,84,completed,84,0,0,84,84,,0,0.0,True,374.2
+R1_UDDS,84,completed,84,0,0,84,84,,0,0.0,True,1976.0
+R1_US06,84,completed,84,0,0,84,84,,0,0.0,True,797.5
+CONV_UDDS_dt1ms,2,completed,2,0,0,2,2,,0,0.0,True,401.9
+CONV_UDDS_dt0.5ms,2,completed,2,0,0,2,2,,0,0.0,True,843.9
+CONV_UDDS_dt0.25ms,2,completed,2,0,0,2,2,,0,0.0,True,1598.5
+CONV_US06_dt1ms,2,completed,2,0,0,2,2,,0,0.0,True,162.9
+CONV_US06_dt0.5ms,2,completed,2,0,0,2,2,,0,0.0,True,321.6
+CONV_US06_dt0.25ms,2,completed,2,0,0,2,2,,0,0.0,True,636.5

@@ -1,0 +1,4 @@
+zz_sha256_manifest_attempt11.csv SHA-256 b62952650d79381ebb3c309dfe17049e03f08cbf7b3e8b929b6f83d3e5ef5768
+103 files listed; written 2026-10-29 08:27:51 +0700
+root: D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_campaign\release_attempts\attempt11_final_owner_decisions
+excluded: ['zz_sha256_manifest_attempt11.csv']; __pycache__/ and *.pyc (0 present)

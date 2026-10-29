@@ -1,0 +1,11 @@
+project root : D:\EURêKA 2026 - KT
+omc          : D:\EURêKA 2026 - KT\tools\OpenModelica\bin\omc.exe
+gcc (bundled): D:\EURêKA 2026 - KT\tools\OpenModelica\tools\msys\ucrt64\bin\gcc.exe
+alias        : Y: -> project root (verified by script hash)
+saved process env OPENMODELICAHOME = [] (machine value is not touched)
+step version: exit=0 time=0.05s  stdout=D:\EURêKA 2026 - KT\verification\modelica-build\logs\20261023-232527-ctl_ptune-version.out.txt
+omc version : OpenModelica v1.27.1 (64-bit)
+step 80_ptune_convergence: exit=-1073741819 time=621.19s  stdout=D:\EURêKA 2026 - KT\verification\modelica-build\logs\20261023-232527-ctl_ptune-80_ptune_convergence.out.txt
+cleanup      : alias_created=True; alias_removed=True; alias_still_mapped=False; other_mappings_unchanged=True; env_restored=True
+summary file : D:\EURêKA 2026 - KT\verification\modelica-build\logs\20261023-232527-ctl_ptune-launcher.json
+LAUNCHER EXIT CODE: 1

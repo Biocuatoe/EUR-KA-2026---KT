@@ -1,0 +1,220 @@
+{
+ "schema_version": "r4h3-trace-v1",
+ "channels": [
+  {
+   "name": "t_s",
+   "unit": "s",
+   "description": "time of the sample (integration-step grid)",
+   "source": "index * dt"
+  },
+  {
+   "name": "v_ref_task_mps",
+   "unit": "m/s",
+   "description": "1 s-sampled task reference, linearly interpolated",
+   "source": "task"
+  },
+  {
+   "name": "stop_ref_flag",
+   "unit": "1",
+   "description": "1 inside a task rest interval [t_a, t_d], else 0",
+   "source": "task"
+  },
+  {
+   "name": "v_tracked_mps",
+   "unit": "m/s",
+   "description": "profile the controller tracks (v_b for B0, S-eco for B3)",
+   "source": "profile"
+  },
+  {
+   "name": "v_mps",
+   "unit": "m/s",
+   "description": "vehicle speed state",
+   "source": "integrator"
+  },
+  {
+   "name": "int_dist",
+   "unit": "m",
+   "description": "position (integrated distance state)",
+   "source": "integrator"
+  },
+  {
+   "name": "u_cmd_Nm",
+   "unit": "N m",
+   "description": "LQR torque command held over the 10 ms control period",
+   "source": "controller"
+  },
+  {
+   "name": "z_int_m",
+   "unit": "m",
+   "description": "LQR integral-of-error state used for u_cmd",
+   "source": "controller"
+  },
+  {
+   "name": "t_cmd_eff_Nm",
+   "unit": "N m",
+   "description": "command after the instantaneous torque limits",
+   "source": "r3_lib"
+  },
+  {
+   "name": "t_pos_Nm",
+   "unit": "N m",
+   "description": "drive torque limit",
+   "source": "r3_lib.torque_limits"
+  },
+  {
+   "name": "t_neg_Nm",
+   "unit": "N m",
+   "description": "regeneration torque limit (magnitude)",
+   "source": "r3_lib.torque_limits"
+  },
+  {
+   "name": "T_Nm",
+   "unit": "N m",
+   "description": "motor torque state",
+   "source": "integrator"
+  },
+  {
+   "name": "w_radps",
+   "unit": "rad/s",
+   "description": "motor speed",
+   "source": "G/r_w v"
+  },
+  {
+   "name": "p_mech_W",
+   "unit": "W",
+   "description": "motor mechanical power T w",
+   "source": "r3_lib.battery_current"
+  },
+  {
+   "name": "p_elec_W",
+   "unit": "W",
+   "description": "electrical power at the motor/inverter input (= p_mech + loss)",
+   "source": "r3_lib.battery_current"
+  },
+  {
+   "name": "i_A",
+   "unit": "A",
+   "description": "battery current, > 0 discharge",
+   "source": "r3_lib.battery_current"
+  },
+  {
+   "name": "V1_V",
+   "unit": "V",
+   "description": "RC polarisation voltage state",
+   "source": "integrator"
+  },
+  {
+   "name": "Vt_V",
+   "unit": "V",
+   "description": "battery terminal voltage V_oc - V1 - R0 i",
+   "source": "derived"
+  },
+  {
+   "name": "SoC",
+   "unit": "1",
+   "description": "state of charge",
+   "source": "integrator"
+  },
+  {
+   "name": "P_wheel_W",
+   "unit": "W",
+   "description": "motor force at the wheel times speed (f_w v), < 0 when motor brakes",
+   "source": "r3_lib.derivatives"
+  },
+  {
+   "name": "P_regen_wheel_W",
+   "unit": "W",
+   "description": "motor-braking power at the wheel, max(-P_wheel, 0)",
+   "source": "derived"
+  },
+  {
+   "name": "P_fric_W",
+   "unit": "W",
+   "description": "friction-brake power",
+   "source": "r3_lib.derivatives"
+  },
+  {
+   "name": "batt_feasible",
+   "unit": "1",
+   "description": "1 if the battery power equation has a real solution",
+   "source": "r3_lib.battery_current"
+  },
+  {
+   "name": "limit_active",
+   "unit": "1",
+   "description": "1 if u_cmd is outside [-t_neg, t_pos]",
+   "source": "derived"
+  },
+  {
+   "name": "int_E_chem",
+   "unit": "J",
+   "description": "integrated V_oc i",
+   "source": "integrator"
+  },
+  {
+   "name": "int_E_pos",
+   "unit": "J",
+   "description": "integrated max(V_oc i, 0)",
+   "source": "integrator"
+  },
+  {
+   "name": "int_E_neg",
+   "unit": "J",
+   "description": "integrated min(V_oc i, 0)",
+   "source": "integrator"
+  },
+  {
+   "name": "int_E_fb",
+   "unit": "J",
+   "description": "integrated friction-brake energy",
+   "source": "integrator"
+  },
+  {
+   "name": "int_E_R0",
+   "unit": "J",
+   "description": "integrated R0 i^2",
+   "source": "integrator"
+  },
+  {
+   "name": "int_E_R1",
+   "unit": "J",
+   "description": "integrated V1^2 / R1",
+   "source": "integrator"
+  },
+  {
+   "name": "int_E_mi",
+   "unit": "J",
+   "description": "integrated motor/inverter loss",
+   "source": "integrator"
+  },
+  {
+   "name": "int_I_over",
+   "unit": "A s",
+   "description": "integrated current above the r3_lib window limit (AMB-03)",
+   "source": "integrator"
+  },
+  {
+   "name": "int_Ah",
+   "unit": "A h",
+   "description": "integrated |i| / 3600",
+   "source": "integrator"
+  }
+ ],
+ "required_meta": [
+  "run_id",
+  "schema_version",
+  "branch",
+  "cycle",
+  "motor_scenario",
+  "limits",
+  "pstate",
+  "soh",
+  "dt_s",
+  "Ts_s",
+  "initial_conditions",
+  "config_sha256",
+  "gain",
+  "d_ref_m",
+  "T_ref_s"
+ ]
+}

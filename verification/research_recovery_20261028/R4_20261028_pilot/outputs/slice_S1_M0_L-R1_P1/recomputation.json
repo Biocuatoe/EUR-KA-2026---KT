@@ -1,0 +1,128 @@
+{
+ "H3-slice-S1-M0-L-R1-P1-B0-dt1ms": {
+  "E_chem_rel": {
+   "value": 6.063818784985542e-07,
+   "tol": 0.0001,
+   "ok": true
+  },
+  "E_DC_rel": {
+   "value": 6.076896658997362e-07,
+   "tol": 0.0001,
+   "ok": true
+  },
+  "E_pos_rel": {
+   "value": 3.24908487266019e-07,
+   "tol": 0.0001,
+   "ok": true
+  },
+  "friction_abs_Wh": {
+   "value": 3.469916221021663e-08,
+   "tol": 1e-06,
+   "ok": true
+  },
+  "distance_rel": {
+   "value": 1.5329359191204274e-11,
+   "tol": 1e-06,
+   "ok": true
+  },
+  "trip_time_abs_s": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true
+  },
+  "rmse_rel": {
+   "value": 2.0077650797431796e-15,
+   "tol": 1e-09,
+   "ok": true
+  },
+  "max_err_rel": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true
+  },
+  "I_over_window_abs_As": {
+   "value": 0.0,
+   "tol": 0.0001,
+   "ok": true
+  },
+  "current_recompute_abs_A": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true
+  },
+  "friction_power_recompute_abs_W": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true
+  },
+  "stop_ok_equal": {
+   "value": true,
+   "tol": null,
+   "ok": true
+  },
+  "all_ok": true
+ },
+ "H3-slice-S1-M0-L-R1-P1-B3-dt1ms": {
+  "E_chem_rel": {
+   "value": 6.08636210385469e-07,
+   "tol": 0.0001,
+   "ok": true
+  },
+  "E_DC_rel": {
+   "value": 6.089396433867483e-07,
+   "tol": 0.0001,
+   "ok": true
+  },
+  "E_pos_rel": {
+   "value": 3.392672262058388e-07,
+   "tol": 0.0001,
+   "ok": true
+  },
+  "friction_abs_Wh": {
+   "value": 0.0,
+   "tol": 1e-06,
+   "ok": true
+  },
+  "distance_rel": {
+   "value": 8.409041602846302e-11,
+   "tol": 1e-06,
+   "ok": true
+  },
+  "trip_time_abs_s": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true
+  },
+  "rmse_rel": {
+   "value": 2.816316373377652e-15,
+   "tol": 1e-09,
+   "ok": true
+  },
+  "max_err_rel": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true
+  },
+  "I_over_window_abs_As": {
+   "value": 0.0,
+   "tol": 0.0001,
+   "ok": true
+  },
+  "current_recompute_abs_A": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true
+  },
+  "friction_power_recompute_abs_W": {
+   "value": 0.0,
+   "tol": 1e-09,
+   "ok": true
+  },
+  "stop_ok_equal": {
+   "value": true,
+   "tol": null,
+   "ok": true
+  },
+  "all_ok": true
+ }
+}

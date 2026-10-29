@@ -1,0 +1,4 @@
+zz_sha256_manifest_v6.csv SHA-256 11ea7f821db0b9ed328c40012cb2ad7cd217b60cb9dfb8a222c3b19b2f94bdeb
+654 files listed; written 2026-10-28 12:40:48 +0700
+root: D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot
+excluded: ['logs/zz_manifest_v6_sha256.txt', 'zz_sha256_manifest_v6.csv']; __pycache__/ and *.pyc (0 present)

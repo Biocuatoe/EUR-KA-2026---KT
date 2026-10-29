@@ -1,0 +1,21 @@
+.................                                                        [100%]
+=================================== PASSES ====================================
+=========================== short test summary info ===========================
+PASSED code\tests\test_owner_decisions_v14.py::test_i6b_an_attempted_run_that_raised_is_condition_error_never_run_missing
+PASSED code\tests\test_owner_decisions_v14.py::test_i6b_a_genuinely_absent_run_energy_stays_on_the_missing_run_path
+PASSED code\tests\test_owner_decisions_v14.py::test_i6b_neither_label_counts_as_pass_and_an_exception_overrides_a_pass
+PASSED code\tests\test_owner_decisions_v14.py::test_after_a_recomputation_or_fold_failure_only_executed_na_pairs_are_relabelled[exit4]
+PASSED code\tests\test_owner_decisions_v14.py::test_after_a_recomputation_or_fold_failure_only_executed_na_pairs_are_relabelled[launch]
+PASSED code\tests\test_owner_decisions_v14.py::test_after_a_recomputation_or_fold_failure_only_executed_na_pairs_are_relabelled[unreadable]
+PASSED code\tests\test_owner_decisions_v14.py::test_after_a_recomputation_or_fold_failure_only_executed_na_pairs_are_relabelled[fold_failed]
+PASSED code\tests\test_owner_decisions_v14.py::test_without_a_recomputation_failure_no_na_pair_is_relabelled
+PASSED code\tests\test_owner_decisions_v14.py::test_r10_2_after_a_process_failure_a_pair_without_an_executed_run_keeps_its_label_in_the_executor
+PASSED code\tests\test_owner_decisions_v14.py::test_r10_2_the_accounting_rejects_an_unknown_pair_status
+PASSED code\tests\test_owner_decisions_v14.py::test_r10_2_r3_9_eligibility_stays_known_when_the_pair_evaluation_raised
+PASSED code\tests\test_owner_decisions_v14.py::test_r10_4_fold_failed_with_fewer_conditions_than_rows_does_not_raise
+PASSED code\tests\test_owner_decisions_v14.py::test_r10_1_the_block_states_only_owner_decisions_as_rulings_and_labels_the_implementer_reading
+PASSED code\tests\test_owner_decisions_v14.py::test_r10_3_the_candidate_states_counts_and_lineage_accurately
+PASSED code\tests\test_owner_decisions_v14.py::test_review_status_v13_keeps_the_six_major_findings_open_pending_owner_acceptance
+PASSED code\tests\test_owner_decisions_v14.py::test_rev12_candidate_matches_the_code_and_earlier_candidates_are_pinned
+PASSED code\tests\test_owner_decisions_v14.py::test_campaign_mode_stays_blocked_in_rev14
+17 passed in 213.05s (0:03:33)

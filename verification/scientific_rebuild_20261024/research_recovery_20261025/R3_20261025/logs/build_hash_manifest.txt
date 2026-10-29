@@ -1,0 +1,23 @@
+﻿frozen-unchanged code/derive_m1_curve.py
+frozen-unchanged code/extract_fastsim_source.py
+frozen-unchanged code/extract_motor_curve.py
+frozen-unchanged code/precheck_feasibility.py
+frozen-unchanged code/probe_fastsim_regen.py
+frozen-unchanged code/r3_lib.py
+frozen-unchanged code/run_gates.py
+frozen-unchanged code/test_r3.py
+frozen-unchanged code/test_r3_supplementary.py
+frozen-unchanged code/test_r3_v1_additions.py
+frozen-unchanged data/fastsim_2022_Renault_Zoe_ZE50_R135.yaml
+frozen-unchanged data/fastsim_em_probe.json
+frozen-unchanged data/fastsim_embedded_em_curves.json
+frozen-unchanged data/fastsim_source_record.json
+frozen-unchanged data/motor_curve_fastsim.json
+frozen-unchanged data/motor_curve_m1_derived.json
+frozen-unchanged outputs/precheck_feasibility.csv
+changed-after-freeze R3_literature_and_parameter_sources.csv
+frozen-unchanged R3_model_basis.md
+frozen-unchanged R3_protocol.md
+frozen-unchanged R3_protocol_v1.md
+202 files
+EXIT=0

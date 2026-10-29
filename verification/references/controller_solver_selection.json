@@ -1,0 +1,466 @@
+{
+ "admissible_configurations": [
+  "dassl@1e-12",
+  "dassl@1e-10",
+  "dassl@1e-08",
+  "dassl@1e-06"
+ ],
+ "failed_or_inadmissible": {
+  "PT_fixed_cvode_tol1e-06": [
+   "no record found",
+   "",
+   null
+  ],
+  "PT_scheduled_cvode_tol1e-06": [
+   "FAILED (see log)",
+   "",
+   null
+  ],
+  "PT_fixed_cvode_tol1e-08": [
+   "FAILED (see log)",
+   "",
+   null
+  ],
+  "PT_scheduled_cvode_tol1e-08": [
+   "FAILED (see log)",
+   "",
+   null
+  ],
+  "PT_fixed_cvode_tol1e-10": [
+   "FAILED (see log)",
+   "",
+   null
+  ],
+  "PT_scheduled_cvode_tol1e-10": [
+   "FAILED (see log)",
+   "",
+   null
+  ],
+  "PT_fixed_cvode_tol1e-12": [
+   "FAILED (see log)",
+   "",
+   null
+  ],
+  "PT_scheduled_cvode_tol1e-12": [
+   "FAILED (see log)",
+   "",
+   null
+  ],
+  "PT_fixed_ida_tol1e-06": [
+   "finished successfully",
+   "",
+   0
+  ],
+  "PT_scheduled_ida_tol1e-06": [
+   "finished successfully",
+   "",
+   0
+  ],
+  "PT_fixed_ida_tol1e-08": [
+   "finished successfully",
+   "",
+   0
+  ],
+  "PT_scheduled_ida_tol1e-08": [
+   "finished successfully",
+   "",
+   0
+  ],
+  "PT_fixed_ida_tol1e-10": [
+   "finished successfully",
+   "",
+   0
+  ],
+  "PT_scheduled_ida_tol1e-10": [
+   "finished successfully",
+   "",
+   0
+  ],
+  "PT_fixed_ida_tol1e-12": [
+   "finished successfully",
+   "",
+   0
+  ],
+  "PT_scheduled_ida_tol1e-12": [
+   "finished successfully",
+   "",
+   0
+  ]
+ },
+ "u_py_P-TUNE_dt1e-3_vs_1e-4": {
+  "E_fixed": 2.3184534114761846e-07,
+  "E_sched": 9.798897337987e-08,
+  "rmse_fixed": 4.190443825269341e-11,
+  "rmse_sched": 1.1609831152004091e-11,
+  "dE_pct": 2.9272388429434776e-07,
+  "rmse_ratio": 9.769862696629161e-10,
+  "v_fixed_trace": 1.4514900728191554e-08,
+  "T_fixed_trace": 1.8030592938700352e-06,
+  "u_fixed_trace": 2.871517231994858e-06,
+  "v_sched_trace": 1.6113345956251984e-09,
+  "T_sched_trace": 2.824285956215533e-07,
+  "u_sched_trace": 2.751273200374271e-07
+ },
+ "reference": "dassl@1e-12",
+ "reference_second_integrator": "none admissible at that tolerance (u_ref set to 0, flagged)",
+ "u_ref": {
+  "E_fixed": 0.0,
+  "E_sched": 0.0,
+  "rmse_fixed": 0.0,
+  "rmse_sched": 0.0,
+  "dE_pct": 0.0,
+  "rmse_ratio": 0.0,
+  "v_fixed_trace": 0.0,
+  "T_fixed_trace": 0.0,
+  "u_fixed_trace": 0.0,
+  "v_sched_trace": 0.0,
+  "T_sched_trace": 0.0,
+  "u_sched_trace": 0.0
+ },
+ "qualifying": [
+  "dassl@1e-12"
+ ],
+ "selected": {
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "rule": "loosest qualifying DASSL tolerance"
+ },
+ "runs": {
+  "PT_fixed_dassl_tol1e-06": {
+   "kind": "fixed",
+   "solver": "dassl",
+   "tol": 1e-06,
+   "status": "finished successfully",
+   "admissible": true,
+   "sim_time_s": 1.5955688,
+   "closure_rel": 5.5311544778054915e-09,
+   "vmin": -1.012028338889085e-10,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 1.1584884840830146e-05,
+   "kin_violations": 0
+  },
+  "PT_scheduled_dassl_tol1e-06": {
+   "kind": "scheduled",
+   "solver": "dassl",
+   "tol": 1e-06,
+   "status": "finished successfully",
+   "admissible": true,
+   "sim_time_s": 1.6366036,
+   "closure_rel": 5.597814032508044e-09,
+   "vmin": -1.008478748433975e-10,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 1.1572607298442519e-05,
+   "kin_violations": 0
+  },
+  "PT_fixed_dassl_tol1e-08": {
+   "kind": "fixed",
+   "solver": "dassl",
+   "tol": 1e-08,
+   "status": "finished successfully",
+   "admissible": true,
+   "sim_time_s": 1.7732446,
+   "closure_rel": 7.220343618557207e-10,
+   "vmin": -2.490522475178724e-12,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 1.1584822821968546e-05,
+   "kin_violations": 0
+  },
+  "PT_scheduled_dassl_tol1e-08": {
+   "kind": "scheduled",
+   "solver": "dassl",
+   "tol": 1e-08,
+   "status": "finished successfully",
+   "admissible": true,
+   "sim_time_s": 1.8295635,
+   "closure_rel": 7.169138127674418e-10,
+   "vmin": -1.711727052588377e-12,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 1.1576183134433103e-05,
+   "kin_violations": 0
+  },
+  "PT_fixed_dassl_tol1e-10": {
+   "kind": "fixed",
+   "solver": "dassl",
+   "tol": 1e-10,
+   "status": "finished successfully",
+   "admissible": true,
+   "sim_time_s": 2.1165009,
+   "closure_rel": 1.3347023906507545e-11,
+   "vmin": -4.819799868374501e-13,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 1.1598471550878158e-05,
+   "kin_violations": 0
+  },
+  "PT_scheduled_dassl_tol1e-10": {
+   "kind": "scheduled",
+   "solver": "dassl",
+   "tol": 1e-10,
+   "status": "finished successfully",
+   "admissible": true,
+   "sim_time_s": 2.1087609,
+   "closure_rel": 1.3447819189857941e-11,
+   "vmin": -6.942001654166006e-13,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 1.159025709626386e-05,
+   "kin_violations": 0
+  },
+  "PT_fixed_dassl_tol1e-12": {
+   "kind": "fixed",
+   "solver": "dassl",
+   "tol": 1e-12,
+   "status": "finished successfully",
+   "admissible": true,
+   "sim_time_s": 2.6813485,
+   "closure_rel": 8.572148159267999e-13,
+   "vmin": -1.227747003702015e-13,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 1.1598636755204235e-05,
+   "kin_violations": 0
+  },
+  "PT_scheduled_dassl_tol1e-12": {
+   "kind": "scheduled",
+   "solver": "dassl",
+   "tol": 1e-12,
+   "status": "finished successfully",
+   "admissible": true,
+   "sim_time_s": 2.6395698,
+   "closure_rel": 8.367343265508992e-13,
+   "vmin": -7.098666345380578e-13,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 1.1590699381537044e-05,
+   "kin_violations": 0
+  },
+  "PT_fixed_cvode_tol1e-06": {
+   "kind": "fixed",
+   "solver": "cvode",
+   "tol": 1e-06,
+   "status": "no record found",
+   "admissible": false,
+   "sim_time_s": NaN,
+   "closure_rel": null,
+   "vmin": null,
+   "error": null,
+   "nan_cells": null,
+   "kin_resid_max_m": null,
+   "kin_violations": null
+  },
+  "PT_scheduled_cvode_tol1e-06": {
+   "kind": "scheduled",
+   "solver": "cvode",
+   "tol": 1e-06,
+   "status": "FAILED (see log)",
+   "admissible": false,
+   "sim_time_s": 29.1247363,
+   "closure_rel": null,
+   "vmin": null,
+   "error": null,
+   "nan_cells": null,
+   "kin_resid_max_m": null,
+   "kin_violations": null
+  },
+  "PT_fixed_cvode_tol1e-08": {
+   "kind": "fixed",
+   "solver": "cvode",
+   "tol": 1e-08,
+   "status": "FAILED (see log)",
+   "admissible": false,
+   "sim_time_s": 29.3865097,
+   "closure_rel": null,
+   "vmin": null,
+   "error": null,
+   "nan_cells": null,
+   "kin_resid_max_m": null,
+   "kin_violations": null
+  },
+  "PT_scheduled_cvode_tol1e-08": {
+   "kind": "scheduled",
+   "solver": "cvode",
+   "tol": 1e-08,
+   "status": "FAILED (see log)",
+   "admissible": false,
+   "sim_time_s": 29.4810611,
+   "closure_rel": null,
+   "vmin": null,
+   "error": null,
+   "nan_cells": null,
+   "kin_resid_max_m": null,
+   "kin_violations": null
+  },
+  "PT_fixed_cvode_tol1e-10": {
+   "kind": "fixed",
+   "solver": "cvode",
+   "tol": 1e-10,
+   "status": "FAILED (see log)",
+   "admissible": false,
+   "sim_time_s": 29.2882758,
+   "closure_rel": null,
+   "vmin": null,
+   "error": null,
+   "nan_cells": null,
+   "kin_resid_max_m": null,
+   "kin_violations": null
+  },
+  "PT_scheduled_cvode_tol1e-10": {
+   "kind": "scheduled",
+   "solver": "cvode",
+   "tol": 1e-10,
+   "status": "FAILED (see log)",
+   "admissible": false,
+   "sim_time_s": 28.8590622,
+   "closure_rel": null,
+   "vmin": null,
+   "error": null,
+   "nan_cells": null,
+   "kin_resid_max_m": null,
+   "kin_violations": null
+  },
+  "PT_fixed_cvode_tol1e-12": {
+   "kind": "fixed",
+   "solver": "cvode",
+   "tol": 1e-12,
+   "status": "FAILED (see log)",
+   "admissible": false,
+   "sim_time_s": 29.4397033,
+   "closure_rel": null,
+   "vmin": null,
+   "error": null,
+   "nan_cells": null,
+   "kin_resid_max_m": null,
+   "kin_violations": null
+  },
+  "PT_scheduled_cvode_tol1e-12": {
+   "kind": "scheduled",
+   "solver": "cvode",
+   "tol": 1e-12,
+   "status": "FAILED (see log)",
+   "admissible": false,
+   "sim_time_s": 29.2847379,
+   "closure_rel": null,
+   "vmin": null,
+   "error": null,
+   "nan_cells": null,
+   "kin_resid_max_m": null,
+   "kin_violations": null
+  },
+  "PT_fixed_ida_tol1e-06": {
+   "kind": "fixed",
+   "solver": "ida",
+   "tol": 1e-06,
+   "status": "finished successfully",
+   "admissible": false,
+   "sim_time_s": 1.9307892,
+   "closure_rel": 1.694992284077887e-05,
+   "vmin": -1.001781070970198e-10,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 0.11111693717922413,
+   "kin_violations": 103
+  },
+  "PT_scheduled_ida_tol1e-06": {
+   "kind": "scheduled",
+   "solver": "ida",
+   "tol": 1e-06,
+   "status": "finished successfully",
+   "admissible": false,
+   "sim_time_s": 1.9801167,
+   "closure_rel": 1.680146648059138e-05,
+   "vmin": -1.007248867040513e-10,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 0.11111699882873016,
+   "kin_violations": 103
+  },
+  "PT_fixed_ida_tol1e-08": {
+   "kind": "fixed",
+   "solver": "ida",
+   "tol": 1e-08,
+   "status": "finished successfully",
+   "admissible": false,
+   "sim_time_s": 2.069236,
+   "closure_rel": 3.130464396188716e-07,
+   "vmin": -1.963710832146535e-12,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 0.11111693697425999,
+   "kin_violations": 103
+  },
+  "PT_scheduled_ida_tol1e-08": {
+   "kind": "scheduled",
+   "solver": "ida",
+   "tol": 1e-08,
+   "status": "finished successfully",
+   "admissible": false,
+   "sim_time_s": 2.1824973,
+   "closure_rel": 2.969082335503007e-07,
+   "vmin": -1.083888345462761e-12,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 0.11111699864915309,
+   "kin_violations": 103
+  },
+  "PT_fixed_ida_tol1e-10": {
+   "kind": "fixed",
+   "solver": "ida",
+   "tol": 1e-10,
+   "status": "finished successfully",
+   "admissible": false,
+   "sim_time_s": 2.2605213,
+   "closure_rel": 3.680197281072689e-09,
+   "vmin": -5.546556598036589e-13,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 0.11111693696939132,
+   "kin_violations": 103
+  },
+  "PT_scheduled_ida_tol1e-10": {
+   "kind": "scheduled",
+   "solver": "ida",
+   "tol": 1e-10,
+   "status": "finished successfully",
+   "admissible": false,
+   "sim_time_s": 2.5582409,
+   "closure_rel": 3.6285029015302255e-09,
+   "vmin": -4.084235997718884e-13,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 0.11111699864534622,
+   "kin_violations": 103
+  },
+  "PT_fixed_ida_tol1e-12": {
+   "kind": "fixed",
+   "solver": "ida",
+   "tol": 1e-12,
+   "status": "finished successfully",
+   "admissible": false,
+   "sim_time_s": 2.1967936,
+   "closure_rel": 2.495676048537915e-11,
+   "vmin": -6.554338155397795e-13,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 0.11111693696949639,
+   "kin_violations": 103
+  },
+  "PT_scheduled_ida_tol1e-12": {
+   "kind": "scheduled",
+   "solver": "ida",
+   "tol": 1e-12,
+   "status": "finished successfully",
+   "admissible": false,
+   "sim_time_s": 2.1681392,
+   "closure_rel": 2.746912836700636e-11,
+   "vmin": -6.949734800931148e-13,
+   "error": null,
+   "nan_cells": 0,
+   "kin_resid_max_m": 0.11111699864536295,
+   "kin_violations": 103
+  }
+ }
+}

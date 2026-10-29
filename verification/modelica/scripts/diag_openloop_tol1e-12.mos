@@ -1,0 +1,4 @@
+loadFile("../modelica/EurekaPlant/package.mo"); getErrorString();
+mkdir("cases"); mkdir("cases/DIAG_tol1e-12"); cd("cases/DIAG_tol1e-12");
+simulate(EurekaPlant.Tests.OpenLoop66, startTime = 0, stopTime = 66.0, numberOfIntervals = 6600, tolerance = 1e-12, method = "dassl", outputFormat = "csv", fileNamePrefix = "DIAG_tol1e-12", variableFilter = "^(time|v|T|F_net|T_ref|V1|disc|I)$", simflags = "-lv=LOG_EVENTS,LOG_SOLVER"); getErrorString();
+cd("../..");

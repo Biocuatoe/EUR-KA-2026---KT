@@ -1,0 +1,85 @@
+true
+""
+true
+""
+true
+""
+true
+""
+true
+"Y:/verification/modelica-build/cases_ctl/DIAG_ida_events"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases_ctl/DIAG_ida_events/DIAG_ida_events_res.csv",
+    simulationOptions = "startTime = 17.9, stopTime = 18.05, numberOfIntervals = 15, tolerance = 1e-12, method = 'ida', fileNamePrefix = 'DIAG_ida_events', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = '-lv=LOG_EVENTS'",
+    messages = "LOG_EVENTS        | info    | status of relations at time=17.9
+|                 | |       | | [1] (pre:  true)  true = P_m >= 0.0
+|                 | |       | | [2] (pre:  true)  true = v <= 0.0
+|                 | |       | | [3] (pre: false) false = F_net < 0.0
+|                 | |       | | [4] (pre:  true)  true = t_s >= 0.0
+|                 | |       | | [5] (pre:  true)  true = time >= tk[2]
+|                 | |       | | [6] (pre:  true)  true = time >= tk[3]
+|                 | |       | | [7] (pre: false) false = time >= tk[4]
+|                 | |       | | [8] (pre: false) false = time >= tk[5]
+|                 | |       | | [9] (pre: false) false = time >= tk[6]
+|                 | |       | | [10] (pre: false) false = time >= tk[7]
+|                 | |       | | [11] (pre: false) false = time >= tk[8]
+|                 | |       | | [12] (pre: false) false = time >= tk[9]
+|                 | |       | | [13] (pre: false) false = time >= tk[10]
+|                 | |       | | [14] (pre: false) false = time >= tk[11]
+LOG_EVENTS        | info    | status of zero crossings at time=17.9
+|                 | |       | | [1] (pre:  0)  1 = P_m >= 0.0
+|                 | |       | | [2] (pre:  0) -1 = v <= 0.0 and F_net < 0.0
+|                 | |       | | [3] (pre:  0)  1 = t_s >= 0.0
+|                 | |       | | [4] (pre:  0)  1 = time >= tk[2]
+|                 | |       | | [5] (pre:  0)  1 = time >= tk[3]
+|                 | |       | | [6] (pre:  0) -1 = time >= tk[4]
+|                 | |       | | [7] (pre:  0) -1 = time >= tk[5]
+|                 | |       | | [8] (pre:  0) -1 = time >= tk[6]
+|                 | |       | | [9] (pre:  0) -1 = time >= tk[7]
+|                 | |       | | [10] (pre:  0) -1 = time >= tk[8]
+|                 | |       | | [11] (pre:  0) -1 = time >= tk[9]
+|                 | |       | | [12] (pre:  0) -1 = time >= tk[10]
+|                 | |       | | [13] (pre:  0) -1 = time >= tk[11]
+LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_EVENTS        | info    | time event at time=17.9
+|                 | |       | | [1] sample(0, 0.01)
+LOG_EVENTS        | info    | time event at time=17.91
+|                 | |       | | [1] sample(0, 0.01)
+LOG_EVENTS        | info    | time event at time=17.92
+|                 | |       | | [1] sample(0, 0.01)
+LOG_EVENTS        | info    | time event at time=17.93
+|                 | |       | | [1] sample(0, 0.01)
+LOG_EVENTS        | info    | time event at time=17.94
+|                 | |       | | [1] sample(0, 0.01)
+LOG_EVENTS        | info    | time event at time=17.95
+|                 | |       | | [1] sample(0, 0.01)
+LOG_EVENTS        | info    | time event at time=17.96
+|                 | |       | | [1] sample(0, 0.01)
+LOG_EVENTS        | info    | time event at time=17.97
+|                 | |       | | [1] sample(0, 0.01)
+LOG_EVENTS        | info    | time event at time=17.98
+|                 | |       | | [1] sample(0, 0.01)
+LOG_EVENTS        | info    | time event at time=17.99
+|                 | |       | | [1] sample(0, 0.01)
+LOG_EVENTS        | info    | time event at time=18
+|                 | |       | | [1] sample(0, 0.01)
+LOG_EVENTS        | info    | time event at time=18.01
+|                 | |       | | [1] sample(0, 0.01)
+LOG_EVENTS        | info    | time event at time=18.02
+|                 | |       | | [1] sample(0, 0.01)
+LOG_EVENTS        | info    | time event at time=18.03
+|                 | |       | | [1] sample(0, 0.01)
+LOG_EVENTS        | info    | time event at time=18.04
+|                 | |       | | [1] sample(0, 0.01)
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0086232,
+    timeBackend = 0.0527078,
+    timeSimCode = 0.0114799,
+    timeTemplates = 0.0372657,
+    timeCompile = 2.2494272,
+    timeSimulation = 0.0963954,
+    timeTotal = 2.4562174
+end SimulationResult;
+""
+"Y:/verification/modelica-build"

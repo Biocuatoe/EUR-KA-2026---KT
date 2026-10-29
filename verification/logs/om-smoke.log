@@ -1,0 +1,75 @@
+﻿omc=D:\EURÉKA 2026 - KT\tools\OpenModelica\bin\omc.exe
+OPENMODELICAHOME=D:\EURÉKA 2026 - KT\tools\OpenModelica\ APPDATA=D:\EURÉKA 2026 - KT\verification\omc-userdata\Roaming TEMP=D:\EURÉKA 2026 - KT\cache\tmp
+> "D:\EURÉKA 2026 - KT\tools\OpenModelica\bin\omc.exe" --version
+OpenModelica v1.27.1 (64-bit)
+[exit 0]
+
+> "D:\EURÉKA 2026 - KT\tools\OpenModelica\bin\omc.exe" ..\test.mos
+We could not find some needed MINGW paths in $OPENMODELICAHOME or $OMDEV. Searched for paths:
+	D:/EUR�KA 2026 - KT/tools/OpenModelica\tools\msys\ucrt64\bin [not found] 
+	D:/EUR�KA 2026 - KT/tools/OpenModelica\tools\msys\ucrt64\bin [not found] 
+
+
+
+
+[exit 0]
+
+=== case A: no trailing backslash OPENMODELICAHOME=D:\EURÉKA 2026 - KT\tools\OpenModelica
+> "D:\EURÉKA 2026 - KT\tools\OpenModelica\bin\omc.exe" ..\test.mos
+We could not find some needed MINGW paths in $OPENMODELICAHOME or $OMDEV. Searched for paths:
+	D:/EUR�KA 2026 - KT/tools/OpenModelica\tools\msys\ucrt64\bin [not found] 
+	D:/EUR�KA 2026 - KT/tools/OpenModelica\tools\msys\ucrt64\bin [not found] 
+
+
+
+
+[exit 0]
+
+=== case B: 8.3 short path OPENMODELICAHOME=D:\EURÉKA 2026 - KT\tools\OpenModelica
+> "D:\EURÉKA 2026 - KT\tools\OpenModelica\bin\omc.exe" ..\test.mos
+We could not find some needed MINGW paths in $OPENMODELICAHOME or $OMDEV. Searched for paths:
+	D:/EUR�KA 2026 - KT/tools/OpenModelica\tools\msys\ucrt64\bin [not found] 
+	D:/EUR�KA 2026 - KT/tools/OpenModelica\tools\msys\ucrt64\bin [not found] 
+
+
+
+
+[exit 0]
+
+=== case C: subst Y: -> D:\EURÉKA 2026 - KT ; OPENMODELICAHOME=Y:\tools\OpenModelica
+> Y:\tools\OpenModelica\bin\omc.exe ..\test.mos
+true
+"[Y:/tools/OpenModelica/share/omlibrary/cache/index.json:0:0-0:0:readonly] Notification: Cached libraries were found and will be installed into Y:/verification/omc-userdata/Roaming/.openmodelica/libraries/.
+[Y:/verification/omc-userdata/Roaming/.openmodelica/libraries/Complex 4.0.0+maint.om/package.mo:0:0-0:0:readonly] Notification: Package installed successfully (SHA 96032134c36668898e1693e69bd9f81aa38de3dd).
+[Y:/verification/omc-userdata/Roaming/.openmodelica/libraries/Complex 4.1.0+maint.om/package.mo:0:0-0:0:readonly] Notification: Package installed successfully (SHA 7a4bf7de77a3986e8eb1e88cbb515d646f78f834).
+[Y:/verification/omc-userdata/Roaming/.openmodelica/libraries/ModelicaServices 4.1.0+maint.om/package.mo:0:0-0:0:readonly] Notification: Package installed successfully (SHA 7a4bf7de77a3986e8eb1e88cbb515d646f78f834).
+[Y:/verification/omc-userdata/Roaming/.openmodelica/libraries/Modelica 3.2.3+maint.om/package.mo:0:0-0:0:readonly] Notification: Package installed successfully (SHA efd981a1176f124938d6d6759f7c09e0fbf55ddf).
+[Y:/verification/omc-userdata/Roaming/.openmodelica/libraries/ModelicaServices 4.0.0+maint.om/package.mo:0:0-0:0:readonly] Notification: Package installed successfully (SHA 96032134c36668898e1693e69bd9f81aa38de3dd).
+[Y:/verification/omc-userdata/Roaming/.openmodelica/libraries/Modelica 4.0.0+maint.om/package.mo:0:0-0:0:readonly] Notification: Package installed successfully (SHA 96032134c36668898e1693e69bd9f81aa38de3dd).
+[Y:/verification/omc-userdata/Roaming/.openmodelica/libraries/Modelica 4.1.0+maint.om/package.mo:0:0-0:0:readonly] Notification: Package installed successfully (SHA 7a4bf7de77a3986e8eb1e88cbb515d646f78f834).
+[Y:/verification/omc-userdata/Roaming/.openmodelica/libraries/ModelicaReference 4.0.0+maint.om/package.mo:0:0-0:0:readonly] Notification: Package installed successfully (SHA 96032134c36668898e1693e69bd9f81aa38de3dd).
+[Y:/verification/omc-userdata/Roaming/.openmodelica/libraries/ModelicaReference 4.1.0+maint.om/package.mo:0:0-0:0:readonly] Notification: Package installed successfully (SHA 7a4bf7de77a3986e8eb1e88cbb515d646f78f834).
+[Y:/verification/omc-userdata/Roaming/.openmodelica/libraries//ModelicaServices 4.0.0+maint.om:0:0-0:0:readonly] Notification: ModelicaServices 4.0.0+maint.om is already installed, skipping.
+[Y:/verification/omc-userdata/Roaming/.openmodelica/libraries//ModelicaServices 4.1.0+maint.om:0:0-0:0:readonly] Notification: ModelicaServices 4.1.0+maint.om is already installed, skipping.
+[Y:/verification/omc-userdata/Roaming/.openmodelica/libraries/ObsoleteModelica4 4.0.0+maint.om/package.mo:0:0-0:0:readonly] Notification: Package installed successfully (SHA 96032134c36668898e1693e69bd9f81aa38de3dd).
+[Y:/verification/omc-userdata/Roaming/.openmodelica/libraries/ObsoleteModelica4 4.1.0+maint.om/package.mo:0:0-0:0:readonly] Notification: Package installed successfully (SHA 7a4bf7de77a3986e8eb1e88cbb515d646f78f834).
+Error: Curl error for URL https://libraries.openmodelica.org/index/v1/index.json: Timeout was reached
+Error: Failed to download package index https://libraries.openmodelica.org/index/v1/index.json to file Y:/verification/omc-userdata/Roaming/.openmodelica/libraries/index.json.
+"
+record SimulationResult
+    resultFile = "Y:/verification/openmodelica-smoke/out/CoastDown_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 20.0, numberOfIntervals = 2000, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'CoastDown', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0023005,
+    timeBackend = 0.0041148,
+    timeSimCode = 9.781e-4,
+    timeTemplates = 0.0290603,
+    timeCompile = 2.1605579,
+    timeSimulation = 0.0980792,
+    timeTotal = 2.2954496
+end SimulationResult;
+""
+[exit 0]
+

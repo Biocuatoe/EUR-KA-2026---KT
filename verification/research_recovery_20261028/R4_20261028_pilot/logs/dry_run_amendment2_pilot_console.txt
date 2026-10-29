@@ -1,0 +1,17 @@
+{
+ "outdir": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_pilot\\outputs\\dry_run_20261028_095027",
+ "schedule_passed": true,
+ "counts": {
+  "NOM": 12,
+  "P3": 12,
+  "INS": 12,
+  "CNV": 6,
+  "SEN": 128
+ },
+ "blockers": [
+  "no issued amendment 2 at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+  "code or config changed since the readiness gate record",
+  "code review status missing"
+ ],
+ "campaign_may_start": false
+}

@@ -1,0 +1,30 @@
+﻿{
+    "label":  "failsafe-auto",
+    "time":  "2026-10-23T21:56:04",
+    "exit_code":  0,
+    "project_root":  "D:\\EURÉKA 2026 - KT",
+    "letter":  "Y",
+    "cleanup":  {
+                    "alias_created":  true,
+                    "alias_removed":  true,
+                    "alias_still_mapped":  false,
+                    "other_mappings_unchanged":  true,
+                    "env_restored":  true
+                },
+    "steps":  [
+                  {
+                      "name":  "version",
+                      "command":  "omc --version",
+                      "exit_code":  0,
+                      "seconds":  0.04,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-215601-failsafe-auto-version.out.txt"
+                  },
+                  {
+                      "name":  "smoke",
+                      "command":  "omc Y:\\verification\\modelica-build\\launcher-smoke\\smoke.mos",
+                      "exit_code":  0,
+                      "seconds":  1.99,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-215601-failsafe-auto-smoke.out.txt"
+                  }
+              ]
+}

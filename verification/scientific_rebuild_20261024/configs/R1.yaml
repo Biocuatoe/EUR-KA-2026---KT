@@ -1,0 +1,26 @@
+# Experiment R1 (experimental_protocol.md section 3). Machine-readable; frozen with the protocol.
+protocol: experimental_protocol.md
+cycles:
+  S1: {source: eureka, label: "synthetic (configs/cycles/profiles.yaml)"}
+  S2: {source: eureka, label: "synthetic (configs/cycles/profiles.yaml)"}
+  UDDS: {source: epa_csv, path: data/processed/drive_cycles/epa/epa_udds_1hz.csv, label: "official EPA schedule (reference)"}
+  US06: {source: epa_csv, path: data/processed/drive_cycles/epa/epa_us06_1hz.csv, label: "official EPA schedule (STRESS: exceeds vehicle capability)"}
+soh: [1.0, 0.9, 0.8, 0.7]
+cases:
+  B0:     {k_r0: 0.5, limits: {}}
+  BV:     {k_r0: 0.5, limits: {v_min_ratio: 0.78125, v_max_ratio: 1.140625}}
+  BV-k2:  {k_r0: 2.0, limits: {v_min_ratio: 0.78125, v_max_ratio: 1.140625}}
+  BCS:    {k_r0: 0.5, limits: {v_min_ratio: 0.78125, v_max_ratio: 1.140625, c_dis: 3.0, c_ch: 1.0, soh_scaled: true}}
+  BCS-k2: {k_r0: 2.0, limits: {v_min_ratio: 0.78125, v_max_ratio: 1.140625, c_dis: 3.0, c_ch: 1.0, soh_scaled: true}}
+  BCN:    {k_r0: 0.5, limits: {v_min_ratio: 0.78125, v_max_ratio: 1.140625, c_dis: 3.0, c_ch: 1.0, soh_scaled: false}}
+  BCS2:   {k_r0: 0.5, limits: {v_min_ratio: 0.78125, v_max_ratio: 1.140625, c_dis: 2.0, c_ch: 0.5, soh_scaled: true}}
+controllers:
+  F:   {kind: fixed, r_scale: 1.0}
+  S:   {kind: scheduled, gamma_v: 1.0, gamma_u: 1.0}
+  F01: {kind: fixed, r_scale: 0.1}
+convergence:
+  cycles: [UDDS, US06]
+  case: BCS
+  soh: 0.7
+  controllers: [F, S]
+  dt: [0.001, 0.0005, 0.00025]

@@ -1,0 +1,30 @@
+true
+""
+true
+""
+true
+""
+"Check of EurekaController.SampledLqr completed successfully.
+Class EurekaController.SampledLqr has 11 equation(s) and 11 variable(s).
+0 of these are trivial equation(s)."
+""
+"Check of EurekaController.ClosedLoop completed successfully.
+Class EurekaController.ClosedLoop has 52 equation(s) and 52 variable(s).
+8 of these are trivial equation(s)."
+""
+"Check of EurekaController.Cases.S1_fixed_soh080 completed successfully.
+Class EurekaController.Cases.S1_fixed_soh080 has 52 equation(s) and 52 variable(s).
+8 of these are trivial equation(s)."
+""
+"Check of EurekaController.Cases.S2_scheduled_soh070 completed successfully.
+Class EurekaController.Cases.S2_scheduled_soh070 has 52 equation(s) and 52 variable(s).
+8 of these are trivial equation(s)."
+""
+"Check of EurekaController.Cases.PTUNE_scheduled_soh080 completed successfully.
+Class EurekaController.Cases.PTUNE_scheduled_soh080 has 52 equation(s) and 52 variable(s).
+8 of these are trivial equation(s)."
+""
+"Check of EurekaController.Tests.ControllerUnit completed successfully.
+Class EurekaController.Tests.ControllerUnit has 14 equation(s) and 14 variable(s).
+6 of these are trivial equation(s)."
+""

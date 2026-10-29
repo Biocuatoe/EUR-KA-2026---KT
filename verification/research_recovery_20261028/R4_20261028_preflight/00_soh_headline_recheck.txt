@@ -1,0 +1,5 @@
+R1 S vs F: n=112 dE% min=-0.0019 max=0.0340
+R2 held-out scheduling contrasts: n=20 max|dE%|=0.0252 verdicts=['NO PRACTICAL DIFFERENCE', 'NO PRACTICAL DIFFERENCE / INCOMPLETE-CYCLE']
+R3-B M0: complete held-out S-F n=16 range [-0.0062, +0.0384] %; incomplete n=4 range [+0.020, +0.023] %
+R3-B M1: complete held-out S-F n=16 range [-0.0196, +0.0334] %; incomplete n=4 range [+0.017, +0.017] %
+R3-B M2: complete held-out S-F n=16 range [+0.0447, +0.3962] %; incomplete n=4 range [+0.376, +0.536] %

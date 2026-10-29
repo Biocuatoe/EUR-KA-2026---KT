@@ -1,0 +1,81 @@
+qid,group,engine,query,utc,http_status,total_count,returned
+A01,A,openalex,"""gain-scheduled LQR"" battery aging",2026-10-25T00:33:19+00:00,200,4,4
+A01,A,crossref,"""gain-scheduled LQR"" battery aging",2026-10-25T00:33:20+00:00,200,648811,6
+A02,A,openalex,"""adaptive LQR"" electric vehicle battery state of health",2026-10-25T00:33:23+00:00,200,5,5
+A02,A,crossref,"""adaptive LQR"" electric vehicle battery state of health",2026-10-25T00:33:24+00:00,200,7373161,6
+A03,A,openalex,LQR state of health scheduling electric vehicle speed control,2026-10-25T00:33:26+00:00,200,379,10
+A03,A,crossref,LQR state of health scheduling electric vehicle speed control,2026-10-25T00:33:27+00:00,200,9803735,6
+A04,A,openalex,battery health aware longitudinal control electric vehicle,2026-10-25T00:33:29+00:00,200,4970,10
+A04,A,crossref,battery health aware longitudinal control electric vehicle,2026-10-25T00:33:30+00:00,200,7821303,6
+A05,A,openalex,gain scheduling linear quadratic regulator actuator saturation stability,2026-10-25T00:33:33+00:00,200,1610,10
+A05,A,crossref,gain scheduling linear quadratic regulator actuator saturation stability,2026-10-25T00:33:34+00:00,200,1642829,6
+A06,A,openalex,fixed gain versus gain scheduled controller comparison electric vehicle energy,2026-10-25T00:33:36+00:00,200,13436,10
+A06,A,crossref,fixed gain versus gain scheduled controller comparison electric vehicle energy,2026-10-25T00:33:37+00:00,200,322437,6
+A07,A,openalex,battery degradation aware cruise control electric vehicle,2026-10-25T00:33:40+00:00,200,2058,10
+A07,A,crossref,battery degradation aware cruise control electric vehicle,2026-10-25T00:33:41+00:00,200,4084139,6
+B01,B,openalex,state of health dependent power capability lithium-ion battery,2026-10-25T00:33:43+00:00,200,12789,10
+B01,B,crossref,state of health dependent power capability lithium-ion battery,2026-10-25T00:33:44+00:00,200,9287484,6
+B02,B,openalex,state of power estimation lithium-ion battery aging,2026-10-25T00:33:46+00:00,200,20069,10
+B02,B,crossref,state of power estimation lithium-ion battery aging,2026-10-25T00:33:47+00:00,200,5734536,6
+B03,B,openalex,capacity fade and resistance increase LiFePO4 graphite cycle aging,2026-10-25T00:33:49+00:00,200,1627,10
+B03,B,crossref,capacity fade and resistance increase LiFePO4 graphite cycle aging,2026-10-25T00:33:50+00:00,200,2085431,6
+B04,B,openalex,semi-empirical aging model lithium iron phosphate battery,2026-10-25T00:33:53+00:00,200,1024,10
+B04,B,crossref,semi-empirical aging model lithium iron phosphate battery,2026-10-25T00:33:54+00:00,200,4918239,6
+B05,B,openalex,equivalent circuit model parameters aging state of health dependence,2026-10-25T00:33:56+00:00,200,23516,10
+B05,B,crossref,equivalent circuit model parameters aging state of health dependence,2026-10-25T00:33:57+00:00,200,10338075,6
+B06,B,openalex,regenerative braking charge acceptance battery current limit electric vehicle,2026-10-25T00:33:59+00:00,200,1607,10
+B06,B,crossref,regenerative braking charge acceptance battery current limit electric vehicle,2026-10-25T00:34:00+00:00,200,2753628,6
+B07,B,openalex,motor inverter efficiency map energy optimal torque control electric vehicle,2026-10-25T00:34:03+00:00,200,4548,10
+B07,B,crossref,motor inverter efficiency map energy optimal torque control electric vehicle,2026-10-25T00:34:04+00:00,200,592199,6
+C01,C,openalex,constraint-aware LQR electric vehicle,2026-10-25T00:34:06+00:00,200,775,10
+C01,C,crossref,constraint-aware LQR electric vehicle,2026-10-25T00:34:07+00:00,200,892607,6
+C02,C,openalex,reference governor electric vehicle battery constraints,2026-10-25T00:34:09+00:00,200,2636,10
+C02,C,crossref,reference governor electric vehicle battery constraints,2026-10-25T00:34:10+00:00,200,1377366,6
+C03,C,openalex,supervisory control battery power limit electric vehicle traction,2026-10-25T00:34:12+00:00,200,1446,10
+C03,C,crossref,supervisory control battery power limit electric vehicle traction,2026-10-25T00:34:13+00:00,200,5337384,6
+C04,C,openalex,regenerative friction brake blending battery state of charge limit,2026-10-25T00:34:16+00:00,200,695,10
+C04,C,crossref,regenerative friction brake blending battery state of charge limit,2026-10-25T00:34:17+00:00,200,2889928,6
+C05,C,openalex,aging-aware torque allocation electric vehicle,2026-10-25T00:34:19+00:00,200,1234,10
+C05,C,crossref,aging-aware torque allocation electric vehicle,2026-10-25T00:34:20+00:00,200,1380685,6
+C06,C,openalex,anti-windup gain scheduling input saturation vehicle,2026-10-25T00:34:22+00:00,200,581,10
+C06,C,crossref,anti-windup gain scheduling input saturation vehicle,2026-10-25T00:34:23+00:00,200,1406071,6
+D01,D,openalex,battery aging aware eco-driving electric vehicle,2026-10-25T00:34:25+00:00,200,6035,10
+D01,D,crossref,battery aging aware eco-driving electric vehicle,2026-10-25T00:34:26+00:00,200,1610888,6
+D02,D,openalex,optimal speed trajectory electric vehicle energy battery degradation,2026-10-25T00:34:28+00:00,200,9516,10
+D02,D,crossref,optimal speed trajectory electric vehicle energy battery degradation,2026-10-25T00:34:30+00:00,200,4442925,6
+D03,D,openalex,energy time degradation Pareto optimization electric vehicle driving,2026-10-25T00:34:32+00:00,200,2514,10
+D03,D,crossref,energy time degradation Pareto optimization electric vehicle driving,2026-10-25T00:34:33+00:00,200,6396980,6
+D04,D,openalex,drivability battery degradation trade-off electric vehicle,2026-10-25T00:34:35+00:00,200,16278,10
+D04,D,crossref,drivability battery degradation trade-off electric vehicle,2026-10-25T00:34:36+00:00,200,1736601,6
+D05,D,openalex,eco-driving low-power small electric vehicle,2026-10-25T00:34:38+00:00,200,27157,10
+D05,D,crossref,eco-driving low-power small electric vehicle,2026-10-25T00:34:39+00:00,200,5121626,6
+D06,D,openalex,multi-objective energy efficiency battery lifetime electric vehicle control,2026-10-25T00:34:41+00:00,200,19490,10
+D06,D,crossref,multi-objective energy efficiency battery lifetime electric vehicle control,2026-10-25T00:34:42+00:00,200,7833676,6
+E01,E,openalex,open lithium-ion battery aging dataset capacity impedance,2026-10-25T00:34:44+00:00,200,3046,10
+E01,E,crossref,open lithium-ion battery aging dataset capacity impedance,2026-10-25T00:34:46+00:00,200,3271286,6
+E02,E,openalex,LFP cell aging dataset impedance capacity fade public,2026-10-25T00:34:48+00:00,200,295,10
+E02,E,crossref,LFP cell aging dataset impedance capacity fade public,2026-10-25T00:34:49+00:00,200,5788919,6
+E03,E,openalex,battery resistance growth with state of health data LiFePO4,2026-10-25T00:34:51+00:00,200,1594,10
+E03,E,crossref,battery resistance growth with state of health data LiFePO4,2026-10-25T00:34:52+00:00,200,11296257,6
+E04,E,openalex,battery model parameter identification public dataset drive cycle,2026-10-25T00:34:54+00:00,200,11740,10
+E04,E,crossref,battery model parameter identification public dataset drive cycle,2026-10-25T00:34:55+00:00,200,6881921,6
+E05,E,openalex,low voltage 48 V electric vehicle battery power limit,2026-10-25T00:34:57+00:00,200,39480,10
+E05,E,crossref,low voltage 48 V electric vehicle battery power limit,2026-10-25T00:34:58+00:00,200,5674141,6
+E06,E,openalex,large format prismatic LiFePO4 cell characterization internal resistance,2026-10-25T00:35:00+00:00,200,456,10
+E06,E,crossref,large format prismatic LiFePO4 cell characterization internal resistance,2026-10-25T00:35:02+00:00,200,6072067,6
+K01,K,openalex,adaptive model predictive control electric vehicle cruise control battery degradation,2026-10-25T00:35:04+00:00,200,2827,10
+K01,K,crossref,adaptive model predictive control electric vehicle cruise control battery degradation,2026-10-25T00:35:06+00:00,200,3016746,6
+K02,K,openalex,battery degradation charge sustenance drivability multi-objective,2026-10-25T00:35:08+00:00,200,346,10
+K02,K,crossref,battery degradation charge sustenance drivability multi-objective,2026-10-25T00:35:09+00:00,200,2107044,6
+K03,K,openalex,hierarchical eco-driving urban battery lifetime energy,2026-10-25T00:35:11+00:00,200,1388,10
+K03,K,crossref,hierarchical eco-driving urban battery lifetime energy,2026-10-25T00:35:12+00:00,200,4051474,6
+K04,K,openalex,eco-driving optimal control driver preference constraints,2026-10-25T00:35:15+00:00,200,14791,10
+K04,K,crossref,eco-driving optimal control driver preference constraints,2026-10-25T00:35:16+00:00,200,3809853,6
+K05,K,openalex,battery aging dataset impedance spectroscopy capacity public,2026-10-25T00:35:18+00:00,200,2153,10
+K05,K,crossref,battery aging dataset impedance spectroscopy capacity public,2026-10-25T00:35:19+00:00,200,3670640,6
+X01,X,openalex,battery aging negligible effect vehicle energy consumption,2026-10-25T00:35:21+00:00,200,9787,10
+X01,X,crossref,battery aging negligible effect vehicle energy consumption,2026-10-25T00:35:22+00:00,200,6726183,6
+X02,X,openalex,eco-driving travel time trade-off energy savings overestimated,2026-10-25T00:35:24+00:00,200,757,10
+X02,X,crossref,eco-driving travel time trade-off energy savings overestimated,2026-10-25T00:35:25+00:00,200,5438095,6
+X03,X,openalex,gain scheduling no improvement over fixed gain robust controller,2026-10-25T00:35:28+00:00,200,38807,10
+X03,X,crossref,gain scheduling no improvement over fixed gain robust controller,2026-10-25T00:35:29+00:00,200,1910420,6

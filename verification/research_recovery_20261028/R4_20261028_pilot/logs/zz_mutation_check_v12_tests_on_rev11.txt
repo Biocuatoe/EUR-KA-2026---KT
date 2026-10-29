@@ -1,0 +1,198 @@
+r4h3.checks <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev11_attempt8_20261028_2126\code\r4h3\checks.py
+r4h3.campaign <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev11_attempt8_20261028_2126\code\r4h3\campaign.py
+FFFF...FFFFFFF                                                           [100%]
+================================== FAILURES ===================================
+___ test_r8_1_a_measured_fail_never_survives_an_exception_and_stays_visible ___
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-296/test_r8_1_a_measured_fail_neve0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001A5A38B5A70>
+
+    def test_r8_1_a_measured_fail_never_survives_an_exception_and_stays_visible(tmp_path, monkeypatch):
+        task = _task()
+        design = _design(task)
+        for obj, name, value in (_fail_both(), _first_call_raises(checks, "failed_criteria")):
+            monkeypatch.setattr(obj, name, value)
+        r = _run(_cond("R81RR"), design, task, tmp_path / "rr")                      # run_report raised; both arms FAIL
+>       assert r["qs_vs_dyn_pair_status"] == CE and r["qs_vs_dyn_pair_status_before_error"] == "FAIL"
+E       AssertionError: assert ('FAIL' == 'NOT_EVALUABL...NDITION_ERROR'
+E         
+E         - NOT_EVALUABLE_CONDITION_ERROR
+E         + FAIL)
+
+code\tests\test_review_fixes_v12.py:117: AssertionError
+_ test_r8_2_the_accounting_adds_up_two_ways_after_an_override_in_the_executor _
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-296/test_r8_2_the_accounting_adds_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001A5A38B5BA0>
+
+    def test_r8_2_the_accounting_adds_up_two_ways_after_an_override_in_the_executor(tmp_path, monkeypatch):
+        c, out, rows, read = _schedule(tmp_path, monkeypatch, "R82", patches=[_screen_fails("B3"), _arm_raises("B0")])
+        cond = read("conditions.csv")[0]
+        assert cond["qs_vs_dyn_pair_status"] == CE and cond["qs_vs_dyn_applicability"] == NA
+        assert cond["qs_vs_dyn_pair_status_before_error"] == NA and cond["qs_eligible_pair"] == "False"
+        for a in read("qs_dynamic_accounting.csv"):
+            planned = int(a["planned_pairs"])
+>           assert planned == 1 and sum(int(a[k]) for k in ELIG) == planned, a              # applicability
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AssertionError: {'motor': 'M0', 'set': 'ALL', 'planned_pairs': '1', 'qs_eligible_pairs': '0', ...}
+E           assert (1 == 1 and 0 == 1)
+E            +  where 0 = sum(<generator object test_r8_2_the_accounting_adds_up_two_ways_after_an_override_in_the_executor.<locals>.<genexpr> at 0x000001A5A395CC70>)
+
+code\tests\test_review_fixes_v12.py:141: AssertionError
+____ test_r8_2_applicability_of_rows_without_the_field_and_unknown_values _____
+
+    def test_r8_2_applicability_of_rows_without_the_field_and_unknown_values():
+>       assert checks.pair_applicability(dict(qs_vs_dyn_pair_status=NA)) == NA
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'r4h3.checks' has no attribute 'pair_applicability'
+
+code\tests\test_review_fixes_v12.py:149: AttributeError
+_______ test_r8_3_candidate_section_1_6_states_the_exception_precedence _______
+
+    def test_r8_3_candidate_section_1_6_states_the_exception_precedence():
+        text = campaign.DRAFT_AMENDMENT_2.read_text(encoding="utf-8")
+        sec = text[text.index("### 1.6 "):text.index("### 1.7 ")]
+>       assert "or `NOT_APPLICABLE_PROFILE_UNAVAILABLE` if a profile is missing" not in text
+E       assert 'or `NOT_APP...e is missing' not in '# Amendment...."\n}\n```\n'
+E         
+E         'or `NOT_APPLICABLE... profile is missing' is contained here:
+E           unknown), or `NOT_APPLICABLE_PROFILE_UNAVAILABLE` if a profile is missing. Both dynamic arms still run, and the condition status comes from §8.2 alone (§3).
+E           - An exception inside one run, including its evaluation, makes the condition `ERROR`. For a QS-eligible pair it leaves the pair `NOT_EVALUABLE_RUN_MISSING` unless the other, valid arm FAILs, which stays a FAIL; either makes the M0/M1 branch INCONCLUSIVE for this criterion. For a QS-ineligible pair the exception makes the pair `NOT_EVALUABLE_CONDITION_ER...
+E         
+E         ...Full output truncated (331 lines hidden), use '-vv' to show
+
+code\tests\test_review_fixes_v12.py:165: AssertionError
+__________ test_r8_4_the_in_process_recomputation_gates_the_qs_check __________
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-296/test_r8_4_the_in_process_recom0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001A5A38EE150>
+
+    def test_r8_4_the_in_process_recomputation_gates_the_qs_check(tmp_path, monkeypatch):
+        task = _task()
+        design = _design(task)
+        real, n = evaluator.compare_with_simulator, {"calls": 0}
+    
+        def cmp(*a, **k):                     # the second arm (B3) is not confirmed by the in-process recomputation
+            n["calls"] += 1
+            r = real(*a, **k)
+            return dict(r, protocol_ok=False) if n["calls"] == 2 else r
+        monkeypatch.setattr(campaign.evaluator, "compare_with_simulator", cmp)
+        r = _run(_cond("R84I4"), design, task, tmp_path / "i4")
+        assert r["_rows"]["B3"]["recompute_protocol_ok"] is False and r["_rows"]["B0"]["recompute_protocol_ok"] is True
+        assert r["qs_vs_dyn_pair_status"] == checks.QS_RUN_INVALID and r["qs_vs_dyn_invalid_arms"] == "B3"
+>       assert r["qs_vs_dyn_applicability"] == checks.QS_APPLICABLE and r["_errors"] == []
+                                               ^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'r4h3.checks' has no attribute 'QS_APPLICABLE'
+
+code\tests\test_review_fixes_v12.py:199: AttributeError
+_________ test_r8_5_every_failed_output_write_is_recorded_and_listed __________
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-296/test_r8_5_every_failed_output_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001A5A38EE750>
+
+    def test_r8_5_every_failed_output_write_is_recorded_and_listed(tmp_path, monkeypatch):
+>       real_text, real_csv = campaign._write_text, campaign._write_csv
+                              ^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'r4h3.campaign' has no attribute '_write_text'. Did you mean: '_write_csv'?
+
+code\tests\test_review_fixes_v12.py:204: AttributeError
+_ test_r8_9_a_not_applicable_pair_is_not_evaluable_after_the_separate_recomputation_fails _
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-296/test_r8_9_a_not_applicable_pai0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001A5A395E6C0>
+
+    def test_r8_9_a_not_applicable_pair_is_not_evaluable_after_the_separate_recomputation_fails(tmp_path, monkeypatch):
+        c = type("C", (), {"run_ids": {"B0": "r0", "B3": "r3"}})()
+        ok = [dict(run_id="r0", recomputed="True", protocol_ok="True"), dict(run_id="r3", recomputed="True", protocol_ok="True")]
+    
+        def row():
+            return dict(status=checks.COMPARABLE, qs_vs_dyn_pair_status=NA, qs_vs_dyn_fail_arms="", qs_vs_dyn_pair_reason="x")
+        r = row()
+        campaign.fold_separate_recomputation([r], [c], ok, 0)                               # control: no failure
+        assert r["qs_vs_dyn_pair_status"] == NA
+        for exit_, err in ((4, ""), (3, ""), (-1, "launch"), (0, "unreadable output")):
+            r = row()
+>           campaign.fold_separate_recomputation([r], [c], ok if exit_ in (0, 1) else [], exit_, err)
+E           TypeError: fold_separate_recomputation() takes 4 positional arguments but 5 were given
+
+code\tests\test_review_fixes_v12.py:238: TypeError
+_ test_r8_10_a_failed_screen_makes_the_check_not_applicable_even_if_the_other_screen_raised _
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-296/test_r8_10_a_failed_screen_mak0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001A5A395F110>
+
+    def test_r8_10_a_failed_screen_makes_the_check_not_applicable_even_if_the_other_screen_raised(tmp_path, monkeypatch):
+        task = _task()
+        design = _design(task)
+        real = checks.qs_screen
+    
+        def screen(plant, t, v):
+            if _is_b0(t):
+                raise RuntimeError("injected screen failure of B0")
+            return real(plant, t, v)
+        for obj, name, value in (_screen_fails("B3"), (checks, "qs_screen", screen)):
+            monkeypatch.setattr(obj, name, value)
+        r = _run(_cond("R810"), design, task, tmp_path)
+        assert r["qs_screen_errors"] == "B0" and r["b3_qs_feasible_on_eval_plant"] is False
+>       assert r["qs_vs_dyn_applicability"] == NA and r["qs_eligible_pair"] is False and r["qs_ineligible_arms"] == "B3"
+E       AssertionError: assert ('UNKNOWN' == 'NOT_APPLICABLE_QS_INFEASIBLE'
+E         
+E         - NOT_APPLICABLE_QS_INFEASIBLE
+E         + UNKNOWN)
+
+code\tests\test_review_fixes_v12.py:268: AssertionError
+_ test_review_status_v10_counts_the_r8_major_findings_until_verified_and_blocks _
+
+    def test_review_status_v10_counts_the_r8_major_findings_until_verified_and_blocks():
+        rv = json.loads(campaign.REVIEW_STATUS.read_text(encoding="utf-8"))
+>       assert campaign.REVIEW_STATUS.name == "code_review_status_v10.json"
+E       AssertionError: assert 'code_review_status_v9.json' == 'code_review_status_v10.json'
+E         
+E         - code_review_status_v10.json
+E         ?                     ^^
+E         + code_review_status_v9.json
+E         ?                     ^
+
+code\tests\test_review_fixes_v12.py:275: AssertionError
+_________ test_rev9_candidate_matches_the_code_and_fixes_the_r8_text __________
+
+    def test_rev9_candidate_matches_the_code_and_fixes_the_r8_text():
+        rev8 = campaign.PILOT_DIR / "03_protocol_v1_amendment_2_rev8_CANDIDATE.md"
+        assert frozen.sha256(rev8) == "f6430bf5512cb56065a2465bcfda1c4c42e244b80f73fcd3e88d985ac8811f7c"
+>       assert campaign.DRAFT_AMENDMENT_2.name == "03_protocol_v1_amendment_2_rev9_CANDIDATE.md"
+E       AssertionError: assert '03_protocol_..._CANDIDATE.md' == '03_protocol_..._CANDIDATE.md'
+E         
+E         - 03_protocol_v1_amendment_2_rev9_CANDIDATE.md
+E         ?                               ^
+E         + 03_protocol_v1_amendment_2_rev8_CANDIDATE.md
+E         ?                               ^
+
+code\tests\test_review_fixes_v12.py:289: AssertionError
+__________________ test_campaign_mode_stays_blocked_in_rev12 __________________
+
+    def test_campaign_mode_stays_blocked_in_rev12():
+        b = " | ".join(campaign.preconditions("campaign"))
+        for x in ("no issued amendment 2", "no campaign authorisation record", "protocol 10.1 gate record",
+                  "5 major findings not resolved"):
+>           assert x in b, x
+E           AssertionError: 5 major findings not resolved
+E           assert '5 major findings not resolved' in "no issued amendment 2 at D:\\EURÉKA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\releas...he owner's acceptance of the closure of the rev7 to rev11 review (an AI-agent review is not a human independent audit)"
+
+code\tests\test_review_fixes_v12.py:309: AssertionError
+=================================== PASSES ====================================
+=========================== short test summary info ===========================
+PASSED code\tests\test_review_fixes_v12.py::test_r8_4_an_exception_at_each_stage_makes_a_not_applicable_pair_not_evaluable[classify]
+PASSED code\tests\test_review_fixes_v12.py::test_r8_4_an_exception_at_each_stage_makes_a_not_applicable_pair_not_evaluable[run_report]
+PASSED code\tests\test_review_fixes_v12.py::test_r8_4_an_exception_at_each_stage_makes_a_not_applicable_pair_not_evaluable[condition_report]
+FAILED code\tests\test_review_fixes_v12.py::test_r8_1_a_measured_fail_never_survives_an_exception_and_stays_visible
+FAILED code\tests\test_review_fixes_v12.py::test_r8_2_the_accounting_adds_up_two_ways_after_an_override_in_the_executor
+FAILED code\tests\test_review_fixes_v12.py::test_r8_2_applicability_of_rows_without_the_field_and_unknown_values
+FAILED code\tests\test_review_fixes_v12.py::test_r8_3_candidate_section_1_6_states_the_exception_precedence
+FAILED code\tests\test_review_fixes_v12.py::test_r8_4_the_in_process_recomputation_gates_the_qs_check
+FAILED code\tests\test_review_fixes_v12.py::test_r8_5_every_failed_output_write_is_recorded_and_listed
+FAILED code\tests\test_review_fixes_v12.py::test_r8_9_a_not_applicable_pair_is_not_evaluable_after_the_separate_recomputation_fails
+FAILED code\tests\test_review_fixes_v12.py::test_r8_10_a_failed_screen_makes_the_check_not_applicable_even_if_the_other_screen_raised
+FAILED code\tests\test_review_fixes_v12.py::test_review_status_v10_counts_the_r8_major_findings_until_verified_and_blocks
+FAILED code\tests\test_review_fixes_v12.py::test_rev9_candidate_matches_the_code_and_fixes_the_r8_text
+FAILED code\tests\test_review_fixes_v12.py::test_campaign_mode_stays_blocked_in_rev12
+11 failed, 3 passed in 258.01s (0:04:18)

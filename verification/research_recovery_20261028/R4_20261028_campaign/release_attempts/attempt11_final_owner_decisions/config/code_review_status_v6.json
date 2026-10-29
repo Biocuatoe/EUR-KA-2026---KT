@@ -1,0 +1,54 @@
+{
+ "review": "04_independent_code_review.md (CR-A, CR-B) + review/CR-A2_CR-A6_rereview_agent_report_20261028.md + review/N-A2_review_agent_report_20261028.md (R3-1..R3-11) + review/N-A2_verification_agent_report_20261028.md (R3-12, R3-13) + review/N-A2_verification2_agent_report_20261028.md (R3-14, R3-15) + review/N-A2_verification3_agent_report_20261028.md (final verification); all by independent read-only review agents",
+ "supersedes": "config/code_review_status_v5.json (kept unchanged)",
+ "date": "2026-10-28",
+ "open_critical": 0,
+ "open_major": 0,
+ "basis_for_zero_counts": "No CRITICAL or MAJOR finding is known. The zero counts rest on the reviews listed under 'review' and cover the code up to rev6 (release attempt 3) only. The rev7 changes (owner rulings AMB-29(a), AMB-31) and the rev8 changes (owner rulings AMB-29(b)-(d), AMB-30, AMB-32) have not yet been independently reviewed: see reviews_pending, which blocks campaign mode and readiness",
+ "rereview_verdicts": {
+  "CR-A2": "CLOSED for the campaign path; re-confirmed unaffected by the N-A2 changes (N-A2 review and three verifications)",
+  "CR-A6": "CLOSED as mitigated, with the residual accepted by the owner (R4_20261028_campaign/release/amendment_1_approval.json); re-confirmed unaffected"
+ },
+ "n_a2_review_findings_fixed": {
+  "R3-1 (MAJOR)": "campaign-mode location check by resolved path; same-named nested copy refused (test_r3_1_...)",
+  "R3-2": "an applicable FAIL is not hidden by a missing arm",
+  "R3-3": "separate NOT_EVALUABLE_QS_UNDEFINED / NOT_EVALUABLE_CONDITION_ERROR labels; eligibility classes add up",
+  "R3-4": "documented as AMB-31 (owner to choose)",
+  "R3-5": "exact failed QSPlant.step sub-check per Gauss node recorded (qs_piece_diagnosis)",
+  "R3-6": "draft change list complete (rev3); see R3-14",
+  "R3-7": "tests for every amendment-2 precondition branch, R3-9 path, R3-12, R3-13, R3-15; clean full runs",
+  "R3-8": "authorisation scope and amendment_2_sha256 key",
+  "R3-9": "pair-evaluation exception recorded without relabelling runs",
+  "R3-10": "unknown status raises; NOT_APPLICABLE_/NOT_EVALUABLE_ label rule; P3_RULE role stated in draft section 4",
+  "R3-11": "JSON round-trip comparison declared",
+  "R3-12": "M2 pair without usable energy is NOT_EVALUABLE_RUN_MISSING; M2 branch stays REPORTED_ONLY",
+  "R3-13": "accounting, branch-outcome and D5-denominator exceptions recorded; outputs still written; never a pass",
+  "R3-14": "draft names config v6; v3-v5 kept unchanged, superseded",
+  "R3-15": "M2 pair with undefined ratio is NOT_EVALUABLE_QS_UNDEFINED; AMB-29 wording precise for M2"
+ },
+ "open_owner_decisions": [],
+ "decided_through_amendment_2_approval": [],
+ "decided_through_amendment_2_approval_rule": "Every owner decision for amendment 2 has been made (owner_rulings_implemented). campaign.preconditions() still blocks until amendment 2 is issued with status APPROVED, its machine-readable block equals IMPLEMENTED_2 key for key, and amendment_2_approval.json names the approver, the date and its SHA-256",
+ "documented_notes": [
+  "N-A3, N-A4, N-A6, N-A7, N-B3 as in config/code_review_status_v3.json",
+  "empty stop list writes no stop_compliance.csv (pre-existing behaviour; noted during R3-13 testing; not changed)"
+ ],
+ "pending_owner_acceptance": [
+  "CR-A6 residual"
+ ],
+ "rule": "campaign.preconditions() blocks while open_critical or open_major is non-zero, while any open_owner_decisions remain, and unless the approval record accepts every pending_owner_acceptance item, and while any reviews_pending item remains",
+ "owner_rulings_implemented": {
+  "N-A2": "2026-10-28 (amendment 2 section 1.1)",
+  "AMB-29(a)": "2026-10-28: missing profile stays an explicit condition outcome in every denominator; only the QS-vs-dynamic check is NOT_APPLICABLE_PROFILE_UNAVAILABLE (candidate rev4 section 1.2)",
+  "AMB-31": "2026-10-28: energy of a run failing 8.2 or not confirmed by the separate recomputation is diagnostic only (candidate rev4 section 1.3)",
+  "AMB-29(b)": "2026-10-28: NOT_EVALUABLE -> INCONCLUSIVE; a pair counts for the paired endpoint only if both arms are valid and confirmed by the separate recomputation; traces kept; never removed from the denominator (candidate rev5 section 1.4)",
+  "AMB-29(c)": "2026-10-28: QS energy <= 0 -> NOT_EVALUABLE_QS_UNDEFINED (QS_COMPARISON_NOT_EVALUABLE) -> INCONCLUSIVE for the QS criterion; raw values and the non-positive term kept; no percentage with a non-positive denominator; dynamic result unaffected (candidate rev5 section 1.5)",
+  "AMB-29(d)": "2026-10-28: evaluation error -> NOT_EVALUABLE -> INCONCLUSIVE; error, traces and run IDs kept; no retry or replacement (candidate rev5 section 1.6)",
+  "AMB-30": "2026-10-28: strict scope; required PASS on the held-out nominal S2 set NOM; failures in any set count; S1 never substitutes (candidate rev5 section 1.7)",
+  "AMB-32": "2026-10-28: a missing, invalid or not-evaluable nominal cell makes the verdict INCONCLUSIVE, never NOT SUPPORTED (candidate rev5 section 1.8)"
+ },
+ "reviews_pending": [
+  "independent read-only review of the rev7 and rev8 changes (owner rulings AMB-29(a)-(d), AMB-30, AMB-31, AMB-32: checks.py, campaign.py, tests/test_owner_rulings_v7.py, tests/test_owner_rulings_v8.py, 03_protocol_v1_amendment_2_rev5_CANDIDATE.md; release attempt 5), and the owner's acceptance of its closure (an AI-agent review is not a human independent audit)"
+ ],
+ "reviews_pending_rule": "This item stays listed until a later review-status file records the review's findings and the owner's acceptance; a review report alone does not remove it. The file is part of the readiness gate, so removing it needs a new status file, a new gate and a new release attempt"
+}

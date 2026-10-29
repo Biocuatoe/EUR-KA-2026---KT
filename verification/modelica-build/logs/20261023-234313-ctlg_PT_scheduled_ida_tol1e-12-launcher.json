@@ -1,0 +1,30 @@
+﻿{
+    "label":  "ctlg_PT_scheduled_ida_tol1e-12",
+    "time":  "2026-10-23T23:43:18",
+    "exit_code":  0,
+    "project_root":  "D:\\EURÉKA 2026 - KT",
+    "letter":  "Y",
+    "cleanup":  {
+                    "alias_created":  true,
+                    "alias_removed":  true,
+                    "alias_still_mapped":  false,
+                    "other_mappings_unchanged":  true,
+                    "env_restored":  true
+                },
+    "steps":  [
+                  {
+                      "name":  "version",
+                      "command":  "omc --version",
+                      "exit_code":  0,
+                      "seconds":  0.04,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-234313-ctlg_PT_scheduled_ida_tol1e-12-version.out.txt"
+                  },
+                  {
+                      "name":  "_single_PT_scheduled_ida_tol1e-12",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\_single_PT_scheduled_ida_tol1e-12.mos",
+                      "exit_code":  0,
+                      "seconds":  4.72,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-234313-ctlg_PT_scheduled_ida_tol1e-12-_single_PT_scheduled_ida_tol1e-12.out.txt"
+                  }
+              ]
+}

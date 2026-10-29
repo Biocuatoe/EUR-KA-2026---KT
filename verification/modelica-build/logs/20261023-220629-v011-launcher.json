@@ -1,0 +1,72 @@
+﻿{
+    "label":  "v011",
+    "time":  "2026-10-23T22:07:30",
+    "exit_code":  0,
+    "project_root":  "D:\\EURÉKA 2026 - KT",
+    "letter":  "Y",
+    "cleanup":  {
+                    "alias_created":  true,
+                    "alias_removed":  true,
+                    "alias_still_mapped":  false,
+                    "other_mappings_unchanged":  true,
+                    "env_restored":  true
+                },
+    "steps":  [
+                  {
+                      "name":  "version",
+                      "command":  "omc --version",
+                      "exit_code":  0,
+                      "seconds":  0.05,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220629-v011-version.out.txt"
+                  },
+                  {
+                      "name":  "00_check_models",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\00_check_models.mos",
+                      "exit_code":  0,
+                      "seconds":  0.14,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220629-v011-00_check_models.out.txt"
+                  },
+                  {
+                      "name":  "10_static",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\10_static.mos",
+                      "exit_code":  0,
+                      "seconds":  21.14,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220629-v011-10_static.out.txt"
+                  },
+                  {
+                      "name":  "20_coastdown",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\20_coastdown.mos",
+                      "exit_code":  0,
+                      "seconds":  13.95,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220629-v011-20_coastdown.out.txt"
+                  },
+                  {
+                      "name":  "30_ideal",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\30_ideal.mos",
+                      "exit_code":  0,
+                      "seconds":  14.68,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220629-v011-30_ideal.out.txt"
+                  },
+                  {
+                      "name":  "40_openloop",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\40_openloop.mos",
+                      "exit_code":  0,
+                      "seconds":  9.25,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220629-v011-40_openloop.out.txt"
+                  },
+                  {
+                      "name":  "50_unit_negative",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\50_unit_negative.mos",
+                      "exit_code":  0,
+                      "seconds":  0.12,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220629-v011-50_unit_negative.out.txt"
+                  },
+                  {
+                      "name":  "diag_openloop_tol1e-12",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\diag_openloop_tol1e-12.mos",
+                      "exit_code":  0,
+                      "seconds":  2.29,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220629-v011-diag_openloop_tol1e-12.out.txt"
+                  }
+              ]
+}

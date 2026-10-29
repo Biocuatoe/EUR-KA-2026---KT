@@ -1,0 +1,19 @@
+...F...........                                                          [100%]
+================================== FAILURES ===================================
+_______________ test_i1_one_nominal_cell_invalid_or_unevaluable _______________
+
+    def test_i1_one_nominal_cell_invalid_or_unevaluable():
+        for s in NOT_EVALUABLE:
+            out = _out(_nom("PASS", s) + OTHERS)
+            assert out["outcome"] == "INCONCLUSIVE" and f"M0/L-EVE {s}" in out["nominal_evidence_missing"].replace("=", " "), s
+            v = checks.h3_verdict_eligibility(_verdict_rows(qs={("M0", "L-EVE"): s}), QS_OK)
+            assert not v["supported_possible"] and not v["not_supported_possible"], s
+>       out = _out([_r("NOM", "L-R1", "PASS"), _r("NOM", "L-EVE", checks.QS_RUN_INVALID, status="INVALID_COMPARISON")]
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   + OTHERS)
+E       TypeError: _r() got multiple values for argument 'status'
+
+code\tests\test_owner_ruling_i1_v10.py:94: TypeError
+=========================== short test summary info ===========================
+FAILED code\tests\test_owner_ruling_i1_v10.py::test_i1_one_nominal_cell_invalid_or_unevaluable
+1 failed, 14 passed in 307.26s (0:05:07)

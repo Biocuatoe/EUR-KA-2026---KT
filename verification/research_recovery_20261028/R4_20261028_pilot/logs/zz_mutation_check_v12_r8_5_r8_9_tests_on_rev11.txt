@@ -1,0 +1,65 @@
+r4h3.checks <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev11_attempt8_20261028_2126\code\r4h3\checks.py
+r4h3.campaign <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev11_attempt8_20261028_2126\code\r4h3\campaign.py
+FF                                                                       [100%]
+================================== FAILURES ===================================
+_________ test_r8_5_every_failed_output_write_is_recorded_and_listed __________
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-302/test_r8_5_every_failed_output_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000198A12856E0>
+
+    def test_r8_5_every_failed_output_write_is_recorded_and_listed(tmp_path, monkeypatch):
+        # rev13 (review R9-7): the failure is injected at Path.write_text, which every version of the executor uses, so the
+        # test also fails on rev11 by its behaviour (an unguarded write), not only by a missing name
+        real = Path.write_text
+    
+        def text(self, *a, **k):
+            if self.parent.name == "conditions" or self.name in ("conditions.csv", "recomputation_independent_process.log"):
+                raise OSError(f"injected write failure of {self.name}")
+            return real(self, *a, **k)
+>       c, out, rows, read = _schedule(tmp_path, monkeypatch, "R85", patches=[(Path, "write_text", text)])
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+code\tests\test_review_fixes_v12.py:212: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+code\tests\test_review_fixes_v12.py:102: in _schedule
+    rows = campaign.execute_schedule([c], lambda n: task, out)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+archive\rev11_attempt8_20261028_2126\code\r4h3\campaign.py:1052: in execute_schedule
+    (outdir / "conditions" / f"{c.cid}.json").write_text(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-302/test_r8_5_every_failed_output_0/R85/conditions/DEV-V12-R85-GENTLE-M0-LR1-P1-dt1ms.json')
+a = ('{\n "condition": {\n  "condition_id": "DEV-V12-R85-GENTLE-M0-LR1-P1-dt1ms",\n  "set": "DEV",\n  "cycle": "GENTLE",\n...ted": true,\n   "executed": true\n  }\n ],\n "errors": [],\n "qs_screen_failures": {\n  "B0": [],\n  "B3": []\n }\n}',)
+k = {'encoding': 'utf-8'}
+
+    def text(self, *a, **k):
+        if self.parent.name == "conditions" or self.name in ("conditions.csv", "recomputation_independent_process.log"):
+>           raise OSError(f"injected write failure of {self.name}")
+E           OSError: injected write failure of DEV-V12-R85-GENTLE-M0-LR1-P1-dt1ms.json
+
+code\tests\test_review_fixes_v12.py:210: OSError
+_ test_r8_9_a_not_applicable_pair_is_not_evaluable_after_the_separate_recomputation_fails _
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-302/test_r8_9_a_not_applicable_pai0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000198A12862C0>
+
+    def test_r8_9_a_not_applicable_pair_is_not_evaluable_after_the_separate_recomputation_fails(tmp_path, monkeypatch):
+        c = type("C", (), {"run_ids": {"B0": "r0", "B3": "r3"}})()
+        ok = [dict(run_id="r0", recomputed="True", protocol_ok="True"), dict(run_id="r3", recomputed="True", protocol_ok="True")]
+    
+        def row():
+            return dict(status=checks.COMPARABLE, qs_vs_dyn_pair_status=NA, qs_vs_dyn_fail_arms="", qs_vs_dyn_pair_reason="x")
+        # rev13 (review R9-7): the calls every version accepts come first, so the test fails on rev11 by its behaviour
+        r = row()
+        campaign.fold_failed([r], "injected")
+>       assert r["qs_vs_dyn_pair_status"] == CE and r["qs_vs_dyn_pair_status_before_error"] == NA
+E       AssertionError: assert ('NOT_APPLICABLE_QS_INFEASIBLE' == 'NOT_EVALUABL...NDITION_ERROR'
+E         
+E         - NOT_EVALUABLE_CONDITION_ERROR
+E         + NOT_APPLICABLE_QS_INFEASIBLE)
+
+code\tests\test_review_fixes_v12.py:232: AssertionError
+=========================== short test summary info ===========================
+FAILED code\tests\test_review_fixes_v12.py::test_r8_5_every_failed_output_write_is_recorded_and_listed
+FAILED code\tests\test_review_fixes_v12.py::test_r8_9_a_not_applicable_pair_is_not_evaluable_after_the_separate_recomputation_fails
+2 failed, 12 deselected in 50.87s

@@ -1,0 +1,12 @@
+﻿UV_CACHE_DIR=D:\EURÉKA 2026 - KT\cache\uv
+UV_PYTHON_INSTALL_DIR=D:\EURÉKA 2026 - KT\tools\python
+UV_PYTHON_PREFERENCE=only-managed
+UV_PYTHON_DOWNLOADS=manual
+TEMP=D:\EURÉKA 2026 - KT\cache\tmp
+> uv venv "D:\EURÉKA 2026 - KT\verification\python-env" --python 3.14.7 --no-config --seed
+Using CPython 3.14.7
+Creating virtual environment with seed packages at: D:\EURÉKA 2026 - KT\verification\python-env
+ + pip==26.2.2
+Activate with: & "D:\EURÉKA 2026 - KT\verification\python-env\Scripts\activate"
+[exit 0]
+

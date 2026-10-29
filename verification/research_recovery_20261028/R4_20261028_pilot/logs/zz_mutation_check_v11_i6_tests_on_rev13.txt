@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\HLC\AppData\Local\Temp\claude\d--EUR-KA-2026---KT\77efa53e-4c97-4a83-a325-5ad7d0b9634a\scratchpad\run_tests_on_archived.py", line 12, in <module>
+    import r4h3  # noqa: E402
+    ^^^^^^^^^^^
+ModuleNotFoundError: No module named 'r4h3'

@@ -13,6 +13,13 @@ statement is labelled by source:
 
 No external literature was consulted, so nothing here is prior-art evidence (see §9).
 
+**Corrections (2026-10-24).** Two dated corrections are listed in §14 and marked inline:
+
+- **K1:** no universal bound on energy improvement;
+- **K2:** the C37 Huria citation.
+
+The literature questions of §9 are answered in `docs/literature_review_soh_scheduled_lqr.md`.
+
 **Independence.** The model, the experiments, the evaluation report and this review were
 all produced by the same AI research assistant, working in the author's repository. No
 person has independently re-run or re-derived them yet. Treat that as an open limitation,
@@ -41,6 +48,8 @@ not a formality.
   - For a given speed profile, energy use is mostly fixed by the profile itself.
   - The part a tracking controller can shape, battery resistive loss, was only
     1.1–2.1 % of the energy supplied.
+  - *[Corrected 2026-10-24: resistive loss is not the only energy a controller can affect,
+    and no bound is established. See §14, K1.]*
 - **What the contribution is not:**
   - not a new control method;
   - not evidence about real vehicles;
@@ -175,6 +184,10 @@ is not a research contribution:
    The share a tracking controller can shape is the battery resistive loss, 1.1–2.1 %
    (N04). A 12.5 % saving would need removing about six times the entire resistive loss.
    This argument holds for this model class; it is not a theorem about real drives.
+
+   *[Corrected 2026-10-24: the heading's "with a bound" and the first sentence above are
+   withdrawn. The decomposition explains the tested null result; it does not bound what
+   other controllers could save. See §14, K1.]*
 3. **A corrected, documented, reproducible model and pipeline [record].**
    - Model parameters carry stated provenance (20 unverified from the thesis, 11 assumed,
      2 standard; none measured).
@@ -254,6 +267,8 @@ not as first-of-their-kind.
   spans 0.28 % in energy).
 - **The claimed 12.5 % is unreachable by any controller tracking the same profile in this
   model class** (N04 and §4.2, item 2).
+  - *[Corrected 2026-10-24: this statement is withdrawn. The evidence establishes no
+    universal upper bound on energy improvement. See §14, K1.]*
 
 ### 5.2 Does not establish (Question 5)
 
@@ -341,6 +356,10 @@ separately pre-registered work.
 **Keep, after checking the citation:** C37 (Huria 2018 reference) and C38 (no physical
 experiments).
 
+*[Corrected 2026-10-24: the C37 citation check has been done, and the citation is wrong.
+C37 moves to "correct the citation; withdraw the LFP and SEI attributions". C38 is
+unchanged. See §14, K2.]*
+
 **Out of scope:** C29 (EKF accuracy) and C39 (life-cycle CO₂ and payback).
 
 ## 7. Claims supported only by simulation (Question 8)
@@ -351,6 +370,8 @@ experiments).
 - **N02:** a single retuned fixed gain is better on both metrics (H_C).
 - **N03:** robustness mean −0.054 % under assumed ranges.
 - **N04:** resistive losses of 1.1–2.1 % bound the controllable share.
+  - *[Corrected 2026-10-24: "bound the controllable share" is withdrawn. N04 is an energy
+    decomposition of the tested runs. See §14, K1.]*
 
 **IMPLEMENTED_NOT_VALIDATED (properties of the documented design model only):**
 
@@ -371,6 +392,10 @@ None of these is REQUIRES_PHYSICAL_VALIDATION-cleared. All are claims about the 
 > this model, battery resistive losses, the only part of the energy a tracking controller
 > can shape, were 1.1–2.1 % of the energy supplied. These are properties of the model;
 > they have not been validated on a vehicle.
+
+*[Corrected 2026-10-24: in the wording above, replace "the only part of the energy a
+tracking controller can shape" with "the energy share that SoH changes directly". See
+§14, K1.]*
 
 **Shorter form:**
 
@@ -426,6 +451,8 @@ The project contains no literature review, and this review added none.
 - Following the same speed profile, energy is mostly fixed by the profile: road load
   68 %, motor/inverter 22 %, gear 5 % (S1, SoH 80 %). Only battery resistive loss
   (1.1–2.1 %) depends on how current is shaped.
+  - *[Corrected 2026-10-24: motor/inverter and gear losses also depend on the torque
+    trajectory. See §14, K1.]*
 - The proposed law softens the controller as SoH falls. In this model that slightly
   raises tracking error and energy (+0.003 %).
 - One well-chosen fixed gain was better on both metrics. The gain, if any, comes from
@@ -462,6 +489,8 @@ The project contains no literature review, and this review added none.
 - A pre-registered, reproducible test of a specific proposed benefit, which turned out
   negative.
 - An explanation that bounds what any tracking controller can save in this model class.
+  - *[Corrected 2026-10-24: say instead "an explanation of why the tested schedule had
+    little effect". See §14, K1.]*
 - Not a new controller.
 
 **Q6. Your earlier draft claimed 12.5 %. What happened?**
@@ -574,6 +603,99 @@ The project contains no literature review, and this review added none.
 > energy supplied. Actuator and battery power limits were not reached, motor efficiency
 > was constant, and no result has been validated on a vehicle. Whether SoH-aware control
 > helps when ageing tightens power limits remains open.
+
+*[Corrected 2026-10-24: in the abstract above, replace "the part a tracking controller can
+shape" with "the energy share that SoH changes directly". See §14, K1.]*
+
+## 14. Dated corrections
+
+The text above is left exactly as written on 2026-10-23. Each corrected passage carries an
+inline *[Corrected …]* marker that points here. The corrected matrix rows are in the dated
+amendment `evidence/evidence_matrix_2026-10-24.yaml` (exports in
+`evidence/exports/2026-10-24/`), and the verbatim before/after values are in
+`docs/evidence-corrections-2026-10-24.md`. The original `evidence/evidence_matrix.yaml` is
+preserved unchanged.
+
+### K1 (2026-10-24): no universal bound on energy improvement
+
+**Original wording, withdrawn as stated:**
+
+- Executive assessment: "The part a tracking controller can shape, battery resistive loss,
+  was only 1.1–2.1 % of the energy supplied."
+- §4.2, item 2: heading "A model-class explanation, with a bound", and "The share a
+  tracking controller can shape is the battery resistive loss, 1.1–2.1 % (N04)."
+- §5.1: "**The claimed 12.5 % is unreachable by any controller tracking the same profile
+  in this model class** (N04 and §4.2, item 2)."
+- §7: "N04: resistive losses of 1.1–2.1 % bound the controllable share."
+- §8 and §13: "the only part of the energy a tracking controller can shape" / "the part a
+  tracking controller can shape".
+- §10, Q1: "Only battery resistive loss (1.1–2.1 %) depends on how current is shaped."
+- §10, Q5: "An explanation that bounds what any tracking controller can save in this model
+  class."
+
+**Corrected position:**
+
+1. **No universal upper bound is established.** The current evidence does not establish
+   any upper bound on the energy improvement achievable by a controller, in this model or
+   elsewhere.
+2. **What 1.1–2.1 % is.** It is the battery resistive share of supplied energy in the
+   tested runs (`artifacts/tables/energy_breakdown.csv`). It is the share that SoH changes
+   directly in this model.
+3. **Other loss terms also depend on the controller.** Energy can also differ between
+   controllers through:
+   - motor/inverter loss (÷η_mi when motoring, ×η_mi when regenerating);
+   - gear loss, with the same direction-dependent asymmetry;
+   - R1 loss;
+   - how much energy is regenerated;
+   - friction braking;
+   - the final kinetic energy;
+   - tracking deviations from the reference.
+
+   The statement that road-load, drivetrain and motor/inverter losses are "set by the
+   trace" holds only for exact tracking.
+4. **What ≈0.3 % is.** The later ≈0.3 % estimate (`docs/research_gap_and_next_experiments.md`
+   §4.3) is a limited, first-order estimate of the ageing-induced increase in resistive
+   loss. It uses the recorded energy split and the unverified k_r0 = 0.5 and k_r1 = 0.3,
+   under the assumptions recorded in `docs/battery-data-feasibility-audit.md` §7. It is
+   not a bound on controller differences.
+5. **What the experiments show and do not show.** They show that the tested SoH schedule
+   changed energy by 0.000 % to +0.005 % (`artifacts/tables/primary_pairs.csv`), and that
+   the fixed-gain family spanned 0.276 % (`artifacts/tables/fixed_family.csv`). They do
+   **not** determine whether a 1 % or a 12.5 % improvement is possible with other
+   controller designs or with a more physically complete plant (SoH-dependent battery
+   limits, OCV(SoC), an efficiency map, other profiles).
+6. **What still stands.** C01 remains CONTRADICTED on the evidence that does exist:
+   - the pre-registered result is +0.003 %;
+   - the thesis body itself implies 10.2 %;
+   - no source data exist for 12.5 %.
+
+   It does not rest on a bound.
+
+### K2 (2026-10-24): C37, the Huria citation
+
+**Original wording (§6):** "Keep, after checking the citation: C37 (Huria 2018 reference)".
+
+**Check performed** (`docs/literature_review_soh_scheduled_lqr.md` §6 and §9):
+
+- The record resolved on Crossref is: T. Huria, M. Ceraolo, J. Gazzarri, R. Jackey, "High
+  fidelity electrical model with thermal dependence for characterization and simulation of
+  high power lithium battery cells", 2012 IEEE International Electric Vehicle Conference
+  (IEVC), pp. 1–8, DOI [10.1109/IEVC.2012.6183271](https://doi.org/10.1109/IEVC.2012.6183271).
+- Its abstract (OpenAlex) describes a one-RC equivalent-circuit model identified on
+  "LiNi-CoMnO2 cathode and graphite-based anode" cells, that is NMC/graphite. The full text
+  was not accessed.
+
+**Corrected position:**
+
+- The thesis citation is wrong in venue, year and type. It is printed as *IEEE Trans. Ind.
+  Appl.* 54(6), 2018 (report.md L6006), and as "Huria 2018, J. Power Sources" (L5998).
+- The source does not support LFP-specific parameters (Assumption 5, L750) or an SEI
+  ageing model (L5998).
+- C37 is updated from "keep after citation check" to: **correct the citation; withdraw
+  the LFP and SEI attributions.**
+- The registry's original disposition is left as registered, following the registry's
+  rule that it is "never edited to fit new results". The outcome is recorded in the
+  evidence matrix row C37 (dated 2026-10-24).
 
 ## Appendix: files reviewed
 

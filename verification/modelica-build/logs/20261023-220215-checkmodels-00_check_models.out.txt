@@ -1,0 +1,24 @@
+true
+""
+true
+""
+"Check of EurekaPlant.Tests.StaticPoint completed successfully.
+Class EurekaPlant.Tests.StaticPoint has 37 equation(s) and 37 variable(s).
+4 of these are trivial equation(s)."
+""
+"Check of EurekaPlant.Tests.CoastDown completed successfully.
+Class EurekaPlant.Tests.CoastDown has 37 equation(s) and 37 variable(s).
+4 of these are trivial equation(s)."
+""
+"Check of EurekaPlant.Tests.OpenLoop66 completed successfully.
+Class EurekaPlant.Tests.OpenLoop66 has 38 equation(s) and 38 variable(s).
+4 of these are trivial equation(s)."
+""
+"Check of EurekaPlant.InverseS1 completed successfully.
+Class EurekaPlant.InverseS1 has 28 equation(s) and 28 variable(s).
+1 of these are trivial equation(s)."
+""
+"Check of EurekaPlant.InverseS2 completed successfully.
+Class EurekaPlant.InverseS2 has 28 equation(s) and 28 variable(s).
+1 of these are trivial equation(s)."
+""

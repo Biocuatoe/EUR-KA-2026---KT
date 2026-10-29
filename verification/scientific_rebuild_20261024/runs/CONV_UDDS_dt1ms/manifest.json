@@ -1,0 +1,94 @@
+{
+ "tag": "CONV_UDDS_dt1ms",
+ "cycle": "UDDS",
+ "label": "official EPA schedule (reference)",
+ "dt": 0.001,
+ "context": {
+  "utc": "2026-10-24T15:00:17+00:00",
+  "git": {
+   "commit": "f264eca354d67dcdf786063ca36ae246466217d2",
+   "dirty": true
+  },
+  "software": {
+   "python": "3.14.7",
+   "executable": "D:\\EUR\u00c9KA 2026 - KT\\.venv\\Scripts\\python.exe",
+   "numpy": "2.5.4",
+   "scipy": "1.18.1",
+   "pandas": "3.1.0",
+   "matplotlib": "3.11.2",
+   "control": "0.10.2",
+   "pint": "0.26.2",
+   "pydantic": "2.14.1",
+   "pyyaml": "6.0.3",
+   "statsmodels": "0.15.0",
+   "sympy": "1.14.0"
+  },
+  "machine": "DESKTOP-QF465MB"
+ },
+ "file_sha256": {
+  "verification\\scientific_rebuild_20261024\\experimental_protocol.md": "d80b5b4f1236dec28423cf89b2e1522a53e4866f2649301777008946382f479c",
+  "verification\\scientific_rebuild_20261024\\configs\\R1.yaml": "b33d9667dacd69884c6443f7f71c229972eabb7a99eec6ae0649dfebbb980858",
+  "verification\\scientific_rebuild_20261024\\src\\rebuild\\__init__.py": "10958da31879aa50d31e7cdf38b3e8fc70ab517481813dd323c90eddf3bb5afc",
+  "verification\\scientific_rebuild_20261024\\src\\rebuild\\model.py": "2050111b0860d1552c180b25ffbfbdb16c098c0e262632be6ecdb95d876003de",
+  "verification\\scientific_rebuild_20261024\\src\\rebuild\\precheck.py": "3c92d36360205080067f15d42b6261db0821555030eb9bfeab90e9145a2f843c",
+  "verification\\scientific_rebuild_20261024\\src\\rebuild\\run.py": "7336a295f407134f6d7aa38ba1749edcb3aea9cdbddf7114c2f8a7bbdb185001",
+  "src\\eureka\\__init__.py": "8c647f0f88b6ce07067a6f09b2448516900cfcc6640de5feaf3b8622b05ecf0e",
+  "src\\eureka\\controllers.py": "2d57b757407dac725891219aa93102ce8be20294a97723fb35ea862ac76d8660",
+  "src\\eureka\\cycles.py": "f09ed877efe3aece1d4990c79d55c4902999758ef67ab2603591703ae49b8cec",
+  "src\\eureka\\evidence.py": "a5b63b286cbe3fec31d0b3936cbcc6415d59875b2a35cc66086a616c1e29ea0b",
+  "src\\eureka\\experiment.py": "b1ef5d0278bb8da528cb950e9ca5ac7dcd1db8cebc81b8e477ce3e93a13a3299",
+  "src\\eureka\\lineage.py": "9ea4e2546e04dc150ce30a1001ce998cf8223e46ed105d0288bd226869b4c044",
+  "src\\eureka\\metrics.py": "0ed37076d1198f9a8056e3cd30b1b288996c571772fa5986bedbe7df9a21ce87",
+  "src\\eureka\\params.py": "192ad65933b2786910104f3755601938758a161f603e2cce02d9eaa74907369e",
+  "src\\eureka\\plant.py": "e5701bce018f37bebba525dfc58d0e347c63cc1a5b385badf74fe6d0ea772907",
+  "src\\eureka\\simulate.py": "dccc267c09af403a22fac9042e53bf0e7dc0502d659875d6b1f17a8efb0003c2",
+  "configs\\parameters.yaml": "0efe2d1a413a51d425043691c857807b021d62908935adfda9b757de6f9f374f",
+  "configs\\cycles\\profiles.yaml": "90a496a36c618e216693a3d819b84739f10e6c35167c23a91b63478ef28be0a6"
+ },
+ "status": "completed",
+ "runs": [
+  {
+   "case": "BCS",
+   "soh": 0.7,
+   "controller": "F",
+   "k_r0": 0.5,
+   "limits": {
+    "v_min_ratio": 0.78125,
+    "v_max_ratio": 1.140625,
+    "c_dis": 3.0,
+    "c_ch": 1.0,
+    "soh_scaled": true
+   },
+   "gains": [
+    196.0353380585201,
+    0.350684947221061,
+    150.85451900658825
+   ],
+   "run_id": "CONV_UDDS_dt1ms-BCS-soh0.70-F",
+   "valid": true
+  },
+  {
+   "case": "BCS",
+   "soh": 0.7,
+   "controller": "S",
+   "k_r0": 0.5,
+   "limits": {
+    "v_min_ratio": 0.78125,
+    "v_max_ratio": 1.140625,
+    "c_dis": 3.0,
+    "c_ch": 1.0,
+    "soh_scaled": true
+   },
+   "gains": [
+    179.17429968375575,
+    0.25598350090049027,
+    137.26847041089286
+   ],
+   "run_id": "CONV_UDDS_dt1ms-BCS-soh0.70-S",
+   "valid": true
+  }
+ ],
+ "runtime_s": 401.9,
+ "n_runs": 2,
+ "n_invalid": 0
+}

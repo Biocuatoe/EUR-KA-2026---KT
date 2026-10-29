@@ -1,0 +1,7 @@
+== b1d68760-d763-4213-b7fc-ed17bae0b679.jsonl
+line 5: role=assistant tools=['TodoWrite', 'Write'] hits=['12.5%', '15.3%'] bytes=167853
+== df2405df-7fa9-4f2b-ae89-4b506027b6a0.jsonl
+line 11: role=assistant tools=['Write'] hits=['12.5%', '15.3%', 'pm2.1', 'pm3.2'] bytes=9302
+line 18: role=assistant tools=['StrReplace'] hits=['12.5%', '15.3%', 'pm2.1', 'pm2.8'] bytes=2180
+line 43: role=assistant tools=['StrReplace', 'TodoWrite'] hits=['12.5%', '15.3%', 'pm2.1', 'pm2.8', 'pm3.2'] bytes=15585
+line 45: role=assistant tools=[] hits=['12.5%', '15.3%', 'pm2.1', 'pm2.8'] bytes=2129

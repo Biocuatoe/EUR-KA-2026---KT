@@ -1,0 +1,178 @@
+{
+  "generator": "verification/scripts/generate_modelica_inputs.py",
+  "sources": {
+    "configs/parameters.yaml": "0efe2d1a413a51d425043691c857807b021d62908935adfda9b757de6f9f374f",
+    "configs/cycles/profiles.yaml": "90a496a36c618e216693a3d819b84739f10e6c35167c23a91b63478ef28be0a6"
+  },
+  "outputs": {
+    "Parameters.mo": "806f6600bba08b9da8d1a5dd37100fe13fab1fc37c496b9f62b66fa8745a9463",
+    "Profiles.mo": "26357ad31d9834a1503f14789cfa50ba09b21e1242c9203a0ed3003c58aa2021"
+  },
+  "parameters": {
+    "M": {
+      "value": 850.0,
+      "yaml_unit": "kg",
+      "modelica_unit": "kg",
+      "provenance": "report_unverified",
+      "yaml_key": "vehicle.mass"
+    },
+    "A_f": {
+      "value": 2.2,
+      "yaml_unit": "m^2",
+      "modelica_unit": "m2",
+      "provenance": "report_unverified",
+      "yaml_key": "vehicle.frontal_area"
+    },
+    "C_d": {
+      "value": 0.35,
+      "yaml_unit": "dimensionless",
+      "modelica_unit": "1",
+      "provenance": "report_unverified",
+      "yaml_key": "vehicle.drag_coefficient"
+    },
+    "C_rr": {
+      "value": 0.008,
+      "yaml_unit": "dimensionless",
+      "modelica_unit": "1",
+      "provenance": "report_unverified",
+      "yaml_key": "vehicle.rolling_resistance"
+    },
+    "r_w": {
+      "value": 0.28,
+      "yaml_unit": "m",
+      "modelica_unit": "m",
+      "provenance": "report_unverified",
+      "yaml_key": "vehicle.wheel_radius"
+    },
+    "rho": {
+      "value": 1.225,
+      "yaml_unit": "kg/m^3",
+      "modelica_unit": "kg/m3",
+      "provenance": "standard",
+      "yaml_key": "vehicle.air_density"
+    },
+    "g": {
+      "value": 9.81,
+      "yaml_unit": "m/s^2",
+      "modelica_unit": "m/s2",
+      "provenance": "standard",
+      "yaml_key": "vehicle.gravity"
+    },
+    "G": {
+      "value": 6.5,
+      "yaml_unit": "dimensionless",
+      "modelica_unit": "1",
+      "provenance": "report_unverified",
+      "yaml_key": "drivetrain.gear_ratio"
+    },
+    "eta_g": {
+      "value": 0.9702,
+      "yaml_unit": "dimensionless",
+      "modelica_unit": "1",
+      "provenance": "report_unverified",
+      "yaml_key": "drivetrain.gear_efficiency"
+    },
+    "J_m": {
+      "value": 0.05,
+      "yaml_unit": "kg*m^2",
+      "modelica_unit": "kg.m2",
+      "provenance": "report_unverified",
+      "yaml_key": "drivetrain.motor_inertia"
+    },
+    "B_m": {
+      "value": 0.001,
+      "yaml_unit": "N*m*s",
+      "modelica_unit": "N.m.s",
+      "provenance": "report_unverified",
+      "yaml_key": "drivetrain.motor_viscous_friction"
+    },
+    "eta_mi": {
+      "value": 0.874,
+      "yaml_unit": "dimensionless",
+      "modelica_unit": "1",
+      "provenance": "report_unverified",
+      "yaml_key": "drivetrain.motor_inverter_efficiency"
+    },
+    "T_max": {
+      "value": 85.0,
+      "yaml_unit": "N*m",
+      "modelica_unit": "N.m",
+      "provenance": "report_unverified",
+      "yaml_key": "drivetrain.torque_max"
+    },
+    "P_max": {
+      "value": 18000.0,
+      "yaml_unit": "W",
+      "modelica_unit": "W",
+      "provenance": "report_unverified",
+      "yaml_key": "drivetrain.power_max"
+    },
+    "tau_T": {
+      "value": 0.02,
+      "yaml_unit": "s",
+      "modelica_unit": "s",
+      "provenance": "assumed",
+      "yaml_key": "drivetrain.torque_time_constant"
+    },
+    "V_oc": {
+      "value": 48.0,
+      "yaml_unit": "V",
+      "modelica_unit": "V",
+      "provenance": "assumed",
+      "yaml_key": "battery.open_circuit_voltage"
+    },
+    "Q_Ah": {
+      "value": 100.0,
+      "yaml_unit": "A*h",
+      "modelica_unit": "A.h",
+      "provenance": "report_unverified",
+      "yaml_key": "battery.capacity"
+    },
+    "R0_new": {
+      "value": 0.005,
+      "yaml_unit": "ohm",
+      "modelica_unit": "Ohm",
+      "provenance": "report_unverified",
+      "yaml_key": "battery.r0_new"
+    },
+    "R1_new": {
+      "value": 0.003,
+      "yaml_unit": "ohm",
+      "modelica_unit": "Ohm",
+      "provenance": "report_unverified",
+      "yaml_key": "battery.r1_new"
+    },
+    "C1": {
+      "value": 50000.0,
+      "yaml_unit": "F",
+      "modelica_unit": "F",
+      "provenance": "report_unverified",
+      "yaml_key": "battery.c1"
+    },
+    "k_r0": {
+      "value": 0.5,
+      "yaml_unit": "dimensionless",
+      "modelica_unit": "1",
+      "provenance": "report_unverified",
+      "yaml_key": "battery.k_r0"
+    },
+    "k_r1": {
+      "value": 0.3,
+      "yaml_unit": "dimensionless",
+      "modelica_unit": "1",
+      "provenance": "report_unverified",
+      "yaml_key": "battery.k_r1"
+    },
+    "v_eps": {
+      "value": 0.05,
+      "yaml_unit": "m/s",
+      "modelica_unit": "m/s",
+      "provenance": "assumed",
+      "yaml_key": "simulation.speed_smoothing"
+    }
+  },
+  "profiles": {
+    "S1": 23,
+    "S2": 25
+  }
+}

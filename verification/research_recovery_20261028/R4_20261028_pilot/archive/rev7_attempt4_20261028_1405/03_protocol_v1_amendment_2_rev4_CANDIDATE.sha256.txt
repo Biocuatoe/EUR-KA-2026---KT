@@ -1,0 +1,4 @@
+SHA-256 of 03_protocol_v1_amendment_2_rev4_CANDIDATE.md (candidate rev4): c726560d1e87036cbd94fe58724cafdc1e4746647f6cfacbb320f3e14ed143ab
+Recorded 2026-10-28 12:25:42 +0700 as an integrity identifier of the candidate text only.
+Status: CANDIDATE - DRAFT - NOT APPROVED FOR RELEASE. Not issued, not frozen, not approved; open owner decisions AMB-29(b)-(d), AMB-30, AMB-32 (15_remaining_owner_decisions.md).
+Parents: protocol v1 f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab; amendment 1 7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2; supersedes draft rev3 fdaf193de510488733f0e0899d50def86cbeafabdbecdd3bc7a144099b6f492c (unchanged).

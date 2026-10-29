@@ -1,0 +1,129 @@
+r4h3.checks <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev14_attempt11_20261029_0807\code\r4h3\checks.py
+r4h3.campaign <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev14_attempt11_20261029_0807\code\r4h3\campaign.py
+FF......FFFFF                                                            [100%]
+================================== FAILURES ===================================
+_ test_r11_1_the_owner_clauses_hold_only_the_owner_sentences_and_the_reading_has_three_labelled_parts _
+
+    def test_r11_1_the_owner_clauses_hold_only_the_owner_sentences_and_the_reading_has_three_labelled_parts():
+        b = campaign.IMPLEMENTED_2["AMB_29_condition_error"]
+        marks = ["Owner ruling I-6 (2026-10-28):", "Owner decision I-6b (2026-10-29):",
+                 "Owner decision (2026-10-29) on a failure of the separate recomputation or its fold:",
+                 "As applied under these rulings:", "Implementer reading (not an owner ruling), for the owner's confirmation:"]
+        seg = _segments(b, marks)
+        i6b = seg[marks[1]]
+        for owner in ("whose run was attempted but raised an exception", "it must not be labelled NOT_EVALUABLE_RUN_MISSING, "
+                      "because the run was attempted and an exception occurred", "a genuinely absent run follows the existing "
+                      "missing-run path", "an attempted run that raises follows the condition-error path",
+                      "neither may count as PASS"):
+>           assert owner in i6b, owner
+E           AssertionError: whose run was attempted but raised an exception
+E           assert 'whose run was attempted but raised an exception' in 'Owner decision I-6b (2026-10-29): a QS-eligible pair one of whose runs was attempted and raised an exception is NOT_E...energy (an executed run without a finite simulator energy, no exception) stays NOT_EVALUABLE_RUN_MISSING (AMB-29(b)). '
+
+code\tests\test_owner_decisions_v15.py:84: AssertionError
+_ test_r11_2_r11_3_r11_5_the_candidate_quotes_the_owner_in_full_and_states_the_effects _
+
+    def test_r11_2_r11_3_r11_5_the_candidate_quotes_the_owner_in_full_and_states_the_effects():
+        text = campaign.DRAFT_AMENDMENT_2.read_text(encoding="utf-8")
+        s15 = text[text.index("### 1.15 "):text.index("### 1.16 ")]
+        quote = s15.split('Owner\'s words: "', 1)[1].split('"\n', 1)[0]
+>       assert quote.endswith("Do not perform a broad label rewrite. Inspect the affected branch and its tests, then verify "
+                              "all exception paths retain their intended classification and reporting.")
+E       AssertionError: assert False
+E        +  where False = <built-in method endswith of str object at 0x000001C04700BDE0>('Do not perform a broad label rewrite. Inspect the affected branch and its tests, then verify all exception paths retain their intended classification and reporting.')
+E        +    where <built-in method endswith of str object at 0x000001C04700BDE0> = 'The specific unresolved case is a QS-eligible pair whose run was attempted but raised an exception. For that case, th...anding I-6 rules require it. Do not retry silently, replace the original evidence, or change unrelated valid outcomes.'.endswith
+
+code\tests\test_owner_decisions_v15.py:112: AssertionError
+________________ test_r11_6_the_fold_rejects_a_length_mismatch ________________
+
+    def test_r11_6_the_fold_rejects_a_length_mismatch():
+        c = type("C", (), {"run_ids": {"B0": "y0", "B3": "y3"}})()
+        rows = [dict(status=checks.COMPARABLE, qs_vs_dyn_pair_status="PASS") for _ in range(2)]
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+code\tests\test_owner_decisions_v15.py:192: Failed
+_________ test_r11_8_the_reason_cites_i6b_only_for_a_qs_eligible_pair _________
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-317/test_r11_8_the_reason_cites_i60')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001C06007C250>
+
+    def test_r11_8_the_reason_cites_i6b_only_for_a_qs_eligible_pair(tmp_path, monkeypatch):
+        task = _task()
+        design = _design(task)
+        _raise_b3(monkeypatch)
+        r = _run(_cond("R118E"), design, task, tmp_path / "e")
+        assert "owner decision I-6b" in r["qs_vs_dyn_pair_reason"]
+        real = checks.qs_energy
+    
+        def screen(plant, t, v):                                                              # B0's screen fails
+            res = real(plant, t, v)
+            if len(t) > 2 and np.allclose(np.diff(t), 1.0):
+                return dict(res, feasible=False, n_infeasible_pieces=1,
+                            infeasible_pieces=[dict(piece=3, t0_s=3.0, t1_s=4.0, v0_ms=1.0, v1_ms=1.5)])
+            return res
+        monkeypatch.setattr(checks, "qs_energy", screen)
+        r = _run(_cond("R118N"), design, task, tmp_path / "n")
+        assert r["qs_vs_dyn_applicability"] == checks.QS_NA_INFEASIBLE and r["qs_vs_dyn_pair_status"] == checks.QS_CONDITION_ERROR
+>       assert "owner decision I-6b" not in r["qs_vs_dyn_pair_reason"]
+E       AssertionError: assert 'owner decision I-6b' not in 'exception(s...ailed for B0'
+E         
+E         'owner decision I-6b' is contained here:
+E           n raised, owner decision I-6b; AMB-29(d), owner ruling I-6); otherwise NOT_APPLICABLE_QS_INFEASIBLE: QS feasibility screen failed for B0
+E         ?           +++++++++++++++++++
+
+code\tests\test_owner_decisions_v15.py:213: AssertionError
+_____ test_review_status_v14_counts_r11_1_and_records_no_owner_acceptance _____
+
+    def test_review_status_v14_counts_r11_1_and_records_no_owner_acceptance():
+        rv = json.loads(campaign.REVIEW_STATUS.read_text(encoding="utf-8"))
+>       assert campaign.REVIEW_STATUS.name == "code_review_status_v14.json"
+E       AssertionError: assert 'code_review_status_v13.json' == 'code_review_status_v14.json'
+E         
+E         - code_review_status_v14.json
+E         ?                      ^
+E         + code_review_status_v13.json
+E         ?                      ^
+
+code\tests\test_owner_decisions_v15.py:219: AssertionError
+____________________ test_rev13_candidate_matches_the_code ____________________
+
+    def test_rev13_candidate_matches_the_code():
+        assert frozen.sha256(campaign.PILOT_DIR / "03_protocol_v1_amendment_2_rev12_CANDIDATE.md") == \
+            "ac376c0b362c2e99a9d3777fa849205844487e0be50a41dd1c5f1b2410b5ae1b"
+>       assert campaign.DRAFT_AMENDMENT_2.name == "03_protocol_v1_amendment_2_rev13_CANDIDATE.md"
+E       AssertionError: assert '03_protocol_..._CANDIDATE.md' == '03_protocol_..._CANDIDATE.md'
+E         
+E         - 03_protocol_v1_amendment_2_rev13_CANDIDATE.md
+E         ?                                ^
+E         + 03_protocol_v1_amendment_2_rev12_CANDIDATE.md
+E         ?                                ^
+
+code\tests\test_owner_decisions_v15.py:232: AssertionError
+__________________ test_campaign_mode_stays_blocked_in_rev15 __________________
+
+    def test_campaign_mode_stays_blocked_in_rev15():
+        b = " | ".join(campaign.preconditions("campaign"))
+        for x in ("no issued amendment 2", "no campaign authorisation record", "protocol 10.1 gate record",
+                  "7 major findings not resolved", "code review not yet performed"):
+>           assert x in b, x
+E           AssertionError: 7 major findings not resolved
+E           assert '7 major findings not resolved' in "no issued amendment 2 at D:\\EURÉKA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\releas...he owner's acceptance of the closure of the rev7 to rev14 review (an AI-agent review is not a human independent audit)"
+
+code\tests\test_owner_decisions_v15.py:252: AssertionError
+=================================== PASSES ====================================
+=========================== short test summary info ===========================
+PASSED code\tests\test_owner_decisions_v15.py::test_r11_4_a_raised_run_with_a_failing_other_arm_is_condition_error_with_the_fail_kept
+PASSED code\tests\test_owner_decisions_v15.py::test_r11_7_an_exception_overrides_a_forced_pass
+PASSED code\tests\test_owner_decisions_v15.py::test_r11_7_an_attempted_run_that_raised_is_condition_error_for_m1_and_m2[M1]
+PASSED code\tests\test_owner_decisions_v15.py::test_r11_7_an_attempted_run_that_raised_is_condition_error_for_m1_and_m2[M2]
+PASSED code\tests\test_owner_decisions_v15.py::test_r11_7_an_attempted_run_that_raised_beside_an_unconfirmed_arm_is_condition_error
+PASSED code\tests\test_owner_decisions_v15.py::test_r11_7_a_fold_exception_keeps_the_label_of_a_pair_without_an_executed_run
+FAILED code\tests\test_owner_decisions_v15.py::test_r11_1_the_owner_clauses_hold_only_the_owner_sentences_and_the_reading_has_three_labelled_parts
+FAILED code\tests\test_owner_decisions_v15.py::test_r11_2_r11_3_r11_5_the_candidate_quotes_the_owner_in_full_and_states_the_effects
+FAILED code\tests\test_owner_decisions_v15.py::test_r11_6_the_fold_rejects_a_length_mismatch
+FAILED code\tests\test_owner_decisions_v15.py::test_r11_8_the_reason_cites_i6b_only_for_a_qs_eligible_pair
+FAILED code\tests\test_owner_decisions_v15.py::test_review_status_v14_counts_r11_1_and_records_no_owner_acceptance
+FAILED code\tests\test_owner_decisions_v15.py::test_rev13_candidate_matches_the_code
+FAILED code\tests\test_owner_decisions_v15.py::test_campaign_mode_stays_blocked_in_rev15
+7 failed, 6 passed in 186.68s (0:03:06)

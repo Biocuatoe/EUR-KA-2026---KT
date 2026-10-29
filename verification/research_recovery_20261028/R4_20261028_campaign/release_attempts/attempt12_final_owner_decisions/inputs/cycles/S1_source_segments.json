@@ -1,0 +1,92 @@
+{
+ "cycle": "S1",
+ "source_file": "configs/cycles/profiles.yaml",
+ "source_sha256": "90a496a36c618e216693a3d819b84739f10e6c35167c23a91b63478ef28be0a6",
+ "definition": {
+  "purpose": "primary evaluation, synthetic urban stop-and-go 0-50 km/h",
+  "segments": [
+   {
+    "idle": 10
+   },
+   {
+    "accel": 0.8,
+    "to_kmh": 20
+   },
+   {
+    "cruise": 15
+   },
+   {
+    "accel": -0.8,
+    "to_kmh": 0
+   },
+   {
+    "idle": 15
+   },
+   {
+    "accel": 1.0,
+    "to_kmh": 35
+   },
+   {
+    "cruise": 30
+   },
+   {
+    "accel": -0.6,
+    "to_kmh": 15
+   },
+   {
+    "cruise": 10
+   },
+   {
+    "accel": -0.9,
+    "to_kmh": 0
+   },
+   {
+    "idle": 20
+   },
+   {
+    "accel": 0.7,
+    "to_kmh": 50
+   },
+   {
+    "cruise": 40
+   },
+   {
+    "accel": -0.5,
+    "to_kmh": 30
+   },
+   {
+    "cruise": 20
+   },
+   {
+    "accel": 0.5,
+    "to_kmh": 45
+   },
+   {
+    "cruise": 25
+   },
+   {
+    "accel": -1.0,
+    "to_kmh": 0
+   },
+   {
+    "idle": 15
+   },
+   {
+    "accel": 1.0,
+    "to_kmh": 25
+   },
+   {
+    "cruise": 10
+   },
+   {
+    "accel": -0.8,
+    "to_kmh": 0
+   },
+   {
+    "idle": 10
+   }
+  ]
+ },
+ "builder": "eureka.cycles.build (src/eureka/cycles.py)",
+ "builder_sha256": "f09ed877efe3aece1d4990c79d55c4902999758ef67ab2603591703ae49b8cec"
+}

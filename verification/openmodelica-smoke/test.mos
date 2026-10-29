@@ -1,0 +1,2 @@
+loadFile("../CoastDown.mo"); getErrorString();
+simulate(CoastDown, startTime = 0, stopTime = 20, numberOfIntervals = 2000, tolerance = 1e-10, outputFormat = "csv"); getErrorString();

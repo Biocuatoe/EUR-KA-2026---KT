@@ -1,0 +1,10 @@
+  "file": "verification/modelica-build/python_reference/openloop66_python_h0.001.csv",
+  "rows": 6601,
+  "elapsed_s": 14.1,
+  "file": "verification/modelica-build/python_reference/openloop66_python_h0.001_Crr1.01.csv",
+  "rows": 6601,
+  "elapsed_s": 15.8,
+  "file": "verification/modelica-build/python_reference/openloop66_python_h0.0001.csv",
+  "rows": 6601,
+  "elapsed_s": 135.1,
+done 22:12:11

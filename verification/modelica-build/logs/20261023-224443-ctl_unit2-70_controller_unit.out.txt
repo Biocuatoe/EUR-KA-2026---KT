@@ -1,0 +1,26 @@
+true
+""
+true
+""
+true
+""
+true
+""
+true
+"Y:/verification/modelica-build/cases_ctl/U_unit"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases_ctl/U_unit/U_unit_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 10.0, numberOfIntervals = 1000, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'U_unit', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0032372,
+    timeBackend = 0.0139049,
+    timeSimCode = 0.0018477,
+    timeTemplates = 0.0133953,
+    timeCompile = 3.0000516,
+    timeSimulation = 0.1307951,
+    timeTotal = 3.1636247
+end SimulationResult;
+""
+"Y:/verification/modelica-build"

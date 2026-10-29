@@ -1,0 +1,33 @@
+{
+  "result_file": "verification\\modelica-build\\cases_ctl\\U_unit\\U_unit_res.csv",
+  "result_sha256": "7235c70ccc98b85541636f227b89c4e058ec6425c24f9f04e075fd3ca753c575",
+  "steps_found": 1000,
+  "simulation_status": "finished successfully",
+  "P1": {
+    "u": 1.0658141036401503e-12,
+    "z_used": 4.052314039881821e-15,
+    "e_k": 5.336009412104659e-15,
+    "T_lim_k": 0.0,
+    "z_next": 4.052314039881821e-15,
+    "sat_k_mismatches": 0,
+    "coverage_samples_sat_and_e_negative": 441,
+    "coverage_samples_sat_and_e_positive": 366,
+    "coverage_samples_not_sat": 194,
+    "integral_frozen_exactly_when_sat_and_e_neg": true,
+    "max_dz_error_when_integrating": 1.1774435593192578e-16,
+    "P1_pass": true
+  },
+  "P2": {
+    "controller_updates": 1001,
+    "expected_updates": 1001,
+    "max_event_time_deviation_s": 1.687538997430238e-13,
+    "first_event_time": 0.0,
+    "update_at_final_instant_present": true,
+    "P2_pass": true
+  },
+  "P4": {
+    "models_checked": 18,
+    "mismatching": [],
+    "P4_pass": true
+  }
+}

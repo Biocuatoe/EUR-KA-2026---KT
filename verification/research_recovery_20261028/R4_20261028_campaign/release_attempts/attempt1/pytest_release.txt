@@ -1,0 +1,17 @@
+........................................................................ [ 39%]
+........................................................................ [ 78%]
+...........F............................                                 [100%]
+================================== FAILURES ===================================
+_____________________ test_readiness_gates_are_versioned ______________________
+
+    def test_readiness_gates_are_versioned():
+        latest, nxt = campaign.latest_readiness_gate(), campaign.next_readiness_gate()
+>       assert nxt.name != latest.name and not nxt.exists()
+E       AssertionError: assert ('readiness_gate_v1.json' != 'readiness_gate_v1.json')
+E        +  where 'readiness_gate_v1.json' = WindowsPath('D:/EURÉKA 2026 - KT/verification/research_recovery_20261028/R4_20261028_campaign/logs/readiness_gate_v1.json').name
+E        +  and   'readiness_gate_v1.json' = WindowsPath('D:/EURÉKA 2026 - KT/verification/research_recovery_20261028/R4_20261028_campaign/logs/readiness_gate_v1.json').name
+
+code\tests\test_rev2.py:214: AssertionError
+=========================== short test summary info ===========================
+FAILED code\tests\test_rev2.py::test_readiness_gates_are_versioned - Assertio...
+1 failed, 183 passed in 340.13s (0:05:40)

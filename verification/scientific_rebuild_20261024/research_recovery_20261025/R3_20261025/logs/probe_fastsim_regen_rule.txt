@@ -1,0 +1,18 @@
+pm min/max -25231.809337711926 37813.21284788406 pe min/max -21194.719843678016 39849.246060565725 dynbrake min/max -0.0 -0.0 -0.0 -0.0
+n neg pm 359
+regen max|eff-curve(|Pm|/Pmax)| 0.10261590466885606
+regen max|Pe/Pm - eff| 1.1102230246251565e-16  max|Pm/Pe - eff| 0.3504761904761907
+regen loss check |pl-(pe-pm)| max 0.0  |pl-(pm-pe)| 8074.178988067819
+max regen frac 0.25231809337711925
+-942.1348470120624 -791.3932714901324 0.84
+-2249.963637338666 -1889.9694553644795 0.84
+-2209.894367639139 -1856.3112688168767 0.84
+-1551.229153129479 -1303.0324886287624 0.84
+-2131.718920084837 -1790.643892871263 0.84
+curve(|pm|/P) regen max abs diff 0.10261590466885606  frac exact 0.0
+curve(|pe|/P) regen max abs diff 0.10059735992183905  frac exact 0.0
+curve(|pm_prev|/P) regen max abs diff 0.10261590466885606  frac exact 0.0
+curve(|req|/P) regen max abs diff 0.10261590466885606  frac exact 0.0
+curve(max(pm,0)/P) regen max abs diff 0.0  frac exact 1.0
+distinct regen eff values [0.84]
+EXIT=0

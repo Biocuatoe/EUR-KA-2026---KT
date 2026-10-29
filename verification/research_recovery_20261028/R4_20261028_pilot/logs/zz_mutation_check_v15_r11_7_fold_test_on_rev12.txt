@@ -1,0 +1,35 @@
+r4h3.checks <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev12_attempt9_20261028_2308\code\r4h3\checks.py
+r4h3.campaign <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev12_attempt9_20261028_2308\code\r4h3\campaign.py
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_r11_7_a_fold_exception_keeps_the_label_of_a_pair_without_an_executed_run _
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-320/test_r11_7_a_fold_exception_ke0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001AA39289E00>
+
+    def test_r11_7_a_fold_exception_keeps_the_label_of_a_pair_without_an_executed_run(tmp_path, monkeypatch):
+        real_design = campaign.plan_design
+    
+        def no_profiles(*a, **k):
+            d = real_design(*a, **k)
+            return dict(d, baseline_ok=False, eco_ok=False, val_e=None,
+                        eco={"status": "unavailable", "rows": d["eco"]["rows"], "t": None, "v": None})
+    
+        def boom(*a, **k):
+            raise RuntimeError("injected fold failure")
+        task = _task()
+        monkeypatch.setattr(campaign, "plan_design", no_profiles)
+        monkeypatch.setattr(campaign, "fold_separate_recomputation", boom)
+        rows = campaign.execute_schedule([_cond("R117F")], lambda n: task, tmp_path / "R117F")
+        monkeypatch.undo()
+>       assert rows[0]["qs_vs_dyn_pair_status"] == "NOT_APPLICABLE_PROFILE_UNAVAILABLE"     # rev12: CONDITION_ERROR
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: assert 'NOT_EVALUABL...NDITION_ERROR' == 'NOT_APPLICAB...E_UNAVAILABLE'
+E         
+E         - NOT_APPLICABLE_PROFILE_UNAVAILABLE
+E         + NOT_EVALUABLE_CONDITION_ERROR
+
+code\tests\test_owner_decisions_v15.py:184: AssertionError
+=========================== short test summary info ===========================
+FAILED code\tests\test_owner_decisions_v15.py::test_r11_7_a_fold_exception_keeps_the_label_of_a_pair_without_an_executed_run
+1 failed, 12 deselected in 0.94s

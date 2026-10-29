@@ -1,0 +1,538 @@
+{
+  "status_definitions": {
+    "NOT_TESTED": "No experiment or check in this repository addresses the claim, because it is out of the approved scope or a prerequisite (data, model, parameter provenance) is missing.",
+    "IMPLEMENTED_NOT_VALIDATED": "Code that addresses the claim exists and runs, but at least one required condition for SIMULATION_SUPPORTED is not met (a verification test fails, the model or a parameter lacks provenance for the claimed use, or the claim's conditions are not fully specified).",
+    "SIMULATION_SUPPORTED": "All of: (1) the claim is restated with its model, operating domain and metric; (2) the pre-registered experiment reproduces it (same sign and, if a value is claimed, within the claimed interval); (3) all verification tests pass; (4) every number is regenerated from saved raw outputs by a documented command at a recorded Git commit. It says nothing about physical reality.",
+    "CONTRADICTED": "A reproducible check or the pre-registered experiment gives a result inconsistent with the claim (opposite sign, outside the claimed interval, or the report's own numbers or equations are mutually inconsistent or dimensionally invalid).",
+    "CONSISTENT_WITH_RECORD": "A non-quantitative statement about how the work was done (declaration, limitation) that agrees with every artefact found. It is not evidence for any result.",
+    "REQUIRES_PHYSICAL_VALIDATION": "The claim concerns physical hardware, real batteries, real traffic data, vehicles or certification; no simulation in this repository can establish it."
+  },
+  "rows": [
+    {
+      "claim_id": "C01",
+      "original_statement": "Adaptive LQR achieves up to 12.5% ± 2.1% improvement in energy efficiency vs fixed-gain LQR (abstract, L9).",
+      "required_evidence": "A defined metric, cycle, SoH and statistic; saved runs of both controllers on the same plant; the improvement recomputed from them.",
+      "implemented_experiment": "Pre-registered primary experiment (S1/S2 x SoH 1.0-0.7), gamma sweep S-B, fixed-gain family S-C, paired robustness S-D, energy decomposition.",
+      "supporting_artifacts": [
+        "artifacts/reports/primary_results.json",
+        "artifacts/tables/primary_pairs.csv",
+        "artifacts/reports/gamma_sweep_results.json",
+        "artifacts/reports/fixed_family_results.json",
+        "artifacts/reports/robustness_results.json",
+        "artifacts/tables/energy_breakdown.csv",
+        "artifacts/figures/evaluation/primary_dE_rmse_vs_soh.png",
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "Primary (S1, SoH 0.8): dE = +0.003 % (scheduled uses slightly MORE energy), RMSE ratio 1.011 -> NO PRACTICAL DIFFERENCE. All 8 pairs |dE| <= 0.005 %; all 15 gamma settings |dE| <= 0.04 %; S-D mean -0.054 % [95 % bootstrap -0.058, -0.050]. Battery resistive losses were 1.1-2.1 % of supplied energy in the tested runs, which explains the small tested differences; this is not a bound on what other controllers or a more complete plant could achieve (corrected 2026-10-24). Report body (L5468-5472) itself implies 10.2 %, not 12.5 %. The ± interval was added editorially (D:\\EUREKA\\AUDIT_REPORT.md L28, L195).",
+      "final_reporting_recommendation": "Withdraw. Report instead: \"In a documented simulation model, SoH scheduling of LQR weights changed model-computed energy per km by less than 0.06 %\" with the conditions of N01-N03. The original conditions are undefined, so the contradiction holds for this documented model, not for an unspecified one."
+    },
+    {
+      "claim_id": "C02",
+      "original_statement": "15.3% ± 2.8% reduction in battery capacity fade over 1000 operational cycles (abstract, L9).",
+      "required_evidence": "An ageing model with documented LFP parameter provenance, validated against measured cycling data; simulated lifetime runs of both controllers.",
+      "implemented_experiment": "None (prerequisite missing; see docs/optional-components.md).",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "Report gives 15.3 % (abstract) and 14 % (L5480) for the same quantity (CHK-FADE-PCT); fade figure spans 1500 cycles and is drawn from hard-coded curves (C36, C40). Current-related metrics differ negligibly between controllers (peak current 274.794 vs 274.793 A).",
+      "final_reporting_recommendation": "Withdraw. No capacity-fade claim of any size is supported; a real-battery claim would additionally REQUIRE_PHYSICAL_VALIDATION."
+    },
+    {
+      "claim_id": "C03",
+      "original_statement": "Fixed 95 Wh/km, adaptive 85.3 Wh/km, savings 9.7 Wh/km = 9.7% (L5468-5472).",
+      "required_evidence": "Saved runs; correct arithmetic.",
+      "implemented_experiment": "Primary experiment; CHK-ENERGY-PCT.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json",
+        "artifacts/tables/primary_pairs.csv"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "9.7 Wh/km is 10.2 %, not 9.7 %. The model gives about 49.9 Wh/km on S1 for both controllers, differing by 0.0015 Wh/km.",
+      "final_reporting_recommendation": "Withdraw both numbers and every economic result derived from them (C39)."
+    },
+    {
+      "claim_id": "C04",
+      "original_statement": "Fade reduction 2.3% per 1000 cycles = 14% improvement (L5480).",
+      "required_evidence": "As C02.",
+      "implemented_experiment": "None.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "Conflicts with 15.3 % in the abstract (CHK-FADE-PCT).",
+      "final_reporting_recommendation": "Withdraw."
+    },
+    {
+      "claim_id": "C05",
+      "original_statement": "SEI-growth ageing model with parameters calibrated for LFP (Eqs. 4.21-4.29, L2916).",
+      "required_evidence": "All coefficients with values, units and sources; dimensional consistency.",
+      "implemented_experiment": "Not implementable: k_c and k_cal have no values.",
+      "supporting_artifacts": [],
+      "verification_status": "NOT_TESTED",
+      "contradictory_or_negative_evidence": "Unit mixing (percent with Ah; gamma_0 in Ah^-1/2 times sqrt(t) with t unitless) is noted in the registry but was not machine-checked, so it is not used as a CONTRADICTED basis.",
+      "final_reporting_recommendation": "Withdraw or replace with a fully specified, sourced model."
+    },
+    {
+      "claim_id": "C06",
+      "original_statement": "Ageing model validated against accelerated ageing data within 5 % over 1000 cycles (L3170).",
+      "required_evidence": "Identified dataset, cell, protocol and the comparison.",
+      "implemented_experiment": "None.",
+      "supporting_artifacts": [],
+      "verification_status": "REQUIRES_PHYSICAL_VALIDATION",
+      "contradictory_or_negative_evidence": "No dataset identified; Declaration (L5980) states no physical experiments were conducted.",
+      "final_reporting_recommendation": "Withdraw unless the dataset and comparison are supplied."
+    },
+    {
+      "claim_id": "C07",
+      "original_statement": "VUC derived from real-world Vietnamese traffic measurements (L810, L4429, L4433).",
+      "required_evidence": "The traffic data, its source and the derivation; the VUC time series.",
+      "implemented_experiment": "Provenance search of the project files; CHK-VUC-SPEED, CHK-VUC-IDLE.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "Limitations (L5996): \"not real measured data\". No VUC time series exists; its statistics are mutually impossible (C08).",
+      "final_reporting_recommendation": "Withdraw Contribution 3. Any profile used must be labelled synthetic (as S1/S2 are here)."
+    },
+    {
+      "claim_id": "C08",
+      "original_statement": "VUC: 5.8 km, 600 s, 28.5 km/h average, 17 stops of 22 s, idle 20.1 % (L4453-4467).",
+      "required_evidence": "Arithmetic consistency; the time series.",
+      "implemented_experiment": "CHK-VUC-SPEED, CHK-VUC-IDLE.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "5.8 km / 600 s = 34.8 km/h; 17 x 22 s = 374 s = 62.3 % idle.",
+      "final_reporting_recommendation": "Withdraw."
+    },
+    {
+      "claim_id": "C09",
+      "original_statement": "Table 12 distances and average speeds of NEDC, WLTP, CLTC (L4507-4509).",
+      "required_evidence": "Official cycle definitions; arithmetic consistency.",
+      "implemented_experiment": "CHK-CYCLE-SPEEDS.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "WLTP: 23.6 km / 1800 s = 47.2 km/h vs 46.5 stated. NEDC and CLTC rows are internally consistent.",
+      "final_reporting_recommendation": "Revise with cited official data (not used in this study; see preregistration section 6)."
+    },
+    {
+      "claim_id": "C10",
+      "original_statement": "Monte Carlo: 100 trials per configuration (2400 runs) vs N = 1000 samples (L17, L4343, L4375, L5016).",
+      "required_evidence": "Run logs with attempted, valid and failed counts.",
+      "implemented_experiment": "This study reports actual counts from manifests.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json",
+        "artifacts/reports/primary_results.json",
+        "artifacts/reports/gamma_sweep_results.json",
+        "artifacts/reports/fixed_family_results.json",
+        "artifacts/reports/robustness_results.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "The report's two counts conflict (CHK-MC-COUNT). This study: 296 attempted, 296 valid, 0 excluded; S-D N = 50 chosen by the pre-registered precision rule (pilot sd 0.014 pp).",
+      "final_reporting_recommendation": "Report only counts read from saved run manifests."
+    },
+    {
+      "claim_id": "C11",
+      "original_statement": "All MC samples RMSE < 0.6 m/s; Tables 16 and 18 percentiles; 0.4 % failures (L5038-5053, L5170).",
+      "required_evidence": "Saved MC runs.",
+      "implemented_experiment": "CHK-MC-TABLES; S-D.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json",
+        "artifacts/reports/robustness_results.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "Percentiles 0.62/0.78 m/s and 0.4 % failures contradict \"all samples < 0.6\"; Tables 16/18 disagree for the same study.",
+      "final_reporting_recommendation": "Withdraw."
+    },
+    {
+      "claim_id": "C12",
+      "original_statement": "Adaptive 98.2 % vs fixed 72.4 % success; 50 % lower mean tracking error (L5063, L5189).",
+      "required_evidence": "Paired MC runs of both controllers under identical uncertainty.",
+      "implemented_experiment": "S-D paired robustness (50 draws).",
+      "supporting_artifacts": [
+        "artifacts/reports/robustness_results.json",
+        "artifacts/figures/evaluation/robustness_paired_dE_hist.png",
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "0.42 vs 0.68 m/s is 38 %, not 50 % (CHK-RMSE-PCT). In S-D the scheduled controller tracked slightly WORSE (median RMSE ratio 1.011) and neither controller had a tracking failure (0 of 100 runs).",
+      "final_reporting_recommendation": "Withdraw."
+    },
+    {
+      "claim_id": "C13",
+      "original_statement": "All 18 comparisons significant after Bonferroni (Appendix E, L6440).",
+      "required_evidence": "Data, test assumptions, correct multiplicity correction.",
+      "implemented_experiment": "CHK-BONFERRONI.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "9 of 18 reported p-values exceed 0.05/18 = 0.0028.",
+      "final_reporting_recommendation": "Withdraw. Do not report significance tests on deterministic simulations."
+    },
+    {
+      "claim_id": "C14",
+      "original_statement": "Shapiro-Wilk W = 0.987, p = 0.342; LHS 1000 = random 10,000 (L5164, L5177).",
+      "required_evidence": "Data; a derivation or reference for the efficiency factor.",
+      "implemented_experiment": "None.",
+      "supporting_artifacts": [],
+      "verification_status": "NOT_TESTED",
+      "contradictory_or_negative_evidence": "No data exist.",
+      "final_reporting_recommendation": "Withdraw."
+    },
+    {
+      "claim_id": "C15",
+      "original_statement": "Morris screening ranks R0, Crr, Q as most influential (Tables 17, 19).",
+      "required_evidence": "A written sensitivity design and its runs.",
+      "implemented_experiment": "CHK-MORRIS-DUP.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "Identical mu and sigma in a 10-parameter and a 12-parameter design.",
+      "final_reporting_recommendation": "Withdraw."
+    },
+    {
+      "claim_id": "C16",
+      "original_statement": "All worst cases pass 1.5 m/s (L5140) vs WC-5 fails (L5290).",
+      "required_evidence": "Saved worst-case runs.",
+      "implemented_experiment": "CHK-WORSTCASE.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "Two incompatible result sets.",
+      "final_reporting_recommendation": "Withdraw; any future worst-case study must be pre-registered."
+    },
+    {
+      "claim_id": "C17",
+      "original_statement": "ISO 26262 ASIL B compliance with 94 % diagnostic coverage (L5426, L5938).",
+      "required_evidence": "Item definition, HARA, FMEDA, hardware metrics, safety case, confirmation measures on real hardware.",
+      "implemented_experiment": "None possible in simulation.",
+      "supporting_artifacts": [],
+      "verification_status": "REQUIRES_PHYSICAL_VALIDATION",
+      "contradictory_or_negative_evidence": "No hardware or safety artefacts exist; ASIL target stated inconsistently (C18).",
+      "final_reporting_recommendation": "Withdraw. At most describe Table 24 as a preliminary hazard list."
+    },
+    {
+      "claim_id": "C18",
+      "original_statement": "ASIL-C target (L5850) vs ASIL B target (L5860).",
+      "required_evidence": "One consistent target from a HARA.",
+      "implemented_experiment": "CHK-ASIL-LEVEL.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "B, C and \"C or D\" all appear.",
+      "final_reporting_recommendation": "Withdraw."
+    },
+    {
+      "claim_id": "C19",
+      "original_statement": "NXP S32K144 implementation; 0.40 ms in a 1 ms loop vs 1.2 ms at 10 ms (L5337, L5357, L3903).",
+      "required_evidence": "Hardware, code and timing measurements.",
+      "implemented_experiment": "CHK-SAMPLING.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "Loop period and compute time conflict; no hardware exists. Even consistent numbers would REQUIRE_PHYSICAL_VALIDATION.",
+      "final_reporting_recommendation": "Relabel as a candidate platform (future work); remove measured-looking timings."
+    },
+    {
+      "claim_id": "C20",
+      "original_statement": "SIL/PIL verification; Embedded Coder SIL mode (L3919, L4325).",
+      "required_evidence": "Simulink models, generated code, SIL/PIL logs.",
+      "implemented_experiment": "None; MATLAB not installed, no artefacts found.",
+      "supporting_artifacts": [],
+      "verification_status": "NOT_TESTED",
+      "contradictory_or_negative_evidence": "No artefacts on this machine.",
+      "final_reporting_recommendation": "Withdraw unless artefacts are produced."
+    },
+    {
+      "claim_id": "C21",
+      "original_statement": "Reliability prediction from field data and accelerated life testing (L5681).",
+      "required_evidence": "Field and ALT data.",
+      "implemented_experiment": "None.",
+      "supporting_artifacts": [],
+      "verification_status": "REQUIRES_PHYSICAL_VALIDATION",
+      "contradictory_or_negative_evidence": "Declaration states no physical experiments.",
+      "final_reporting_recommendation": "Withdraw; at most a labelled MIL-HDBK-217F parts-count estimate."
+    },
+    {
+      "claim_id": "C22",
+      "original_statement": "Platform within 5 % of published WLTP energy; coupled model within 2 % of experimental data (L4355, L4215).",
+      "required_evidence": "Reference measurements and the comparison.",
+      "implemented_experiment": "None; this study's model is explicitly unvalidated (docs/model.md section 3).",
+      "supporting_artifacts": [],
+      "verification_status": "REQUIRES_PHYSICAL_VALIDATION",
+      "contradictory_or_negative_evidence": "No reference data identified.",
+      "final_reporting_recommendation": "Withdraw; state that the model is not validated against a vehicle."
+    },
+    {
+      "claim_id": "C23",
+      "original_statement": "MATLAB R2023a / Python 3.10; Git-versioned scripts, models, data; code on request (L4303-4351, L6181).",
+      "required_evidence": "The repository.",
+      "implemented_experiment": "Search of the machine; this repository replaces it.",
+      "supporting_artifacts": [],
+      "verification_status": "NOT_TESTED",
+      "contradictory_or_negative_evidence": "No such repository, model or module exists on this machine.",
+      "final_reporting_recommendation": "Replace with this repository (commit hash, uv.lock) as the software provenance."
+    },
+    {
+      "claim_id": "C24",
+      "original_statement": "State-space model Eq. 4.3-4.4 (L2654).",
+      "required_evidence": "Dimensional consistency and physical coupling.",
+      "implemented_experiment": "CHK-AMATRIX-DIM (Pint); replacement model docs/model.md verified by tests.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json",
+        "artifacts/reports/verification-gate.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "Traction term A[v, omega] has units rad/(kg m s), not m/s^2; current enters as an opposing torque; no road load on the shaft.",
+      "final_reporting_recommendation": "Withdraw; use the documented model."
+    },
+    {
+      "claim_id": "C25",
+      "original_statement": "Controllability and observability matrices have full rank (L2742).",
+      "required_evidence": "Rank computed for a valid, fully parameterised model.",
+      "implemented_experiment": "Controllability of the documented design model (tests/test_controllers.py).",
+      "supporting_artifacts": [
+        "artifacts/reports/verification-gate.json"
+      ],
+      "verification_status": "IMPLEMENTED_NOT_VALIDATED",
+      "contradictory_or_negative_evidence": "The report's own matrices lack numerical values and are invalid (C24); only the replacement model was checked (rank 3).",
+      "final_reporting_recommendation": "Restate for the documented model."
+    },
+    {
+      "claim_id": "C26",
+      "original_statement": "Time-varying adaptive LQR is exponentially stable under conditions 1-3 (L3300).",
+      "required_evidence": "Verification of the conditions for the actual schedule.",
+      "implemented_experiment": "Frozen-time stability over SoH in [0.5, 1], gamma in [0, 10] (Hypothesis, 100 examples); P positive definite.",
+      "supporting_artifacts": [
+        "artifacts/reports/verification-gate.json"
+      ],
+      "verification_status": "IMPLEMENTED_NOT_VALIDATED",
+      "contradictory_or_negative_evidence": "Condition 3 assumes what the proof should establish; the K-dot bound is not evaluated. SoH changes over months, so frozen-time analysis is the relevant check, and it passes.",
+      "final_reporting_recommendation": "Replace the proof with the frozen-time result and a slow-variation remark."
+    },
+    {
+      "claim_id": "C27",
+      "original_statement": "Fixed LQR weights Q = diag(10,1,1,0.5), R = 1 from Bryson's rule (L4745-4747; Table 14 L4869).",
+      "required_evidence": "Stated maxima reproducing the weights.",
+      "implemented_experiment": "CHK-BRYSON; this study applies Bryson with stated maxima (configs/parameters.yaml).",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "R = 1 implies u_max = 1 Nm (torque limit 85 Nm); Q differs between text and Table 14.",
+      "final_reporting_recommendation": "Revise."
+    },
+    {
+      "claim_id": "C28",
+      "original_statement": "Gains rise as SoH falls (Appendix B; L6112).",
+      "required_evidence": "All parameters needed to recompute the DARE at each SoH.",
+      "implemented_experiment": "Gain schedule computed by eureka.controllers.gain from documented parameters.",
+      "supporting_artifacts": [
+        "artifacts/reports/primary_results.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "With the report's weight laws on a physically consistent model, gains FALL with SoH (K_e 196.0 -> 184.3, K_z 150.9 -> 141.5 at SoH 0.8, gamma = 1), because R(SoH) grows and the plant does not depend on SoH. The report's table is not reproducible (missing L_eq, K_e, K_t, gamma).",
+      "final_reporting_recommendation": "Withdraw the table; publish the computed schedule with its inputs."
+    },
+    {
+      "claim_id": "C29",
+      "original_statement": "EKF SoH estimate within 1 % after about 2 h (L3503).",
+      "required_evidence": "Estimator runs with a stated noise model, and real data for a real-battery claim.",
+      "implemented_experiment": "None; this study assumes SoH is known (best case for the scheduled controller).",
+      "supporting_artifacts": [],
+      "verification_status": "NOT_TESTED",
+      "contradictory_or_negative_evidence": "None available.",
+      "final_reporting_recommendation": "Out of the minimum scope; remove or support separately."
+    },
+    {
+      "claim_id": "C30",
+      "original_statement": "Highest regen efficiency; near-MPC performance (Table 35, L4876).",
+      "required_evidence": "Implemented, pre-tuned benchmarks on the same plant.",
+      "implemented_experiment": "None beyond fixed-gain LQR.",
+      "supporting_artifacts": [],
+      "verification_status": "NOT_TESTED",
+      "contradictory_or_negative_evidence": "Regen recovered is identical to 0.01 Wh between fixed and scheduled LQR in the primary runs.",
+      "final_reporting_recommendation": "Withdraw."
+    },
+    {
+      "claim_id": "C31",
+      "original_statement": "NSGA-II knee point at about 122 Wh/km and 14.0 %/1000 cycles (L3593).",
+      "required_evidence": "Defensible objectives, implementation, Pareto analysis.",
+      "implemented_experiment": "None (excluded; docs/optional-components.md).",
+      "supporting_artifacts": [
+        "artifacts/reports/fixed_family_results.json"
+      ],
+      "verification_status": "NOT_TESTED",
+      "contradictory_or_negative_evidence": "In the documented model energy and tracking do not conflict across LQR weights (S-C), so the trade-off motivating NSGA-II is absent; also 122 Wh/km vs about 50 Wh/km in the model.",
+      "final_reporting_recommendation": "Withdraw."
+    },
+    {
+      "claim_id": "C32",
+      "original_statement": "Parameters validated against datasheets and benchmark datasets (L5980, L5986).",
+      "required_evidence": "A source per parameter.",
+      "implemented_experiment": "Parameter registry with provenance (configs/parameters.yaml).",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "No per-parameter source; tables conflict (C33-C35, CHK-PARAM-MC). Of 33 parameters, 20 are labelled report_unverified, 11 assumed and 2 standard.",
+      "final_reporting_recommendation": "Relabel as assumed/unverified."
+    },
+    {
+      "claim_id": "C33",
+      "original_statement": "C_d = 0.35 from wind-tunnel data (L2718).",
+      "required_evidence": "Wind-tunnel source.",
+      "implemented_experiment": "Provenance review.",
+      "supporting_artifacts": [],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "Appendix A gives the source as \"Micro-EV average\".",
+      "final_reporting_recommendation": "Relabel as assumed."
+    },
+    {
+      "claim_id": "C34",
+      "original_statement": "Parameters from Citroën Ami / Wuling Mini EV datasheets vs Wuling Hongguang / VinFast VF3 (L5994, L780).",
+      "required_evidence": "Cited datasheets.",
+      "implemented_experiment": "Provenance review.",
+      "supporting_artifacts": [],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "Different vehicles named in different sections; none cited.",
+      "final_reporting_recommendation": "Describe the vehicle as hypothetical."
+    },
+    {
+      "claim_id": "C35",
+      "original_statement": "MC distributions consistent with the model parameters (Sec. 5.1, 4.6).",
+      "required_evidence": "Distributions centred on the model values with sources.",
+      "implemented_experiment": "CHK-PARAM-MC; this study centres ranges on nominal values and labels them assumed.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "Wheel radius 0.265 vs 0.28 m; eta_dt range excludes 0.88; mass mean differs.",
+      "final_reporting_recommendation": "Revise."
+    },
+    {
+      "claim_id": "C36",
+      "original_statement": "Figure 11 capacity fade over 1500 cycles (L3166).",
+      "required_evidence": "Figure generated from saved simulation output.",
+      "implemented_experiment": "Provenance review of D:\\EUREKA\\scripts\\render_kt01_figures.py.",
+      "supporting_artifacts": [
+        "artifacts/reports/report-consistency-checks.json"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "Curves are hard-coded in the rendering script; horizon differs from the 1000-cycle claim.",
+      "final_reporting_recommendation": "Withdraw."
+    },
+    {
+      "claim_id": "C37",
+      "original_statement": "Ageing model from Huria 2018, J. Power Sources (L5998) vs reference Huria et al., IEEE Trans. Ind. Appl. (L6006).",
+      "required_evidence": "Consistent citation; primary source checked.",
+      "implemented_experiment": "Citation comparison. 2026-10-24: bibliographic identity resolved on Crossref (DOI 10.1109/IEVC.2012.6183271) and the abstract read via OpenAlex; full text not accessed.",
+      "supporting_artifacts": [
+        "docs/literature_review_soh_scheduled_lqr.md"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "Two different publications cited for the same source; the listed reference is an equivalent-circuit model paper. 2026-10-24: the only matching record is T. Huria, M. Ceraolo, J. Gazzarri, R. Jackey, \"High fidelity electrical model with thermal dependence for characterization and simulation of high power lithium battery cells\", 2012 IEEE International Electric Vehicle Conference (IEVC), pp. 1-8, doi:10.1109/IEVC.2012.6183271, not IEEE Trans. Ind. Appl. 2018 and not J. Power Sources. Its abstract describes a one-RC equivalent-circuit model identified on LiNiCoMnO2 (NMC)/graphite cells, with no ageing or SEI model; it therefore supports neither LFP-specific parameters (report Assumption 5, L750, not a registered location of this claim) nor the SEI ageing model (L5998).",
+      "final_reporting_recommendation": "Correct reference [3] to the 2012 IEVC record above. Withdraw its use as a source for LFP-specific parameters (L750) and for SEI ageing theory (L5998). No replacement provenance is known; do not substitute one without a verified source."
+    },
+    {
+      "claim_id": "C38",
+      "original_statement": "No physical experiments; all results from simulation (L5980, L5992).",
+      "required_evidence": "Consistency with artefacts.",
+      "implemented_experiment": "Search of the machine.",
+      "supporting_artifacts": [],
+      "verification_status": "CONSISTENT_WITH_RECORD",
+      "contradictory_or_negative_evidence": "Contradicts C06, C07, C17, C19-C22 of the same report.",
+      "final_reporting_recommendation": "Keep; remove the contradicted statements and state that earlier figures cannot be reproduced from any code or data currently available in the project."
+    },
+    {
+      "claim_id": "C39",
+      "original_statement": "LCA 45 % CO2 reduction; payback 3.86 years (L13, L5928).",
+      "required_evidence": "Separate LCA/economic analysis with sources.",
+      "implemented_experiment": "None (out of scope).",
+      "supporting_artifacts": [],
+      "verification_status": "NOT_TESTED",
+      "contradictory_or_negative_evidence": "Payback rests on the contradicted energy saving (C01, C03).",
+      "final_reporting_recommendation": "Withdraw anything derived from C01/C03."
+    },
+    {
+      "claim_id": "C40",
+      "original_statement": "Result figures are simulation outputs.",
+      "required_evidence": "Figure-generating code reading saved runs.",
+      "implemented_experiment": "Provenance review; this study regenerates figures from saved runs (scripts/make_figures.py).",
+      "supporting_artifacts": [
+        "artifacts/figures/evaluation/primary_dE_rmse_vs_soh.png",
+        "artifacts/figures/evaluation/fixed_family_vs_scheduled.png",
+        "artifacts/figures/evaluation/robustness_paired_dE_hist.png",
+        "artifacts/figures/evaluation/tracking_error_S1_soh80.png"
+      ],
+      "verification_status": "CONTRADICTED",
+      "contradictory_or_negative_evidence": "render_kt01_figures.py lines 245-248, 321, 565-566 draw np.random noise around hard-coded values; DATA_AND_COLAB_PROMPTS.md line 3 states the intent.",
+      "final_reporting_recommendation": "Withdraw all such figures."
+    },
+    {
+      "claim_id": "N01",
+      "original_statement": "NEW. On the documented 48 V micro-EV model (flat road, synthetic profiles S1/S2 up to 50 km/h, SoH 70-100 %, SoH known), the report's SoH-scheduled LQR (gamma = 1) changes model-computed battery energy per km by +0.000 to +0.005 % relative to fixed-gain LQR, with 0.4-2.0 % higher tracking RMSE: no practical difference (pre-registered ±1 % margin).",
+      "required_evidence": "Pre-registered primary experiment, verification gate, regenerable outputs.",
+      "implemented_experiment": "Primary + S-B.",
+      "supporting_artifacts": [
+        "artifacts/reports/primary_results.json",
+        "artifacts/tables/primary_pairs.csv",
+        "artifacts/reports/gamma_sweep_results.json",
+        "artifacts/figures/evaluation/primary_dE_rmse_vs_soh.png",
+        "artifacts/figures/evaluation/tracking_error_S1_soh80.png",
+        "artifacts/reports/verification-gate.json"
+      ],
+      "verification_status": "SIMULATION_SUPPORTED",
+      "contradictory_or_negative_evidence": "With velocity-measurement noise (S-D) the sign flips (-0.054 %), still far inside the margin. Traction limit and friction brake were essentially never active on S1/S2, so actuator-constrained behaviour is untested.",
+      "final_reporting_recommendation": "Report with all conditions; do not generalise to real vehicles, standard cycles, grades or efficiency maps."
+    },
+    {
+      "claim_id": "N02",
+      "original_statement": "NEW. In the same model a single, non-scheduled fixed-gain LQR (R scaled by 0.1) gives lower SoH-averaged energy (49.854 vs 49.881 Wh/km) and lower SoH-averaged RMSE (0.038 vs 0.051 m/s) than the scheduled controller; the competing hypothesis H_C holds.",
+      "required_evidence": "Pre-registered S-C.",
+      "implemented_experiment": "S-C fixed-gain family (41 members x 4 SoH).",
+      "supporting_artifacts": [
+        "artifacts/reports/fixed_family_results.json",
+        "artifacts/figures/evaluation/fixed_family_vs_scheduled.png"
+      ],
+      "verification_status": "SIMULATION_SUPPORTED",
+      "contradictory_or_negative_evidence": "The best member lies at the edge of the pre-registered family (0.1x), so the optimum may be outside the tested range; the family spans only 0.28 % in energy.",
+      "final_reporting_recommendation": "Report as: SoH scheduling of weights did not outperform retuning a single fixed gain in this model."
+    },
+    {
+      "claim_id": "N03",
+      "original_statement": "NEW. Over 50 paired draws from ASSUMED uniform parameter ranges with velocity noise (S1, SoH 0.8), mean dE = -0.054 % (bootstrap 95 % [-0.058, -0.050] for the Monte Carlo mean); every draw within ±1 %; no tracking failures.",
+      "required_evidence": "Pre-registered S-D with sample-size rule.",
+      "implemented_experiment": "S-D.",
+      "supporting_artifacts": [
+        "artifacts/reports/robustness_results.json",
+        "artifacts/figures/evaluation/robustness_paired_dE_hist.png"
+      ],
+      "verification_status": "SIMULATION_SUPPORTED",
+      "contradictory_or_negative_evidence": "Distributions are assumed, not measured; the interval is not an inference about vehicles.",
+      "final_reporting_recommendation": "Report with the interpretation limit; no p-values."
+    },
+    {
+      "claim_id": "N04",
+      "original_statement": "NEW. In this model, battery resistive losses are 1.1-2.1 % of supplied energy on S1/S2 in the tested runs; this is the energy share that SoH changes directly. It explains the tested null result and is not a bound on what other controllers could save.",
+      "required_evidence": "Energy decomposition with closure.",
+      "implemented_experiment": "scripts/energy_breakdown.py on primary runs (closure error <= 5.4e-10).",
+      "supporting_artifacts": [
+        "artifacts/tables/energy_breakdown.csv"
+      ],
+      "verification_status": "SIMULATION_SUPPORTED",
+      "contradictory_or_negative_evidence": "Constant motor/inverter efficiency hides any part-load efficiency effect of control; a measured efficiency map could enlarge the controllable share. 2026-10-24: energy can also differ between controllers through motor/inverter and gear loss asymmetry (motoring vs regeneration), R1 loss, regenerated energy, friction braking and tracking deviations; no bound over all controllers has been derived.",
+      "final_reporting_recommendation": "Report as a model-specific energy decomposition of the tested runs, not as a bound; name the efficiency-map limitation."
+    }
+  ]
+}

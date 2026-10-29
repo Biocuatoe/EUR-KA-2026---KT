@@ -1,0 +1,186 @@
+{
+ "record": "release attempt 4 gate record (owner rulings AMB-29(a), AMB-31; amendment 2 candidate rev4). NOT a release, NOT the protocol 10.1 gate",
+ "written": "2026-10-28T12:36:44+0700",
+ "campaign_status": "BLOCKED",
+ "attempt_directory": "R4_20261028_campaign/release_attempts/attempt4_owner_rulings/",
+ "protocol_v1": {
+  "path": "R4_20261028_preflight/03_R4_protocol_v1.md",
+  "sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab"
+ },
+ "amendment_1": {
+  "path": "R4_20261028_campaign/release/03_R4_protocol_v1_amendment_1.md",
+  "sha256": "7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2",
+  "status": "APPROVED (issued 2026-10-28; unchanged)",
+  "approval_record_sha256": "03f835e9311410095e4447840ecb2b02d95c50279527df5fdf2f6d334e15eecd"
+ },
+ "amendment_2": {
+  "draft_path": "R4_20261028_pilot/03_protocol_v1_amendment_2_rev4_CANDIDATE.md",
+  "draft_sha256": "c726560d1e87036cbd94fe58724cafdc1e4746647f6cfacbb320f3e14ed143ab",
+  "revision": "candidate rev4",
+  "status": "CANDIDATE - DRAFT - NOT APPROVED FOR RELEASE",
+  "rev3_draft_sha256_unchanged": "fdaf193de510488733f0e0899d50def86cbeafabdbecdd3bc7a144099b6f492c",
+  "open_owner_decisions": [
+   "AMB-29(b)",
+   "AMB-29(c)",
+   "AMB-29(d)",
+   "AMB-30",
+   "AMB-32"
+  ],
+  "dry_run_reading": {
+   "status": "DRAFT",
+   "errors": []
+  },
+  "issued_copy_present": false,
+  "approval_record_present": false
+ },
+ "source": {
+  "pilot_readiness_gate": {
+   "path": "R4_20261028_pilot/logs/readiness_gate_v8.json",
+   "sha256": "6f051d6209f5db2ef967fd415da0999640a1f91ab60f13fe5d3950fda90b64be",
+   "junit": {
+    "tests": 229,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+   },
+   "junit_sha256": "863edd20f96ba8d4fbfa5a4d396fcb61dfb120931186617593fba1adb425cf9c"
+  },
+  "copy_verification": {
+   "files_copied": 61,
+   "copy_mismatches": [],
+   "gate_code_files": 53,
+   "gate_mismatches": [],
+   "summary_sha256": "7a6441410c58c1eaf26e264b1e5eff25a84a99ca64ca66e79dfe5205ba3aaa20",
+   "rows_sha256": "df36f34a8782c5d0e8c681ef7f96cbe186931c940d6730a5c5cb17a65fa237bd"
+  }
+ },
+ "attempt_tests": {
+  "log": "logs/pytest_release_attempt4.txt",
+  "junit": "logs/pytest_release_attempt4.xml",
+  "tests": 229,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "junit_sha256": "08a567d107175884dd4c50d0b474ba760b448dae6df1ecd320ef4277688a1892",
+  "attempt_readiness_gate": {
+   "path": "logs/readiness_gate_v1.json",
+   "sha256": "ba4f807ce721771314dee88757e64a18db6ddba820ac3a2258bc9c28bce41452"
+  }
+ },
+ "independent_review": {
+  "status_file": {
+   "path": "config/code_review_status_v5.json",
+   "sha256": "5c383dc595400878097c3cb74c5829c58e100c57ad891b31b132ca984b7743db"
+  },
+  "rev7_independent_review": "NOT PERFORMED (reviews_pending in code_review_status_v5.json; blocks campaign mode)",
+  "reports": [
+   "R4_20261028_pilot/review/N-A2_review_agent_report_20261028.md",
+   "R4_20261028_pilot/review/N-A2_verification_agent_report_20261028.md",
+   "R4_20261028_pilot/review/N-A2_verification2_agent_report_20261028.md",
+   "R4_20261028_pilot/review/N-A2_verification3_agent_report_20261028.md"
+  ],
+  "scope": "covers the code up to rev6 (release attempt 3) only; the rev7 changes of this attempt were checked by the author's own tests and self-review, not by an independent reviewer",
+  "open_critical_up_to_rev6": 0,
+  "open_major_up_to_rev6": 0,
+  "owner_decisions_pending_through_amendment_2": [
+   "AMB-29(b)",
+   "AMB-29(c)",
+   "AMB-29(d)",
+   "AMB-30",
+   "AMB-32"
+  ],
+  "owner_rulings_implemented": [
+   "N-A2",
+   "AMB-29(a)",
+   "AMB-31"
+  ]
+ },
+ "dry_run": {
+  "path": "dry_run_20261028_123642/",
+  "dry_run_json_sha256": "7dabefcbdcb153191b827fbbed077da12733be218bf4559ebb2e7ce85b8bee60",
+  "schedule_170_csv_sha256": "6011e3572ed6f99b0f306251de28580574b54ea18df495286baf8f4917a77dfc",
+  "counts_per_set": {
+   "NOM": 12,
+   "P3": 12,
+   "INS": 12,
+   "CNV": 6,
+   "SEN": 128
+  },
+  "total_runs": 170,
+  "schedule_passed": true,
+  "schedule_identical_to_attempt_2": true,
+  "planner_jobs_identical_to_attempt_2": true,
+  "config": {
+   "path": "config/campaign_config_v7_DRAFT.json",
+   "sha256": "80ae8276b7178d784b72361963a4cd574f1a4de2a9081e27c426e553a0e3cf35",
+   "current": true,
+   "schedule_sha256_matches": true
+  },
+  "sensitivity_table_regenerates": true
+ },
+ "preconditions": {
+  "record": "logs/preconditions_attempt4.json",
+  "sha256": "3a422e134be73c128538a24705bddce267186e690d063e2d3f12d2b587f8de00",
+  "readiness_blockers": [
+   "no issued amendment 2 at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+   "code review not yet performed: independent read-only review of rev7 (owner rulings AMB-29(a) and AMB-31: checks.py, campaign.py, tests/test_owner_rulings_v7.py, 03_protocol_v1_amendment_2_rev4_CANDIDATE.md)"
+  ],
+  "campaign_mode_blockers": [
+   "no issued amendment 2 at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+   "protocol 10.1 gate record: pre-run gate record logs/pre_run_hashes.txt is missing",
+   "no campaign authorisation record campaign_authorization.json (protocol approval is not campaign authorisation)",
+   "campaign must run once, from the released copy in R4_20261028_campaign (AMB-15), not from attempt4_owner_rulings (protocol 10.1)",
+   "code review not yet performed: independent read-only review of rev7 (owner rulings AMB-29(a) and AMB-31: checks.py, campaign.py, tests/test_owner_rulings_v7.py, 03_protocol_v1_amendment_2_rev4_CANDIDATE.md)"
+  ]
+ },
+ "gate_criteria": [
+  {
+   "criterion": "1. amendment 2 approved by the owner and issued",
+   "met": false,
+   "evidence": "no release/03_R4_protocol_v1_amendment_2.md and no release/amendment_2_approval.json"
+  },
+  {
+   "criterion": "2. new release attempt passes all mandatory tests and independent reviews",
+   "met": false,
+   "evidence": "attempt tests: see attempt_tests (logs/pytest_release_attempt4.xml); the rev7 changes have NOT been independently reviewed (reviews_pending)"
+  },
+  {
+   "criterion": "3. final release manifest and protocol hashes verified",
+   "met": false,
+   "evidence": "this attempt's manifest (zz_sha256_manifest_attempt4.csv) and the protocol and amendment 1 hashes are verified; the FINAL release manifest only exists after promotion to the campaign root"
+  },
+  {
+   "criterion": "4. all release criteria met, incl. promotion to the campaign root with its own protocol 10.1 gate",
+   "met": false,
+   "evidence": "not promoted; the campaign root still holds release attempt 2 (amendment 1 only), unchanged; no protocol 10.1 gate for this code"
+  },
+  {
+   "criterion": "5. separate explicit owner authorisation (release/campaign_authorization.json)",
+   "met": false,
+   "evidence": "absent; no code path writes it"
+  }
+ ],
+ "prior_attempts": {
+  "attempt_1": "release_attempts/attempt1/ (183 passed, 1 failed: test defect; preserved)",
+  "attempt_3": {
+   "location": "release_attempts/attempt3_amendment2/",
+   "scope": "amendment 2 draft rev3 (N-A2)",
+   "manifest_sha256": "e33cdcb9b9ff6c9e50d34ab00acdc53a21dac4fe87c20e79c41158f84f5da9d3",
+   "status": "preserved unchanged; superseded by this attempt for the AMB-29(a) and AMB-31 rulings"
+  },
+  "attempt_2": {
+   "location": "campaign root (code/, config/, inputs/, logs/, release/)",
+   "scope": "amendment 1 only",
+   "manifest": "zz_sha256_manifest_release.csv",
+   "manifest_sha256": "eae902275b363357674be7aed8a8b37162b687cd72ced0033dbfb84dfaff32e4",
+   "manifest_rows_verified": "122/122, no unlisted file (2026-10-28, this task)",
+   "pre_run_hashes_sha256": "b4108d85c2bc35937e7c067aa922cca44e9b24f8d0a3e0a0286cf07fd7d69759",
+   "gate_record_sha256": "c25b2cfcd899f9ea7ce1bc2e4583c6879007a5b1a9cd71e2f9cf0f790b41f8e8",
+   "status": "preserved unchanged; superseded for campaign use once amendment 2 is issued"
+  }
+ },
+ "official_outputs_present": false,
+ "campaign_mode_invoked": false,
+ "campaign_authorization_created": false,
+ "arm_to_arm_energy_differences_computed": false
+}

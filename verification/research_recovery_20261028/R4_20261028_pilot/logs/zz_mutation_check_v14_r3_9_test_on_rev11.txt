@@ -1,0 +1,28 @@
+r4h3.checks <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev11_attempt8_20261028_2126\code\r4h3\checks.py
+r4h3.campaign <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev11_attempt8_20261028_2126\code\r4h3\campaign.py
+F                                                                        [100%]
+================================== FAILURES ===================================
+___ test_r10_2_r3_9_eligibility_stays_known_when_the_pair_evaluation_raised ___
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-313/test_r10_2_r3_9_eligibility_st0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001CCFF1D5810>
+
+    def test_r10_2_r3_9_eligibility_stays_known_when_the_pair_evaluation_raised(tmp_path, monkeypatch):
+        # the rev12 change behind the R3-9 assertion (review R8-2), asserted with names every version has, so that the test
+        # fails on rev11 by its behaviour (rev11 gave qs_eligible_pair None), not on a missing name
+        def boom(*a, **k):
+            raise RuntimeError("injected pair failure")
+        task = _task()
+        design = _design(task)
+        monkeypatch.setattr(checks, "pair_qs_dynamic", boom)
+        r = _run(_cond("R1039"), design, task, tmp_path)
+        assert r["qs_vs_dyn_pair_status"] == "NOT_EVALUABLE_CONDITION_ERROR"
+>       assert r["qs_vs_dyn_applicability"] == "APPLICABLE" and r["qs_eligible_pair"] is True
+E       AssertionError: assert ('APPLICABLE' == 'APPLICABLE'
+E         
+E           APPLICABLE and None is True)
+
+code\tests\test_owner_decisions_v14.py:209: AssertionError
+=========================== short test summary info ===========================
+FAILED code\tests\test_owner_decisions_v14.py::test_r10_2_r3_9_eligibility_stays_known_when_the_pair_evaluation_raised
+1 failed, 16 deselected in 35.80s

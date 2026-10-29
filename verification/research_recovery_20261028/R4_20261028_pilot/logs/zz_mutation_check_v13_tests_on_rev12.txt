@@ -1,0 +1,163 @@
+r4h3.checks <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev12_attempt9_20261028_2308\code\r4h3\checks.py
+r4h3.campaign <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev12_attempt9_20261028_2308\code\r4h3\campaign.py
+FFFFFFFFF                                                                [100%]
+================================== FAILURES ===================================
+_ test_r9_1_an_exception_in_the_qs_screen_diagnosis_is_recorded_and_makes_the_pair_not_evaluable _
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-301/test_r9_1_an_exception_in_the_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000298D7849A70>
+
+    def test_r9_1_an_exception_in_the_qs_screen_diagnosis_is_recorded_and_makes_the_pair_not_evaluable(tmp_path,
+                                                                                                        monkeypatch):
+        task = _task()
+        design = _design(task)
+        monkeypatch.setattr(*_screen_fails("B3"))
+        c0 = _cond("R91CTRL")
+        r = _run(c0, design, task, tmp_path / "ctrl")                                        # control: diagnosis works
+        assert r["qs_vs_dyn_pair_status"] == NA and r["_errors"] == [] and r["qs_screen_errors"] == ""
+        monkeypatch.setattr(checks, "qs_piece_diagnosis", _boom)
+        c = _cond("R91")
+        r = _run(c, design, task, tmp_path / "diag")
+        e = [x for x in r["_errors"] if x["stage"] == "qs_screen"]
+>       assert len(e) == 1 and e[0]["run_id"] == c.run_ids["B3"] and "diagnosis of piece 3" in e[0]["traceback"]
+E       assert (0 == 1)
+E        +  where 0 = len([])
+
+code\tests\test_review_fixes_v13.py:86: AssertionError
+_ test_r9_2_a_fail_relabelled_after_a_recomputation_or_fold_failure_is_kept_and_counted _
+
+    def test_r9_2_a_fail_relabelled_after_a_recomputation_or_fold_failure_is_kept_and_counted():
+        def row():
+            return dict(motor="M0", set="SEN", status=checks.COMPARABLE, qs_vs_dyn_pair_status="FAIL",
+                        qs_vs_dyn_fail_arms="B0", qs_vs_dyn_pair_reason="x", qs_vs_dyn_pair_status_before_error="",
+                        qs_vs_dyn_applicability=checks.QS_APPLICABLE)
+        ok = [dict(run_id="r0", recomputed="True", protocol_ok="True"), dict(run_id="r3", recomputed="True", protocol_ok="True")]
+        a, b = row(), row()
+        campaign.fold_separate_recomputation([a], [_cc()], [], 4)                            # process failure
+        campaign.fold_failed([b], "injected")                                                # fold exception
+        for r in (a, b):
+>           assert r["qs_vs_dyn_pair_status"] == checks.QS_RUN_INVALID and r["qs_vs_dyn_pair_status_before_error"] == "FAIL"
+E           AssertionError: assert ('NOT_EVALUABLE_RUN_INVALID' == 'NOT_EVALUABLE_RUN_INVALID'
+E             
+E               NOT_EVALUABLE_RUN_INVALID and '' == 'FAIL'
+E             
+E             - FAIL)
+
+code\tests\test_review_fixes_v13.py:111: AssertionError
+___ test_r9_2_a_qs_vs_dynamic_exception_keeps_the_arm_results_and_the_fail ____
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-301/test_r9_2_a_qs_vs_dynamic_exce0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000298D784AC40>
+
+    def test_r9_2_a_qs_vs_dynamic_exception_keeps_the_arm_results_and_the_fail(tmp_path, monkeypatch):
+        task = _task()
+        design = _design(task)
+        calls = {"n": 0}
+    
+        def qs(*a, **k):                     # B0's comparison is a FAIL; the comparison of B3 then raises
+            calls["n"] += 1
+            if calls["n"] == 2:
+                raise RuntimeError("injected failure of the second comparison")
+            return _fail()
+        monkeypatch.setattr(checks, "qs_vs_dynamic", qs)
+        r = _run(_cond("R92Q"), design, task, tmp_path)
+        assert [e["stage"] for e in r["_errors"]] == ["qs_vs_dynamic"]
+>       assert r["qs_vs_dyn_pair_status"] == CE and r["qs_vs_dyn_fail_arms"] == "B0"
+E       AssertionError: assert ('NOT_EVALUABL...NDITION_ERROR' == 'NOT_EVALUABL...NDITION_ERROR'
+E         
+E           NOT_EVALUABLE_CONDITION_ERROR and '' == 'B0'
+E         
+E         - B0)
+
+code\tests\test_review_fixes_v13.py:137: AssertionError
+_ test_r9_4_a_qs_vs_dynamic_exception_on_a_not_applicable_pair_keeps_its_label_and_failed_arms _
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-301/test_r9_4_a_qs_vs_dynamic_exce0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000298D7914CB0>
+
+    def test_r9_4_a_qs_vs_dynamic_exception_on_a_not_applicable_pair_keeps_its_label_and_failed_arms(tmp_path, monkeypatch):
+        task = _task()
+        design = _design(task)
+        for obj, name, value in (_screen_fails("B3"), (checks, "pair_qs_dynamic", _boom)):
+            monkeypatch.setattr(obj, name, value)
+        r = _run(_cond("R94"), design, task, tmp_path)
+>       assert r["qs_vs_dyn_pair_status"] == CE and r["qs_vs_dyn_pair_status_before_error"] == NA
+E       AssertionError: assert ('NOT_EVALUABL...NDITION_ERROR' == 'NOT_EVALUABL...NDITION_ERROR'
+E         
+E           NOT_EVALUABLE_CONDITION_ERROR and '' == 'NOT_APPLICABLE_QS_INFEASIBLE'
+E         
+E         - NOT_APPLICABLE_QS_INFEASIBLE)
+
+code\tests\test_review_fixes_v13.py:149: AssertionError
+_ test_r9_6_after_a_recomputation_failure_only_pairs_with_an_executed_run_become_not_evaluable _
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-301/test_r9_6_after_a_recomputatio0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000298D7B819D0>
+
+    def test_r9_6_after_a_recomputation_failure_only_pairs_with_an_executed_run_become_not_evaluable(tmp_path, monkeypatch):
+        def row():
+            return dict(status="PROFILE_UNAVAILABLE", qs_vs_dyn_pair_status=NA_PROFILE, qs_vs_dyn_fail_arms="",
+                        qs_vs_dyn_pair_reason="x")
+        for executed, want in ((set(), NA_PROFILE), ({"r0"}, CE), (None, CE)):
+            r = row()
+>           campaign.fold_separate_recomputation([r], [_cc()], [], 4, "", executed)
+E           TypeError: fold_separate_recomputation() takes from 4 to 5 positional arguments but 6 were given
+
+code\tests\test_review_fixes_v13.py:164: TypeError
+_ test_r9_5_the_label_reading_is_marked_in_the_block_and_r9_3_the_condition_status_rows_are_split _
+
+    def test_r9_5_the_label_reading_is_marked_in_the_block_and_r9_3_the_condition_status_rows_are_split():
+        block = campaign.IMPLEMENTED_2["AMB_29_condition_error"]
+>       assert "Implementer reading" in block and "owner's confirmation" in block and "I-6b" in block
+E       AssertionError: assert ('Implementer reading' in 'owner ruling 2026-10-28 (AMB-29(d)): an exception before or during the pair evaluation, including the QS screen -> NO...icability), dynamic validity (the condition status) and the evaluation status are kept separate and counted separately')
+
+code\tests\test_review_fixes_v13.py:191: AssertionError
+________ test_review_status_v11_counts_r9_1_until_verified_and_blocks _________
+
+    def test_review_status_v11_counts_r9_1_until_verified_and_blocks():
+        rv = json.loads(campaign.REVIEW_STATUS.read_text(encoding="utf-8"))
+>       assert campaign.REVIEW_STATUS.name == "code_review_status_v11.json"
+E       AssertionError: assert 'code_review_status_v10.json' == 'code_review_status_v11.json'
+E         
+E         - code_review_status_v11.json
+E         ?                      ^
+E         + code_review_status_v10.json
+E         ?                      ^
+
+code\tests\test_review_fixes_v13.py:203: AssertionError
+____________________ test_rev10_candidate_matches_the_code ____________________
+
+    def test_rev10_candidate_matches_the_code():
+        rev9 = campaign.PILOT_DIR / "03_protocol_v1_amendment_2_rev9_CANDIDATE.md"
+        assert frozen.sha256(rev9) == "cdeea032c520f408f1f300a53cf1bc8b1ec4582d80340d3df2c2c94fa5d45719"
+>       assert campaign.DRAFT_AMENDMENT_2.name == "03_protocol_v1_amendment_2_rev10_CANDIDATE.md"
+E       AssertionError: assert '03_protocol_..._CANDIDATE.md' == '03_protocol_..._CANDIDATE.md'
+E         
+E         - 03_protocol_v1_amendment_2_rev10_CANDIDATE.md
+E         ?                               ^^
+E         + 03_protocol_v1_amendment_2_rev9_CANDIDATE.md
+E         ?                               ^
+
+code\tests\test_review_fixes_v13.py:215: AssertionError
+__________________ test_campaign_mode_stays_blocked_in_rev13 __________________
+
+    def test_campaign_mode_stays_blocked_in_rev13():
+        b = " | ".join(campaign.preconditions("campaign"))
+        for x in ("no issued amendment 2", "no campaign authorisation record", "protocol 10.1 gate record",
+                  "6 major findings not resolved"):
+>           assert x in b, x
+E           AssertionError: 6 major findings not resolved
+E           assert '6 major findings not resolved' in "no issued amendment 2 at D:\\EURÉKA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\releas...he owner's acceptance of the closure of the rev7 to rev12 review (an AI-agent review is not a human independent audit)"
+
+code\tests\test_review_fixes_v13.py:234: AssertionError
+=========================== short test summary info ===========================
+FAILED code\tests\test_review_fixes_v13.py::test_r9_1_an_exception_in_the_qs_screen_diagnosis_is_recorded_and_makes_the_pair_not_evaluable
+FAILED code\tests\test_review_fixes_v13.py::test_r9_2_a_fail_relabelled_after_a_recomputation_or_fold_failure_is_kept_and_counted
+FAILED code\tests\test_review_fixes_v13.py::test_r9_2_a_qs_vs_dynamic_exception_keeps_the_arm_results_and_the_fail
+FAILED code\tests\test_review_fixes_v13.py::test_r9_4_a_qs_vs_dynamic_exception_on_a_not_applicable_pair_keeps_its_label_and_failed_arms
+FAILED code\tests\test_review_fixes_v13.py::test_r9_6_after_a_recomputation_failure_only_pairs_with_an_executed_run_become_not_evaluable
+FAILED code\tests\test_review_fixes_v13.py::test_r9_5_the_label_reading_is_marked_in_the_block_and_r9_3_the_condition_status_rows_are_split
+FAILED code\tests\test_review_fixes_v13.py::test_review_status_v11_counts_r9_1_until_verified_and_blocks
+FAILED code\tests\test_review_fixes_v13.py::test_rev10_candidate_matches_the_code
+FAILED code\tests\test_review_fixes_v13.py::test_campaign_mode_stays_blocked_in_rev13
+9 failed in 187.07s (0:03:07)

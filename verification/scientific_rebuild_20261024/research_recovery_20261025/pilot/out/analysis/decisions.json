@@ -1,0 +1,57 @@
+{
+ "predictions": {
+  "P1 S1 vs F1 no practical difference (held-out)": {
+   "falsified": false,
+   "n_falsifying": 0
+  },
+  "P2 layer changes energy < 1 % (complete, held-out)": {
+   "falsified": false,
+   "n_falsifying": 0
+  },
+  "P3 layer does not raise max|e| > 10 % where battery-limited > 1 %": {
+   "falsified": false,
+   "n_tested": 10,
+   "n_falsifying": 0
+  },
+  "P4 |interaction| < 0.5 pp": {
+   "falsified": false,
+   "n_falsifying": 0
+  },
+  "P5 all branch differences < 1 % on complete runs": {
+   "falsified": false,
+   "n_falsifying": 0
+  }
+ },
+ "sanity": {
+  "R1_reproduction_rel_diff_Wh_km": 0.0,
+  "sched_equals_fixed_at_soh1_maxabs": 0.0,
+  "n_invalid": 0,
+  "max_closure_rel": 8.683587225921629e-10
+ },
+ "convergence": {
+  "S0_vs_F0": {
+   "dE_1ms": -0.016404534457067996,
+   "dE_0.5ms": -0.016404532434735594,
+   "change_pp": 2.0223324022350386e-09,
+   "pass": true
+  },
+  "S1_vs_F1": {
+   "dE_1ms": -0.013140659196912036,
+   "dE_0.5ms": -0.013140701100741874,
+   "change_pp": -4.190382983833285e-08,
+   "pass": true
+  },
+  "F1_vs_F0": {
+   "dE_1ms": -0.013771359642000866,
+   "dE_0.5ms": -0.013771333709013756,
+   "change_pp": 2.5932987110163785e-08,
+   "pass": true
+  },
+  "S1_vs_S0": {
+   "dE_1ms": -0.010507398424202608,
+   "dE_0.5ms": -0.010507416417754049,
+   "change_pp": -1.79935514404983e-08,
+   "pass": true
+  }
+ }
+}

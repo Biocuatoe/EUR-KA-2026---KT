@@ -1,0 +1,11 @@
+D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_campaign\release_attempts\attempt10_review_fixes\logs\readiness_gate_v1.json
+{
+ "written": "2026-10-29T05:27:48+0700",
+ "protocol_sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+ "junit": {
+  "tests": 311,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0
+ }
+}

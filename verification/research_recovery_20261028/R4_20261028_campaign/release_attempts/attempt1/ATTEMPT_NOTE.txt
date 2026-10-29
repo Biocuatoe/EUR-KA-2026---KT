@@ -1,0 +1,4 @@
+Release attempt 1 (2026-10-28 ~08:19-08:25): package copied from the pilot under readiness gate v5 (pilot run 13, 184/184).
+Release test run from this copy: 183 passed, 1 failed (pytest_release.txt/.xml).
+Failure: code/tests/test_rev2.py::test_readiness_gates_are_versioned assumed at least one readiness gate exists; in the release directory none exists, so latest and next are both readiness_gate_v1.json. Test defect (state assumption), not a campaign-code or protocol defect.
+No protocol 10.1 gate was recorded from this attempt. Superseded by attempt 2.

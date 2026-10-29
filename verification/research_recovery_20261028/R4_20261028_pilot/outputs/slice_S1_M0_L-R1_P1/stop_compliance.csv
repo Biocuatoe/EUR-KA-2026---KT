@@ -1,0 +1,11 @@
+run_id,t_a,t_d,tested,max_abs_v,distance_m,ok
+H3-slice-S1-M0-L-R1-P1-B0-dt1ms,0.0,10.0,True,0.0,0.0,True
+H3-slice-S1-M0-L-R1-P1-B0-dt1ms,39.0,53.0,True,0.0,0.0,True
+H3-slice-S1-M0-L-R1-P1-B0-dt1ms,118.0,137.0,True,0.0,0.0,True
+H3-slice-S1-M0-L-R1-P1-B0-dt1ms,275.0,289.0,True,0.0,0.0,True
+H3-slice-S1-M0-L-R1-P1-B0-dt1ms,315.0,324.0,True,0.0,0.0,True
+H3-slice-S1-M0-L-R1-P1-B3-dt1ms,0.0,10.0,True,0.0,0.0,True
+H3-slice-S1-M0-L-R1-P1-B3-dt1ms,39.0,53.0,True,0.0,0.0,True
+H3-slice-S1-M0-L-R1-P1-B3-dt1ms,118.0,137.0,True,0.0,0.0,True
+H3-slice-S1-M0-L-R1-P1-B3-dt1ms,275.0,289.0,True,0.0,0.0,True
+H3-slice-S1-M0-L-R1-P1-B3-dt1ms,315.0,324.0,True,0.0,0.0,True

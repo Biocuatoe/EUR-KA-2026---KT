@@ -1,0 +1,512 @@
+{
+ "U_unit": {
+  "stage": "unit",
+  "model": "EurekaController.Tests.ControllerUnit",
+  "stop_time": 10.0,
+  "intervals": 1000,
+  "solver": "dassl",
+  "tolerance": 1e-10,
+  "result_file": "verification/modelica-build/cases_ctl/U_unit/U_unit_res.csv",
+  "simflags": ""
+ },
+ "U_step_original": {
+  "stage": "step",
+  "model": "EurekaController.Tests.ControllerUnitStepOriginal",
+  "stop_time": 10.0,
+  "intervals": 1000,
+  "solver": "dassl",
+  "tolerance": 1e-10,
+  "result_file": "verification/modelica-build/cases_ctl/U_step_original/U_step_original_res.csv",
+  "simflags": ""
+ },
+ "U_step_semantics": {
+  "stage": "step",
+  "model": "EurekaController.Tests.ControllerStepSemantics",
+  "stop_time": 12.0,
+  "intervals": 1200,
+  "solver": "dassl",
+  "tolerance": 1e-10,
+  "result_file": "verification/modelica-build/cases_ctl/U_step_semantics/U_step_semantics_res.csv",
+  "simflags": ""
+ },
+ "PT_fixed_dassl_tol1e-06": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_fixed_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "dassl",
+  "tolerance": 1e-06,
+  "result_file": "verification/modelica-build/cases_ctl/PT_fixed_dassl_tol1e-06/PT_fixed_dassl_tol1e-06_res.csv",
+  "simflags": ""
+ },
+ "PT_scheduled_dassl_tol1e-06": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_scheduled_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "dassl",
+  "tolerance": 1e-06,
+  "result_file": "verification/modelica-build/cases_ctl/PT_scheduled_dassl_tol1e-06/PT_scheduled_dassl_tol1e-06_res.csv",
+  "simflags": ""
+ },
+ "PT_fixed_dassl_tol1e-08": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_fixed_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "dassl",
+  "tolerance": 1e-08,
+  "result_file": "verification/modelica-build/cases_ctl/PT_fixed_dassl_tol1e-08/PT_fixed_dassl_tol1e-08_res.csv",
+  "simflags": ""
+ },
+ "PT_scheduled_dassl_tol1e-08": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_scheduled_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "dassl",
+  "tolerance": 1e-08,
+  "result_file": "verification/modelica-build/cases_ctl/PT_scheduled_dassl_tol1e-08/PT_scheduled_dassl_tol1e-08_res.csv",
+  "simflags": ""
+ },
+ "PT_fixed_dassl_tol1e-10": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_fixed_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "dassl",
+  "tolerance": 1e-10,
+  "result_file": "verification/modelica-build/cases_ctl/PT_fixed_dassl_tol1e-10/PT_fixed_dassl_tol1e-10_res.csv",
+  "simflags": ""
+ },
+ "PT_scheduled_dassl_tol1e-10": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_scheduled_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "dassl",
+  "tolerance": 1e-10,
+  "result_file": "verification/modelica-build/cases_ctl/PT_scheduled_dassl_tol1e-10/PT_scheduled_dassl_tol1e-10_res.csv",
+  "simflags": ""
+ },
+ "PT_fixed_dassl_tol1e-12": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_fixed_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/PT_fixed_dassl_tol1e-12/PT_fixed_dassl_tol1e-12_res.csv",
+  "simflags": ""
+ },
+ "PT_scheduled_dassl_tol1e-12": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_scheduled_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/PT_scheduled_dassl_tol1e-12/PT_scheduled_dassl_tol1e-12_res.csv",
+  "simflags": ""
+ },
+ "PT_fixed_cvode_tol1e-06": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_fixed_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "cvode",
+  "tolerance": 1e-06,
+  "result_file": "verification/modelica-build/cases_ctl/PT_fixed_cvode_tol1e-06/PT_fixed_cvode_tol1e-06_res.csv",
+  "simflags": ""
+ },
+ "PT_scheduled_cvode_tol1e-06": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_scheduled_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "cvode",
+  "tolerance": 1e-06,
+  "result_file": "verification/modelica-build/cases_ctl/PT_scheduled_cvode_tol1e-06/PT_scheduled_cvode_tol1e-06_res.csv",
+  "simflags": ""
+ },
+ "PT_fixed_cvode_tol1e-08": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_fixed_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "cvode",
+  "tolerance": 1e-08,
+  "result_file": "verification/modelica-build/cases_ctl/PT_fixed_cvode_tol1e-08/PT_fixed_cvode_tol1e-08_res.csv",
+  "simflags": ""
+ },
+ "PT_scheduled_cvode_tol1e-08": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_scheduled_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "cvode",
+  "tolerance": 1e-08,
+  "result_file": "verification/modelica-build/cases_ctl/PT_scheduled_cvode_tol1e-08/PT_scheduled_cvode_tol1e-08_res.csv",
+  "simflags": ""
+ },
+ "PT_fixed_cvode_tol1e-10": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_fixed_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "cvode",
+  "tolerance": 1e-10,
+  "result_file": "verification/modelica-build/cases_ctl/PT_fixed_cvode_tol1e-10/PT_fixed_cvode_tol1e-10_res.csv",
+  "simflags": ""
+ },
+ "PT_scheduled_cvode_tol1e-10": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_scheduled_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "cvode",
+  "tolerance": 1e-10,
+  "result_file": "verification/modelica-build/cases_ctl/PT_scheduled_cvode_tol1e-10/PT_scheduled_cvode_tol1e-10_res.csv",
+  "simflags": ""
+ },
+ "PT_fixed_cvode_tol1e-12": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_fixed_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "cvode",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/PT_fixed_cvode_tol1e-12/PT_fixed_cvode_tol1e-12_res.csv",
+  "simflags": ""
+ },
+ "PT_scheduled_cvode_tol1e-12": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_scheduled_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "cvode",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/PT_scheduled_cvode_tol1e-12/PT_scheduled_cvode_tol1e-12_res.csv",
+  "simflags": ""
+ },
+ "PT_fixed_ida_tol1e-06": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_fixed_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "ida",
+  "tolerance": 1e-06,
+  "result_file": "verification/modelica-build/cases_ctl/PT_fixed_ida_tol1e-06/PT_fixed_ida_tol1e-06_res.csv",
+  "simflags": ""
+ },
+ "PT_scheduled_ida_tol1e-06": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_scheduled_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "ida",
+  "tolerance": 1e-06,
+  "result_file": "verification/modelica-build/cases_ctl/PT_scheduled_ida_tol1e-06/PT_scheduled_ida_tol1e-06_res.csv",
+  "simflags": ""
+ },
+ "PT_fixed_ida_tol1e-08": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_fixed_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "ida",
+  "tolerance": 1e-08,
+  "result_file": "verification/modelica-build/cases_ctl/PT_fixed_ida_tol1e-08/PT_fixed_ida_tol1e-08_res.csv",
+  "simflags": ""
+ },
+ "PT_scheduled_ida_tol1e-08": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_scheduled_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "ida",
+  "tolerance": 1e-08,
+  "result_file": "verification/modelica-build/cases_ctl/PT_scheduled_ida_tol1e-08/PT_scheduled_ida_tol1e-08_res.csv",
+  "simflags": ""
+ },
+ "PT_fixed_ida_tol1e-10": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_fixed_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "ida",
+  "tolerance": 1e-10,
+  "result_file": "verification/modelica-build/cases_ctl/PT_fixed_ida_tol1e-10/PT_fixed_ida_tol1e-10_res.csv",
+  "simflags": ""
+ },
+ "PT_scheduled_ida_tol1e-10": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_scheduled_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "ida",
+  "tolerance": 1e-10,
+  "result_file": "verification/modelica-build/cases_ctl/PT_scheduled_ida_tol1e-10/PT_scheduled_ida_tol1e-10_res.csv",
+  "simflags": ""
+ },
+ "PT_fixed_ida_tol1e-12": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_fixed_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "ida",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/PT_fixed_ida_tol1e-12/PT_fixed_ida_tol1e-12_res.csv",
+  "simflags": ""
+ },
+ "PT_scheduled_ida_tol1e-12": {
+  "stage": "ptune",
+  "model": "EurekaController.Cases.PTUNE_scheduled_soh080",
+  "stop_time": 122.31,
+  "intervals": 12231,
+  "solver": "ida",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/PT_scheduled_ida_tol1e-12/PT_scheduled_ida_tol1e-12_res.csv",
+  "simflags": ""
+ },
+ "A_S1_fixed_soh100": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S1_fixed_soh100",
+  "stop_time": 324.91,
+  "intervals": 32491,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S1_fixed_soh100/A_S1_fixed_soh100_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S1_scheduled_soh100": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S1_scheduled_soh100",
+  "stop_time": 324.91,
+  "intervals": 32491,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S1_scheduled_soh100/A_S1_scheduled_soh100_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S1_fixed_soh090": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S1_fixed_soh090",
+  "stop_time": 324.91,
+  "intervals": 32491,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S1_fixed_soh090/A_S1_fixed_soh090_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S1_scheduled_soh090": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S1_scheduled_soh090",
+  "stop_time": 324.91,
+  "intervals": 32491,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S1_scheduled_soh090/A_S1_scheduled_soh090_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S1_fixed_soh080": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S1_fixed_soh080",
+  "stop_time": 324.91,
+  "intervals": 32491,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S1_fixed_soh080/A_S1_fixed_soh080_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S1_scheduled_soh080": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S1_scheduled_soh080",
+  "stop_time": 324.91,
+  "intervals": 32491,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S1_scheduled_soh080/A_S1_scheduled_soh080_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S1_fixed_soh070": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S1_fixed_soh070",
+  "stop_time": 324.91,
+  "intervals": 32491,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S1_fixed_soh070/A_S1_fixed_soh070_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S1_scheduled_soh070": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S1_scheduled_soh070",
+  "stop_time": 324.91,
+  "intervals": 32491,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S1_scheduled_soh070/A_S1_scheduled_soh070_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S2_fixed_soh100": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S2_fixed_soh100",
+  "stop_time": 213.28,
+  "intervals": 21328,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S2_fixed_soh100/A_S2_fixed_soh100_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S2_scheduled_soh100": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S2_scheduled_soh100",
+  "stop_time": 213.28,
+  "intervals": 21328,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S2_scheduled_soh100/A_S2_scheduled_soh100_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S2_fixed_soh090": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S2_fixed_soh090",
+  "stop_time": 213.28,
+  "intervals": 21328,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S2_fixed_soh090/A_S2_fixed_soh090_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S2_scheduled_soh090": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S2_scheduled_soh090",
+  "stop_time": 213.28,
+  "intervals": 21328,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S2_scheduled_soh090/A_S2_scheduled_soh090_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S2_fixed_soh080": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S2_fixed_soh080",
+  "stop_time": 213.28,
+  "intervals": 21328,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S2_fixed_soh080/A_S2_fixed_soh080_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S2_scheduled_soh080": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S2_scheduled_soh080",
+  "stop_time": 213.28,
+  "intervals": 21328,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S2_scheduled_soh080/A_S2_scheduled_soh080_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S2_fixed_soh070": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S2_fixed_soh070",
+  "stop_time": 213.28,
+  "intervals": 21328,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S2_fixed_soh070/A_S2_fixed_soh070_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "A_S2_scheduled_soh070": {
+  "stage": "primary",
+  "model": "EurekaController.Cases.S2_scheduled_soh070",
+  "stop_time": 213.28,
+  "intervals": 21328,
+  "solver": "dassl",
+  "tolerance": 1e-12,
+  "result_file": "verification/modelica-build/cases_ctl/A_S2_scheduled_soh070/A_S2_scheduled_soh070_res.csv",
+  "simflags": "-lv=LOG_STATS"
+ },
+ "N_S1_fixed_soh080_dassl_tol1e-10": {
+  "stage": "sens",
+  "model": "EurekaController.Cases.S1_fixed_soh080",
+  "stop_time": 324.91,
+  "intervals": 32491,
+  "solver": "dassl",
+  "tolerance": 1e-10,
+  "result_file": "verification/modelica-build/cases_ctl/N_S1_fixed_soh080_dassl_tol1e-10/N_S1_fixed_soh080_dassl_tol1e-10_res.csv",
+  "simflags": ""
+ },
+ "N_S1_fixed_soh080_dassl_tol1e-08": {
+  "stage": "sens",
+  "model": "EurekaController.Cases.S1_fixed_soh080",
+  "stop_time": 324.91,
+  "intervals": 32491,
+  "solver": "dassl",
+  "tolerance": 1e-08,
+  "result_file": "verification/modelica-build/cases_ctl/N_S1_fixed_soh080_dassl_tol1e-08/N_S1_fixed_soh080_dassl_tol1e-08_res.csv",
+  "simflags": ""
+ },
+ "N_S1_scheduled_soh080_dassl_tol1e-10": {
+  "stage": "sens",
+  "model": "EurekaController.Cases.S1_scheduled_soh080",
+  "stop_time": 324.91,
+  "intervals": 32491,
+  "solver": "dassl",
+  "tolerance": 1e-10,
+  "result_file": "verification/modelica-build/cases_ctl/N_S1_scheduled_soh080_dassl_tol1e-10/N_S1_scheduled_soh080_dassl_tol1e-10_res.csv",
+  "simflags": ""
+ },
+ "N_S1_scheduled_soh080_dassl_tol1e-08": {
+  "stage": "sens",
+  "model": "EurekaController.Cases.S1_scheduled_soh080",
+  "stop_time": 324.91,
+  "intervals": 32491,
+  "solver": "dassl",
+  "tolerance": 1e-08,
+  "result_file": "verification/modelica-build/cases_ctl/N_S1_scheduled_soh080_dassl_tol1e-08/N_S1_scheduled_soh080_dassl_tol1e-08_res.csv",
+  "simflags": ""
+ },
+ "N_S2_fixed_soh080_dassl_tol1e-10": {
+  "stage": "sens",
+  "model": "EurekaController.Cases.S2_fixed_soh080",
+  "stop_time": 213.28,
+  "intervals": 21328,
+  "solver": "dassl",
+  "tolerance": 1e-10,
+  "result_file": "verification/modelica-build/cases_ctl/N_S2_fixed_soh080_dassl_tol1e-10/N_S2_fixed_soh080_dassl_tol1e-10_res.csv",
+  "simflags": ""
+ },
+ "N_S2_fixed_soh080_dassl_tol1e-08": {
+  "stage": "sens",
+  "model": "EurekaController.Cases.S2_fixed_soh080",
+  "stop_time": 213.28,
+  "intervals": 21328,
+  "solver": "dassl",
+  "tolerance": 1e-08,
+  "result_file": "verification/modelica-build/cases_ctl/N_S2_fixed_soh080_dassl_tol1e-08/N_S2_fixed_soh080_dassl_tol1e-08_res.csv",
+  "simflags": ""
+ },
+ "N_S2_scheduled_soh080_dassl_tol1e-10": {
+  "stage": "sens",
+  "model": "EurekaController.Cases.S2_scheduled_soh080",
+  "stop_time": 213.28,
+  "intervals": 21328,
+  "solver": "dassl",
+  "tolerance": 1e-10,
+  "result_file": "verification/modelica-build/cases_ctl/N_S2_scheduled_soh080_dassl_tol1e-10/N_S2_scheduled_soh080_dassl_tol1e-10_res.csv",
+  "simflags": ""
+ },
+ "N_S2_scheduled_soh080_dassl_tol1e-08": {
+  "stage": "sens",
+  "model": "EurekaController.Cases.S2_scheduled_soh080",
+  "stop_time": 213.28,
+  "intervals": 21328,
+  "solver": "dassl",
+  "tolerance": 1e-08,
+  "result_file": "verification/modelica-build/cases_ctl/N_S2_scheduled_soh080_dassl_tol1e-08/N_S2_scheduled_soh080_dassl_tol1e-08_res.csv",
+  "simflags": ""
+ }
+}

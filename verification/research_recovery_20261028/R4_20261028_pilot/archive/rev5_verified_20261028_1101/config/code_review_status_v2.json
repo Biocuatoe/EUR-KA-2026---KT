@@ -1,0 +1,17 @@
+{
+ "review": "04_independent_code_review.md (CR-A1..A21 read-only agent; CR-B1..B8 author) + 12_independent_gate_status_rev2.md",
+ "supersedes": "config/code_review_status_v1.json (kept unchanged)",
+ "date": "2026-10-28",
+ "open_critical": 0,
+ "open_major": 0,
+ "closed_since_v1": {
+  "CR-A2": "owner decision AMB-24 (dynamic protocol 8.2 decides P3 feasibility; QS check is a recorded diagnostic screen), implemented in checks.classify_pair and campaign.run_condition, tested (test_checks, test_campaign)",
+  "CR-A6": "all remedies the reviewer named are implemented: separate-process recomputation, per-run spec files, simulator-side C-rate I_over and min V_t, tracked-profile check, and now an independently computed torque-limit path (evaluator.torque_limits, VC-09) used for friction and the battery-limited fraction"
+ },
+ "pending_owner_acceptance": ["CR-A6 residual"],
+ "pending_owner_acceptance_text": {
+  "CR-A6 residual": "the evaluator re-writes the same declared model equations (battery current, loss laws, window limit, friction, gear) and reads the integrated states (v, T, V1) from the trace; recomputation therefore verifies bookkeeping, integration, sampling, metric definitions and the torque-limit calculation, not the plant dynamics or parameter values"
+ },
+ "not_reverified_by_independent_reviewer": ["CR-A2 closure", "CR-A6 closure"],
+ "rule": "campaign.preconditions() blocks while open_critical or open_major is non-zero, and the approval record must list every item in pending_owner_acceptance under accepted_review_items"
+}

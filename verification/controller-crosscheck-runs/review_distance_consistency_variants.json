@@ -1,0 +1,44 @@
+{
+ "A_S1_fixed_soh080": {
+  "window_s": [
+   160.0,
+   195.0
+  ],
+  "ddist_minus_simpson_v_m": -8.001002811397484e-07
+ },
+ "N_S1_fixed_soh080_dassl_tol1e-10": {
+  "window_s": [
+   160.0,
+   195.0
+  ],
+  "ddist_minus_simpson_v_m": -8.000898787940969e-07
+ },
+ "N_S1_fixed_soh080_dassl_tol1e-08": {
+  "window_s": [
+   160.0,
+   195.0
+  ],
+  "ddist_minus_simpson_v_m": -7.987524668351398e-07
+ },
+ "A_S1_scheduled_soh080": {
+  "window_s": [
+   160.0,
+   195.0
+  ],
+  "ddist_minus_simpson_v_m": -8.001179025995953e-07
+ },
+ "A_S1_fixed_soh070": {
+  "window_s": [
+   160.0,
+   195.0
+  ],
+  "ddist_minus_simpson_v_m": -8.001150604286522e-07
+ },
+ "A_S2_fixed_soh080": {
+  "window_s": [
+   158.0,
+   168.0
+  ],
+  "ddist_minus_simpson_v_m": -3.215671995349112e-08
+ }
+}

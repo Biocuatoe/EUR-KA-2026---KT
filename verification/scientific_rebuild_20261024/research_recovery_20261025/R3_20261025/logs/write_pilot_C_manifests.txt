@@ -1,0 +1,4 @@
+﻿M0 manifest written 17 runs
+M1 manifest written 17 runs
+M2 manifest written 17 runs
+EXIT=0

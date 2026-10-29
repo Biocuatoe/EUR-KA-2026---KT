@@ -1,0 +1,105 @@
+true
+""
+true
+""
+true
+"Y:/verification/modelica-build/cases/F1_openloop66_tol1e-08"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/F1_openloop66_tol1e-08/F1_openloop66_tol1e-08_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 66.0, numberOfIntervals = 6600, tolerance = 1e-8, method = 'dassl', fileNamePrefix = 'F1_openloop66_tol1e-08', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0053187,
+    timeBackend = 0.0325608,
+    timeSimCode = 0.0061523,
+    timeTemplates = 0.0161931,
+    timeCompile = 1.9256453,
+    timeSimulation = 0.2923359,
+    timeTotal = 2.2785362
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/F1_openloop66_tol1e-10"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/F1_openloop66_tol1e-10/F1_openloop66_tol1e-10_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 66.0, numberOfIntervals = 6600, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'F1_openloop66_tol1e-10', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = '-lv=LOG_STATS'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_STATS         | info    | ### STATISTICS ###
+|                 | |       | | timer
+|                 | |       | | |    0.0014728s          reading init.xml
+|                 | |       | | |    0.0003632s          reading info.xml
+|                 | |       | | |    0.0004229s [  0.2%] pre-initialization
+|                 | |       | | |    0.0001204s [  0.1%] initialization
+|                 | |       | | |      1.2e-06s [  0.0%] steps
+|                 | |       | | |    0.0061665s [  3.0%] solver (excl. callbacks)
+|                 | |       | | |     0.188911s [ 91.5%] creating output-file
+|                 | |       | | |    0.0025885s [  1.3%] event-handling
+|                 | |       | | |    0.0009482s [  0.5%] overhead
+|                 | |       | | |    0.0074073s [  3.6%] simulation
+|                 | |       | | |     0.206566s [100.0%] total
+|                 | |       | | events
+|                 | |       | | |    10 state events
+|                 | |       | | |     0 time events
+|                 | |       | | solver: dassl
+|                 | |       | | |  3949 steps taken
+|                 | |       | | |  4550 calls of functionODE
+|                 | |       | | |   456 evaluations of jacobian
+|                 | |       | | |    60 error test failures
+|                 | |       | | |     1 convergence test failures
+|                 | |       | | | 0.0006283s time of jacobian evaluation
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0033303,
+    timeBackend = 0.0280085,
+    timeSimCode = 0.0060558,
+    timeTemplates = 0.0147327,
+    timeCompile = 1.972478,
+    timeSimulation = 0.2997428,
+    timeTotal = 2.3246289
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/F1_openloop66_tol1e-12"
+record SimulationResult
+    resultFile = "",
+    simulationOptions = "startTime = 0.0, stopTime = 66.0, numberOfIntervals = 6600, tolerance = 1e-12, method = 'dassl', fileNamePrefix = 'F1_openloop66_tol1e-12', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "Simulation execution failed for model: EurekaPlant.Tests.OpenLoop66
+LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_ASSERT        | debug   | division leads to inf or nan at time -nan(ind), (a=-nan(ind)) / (b=0.9702), where divisor b is: eta_g
+LOG_ASSERT        | debug   | division leads to inf or nan at time -nan(ind), (a=-nan(ind)) / (b=0.00318), where divisor b is: R1
+LOG_STDOUT        | warning | Integrator attempt to handle a problem with a called assert.
+LOG_ASSERT        | debug   | division leads to inf or nan at time -nan(ind), (a=-nan(ind)) / (b=0.9702), where divisor b is: eta_g
+LOG_ASSERT        | debug   | division leads to inf or nan at time -nan(ind), (a=-nan(ind)) / (b=0.00318), where divisor b is: R1
+LOG_STDOUT        | info    | model terminate | Simulation terminated by an assert at time: -nan(ind)
+",
+    timeFrontend = 0.0031287,
+    timeBackend = 0.0272523,
+    timeSimCode = 0.0061841,
+    timeTemplates = 0.0151918,
+    timeCompile = 1.9640479,
+    timeSimulation = 0.1889684,
+    timeTotal = 2.205046
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/E_F1_openloop66_Crr_plus1pct"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/E_F1_openloop66_Crr_plus1pct/E_F1_openloop66_Crr_plus1pct_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 66.0, numberOfIntervals = 6600, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'E_F1_openloop66_Crr_plus1pct', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = '-override=C_rr=0.00808'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0033991,
+    timeBackend = 0.0239186,
+    timeSimCode = 0.0095606,
+    timeTemplates = 0.021856,
+    timeCompile = 1.9053544,
+    timeSimulation = 0.3077539,
+    timeTotal = 2.2721118
+end SimulationResult;
+""
+"Y:/verification/modelica-build"

@@ -1,0 +1,35 @@
+.....F..........................................................F....... [ 40%]
+........................................................................ [ 80%]
+..................................                                       [100%]
+================================== FAILURES ===================================
+_________ test_amendment_candidate_parses_and_is_not_marked_approved __________
+
+    def test_amendment_candidate_parses_and_is_not_marked_approved():
+        r = campaign.read_amendment(campaign.DRAFT_AMENDMENT)
+>       assert r["exists"] and not r["errors"], r["errors"]
+E       AssertionError: ['file not found']
+E       assert (False)
+
+code\tests\test_campaign.py:83: AssertionError
+____________________ test_comparison_detects_disagreement _____________________
+
+    def test_comparison_detects_disagreement():
+        v = np.full(10001, 1.0)
+        ev = run_eval(v, v, np.full_like(v, 5.0), 10.0)
+        sim = dict(E_net_Wh=ev["E_chem_Wh"] * 1.01, E_DC_Wh=ev["E_DC_Wh"], E_pos_Wh=ev["E_pos_Wh"],
+                   friction_brake_Wh=ev["friction_brake_Wh"], distance_km=ev["distance_m"] / 1000, trip_time_s=ev["trip_time_s"],
+                   rmse_ms=ev["rmse_ms"], max_abs_err_ms=ev["max_abs_err_ms"], I_over_As=ev["I_over_window_As"],
+                   batt_limited_frac=ev["batt_limited_frac"], stop_ok_sim=ev["stop_ok"],
+                   shortfall_vs_dref_pct=ev["shortfall_pct"], I_over_protocol_As=ev["I_over_protocol_As"],
+                   min_Vt_V=ev["min_Vt_V"], constraint_ok_sim=ev["constraint_ok"], closure_rel=ev["closure_rel_from_trace"])
+        cmp = evaluator.compare_with_simulator(ev, sim, RULES)
+        assert not cmp["all_ok"] and not cmp["E_chem_rel"]["ok"]
+        sim["E_net_Wh"] = ev["E_chem_Wh"]
+>       assert evaluator.compare_with_simulator(ev, sim, RULES)["all_ok"]
+E       assert False
+
+code\tests\test_evaluator.py:140: AssertionError
+=========================== short test summary info ===========================
+FAILED code\tests\test_campaign.py::test_amendment_candidate_parses_and_is_not_marked_approved
+FAILED code\tests\test_evaluator.py::test_comparison_detects_disagreement - a...
+2 failed, 176 passed in 281.08s (0:04:41)

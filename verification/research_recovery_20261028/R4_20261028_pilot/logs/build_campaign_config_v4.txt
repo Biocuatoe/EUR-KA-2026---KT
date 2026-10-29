@@ -1,0 +1,5 @@
+{
+ "campaign_config_v4_DRAFT.json": "302106abe003e8a27c36b644f8a852007f5d3934e0ef5e61f8b5dd3d38308f88",
+ "sensitivity_draws_v1.csv": "d1e42f31c5feb69c139b78fcdeb8d066be4aec8748708c539a210d24c008c703",
+ "trace_schema_v2.json": "e648efd2034efdad243e9bffe9ca7e786516f4a91dceca9679866c92d47645df"
+}

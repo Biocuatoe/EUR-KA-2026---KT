@@ -1,0 +1,49 @@
+﻿[1/47] done ('conv_eco', ()) 23 s
+[2/47] done ('conv_band', ()) 26 s
+[3/47] done ('band', ('UDDS', 'M0', 'L-R1')) 194 s
+[4/47] done ('band', ('UDDS', 'M1', 'L-R1')) 202 s
+[5/47] done ('band', ('UDDS', 'M0', 'L-EVE')) 352 s
+[6/47] done ('band', ('UDDS', 'M0', 'L-EVE-s')) 373 s
+[7/47] done ('band', ('UDDS', 'M1', 'L-EVE')) 365 s
+[8/47] done ('band', ('UDDS', 'M2', 'L-R1')) 202 s
+[9/47] done ('band', ('UDDS', 'M1', 'L-EVE-s')) 371 s
+[10/47] done ('eco', ('UDDS', 'M0', 'L-R1')) 99 s
+[11/47] done ('eco', ('UDDS', 'M1', 'L-R1')) 97 s
+[12/47] done ('band', ('UDDS', 'M2', 'L-EVE')) 326 s
+[13/47] done ('eco', ('UDDS', 'M0', 'L-EVE')) 151 s
+[14/47] done ('band', ('S1', 'M0', 'L-R1')) 34 s
+[15/47] done ('band', ('S1', 'M0', 'L-EVE')) 33 s
+[16/47] done ('eco', ('UDDS', 'M2', 'L-R1')) 101 s
+[17/47] done ('eco', ('UDDS', 'M1', 'L-EVE')) 177 s
+[18/47] done ('band', ('S1', 'M0', 'L-EVE-s')) 39 s
+[19/47] done ('band', ('S1', 'M1', 'L-R1')) 44 s
+[20/47] done ('band', ('S1', 'M1', 'L-EVE')) 45 s
+[21/47] done ('band', ('S1', 'M1', 'L-EVE-s')) 45 s
+[22/47] done ('band', ('S1', 'M2', 'L-R1')) 45 s
+[23/47] done ('band', ('S2', 'M0', 'L-R1')) 28 s
+[24/47] done ('band', ('UDDS', 'M2', 'L-EVE-s')) 303 s
+[25/47] done ('band', ('S1', 'M2', 'L-EVE')) 43 s
+[26/47] done ('band', ('S1', 'M2', 'L-EVE-s')) 43 s
+[27/47] done ('eco', ('UDDS', 'M2', 'L-EVE')) 173 s
+[28/47] done ('band', ('S2', 'M0', 'L-EVE')) 26 s
+[29/47] done ('band', ('S2', 'M0', 'L-EVE-s')) 27 s
+[30/47] done ('band', ('S2', 'M1', 'L-R1')) 27 s
+[31/47] done ('band', ('S2', 'M1', 'L-EVE')) 27 s
+[32/47] done ('band', ('S2', 'M1', 'L-EVE-s')) 27 s
+[33/47] done ('band', ('S2', 'M2', 'L-R1')) 26 s
+[34/47] done ('eco', ('S1', 'M0', 'L-R1')) 12 s
+[35/47] done ('band', ('S2', 'M2', 'L-EVE')) 26 s
+[36/47] done ('eco', ('S1', 'M0', 'L-EVE')) 12 s
+[37/47] done ('band', ('S2', 'M2', 'L-EVE-s')) 25 s
+[38/47] done ('eco', ('S2', 'M0', 'L-R1')) 3 s
+[39/47] done ('eco', ('S1', 'M1', 'L-R1')) 12 s
+[40/47] done ('eco', ('S2', 'M0', 'L-EVE')) 3 s
+[41/47] done ('eco', ('S2', 'M1', 'L-R1')) 3 s
+[42/47] done ('eco', ('S2', 'M1', 'L-EVE')) 3 s
+[43/47] done ('eco', ('S2', 'M2', 'L-R1')) 3 s
+[44/47] done ('eco', ('S1', 'M1', 'L-EVE')) 11 s
+[45/47] done ('eco', ('S1', 'M2', 'L-R1')) 11 s
+[46/47] done ('eco', ('S2', 'M2', 'L-EVE')) 2 s
+[47/47] done ('eco', ('S1', 'M2', 'L-EVE')) 10 s
+errors: 0
+EXIT=0  elapsed_s=710.0365275

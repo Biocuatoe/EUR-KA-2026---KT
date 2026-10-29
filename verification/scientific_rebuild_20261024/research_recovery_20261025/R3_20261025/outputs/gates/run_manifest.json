@@ -1,0 +1,41 @@
+{
+ "start": "2026-10-25T15:32:24",
+ "protocol": "R3_protocol_v1.md",
+ "protocol_sha256": "d9e82f8906224ca97aa02deddd5b674f8a33d3ebfb9b5d1564df130aaa3bae56",
+ "code": {
+  "derive_m1_curve.py": "88850e03469777f5aa7bc6cf0566ccfa221f20ce464da238a4e5abaa70de92b8",
+  "extract_fastsim_source.py": "d5006c00c1ffb85c69958c247cd9e4bd27fb29b220af1eaeeba45ad0f5f0b4fc",
+  "extract_motor_curve.py": "8a2faf6668c785ce32cbd0aab5a77c90a4bcc525e40363fa65e066e7bc676452",
+  "precheck_feasibility.py": "2cd1a7c664bc20dbb3fdec1b04db06c9a4842b996628b3b0370f4af575ff05a6",
+  "probe_fastsim_regen.py": "0ab52f8666519067284aa7c8e8bb3e61cb12529f1e114201243df9748e3db8a0",
+  "r3_lib.py": "c2403adc2c7ef7a7ecc662f0dcfd3c107a43204ee73c28bd46f782b73cba1c97",
+  "run_gates.py": "d870e096cbad828661c65682dfbd4e18ecc00bdace989af084e10def465ca85a",
+  "test_r3.py": "10eb3ecd0618ee87f47e2874e588305302c67e1b3bfdcc5f9eece31f71eea538",
+  "test_r3_supplementary.py": "0dab137ecdca717954a09de64638a887103acb88e9db694ffda8825d5a6b489b",
+  "test_r3_v1_additions.py": "3985e0d97d5523a7bec121884209258a855577fb2d578c911f167b9b88fb213f"
+ },
+ "data": {
+  "fastsim_2022_Renault_Zoe_ZE50_R135.yaml": "ed882ffab297a02f1558a6c89a0f0c6fd0fca1ff40d98b64c858a9d6d8180141",
+  "fastsim_em_probe.json": "3f9df275180507d8221f5a96a70f252e1e6e15ab8317cb8af6a6e5d3e95e7b95",
+  "fastsim_embedded_em_curves.json": "6e511532d9db59cc6040e23d55ae037abae75ea2227527127b8fccf8884a05f4",
+  "fastsim_source_record.json": "54d55dc1b8aed4358fcbdeea766c1e69f3c0e99816086eab82bff926ab1d845b",
+  "motor_curve_fastsim.json": "75947bba8bce5fc7f23e8745561aa9258c52a761071ea4129d04edc791ab7448",
+  "motor_curve_m1_derived.json": "f872faa0ff96d12d26eb5c935bb145062c3ac649e4eb327136f0fa9a0868d1d9"
+ },
+ "python": "3.14.7 (main, Sep  1 2026, 14:17:30) [MSC v.1944 64 bit (AMD64)]",
+ "numpy": "2.5.4",
+ "platform": "Windows-10-10.0.19045-SP0",
+ "workers": 6,
+ "end": "2026-10-25T15:44:13",
+ "n_tasks": 47,
+ "n_errors": 0,
+ "outputs": {
+  "band_rows.csv": "f8f31bbf3d3da84d6e76782dd3447c3b7bdb2fee79390bdafaa3316b395efad6",
+  "conv_rows.csv": "43ae2ae12fb40df37fc7913f6fd8082dde5ec280247dd1140626eea394430c32",
+  "eco_rows.csv": "c0dd7aa9c5d89278586f6b962f0ab1d025c7f1eb8359b44e01b75c6aa22e8ff3",
+  "eco_vsi_rows.csv": "b3c83b48a56fb716266621c77ccd1206f8b7c8f767adc73b895dca615718b8b3",
+  "errors.csv": "3ca8356884708c900fd9e511fb2a01873014b45473e5209f1c2d819986d35454",
+  "task_times.csv": "ae7eea309acd9996e8859017f2fae683435f04f09f43bfc886235e3d77117c24",
+  "vsi_rows.csv": "619c4daea31c7872b19027a25518989c177fda6648fbb94effaf579d64a135d5"
+ }
+}

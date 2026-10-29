@@ -1,0 +1,26 @@
+true
+""
+true
+""
+true
+""
+true
+""
+true
+"Y:/verification/modelica-build/cases_ctl/N_S2_scheduled_soh080_dassl_tol1e-08"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases_ctl/N_S2_scheduled_soh080_dassl_tol1e-08/N_S2_scheduled_soh080_dassl_tol1e-08_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 213.28, numberOfIntervals = 21328, tolerance = 1e-8, method = 'dassl', fileNamePrefix = 'N_S2_scheduled_soh080_dassl_tol1e-08', options = '', outputFormat = 'csv', variableFilter = '^(time|v|v_ref|T|T_ref|T_lim|T_cmd|a|F_fb|F_net|I|P_batt|P_e|P_m|SoC|V1|E_chem|E_rr|E_aero|E_fb|E_gear|E_visc|E_mi|E_R0|E_R1|E_regen|dist|Ah|closure|ctrl\\\\.u|ctrl\\\\.z|ctrl\\\\.z_used|ctrl\\\\.e_k|ctrl\\\\.T_lim_k|ctrl\\\\.sat_k|ctrl\\\\.k_ctrl|ctrl\\\\.se2)$', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.008557,
+    timeBackend = 0.0555196,
+    timeSimCode = 0.015023,
+    timeTemplates = 0.028769,
+    timeCompile = 1.8356886,
+    timeSimulation = 2.5070038,
+    timeTotal = 4.4508517
+end SimulationResult;
+""
+"Y:/verification/modelica-build"

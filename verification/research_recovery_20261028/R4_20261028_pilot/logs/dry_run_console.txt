@@ -1,0 +1,16 @@
+{
+ "outdir": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_pilot\\outputs\\dry_run_20261028_061440",
+ "schedule_passed": true,
+ "counts": {
+  "NOM": 12,
+  "P3": 12,
+  "INS": 12,
+  "CNV": 6,
+  "SEN": 128
+ },
+ "blockers": [
+  "no issued amendment at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_preflight\\03_R4_protocol_v1_amendment_1.md (the draft is not approved)",
+  "code review: 0 critical and 2 major findings not resolved or accepted by the owner"
+ ],
+ "campaign_may_start": false
+}

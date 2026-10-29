@@ -1,0 +1,43 @@
+{
+ "written": "2026-10-28T01:20:36+0700",
+ "protocol": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_preflight\\03_R4_protocol_v1.md",
+ "protocol_sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+ "frozen_inputs": {
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_preflight\\03_R4_protocol_v1.md": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\research_recovery_20261025\\R3_20261025\\code\\r3_lib.py": "c2403adc2c7ef7a7ecc662f0dcfd3c107a43204ee73c28bd46f782b73cba1c97",
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\research_recovery_20261025\\R3_20261025\\data\\motor_curve_m1_derived.json": "f872faa0ff96d12d26eb5c935bb145062c3ac649e4eb327136f0fa9a0868d1d9"
+ },
+ "junit_xml": "logs/pytest_run2.xml",
+ "junit_sha256": "3b17d2493825405ef876bae265974bfea6220999ecc916bf25386e2e6f448fac",
+ "junit": {
+  "tests": 67,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0
+ },
+ "code_sha256": {
+  "code/r4h3/__init__.py": "2b341a989b866e7d29dccaa7123cfd771612de8c5f69fcb1edab670379dfdae3",
+  "code/r4h3/closedloop.py": "004ff0c8a5ec7e0a2e88c382a26ac8cf8c72932bfd4f753f1255ad505ad1ed62",
+  "code/r4h3/config.py": "47c6181780a8c3ab69684f9b47f236efc5ae1dc8896fe07e3bb9746b79cb3b01",
+  "code/r4h3/evaluator.py": "9e08ead7409c5a7cd27061efd08d6656e04037ec7ec3fe949e24087374443203",
+  "code/r4h3/frozen.py": "0afc6cd3bb1d0e34dac5d592e18f3149f57d7a6a5899fbd32ab023eff826b943",
+  "code/r4h3/planner.py": "fbd7f6e61f6890accfb213bff06388ac8c9572a98e50a7b66fc9ef9e5812ef8b",
+  "code/r4h3/slice.py": "1aecdd9ebb8030814f17be42b6c14186260610ca6806306accd89bb3c21563ad",
+  "code/r4h3/task.py": "cf37b86a161c5a41f59bf3474e7ad4d419253892f08496181ebcc32350969aca",
+  "code/r4h3/traces.py": "0db67ac3b419e63a20819f26317cf69a04bff61918b15dcddbce7d0ad2f40379",
+  "code/r4h3/validator.py": "1f2e9e393b908619b228c3b1bb0372d360b37c9b71b3bddd6ee7e408e51b3bea",
+  "code/record_gate.py": "913c3516430020f38f6794e73c0e7aa22d3223054a4e81e3cb001247bb10e22d",
+  "code/run_slice.py": "967a31848643e6cc9e581a1c0cdf70ad6737c305866a80a3a197027ac49c422f",
+  "code/tests/conftest.py": "b6771aebda40cbc9ef7da6e1990e16af136eff37c15544fa044cb35c056ad102",
+  "code/tests/test_closedloop.py": "c22553ce9499630532c6d626b89c514d82ca18548008fd6e0d2189d0f2700bc3",
+  "code/tests/test_evaluator.py": "0e8df6de9068fb81d87920efa67901d6204b5944280e77f54b8587918334f62c",
+  "code/tests/test_frozen_and_task.py": "cfb7b849a3611b16e8a8cb9fff24bbf58ea3e2369a129161840d6638d0906aef",
+  "code/tests/test_planner.py": "5ea4373827d988de070992d30e597c9a16a35e6043c58c10f37685e18a504a9c",
+  "code/tests/test_scope.py": "55fcd5f25980936e4a1547b5efd18391f3ab8f07b6c6b81b710d51fc2af06d83",
+  "code/tests/test_traces.py": "290bb8bc59873d84ff3a11d3521e2f41bc6417326ae7ffb2f61ac34fc52b86c9",
+  "code/tests/test_validator.py": "56b2f3070474a43f8f6c28eba67474e5669b461b3c8907cf82fafee582449229",
+  "code/pytest.ini": "ab066707ce8bfbf7c47261d8988972def30e14af2960ff32904aeaddbcbaca26",
+  "config/scenarios_v1.json": "b12232a707034fc575737b08f2511eceab13c129d40e45317b2277488d45f9d4",
+  "config/trace_schema_v1.json": "e673d6445877c266f2a6b68b3b0d169b6178d47411683fca94b59f5d820cf508"
+ }
+}

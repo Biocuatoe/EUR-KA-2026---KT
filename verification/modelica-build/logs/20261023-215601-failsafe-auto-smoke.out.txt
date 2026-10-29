@@ -1,0 +1,18 @@
+true
+""
+"Y:/verification/modelica-build/launcher-smoke"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/launcher-smoke/CoastDown_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 20.0, numberOfIntervals = 2000, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'CoastDown', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0019479,
+    timeBackend = 0.0035088,
+    timeSimCode = 7.775e-4,
+    timeTemplates = 0.0086731,
+    timeCompile = 1.7964857,
+    timeSimulation = 0.0828194,
+    timeTotal = 1.8946378
+end SimulationResult;
+""

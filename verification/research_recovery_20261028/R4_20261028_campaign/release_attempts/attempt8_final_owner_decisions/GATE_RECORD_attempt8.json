@@ -1,0 +1,264 @@
+{
+ "record": "release attempt 8 gate record (owner rulings I-2 to I-6 and the fixes of review R7; amendment 2 candidate rev8). NOT a release, NOT the protocol 10.1 gate",
+ "written": "2026-10-28T21:25:45+0700",
+ "campaign_status": "BLOCKED",
+ "attempt_status": "REVIEWED - 3 MAJOR findings open (R8-1, R8-2, R8-3; independent AI-agent review, not a human audit). NOT RELEASABLE. Preserved unchanged as reviewed; the corrections go into a new attempt, release_attempts/attempt9_review_fixes/ (task rule: a CRITICAL or MAJOR finding is never downgraded; the reviewed attempt is kept and a new versioned attempt is made)",
+ "superseded_by": "release_attempts/attempt9_review_fixes/",
+ "attempt_directory": "R4_20261028_campaign/release_attempts/attempt8_final_owner_decisions/",
+ "protocol_v1": {
+  "path": "R4_20261028_preflight/03_R4_protocol_v1.md",
+  "sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab"
+ },
+ "amendment_1": {
+  "path": "R4_20261028_campaign/release/03_R4_protocol_v1_amendment_1.md",
+  "sha256": "7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2",
+  "status": "APPROVED (issued 2026-10-28; unchanged)",
+  "approval_record_sha256": "03f835e9311410095e4447840ecb2b02d95c50279527df5fdf2f6d334e15eecd"
+ },
+ "amendment_2": {
+  "draft_path": "R4_20261028_pilot/03_protocol_v1_amendment_2_rev8_CANDIDATE.md",
+  "draft_sha256": "f6430bf5512cb56065a2465bcfda1c4c42e244b80f73fcd3e88d985ac8811f7c",
+  "revision": "candidate rev8",
+  "status": "CANDIDATE - DRAFT - NOT APPROVED FOR RELEASE",
+  "earlier_drafts_unchanged": {
+   "rev3": "fdaf193de510488733f0e0899d50def86cbeafabdbecdd3bc7a144099b6f492c",
+   "rev4": "c726560d1e87036cbd94fe58724cafdc1e4746647f6cfacbb320f3e14ed143ab",
+   "rev5": "e7ba73c11784b3cf38f48e32b69a7a7c21b070d039118547d638bc1bf06d4f5f",
+   "rev6": "0dcb767e97e19f40c00735d9efaecf8d21c396c23952b70e60ccb21a3f711e1f",
+   "rev7": "0e3ef3112c979237e7079f176b21dd4f2ce682c7ab435f36f33321ffe67a5996"
+  },
+  "owner_rulings_stated": "I-1 to I-6 (2026-10-28); no owner decision on its content open",
+  "review_finds_text_misstating_the_rulings": [
+   "R8-1 (section 1.14 and section 3: a FAIL of a valid arm kept over an exception)",
+   "R8-3 (section 1.6: NOT_APPLICABLE_PROFILE_UNAVAILABLE for a QS-screen exception with a missing profile)",
+   "R8-2 (sections 7, 7.2 and 9: eligibility classes said to add up to the planned pairs)"
+  ],
+  "decision_matrix": {
+   "path": "R4_20261028_pilot/18_owner_decision_matrix_I1_I6.md",
+   "sha256": "f385bc32743c97e2cec1959e368226c6b1539c9198718e938d6802a80764be96",
+   "note": "pre-ruling record of the interpretations considered; unchanged"
+  },
+  "dry_run_reading": {
+   "status": "DRAFT",
+   "errors": []
+  },
+  "issued_copy_present": false,
+  "approval_record_present": false
+ },
+ "source": {
+  "pilot_readiness_gate": {
+   "path": "R4_20261028_pilot/logs/readiness_gate_v12.json",
+   "sha256": "3e376092adedf02e50c83a6a59850ac11a0df4546dc6a0e56c0331c2aa18fee5",
+   "junit": {
+    "tests": 288,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+   },
+   "junit_sha256": "0d7914b78f311c2cef1f0a9b01148b6c585314ead522c5c8aad9c33525606598"
+  },
+  "copy_verification": {
+   "files_copied": 73,
+   "copy_mismatches": [],
+   "gate_code_files": 65,
+   "gate_mismatches": [],
+   "summary_sha256": "52ea606ef73da9efde1296086f743d972641986b4a4a194172cde4916496b40b",
+   "rows_sha256": "3ebf4cb3533b6237aadf4d8e1b2363882632339bfb45abf3996b931eb382263f"
+  }
+ },
+ "attempt_tests": {
+  "log": "logs/pytest_release_attempt8.txt",
+  "junit": "logs/pytest_release_attempt8.xml",
+  "tests": 288,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "junit_sha256": "99d8cc3c2e0d414a6f97e8789f42cd3756d6b32a8b7b08a7365f312425523d3b",
+  "attempt_readiness_gate": {
+   "path": "logs/readiness_gate_v1.json",
+   "sha256": "e30b3ddfabf13fb6ecd0b28a9df758cb1dd422e5cd603382b18e5130b9dac329"
+  },
+  "note": "the suite passes, but the I6FL test (test_owner_decisions_v11.py) asserts the behaviour that review finding R8-1 rejects; a passing suite is not a closure of R8-1 to R8-3"
+ },
+ "release_validation": {
+  "path": "logs/release_validation_attempt8.json",
+  "sha256": "70a4b322d9e794d355a11702c3c5efae3c066a8289b9ce3387c786b95459ba6c",
+  "all_checks_true": true,
+  "legacy_number_hits": 12,
+  "legacy_number_hits_identical_to_attempt_7": true,
+  "legacy_number_hits_inspected": "the same file and text as attempt 7: each a protocol section reference (10.3, 2.1, 5.3); none a percentage, target or threshold"
+ },
+ "independent_review": {
+  "reviewer": "a new, separate AI review agent ('Plan' agent type, no Edit or Write tools; Read, Grep and Glob only). NOT a human independent audit",
+  "timing": "started about 19:44:10 (+0700) after the scope record (19:44:05); stopped by a service rate limit; resumed about 19:53:15; delivered about 19:57:15. The report was saved at 21:21:41 and checked to equal the agent's hand-back text in the session transcript character for character (25,350 characters)",
+  "brief": {
+   "path": "review/review_brief_attempt8_as_sent.md",
+   "sha256": "0d180a61b59806742bdbce4f1067d1e75f1262693215e18dfcc1ca5ea3df03fd"
+  },
+  "scope_record": {
+   "path": "review/review_scope_attempt8.json",
+   "sha256": "28356fd7c0e433c46594affe03ab976bbfc71fc09f017edc836be35c354dc0d0"
+  },
+  "report": {
+   "path": "review/R8_attempt8_review_agent_report_20261028.md",
+   "sha256": "8cec721ed9e20ea562fe7e7d9eb667333d02cea5314c1df6cbeec2b9f445ca38",
+   "pilot_copy": "R4_20261028_pilot/review/R8_attempt8_review_agent_report_20261028.md (identical)"
+  },
+  "counts": {
+   "CRITICAL": 0,
+   "MAJOR": 3,
+   "MINOR": 3,
+   "NOTE": 5
+  },
+  "closure_of_R7": {
+   "R7-1": "FIXED",
+   "R7-2": "FIXED",
+   "R7-3": "FIXED",
+   "R7-4": "FIXED",
+   "R7-5": "FIXED",
+   "R7-6": "FIXED",
+   "R7-7": "FIXED",
+   "R7-8": "resolved (report 19 exists)",
+   "R7-9": "superseded by the rulings",
+   "R7-10": "closed in practice by the I-6 override; the record still says unchanged (R8-8)",
+   "R7-11": "unchanged (optional hardening)",
+   "R7-12": "superseded",
+   "R7-13": "unchanged (optional hardening)"
+  },
+  "open_major": [
+   "R8-1 a run exception with a FAILing valid arm keeps the pair FAIL; ruling I-6 (stricter, I-6b) says the pair becomes NOT_EVALUABLE; the exception is presented as part of the ruling",
+   "R8-2 qs_dynamic_accounting counts the eligibility classes from the pair status, so a QS-ineligible or profile-less pair relabelled by I-6 falls out of every class (a reported denominator drops pairs)",
+   "R8-3 candidate rev8 section 1.6 still says NOT_APPLICABLE_PROFILE_UNAVAILABLE for a QS-screen exception with a missing profile"
+  ],
+  "open_minor": [
+   "R8-4 test gaps: I-6 at classify, run_report and condition_report with an NA pair; the accounting after an override; I-4 in-process half tested by source string",
+   "R8-5 the conditions/<id>.json write is unguarded; conditions.csv and process-log write failures are not listed in output_write_failures",
+   "R8-6 the block text says a measured FAIL stays FAIL, but condition_report relabels it"
+  ],
+  "open_notes": [
+   "R8-7 report 20 cited before it exists",
+   "R8-8 R7-10 recorded as unchanged",
+   "R8-9 I-6 not applied after a separate-recomputation or fold exception",
+   "R8-10 applicability UNKNOWN when one screen raised and the other failed",
+   "R8-11 decision matrix still says OPEN (historical record; not edited)"
+  ],
+  "critical_or_major_open": true,
+  "outcome_effect_per_reviewer": "none of R8-1 to R8-3 can produce a PASS, SUPPORTED or NOT SUPPORTED or start the campaign; each changes a pair status, a reported denominator, or misstates the ruled precedence",
+  "formal_status": "code_review_status_v9.json (in this attempt, written before the review) counts open_major 2 (R5-1, R5-2, verified fixed but not accepted by the owner), no open owner decision, and a reviews_pending item for this review; each blocks",
+  "status_file_in_this_attempt": {
+   "path": "config/code_review_status_v9.json",
+   "sha256": "5c7fe2d0019d23e8d12a9127525d6ca59967ed5645eb982fafd26926cd324e33"
+  }
+ },
+ "dry_run": {
+  "path": "dry_run_20261028_212143/",
+  "dry_run_json_sha256": "b8ae785a530c9639dbd78ac55d4fc56a960b8cfa8d1c9ce04579bb568e8a9f48",
+  "schedule_170_csv_sha256": "6011e3572ed6f99b0f306251de28580574b54ea18df495286baf8f4917a77dfc",
+  "counts_per_set": {
+   "NOM": 12,
+   "P3": 12,
+   "INS": 12,
+   "CNV": 6,
+   "SEN": 128
+  },
+  "total_runs": 170,
+  "schedule_passed": true,
+  "schedule_identical_to_attempt_2": true,
+  "planner_jobs_identical_to_attempt_2": true,
+  "config": {
+   "path": "config/campaign_config_v11_DRAFT.json",
+   "sha256": "eeac761f759a24db4085445f48a149265a0869401f6e3453efe4b55f0bfc8d45",
+   "current": true,
+   "schedule_sha256_matches": true
+  },
+  "sensitivity_table_regenerates": true
+ },
+ "preconditions": {
+  "record": "logs/preconditions_attempt8.json",
+  "sha256": "5d49875a9a9e8ed1e4e5b7f1ccd4e21b232935920e40f15eb6ae60ec47165472",
+  "readiness_blockers": [
+   "no issued amendment 2 at D:\\EURÉKA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+   "code review: 0 critical and 2 major findings not resolved or accepted by the owner",
+   "code review not yet performed or its closure not yet accepted by the owner: independent read-only AI review of rev11 (owner rulings I-2 to I-6, fixes of R7-1 to R7-7, candidate rev8) on release attempt 8, and the owner's acceptance of the closure of the rev7 to rev11 review (an AI-agent review is not a human independent audit)"
+  ],
+  "campaign_mode_blockers": [
+   "no issued amendment 2 at D:\\EURÉKA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+   "protocol 10.1 gate record: pre-run gate record logs/pre_run_hashes.txt is missing",
+   "no campaign authorisation record campaign_authorization.json (protocol approval is not campaign authorisation)",
+   "campaign must run once, from the released copy in R4_20261028_campaign (AMB-15), not from attempt8_final_owner_decisions (protocol 10.1)",
+   "code review: 0 critical and 2 major findings not resolved or accepted by the owner",
+   "code review not yet performed or its closure not yet accepted by the owner: independent read-only AI review of rev11 (owner rulings I-2 to I-6, fixes of R7-1 to R7-7, candidate rev8) on release attempt 8, and the owner's acceptance of the closure of the rev7 to rev11 review (an AI-agent review is not a human independent audit)"
+  ]
+ },
+ "gate_criteria": [
+  {
+   "criterion": "0. owner decisions I-2 to I-6 made and implemented as ruled",
+   "met": false,
+   "evidence": "made by the owner on 2026-10-28; implemented with 3 MAJOR findings (R8-1, R8-2, R8-3) open"
+  },
+  {
+   "criterion": "1. amendment 2 approved by the owner and issued",
+   "met": false,
+   "evidence": "no release/03_R4_protocol_v1_amendment_2.md and no release/amendment_2_approval.json; candidate rev8 misstates the rulings at R8-1 and R8-3"
+  },
+  {
+   "criterion": "2. release attempt passes all mandatory tests and independent reviews",
+   "met": false,
+   "evidence": "tests: {'tests': 288, 'failures': 0, 'errors': 0, 'skipped': 0} from this copy; AI-agent review: 3 MAJOR findings open"
+  },
+  {
+   "criterion": "3. final release manifest and protocol hashes verified",
+   "met": false,
+   "evidence": "this attempt's manifest and the protocol, amendment 1 and draft hashes are verified; the FINAL release manifest only exists after promotion to the campaign root"
+  },
+  {
+   "criterion": "4. promotion to the campaign root with its own protocol 10.1 gate",
+   "met": false,
+   "evidence": "not promoted; the campaign root still holds release attempt 2 (amendment 1 only), unchanged"
+  },
+  {
+   "criterion": "5. separate explicit owner authorisation (release/campaign_authorization.json)",
+   "met": false,
+   "evidence": "absent; no code path writes it"
+  }
+ ],
+ "prior_attempts": {
+  "attempt_1": "release_attempts/attempt1/ (preserved)",
+  "attempt_2": {
+   "location": "campaign root",
+   "manifest_sha256": "eae902275b363357674be7aed8a8b37162b687cd72ced0033dbfb84dfaff32e4",
+   "pre_run_hashes_sha256": "b4108d85c2bc35937e7c067aa922cca44e9b24f8d0a3e0a0286cf07fd7d69759",
+   "gate_record_sha256": "c25b2cfcd899f9ea7ce1bc2e4583c6879007a5b1a9cd71e2f9cf0f790b41f8e8",
+   "status": "preserved unchanged (amendment 1 only)"
+  },
+  "attempt_3": {
+   "location": "release_attempts/attempt3_amendment2/",
+   "manifest_sha256": "e33cdcb9b9ff6c9e50d34ab00acdc53a21dac4fe87c20e79c41158f84f5da9d3",
+   "status": "preserved unchanged"
+  },
+  "attempt_4": {
+   "location": "release_attempts/attempt4_owner_rulings/",
+   "manifest_sha256": "0727aa086b3da7639c680a0bdd4f84ce58f7fe11133e64526727841cbcb91c89",
+   "status": "preserved unchanged"
+  },
+  "attempt_5": {
+   "location": "release_attempts/attempt5_owner_rulings/",
+   "manifest_sha256": "c32601c33365dc5c06f563d0ccec01c483208809499d87f3f2d7d944a4f3ca00",
+   "status": "preserved unchanged"
+  },
+  "attempt_6": {
+   "location": "release_attempts/attempt6_review_fixes/",
+   "manifest_sha256": "b19ddce7373aff8e02ae854986f3107355ea244a05e0a4b62831623b96ad4c3a",
+   "status": "preserved unchanged"
+  },
+  "attempt_7": {
+   "location": "release_attempts/attempt7_final_review/",
+   "manifest_sha256": "42e8c88f35edd49e206354173a79925050eae395a52b04a5fba7675f32a1f933",
+   "status": "preserved unchanged; superseded by this attempt"
+  }
+ },
+ "official_outputs_present": false,
+ "campaign_mode_invoked": false,
+ "campaign_authorization_created": false,
+ "arm_to_arm_energy_differences_computed": false
+}

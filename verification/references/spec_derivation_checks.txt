@@ -1,0 +1,43 @@
+(1) coast-down closed form  v(t) = (s tan(atan((2 g v0 + b)/s) - s t/2) - b)/(2 g),  s = sqrt(4 a g - b^2)
+    symbolic residual  dv/dt + (alpha + beta v + gamma v^2)  simplifies to: 0
+    symbolic initial condition v(0) - v0 simplifies to: 0
+    numeric residual at the project's coast-down coefficients, t = 7.3 s: 2.08166817117216851329430937767E-17
+    negative control: residual with gamma changed by 1 % in the ODE only is non-zero: True
+
+(2) dimensional check of every specification term (units taken from configs/parameters.yaml)
+    OK   M_eff = M + J_m G^2 / r_w^2  [kg]
+    OK   omega = G v / r_w  [1/s]
+    OK   t_s = T - B_m omega  [N m]
+    OK   F_w = G t_s eta_g / r_w  [N]
+    OK   F_w (regeneration) = G t_s / (eta_g r_w)  [N]
+    OK   F_rr = C_rr M g  [N]
+    OK   tanh argument v / v_eps  [1]
+    OK   F_aero = 1/2 rho C_d A_f v^2  [N]
+    OK   F_fb = G max(0, -T_lim - T_ref) / r_w  [N]
+    OK   T_lim = P_max / omega  [N m]
+    OK   dv/dt = F / M_eff  [m/s^2]
+    OK   dT/dt = (T_cmd - T) / tau_T  [N m / s]
+    OK   P_m = T omega  [W]
+    OK   P_e = P_m / eta_mi  [W]
+    OK   I = (V - sqrt(V^2 - 4 R0 P_e)) / (2 R0)  [A]; V^2 vs R0*P_e
+    OK   I -> V/R0  [A]
+    OK   dV1/dt = -V1/(R1 C1) + I/C1  [V/s]  (term 1)
+    OK   dV1/dt  (term 2)
+    OK   dSoC/dt = -I / (3600 Q SoH)  [1/s]
+    OK   dE_chem/dt = V_oc I  [W]
+    OK   dE_rr/dt = F_rr v  [W]
+    OK   dE_gear/dt = t_s omega - F_w v  [W]
+    OK   dE_visc/dt = B_m omega^2  [W]
+    OK   dE_R0/dt = R0 I^2  [W]
+    OK   dE_R1/dt = V1^2 / R1  [W]
+    OK   E_C1 = 1/2 C1 V1^2  [J]
+    OK   E_kin = 1/2 M_eff v^2  [J]
+    OK   shaft friction reflected c = B_m G^2/(eta_g r_w^2)  [N s/m]
+
+    negative controls (each must be detected as dimensionally wrong):
+    detected  F_w = G t_s eta_g * r_w   (wrong: multiply by wheel radius)
+    detected  F_aero with v instead of v^2
+    detected  P_m = T * v   (wheel speed in place of motor speed)
+    detected  dv/dt = F / M  with F in W
+
+    positive checks failed: 0 of 28;  negative controls detected: 4 of 4

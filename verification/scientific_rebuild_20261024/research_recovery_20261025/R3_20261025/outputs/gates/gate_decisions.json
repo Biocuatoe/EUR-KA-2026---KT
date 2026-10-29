@@ -1,0 +1,75 @@
+{
+ "inputs": {
+  "band_rows.csv": "f8f31bbf3d3da84d6e76782dd3447c3b7bdb2fee79390bdafaa3316b395efad6",
+  "vsi_rows.csv": "619c4daea31c7872b19027a25518989c177fda6648fbb94effaf579d64a135d5",
+  "eco_rows.csv": "c0dd7aa9c5d89278586f6b962f0ab1d025c7f1eb8359b44e01b75c6aa22e8ff3",
+  "eco_vsi_rows.csv": "b3c83b48a56fb716266621c77ccd1206f8b7c8f767adc73b895dca615718b8b3",
+  "conv_rows.csv": "43ae2ae12fb40df37fc7913f6fd8082dde5ec280247dd1140626eea394430c32"
+ },
+ "gates": {
+  "M0": {
+   "G-A": {
+    "decision": "FAIL-certified-on-grid",
+    "n_qualifying": 6,
+    "best_found_pct": 0.011154220889864064,
+    "best_max_pct": 0.0837712821494363
+   },
+   "G-B": {
+    "decision": "PASS",
+    "n_qualifying": 9,
+    "best_found_pct": 5.320355069912452,
+    "best_max_pct": 5.320500270845773
+   },
+   "G-C": {
+    "decision": "PASS",
+    "n_qualifying": 12,
+    "best_found_pct": 34.31686074928424,
+    "best_max_pct": 34.33466743397955
+   },
+   "H-C S_max(5%) all < 1 %": false
+  },
+  "M1": {
+   "G-A": {
+    "decision": "FAIL-certified-on-grid",
+    "n_qualifying": 6,
+    "best_found_pct": 0.08606937901209921,
+    "best_max_pct": 0.0860693790120437
+   },
+   "G-B": {
+    "decision": "PASS",
+    "n_qualifying": 9,
+    "best_found_pct": 6.695012775731158,
+    "best_max_pct": 6.762235964997587
+   },
+   "G-C": {
+    "decision": "PASS",
+    "n_qualifying": 12,
+    "best_found_pct": 34.21103485003164,
+    "best_max_pct": 34.21325008375835
+   },
+   "H-C S_max(5%) all < 1 %": false
+  },
+  "M2": {
+   "G-A": {
+    "decision": "FAIL-certified-on-grid",
+    "n_qualifying": 8,
+    "best_found_pct": 0.004039990153925643,
+    "best_max_pct": 0.008538346588349288
+   },
+   "G-B": {
+    "decision": "PASS",
+    "n_qualifying": 12,
+    "best_found_pct": 7.347430328666105,
+    "best_max_pct": 7.35347073773589
+   },
+   "G-C": {
+    "decision": "PASS",
+    "n_qualifying": 14,
+    "best_found_pct": 34.04345163017304,
+    "best_max_pct": 34.130957845844534
+   },
+   "H-C S_max(5%) all < 1 %": false
+  }
+ },
+ "robustness_triggers": []
+}

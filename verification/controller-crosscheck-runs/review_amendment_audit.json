@@ -1,0 +1,187 @@
+{
+ "frozen_text_reconstruction": {
+  "reconstructed_sha256": "c7951936eb162ab5326711d537fe7f8438f76a2ac25df4a80126267237e9725d",
+  "sha256_recorded_at_freeze": "c7951936eb162ab5326711d537fe7f8438f76a2ac25df4a80126267237e9725d",
+  "identical": true
+ },
+ "amendment_headings": [
+  [
+   "A1",
+   "2026-10-23 23:4x (local), written after the freeze and after the first P-TUNE closed-loop runs, before any P-TUNE result was inspected or evaluated. Resource guard, not a numerical change."
+  ],
+  [
+   "A2",
+   "2026-10-23 23:5x (local). POST-RESULT amendment to sections 7 and 9 (written after the P-TUNE solver-study results were computed; before any S1 or S2 closed-loop case was run and before any Modelica-vs-Python comparison)."
+  ],
+  [
+   "A3",
+   "2026-10-23 23:5x (local), same status as A2 (post P-TUNE result, pre S1/S2)."
+  ],
+  [
+   "A4",
+   "2026-10-24 00:4x (local). POST-RESULT evaluator corrections (written after the primary-grid results had been evaluated; no tolerance, criterion threshold, metric definition or gain was changed)."
+  ]
+ ],
+ "ptune_dassl_ida": {
+  "PT_fixed_dassl_tol1e-06": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 1.1584884840830146e-05,
+   "samples_over_1e-3": 0,
+   "update_rows_with_unchanged_E_chem_while_v>1": 0,
+   "first_such_update_time_s": null
+  },
+  "PT_scheduled_dassl_tol1e-06": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 1.1572607298442519e-05,
+   "samples_over_1e-3": 0,
+   "update_rows_with_unchanged_E_chem_while_v>1": 0,
+   "first_such_update_time_s": null
+  },
+  "PT_fixed_dassl_tol1e-08": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 1.1584822821968546e-05,
+   "samples_over_1e-3": 0,
+   "update_rows_with_unchanged_E_chem_while_v>1": 0,
+   "first_such_update_time_s": null
+  },
+  "PT_scheduled_dassl_tol1e-08": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 1.1576183134433103e-05,
+   "samples_over_1e-3": 0,
+   "update_rows_with_unchanged_E_chem_while_v>1": 0,
+   "first_such_update_time_s": null
+  },
+  "PT_fixed_dassl_tol1e-10": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 1.1598471550878158e-05,
+   "samples_over_1e-3": 0,
+   "update_rows_with_unchanged_E_chem_while_v>1": 0,
+   "first_such_update_time_s": null
+  },
+  "PT_scheduled_dassl_tol1e-10": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 1.159025709626386e-05,
+   "samples_over_1e-3": 0,
+   "update_rows_with_unchanged_E_chem_while_v>1": 0,
+   "first_such_update_time_s": null
+  },
+  "PT_fixed_dassl_tol1e-12": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 1.1598636755204235e-05,
+   "samples_over_1e-3": 0,
+   "update_rows_with_unchanged_E_chem_while_v>1": 0,
+   "first_such_update_time_s": null
+  },
+  "PT_scheduled_dassl_tol1e-12": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 1.1590699381537044e-05,
+   "samples_over_1e-3": 0,
+   "update_rows_with_unchanged_E_chem_while_v>1": 0,
+   "first_such_update_time_s": null
+  },
+  "PT_fixed_ida_tol1e-06": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 0.11111693717922413,
+   "samples_over_1e-3": 103,
+   "update_rows_with_unchanged_E_chem_while_v>1": 1,
+   "first_such_update_time_s": 17.99000000000001
+  },
+  "PT_scheduled_ida_tol1e-06": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 0.11111699882873016,
+   "samples_over_1e-3": 103,
+   "update_rows_with_unchanged_E_chem_while_v>1": 1,
+   "first_such_update_time_s": 18.01000000000002
+  },
+  "PT_fixed_ida_tol1e-08": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 0.11111693697425999,
+   "samples_over_1e-3": 103,
+   "update_rows_with_unchanged_E_chem_while_v>1": 0,
+   "first_such_update_time_s": null
+  },
+  "PT_scheduled_ida_tol1e-08": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 0.11111699864915309,
+   "samples_over_1e-3": 103,
+   "update_rows_with_unchanged_E_chem_while_v>1": 1,
+   "first_such_update_time_s": 18.01000000000002
+  },
+  "PT_fixed_ida_tol1e-10": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 0.11111693696939132,
+   "samples_over_1e-3": 103,
+   "update_rows_with_unchanged_E_chem_while_v>1": 1,
+   "first_such_update_time_s": 18.01000000000002
+  },
+  "PT_scheduled_ida_tol1e-10": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 0.11111699864534622,
+   "samples_over_1e-3": 103,
+   "update_rows_with_unchanged_E_chem_while_v>1": 1,
+   "first_such_update_time_s": 17.99000000000001
+  },
+  "PT_fixed_ida_tol1e-12": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 0.11111693696949639,
+   "samples_over_1e-3": 103,
+   "update_rows_with_unchanged_E_chem_while_v>1": 1,
+   "first_such_update_time_s": 18.01000000000002
+  },
+  "PT_scheduled_ida_tol1e-12": {
+   "status_from_omc_record": "finished successfully",
+   "kinematic_residual_max_m": 0.11111699864536295,
+   "samples_over_1e-3": 103,
+   "update_rows_with_unchanged_E_chem_while_v>1": 1,
+   "first_such_update_time_s": 17.99000000000001
+  }
+ },
+ "cvode_evidence": {
+  "PT_fixed_cvode_tol1e-06": {
+   "mentions_desired_step_to_small": true,
+   "csv_bytes": 10044205235,
+   "omc_record_status": "no record"
+  },
+  "PT_fixed_cvode_tol1e-08": {
+   "mentions_desired_step_to_small": true,
+   "csv_bytes": 503204686,
+   "omc_record_status": "FAILED"
+  },
+  "PT_fixed_cvode_tol1e-10": {
+   "mentions_desired_step_to_small": true,
+   "csv_bytes": 504842322,
+   "omc_record_status": "FAILED"
+  },
+  "PT_fixed_cvode_tol1e-12": {
+   "mentions_desired_step_to_small": true,
+   "csv_bytes": 514282593,
+   "omc_record_status": "FAILED"
+  },
+  "PT_scheduled_cvode_tol1e-06": {
+   "mentions_desired_step_to_small": true,
+   "csv_bytes": 504159688,
+   "omc_record_status": "FAILED"
+  },
+  "PT_scheduled_cvode_tol1e-08": {
+   "mentions_desired_step_to_small": true,
+   "csv_bytes": 522844767,
+   "omc_record_status": "FAILED"
+  },
+  "PT_scheduled_cvode_tol1e-10": {
+   "mentions_desired_step_to_small": true,
+   "csv_bytes": 506590075,
+   "omc_record_status": "FAILED"
+  },
+  "PT_scheduled_cvode_tol1e-12": {
+   "mentions_desired_step_to_small": true,
+   "csv_bytes": 517263083,
+   "omc_record_status": "FAILED"
+  }
+ },
+ "timeline": {
+  "solver_selection_json_mtime": "2026-10-23T23:48:58",
+  "first_S1_S2_grid_result_mtime": "2026-10-23T23:49:48",
+  "first_grid_file": "A_S1_fixed_soh100_res.csv",
+  "selection_precedes_first_grid_result": true
+ }
+}

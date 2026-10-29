@@ -1,0 +1,38 @@
+{
+ "record": "approval of R4 protocol v1 amendment 1 (H3)",
+ "approved_by": "project owner (decisions given in the owner's instruction 'R4 H3 - Owner Approval and Campaign Release Preparation', 2026-10-28; record written by the AI assistant on the owner's instruction)",
+ "date": "2026-10-28T07:46:40+0700",
+ "date_source": "local system clock",
+ "protocol_v1_sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+ "candidate_amendment": "R4_20261028_pilot/03_protocol_v1_amendment_1_rev2_CANDIDATE.md",
+ "candidate_amendment_sha256": "42a7a9f51afae7c059373b9048ed9b09c6b87c975705e54c485f2f6bfc133369",
+ "amendment_sha256": "7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2",
+ "released_amendment": "R4_20261028_campaign/release/03_R4_protocol_v1_amendment_1.md",
+ "decisions": {
+  "AMB-14": "nominal P1-designed fixed-LQR gain across all sensitivity draws; within each draw B0 and B3 use the same gain and the same plant realisation; no per-draw retuning",
+  "AMB-15": "separate official campaign directory R4_20261028_campaign/ with its own release package, gate record and manifest",
+  "AMB-24": "the quasi-static check is diagnostic; the dynamic run's frozen protocol 8.2 checks determine formal feasibility; infeasible or incomplete cases receive no paired energy-saving result",
+  "S2": "held-out role preserved; its outcomes are not used to tune the planner, select parameters, revise tolerances or choose a planner design",
+  "D1-D5": "as stated in the released amendment, sections 1-5"
+ },
+ "approved_tolerances": {
+  "E_chem_rel": 0.0001,
+  "E_DC_rel": 0.0001,
+  "distance_rel": 1e-06,
+  "trip_time_abs_s": 1e-09,
+  "I_over_protocol_abs_As": 1e-06,
+  "rmse_rel": 1e-09,
+  "flags": "identical"
+ },
+ "tolerance_notes": {
+  "I_over_protocol_abs_As": "a chosen numerical-comparison tolerance set relative to the 0.01 A s pass/fail threshold of protocol 8.2; not a measured physical uncertainty and not a change of that threshold"
+ },
+ "accepted_review_items": [
+  "CR-A6 residual"
+ ],
+ "accepted_review_items_text": {
+  "CR-A6 residual": "accepted as a limitation: the independent evaluator checks accounting, integration and metric definitions but does not independently validate the physical plant model; the separate torque-limit calculation reduces shared-code errors but still shares model equations and parameters"
+ },
+ "scope": "protocol amendment only; this record does not authorise campaign execution",
+ "campaign_status": "BLOCKED pending release-gate completion and a separate owner campaign authorisation (release/campaign_authorization.json)"
+}

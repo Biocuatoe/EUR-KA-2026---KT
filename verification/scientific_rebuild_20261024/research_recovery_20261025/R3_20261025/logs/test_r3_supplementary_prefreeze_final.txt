@@ -1,0 +1,25 @@
+    M1 eta range [0.8400, 0.9500], max |dL| per 0.18 W step = 0.0343 W
+PASS test_m1_curve_physical
+    M1 inverse-map worst relative error 1.49e-05
+PASS test_m1_inverse_maps
+    M0 vs R1 derivatives: worst |diff|/(1+|R1|) = 9.09e-14 over 3000 random states
+PASS test_m0_margin_vs_r1
+    QS vs R1 ideal ledger: 16 rows, worst relative difference 0.0714 % (limit 0.2 %)
+PASS test_qs_vs_r1_ledger_all_rows
+    QS point terminal and friction power vs hand formula (with motor envelope): worst relative difference 5.3e-15; signs consistent
+PASS test_signs_and_independent_point_power
+    hard braking 12 m/s, -3 m/s^2, L-EVE: charge current 100.0 A (limit 100.0 A), friction 24155 W
+PASS test_regen_limit_friction_and_current
+    5751 (v, a) points x 3 models x 3 limit sets x 2 SoH: all finite; 71215 feasible points satisfy every limit; 32303 flagged infeasible
+PASS test_grid_finite_and_constraints_enforced
+    QS point vs dynamic derivatives at the same (v, T): current 0.0e+00 rel., acceleration 1.1e-16 m/s^2
+PASS test_qs_and_dynamic_share_equations
+    M0 S2 L-EVE dynamic: closure 2.6e-10 of throughput, E_pos+E_neg-E_chem 5.4e-10 J
+    M1 S2 L-EVE dynamic: closure 2.7e-10 of throughput, E_pos+E_neg-E_chem 1.2e-09 J
+PASS test_dynamic_closure_m0_m1
+    band DP vs exhaustive enumeration of 625 trajectories: objective equal (3037.8888 J)
+PASS test_band_dp_is_global_on_its_grid
+    distance-constrained: dual bound 3525.765 <= exact 3733.939 <= bisection result 3733.939 J
+PASS test_band_lagrangian_bound_valid
+    eco DP vs exhaustive enumeration of 125 speed sequences: objective equal (2876.7137)
+PASS test_eco_dp_is_global_on_its_grid

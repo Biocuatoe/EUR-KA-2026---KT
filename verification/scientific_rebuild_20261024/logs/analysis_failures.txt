@@ -1,0 +1,1 @@
+2026-10-24T16:00:55Z analyze.py run 1 FAILED: ValueError in csv writer (convergence rows had keys absent from the first row: dE_change_pp, E_F_rel_change, E_S_rel_change, pass). Fixed write() to use the union of keys; no data or metric changed. Rerun follows.

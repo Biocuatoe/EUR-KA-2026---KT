@@ -1,0 +1,6 @@
+M_eff=876.9 kg | motor-speed-limited vehicle speed = 36.06 m/s = 129.8 km/h = 80.7 mph
+max traction force at low speed = 1914 N -> max accel before road loads = 2.18 m/s^2
+udds   vmax=25.35 m/s ( 91.2 km/h) amax=1.48 m/s^2 | samples with required force > available: 2 of 1370 (0.1 %) | peak required shaft power ~19.9 kW (limit 18 kW)
+hwfet  vmax=26.78 m/s ( 96.4 km/h) amax=1.43 m/s^2 | samples with required force > available: 0 of 766 (0.0 %) | peak required shaft power ~16.2 kW (limit 18 kW)
+us06   vmax=35.90 m/s (129.2 km/h) amax=3.24 m/s^2 | samples with required force > available: 171 of 601 (28.5 %) | peak required shaft power ~44.4 kW (limit 18 kW)
+project profiles for comparison: S1 vmax = 50 km/h (13.9 m/s), S2 vmax = 25 km/h

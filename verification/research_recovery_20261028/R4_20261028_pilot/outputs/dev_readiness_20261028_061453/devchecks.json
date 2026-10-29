@@ -1,0 +1,245 @@
+{
+ "kind": "development checks (S1 only; not campaign runs; no energy difference computed)",
+ "start": "2026-10-28T06:14:53+0700",
+ "readiness_gate_sha256": "c373eb6d5d5d8c3a5ed332e4bf362b19dc913f616e5cae2a6d82d9ed1da71a1b",
+ "frozen": {
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_preflight\\03_R4_protocol_v1.md": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\research_recovery_20261025\\R3_20261025\\code\\r3_lib.py": "c2403adc2c7ef7a7ecc662f0dcfd3c107a43204ee73c28bd46f782b73cba1c97",
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\research_recovery_20261025\\R3_20261025\\data\\motor_curve_m1_derived.json": "f872faa0ff96d12d26eb5c935bb145062c3ac649e4eb327136f0fa9a0868d1d9",
+  "D:\\EUR\u00c9KA 2026 - KT\\src\\eureka\\plant.py": "e5701bce018f37bebba525dfc58d0e347c63cc1a5b385badf74fe6d0ea772907",
+  "D:\\EUR\u00c9KA 2026 - KT\\src\\eureka\\controllers.py": "2d57b757407dac725891219aa93102ce8be20294a97723fb35ea862ac76d8660",
+  "D:\\EUR\u00c9KA 2026 - KT\\src\\eureka\\params.py": "192ad65933b2786910104f3755601938758a161f603e2cce02d9eaa74907369e",
+  "D:\\EUR\u00c9KA 2026 - KT\\src\\eureka\\cycles.py": "f09ed877efe3aece1d4990c79d55c4902999758ef67ab2603591703ae49b8cec",
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\src\\rebuild\\model.py": "2050111b0860d1552c180b25ffbfbdb16c098c0e262632be6ecdb95d876003de",
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\src\\rebuild\\run.py": "7336a295f407134f6d7aa38ba1749edcb3aea9cdbddf7114c2f8a7bbdb185001",
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\configs\\R1.yaml": "b33d9667dacd69884c6443f7f71c229972eabb7a99eec6ae0649dfebbb980858",
+  "D:\\EUR\u00c9KA 2026 - KT\\configs\\parameters.yaml": "0efe2d1a413a51d425043691c857807b021d62908935adfda9b757de6f9f374f",
+  "D:\\EUR\u00c9KA 2026 - KT\\configs\\cycles\\profiles.yaml": "90a496a36c618e216693a3d819b84739f10e6c35167c23a91b63478ef28be0a6"
+ },
+ "canonical_cycle_inputs": {
+  "S1_source_segments.json": "88a04c905fdd6a3b109e0189af0347c8d6525347ae4812228e7838162cb8d6fd",
+  "S1_knots_from_yaml.csv": "e0cdb1f4a4627838a8e691d4516492e604b01be85c2afa34c1ec98be8fd120ec",
+  "S2_source_segments.json": "49093326473eb4d33dde34400a6dc741949d192e48fe25c81f1467683a0f2d13",
+  "S2_knots_from_yaml.csv": "4bf394980e928f075f7f82135aa11beba1b97b95a2d1e18ae030ea3c448dde6c",
+  "cycle_inputs_manifest.json": "3d3d6e93d19842141691d041e2363dd8f3f9fef73b362ebcd6ae2ef8b6de7ea5",
+  "S1_sampled_h1.csv": "87151e5c30c02f5f6784732a5dd619fc6c39e90913d4afcf06292de2c1f2b7da",
+  "S2_sampled_h1.csv": "def9d757dc0923afe20a91dca487c84527daff2bef5421c34aef1a61f0a6e990"
+ },
+ "env": {
+  "python": "3.14.7 (main, Sep  1 2026, 14:17:30) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\EUR\u00c9KA 2026 - KT\\.venv\\Scripts\\python.exe",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "machine": "DESKTOP-QF465MB",
+  "process_start": "2026-10-28T06:14:53+0700",
+  "packages": [
+   "Pint==0.26.2",
+   "PyYAML==6.0.3",
+   "Pygments==2.21.0",
+   "annotated-types==0.8.0",
+   "asttokens==3.0.2",
+   "colorama==0.4.6",
+   "comm==0.2.3",
+   "contourpy==1.4.0",
+   "control==0.10.2",
+   "coverage==7.17.0",
+   "cycler==0.12.1",
+   "debugpy==1.8.22",
+   "eureka-2026-kt==0.1.0",
+   "executing==2.3.0",
+   "flexcache==0.3",
+   "flexparser==0.4",
+   "fonttools==4.67.0",
+   "formulaic==1.2.2",
+   "hypothesis==6.170.8",
+   "iniconfig==2.3.1",
+   "interface_meta==2.0.1",
+   "ipykernel==7.4.0",
+   "ipython==9.17.1",
+   "ipython_pygments_lexers==1.1.1",
+   "jedi==0.20.1",
+   "jupyter_client==8.10.0",
+   "jupyter_core==5.9.1",
+   "kiwisolver==1.5.1",
+   "matplotlib-inline==0.2.2",
+   "matplotlib==3.11.2",
+   "mpmath==1.3.0",
+   "narwhals==2.27.1",
+   "nest-asyncio2==1.7.4",
+   "numpy==2.5.4",
+   "packaging==26.3",
+   "pandas==3.1.0",
+   "parso==0.8.7",
+   "patsy==1.0.3",
+   "pillow==13.0.0",
+   "pip==26.2.2",
+   "platformdirs==4.13.5",
+   "pluggy==1.7.0",
+   "prompt_toolkit==3.0.53",
+   "psutil==7.2.2",
+   "pure_eval==0.2.4",
+   "pydantic==2.14.1",
+   "pydantic_core==2.50.1",
+   "pyparsing==3.3.3",
+   "pytest-cov==7.1.0",
+   "pytest==9.1.1",
+   "python-dateutil==3.0.0",
+   "pyzmq==27.2.0",
+   "ruff==0.17.2",
+   "scipy==1.18.1",
+   "six==1.17.0",
+   "sortedcontainers==2.4.0",
+   "stack-data==0.6.3",
+   "statsmodels==0.15.0",
+   "sympy==1.14.0",
+   "tornado==6.6",
+   "traitlets==5.16.1",
+   "typing-inspection==0.4.4",
+   "typing_extensions==4.16.0",
+   "tzdata==2026.5",
+   "wcwidth==0.9.3",
+   "wrapt==2.5.1"
+  ]
+ },
+ "DEV-1_revalidate": {
+  "B0": {
+   "valid_on_P1": true,
+   "failures_on_P1": [],
+   "n_extra_stop_knots": 0,
+   "max_wait_speed_ms": 0.0,
+   "early_arrival_s": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "departures_s": [
+    10.0,
+    53.0,
+    137.0,
+    289.0
+   ],
+   "qs_feasible_on_P3": true,
+   "n_infeasible_pieces_on_P3": 0
+  },
+  "B3": {
+   "valid_on_P1": true,
+   "failures_on_P1": [],
+   "n_extra_stop_knots": 0,
+   "max_wait_speed_ms": 0.0,
+   "early_arrival_s": [
+    0.1573214789065105,
+    0.3078509669441303,
+    0.48302722207017723,
+    0.07631078065463726
+   ],
+   "departures_s": [
+    10.0,
+    53.0,
+    137.0,
+    289.0
+   ],
+   "qs_feasible_on_P3": true,
+   "n_infeasible_pieces_on_P3": 0
+  }
+ },
+ "DEV-2_qs_vs_dynamic": {
+  "B0": {
+   "run_id": "H3-slice-S1-M0-L-R1-P1-B0-dt1ms",
+   "qs_vs_dyn_pct": 0.5256210267672426,
+   "status": "pass",
+   "qs_feasible": true
+  },
+  "B3": {
+   "run_id": "H3-slice-S1-M0-L-R1-P1-B3-dt1ms",
+   "qs_vs_dyn_pct": 0.1965949336202757,
+   "status": "pass",
+   "qs_feasible": true
+  },
+  "B3_knots_QS_equals_planner_DP_sum_rel": 1.1962677798367024e-14
+ },
+ "DEV-3_grid": {
+  "coarse": {
+   "ds": 2.0,
+   "dv": 0.1,
+   "status": "ok",
+   "runtime_s": 1.0380184650421143,
+   "valid": true,
+   "failures": [],
+   "n_extra_stop_knots": 0,
+   "segment_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "segment_time_margin_s": [
+    0.1573214789065247,
+    0.3078509669442582,
+    0.4830272220680172,
+    0.07631078065463726
+   ],
+   "n_lambda_evals": [
+    42,
+    42,
+    42,
+    42
+   ]
+  },
+  "fine": {
+   "ds": 1.0,
+   "dv": 0.05,
+   "status": "ok",
+   "runtime_s": 6.543945074081421,
+   "valid": true,
+   "failures": [],
+   "n_extra_stop_knots": 0,
+   "segment_status": [
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "segment_time_margin_s": [
+    0.1082400783795805,
+    0.15576259241703383,
+    0.4214990687635236,
+    0.015401285252536923
+   ],
+   "n_lambda_evals": [
+    42,
+    42,
+    42,
+    42
+   ]
+  },
+  "eco_QS_energy_rel_change_fine_vs_coarse": -0.0023530073794503603,
+  "note": "eco-arm quantity only; protocol 9 judges |dS_found| on S2 in the campaign, not here"
+ },
+ "DEV-4_dt": {
+  "run_id": "DEV-S1-M0-LR1-P1-B0-dt0.5ms",
+  "wall_s": 354.20903062820435,
+  "dt_s": 0.0005,
+  "trace_dt_s": 0.001,
+  "n_samples": 324001,
+  "credited_flags": {
+   "sim_valid": true,
+   "complete": true,
+   "tracking_ok": true,
+   "stop_ok": true,
+   "constraint_ok": true,
+   "finite_ok": true,
+   "recompute_protocol_ok": true,
+   "credited": true
+  },
+  "recompute_protocol_ok": true,
+  "recompute_diagnostics_ok": true,
+  "failed_checks": [],
+  "separate_process_exit": 0,
+  "separate_process_stdout": "{\"n_rows\": 1, \"n_recomputed\": 1, \"n_protocol_fail\": 0, \"simulator_modules_imported\": [], \"python\": \"3.14.7 (main, Sep  1 2026, 14:17:30) [MSC v.1944 64 bit (AMD64)]\"}",
+  "separate_process_stderr": "",
+  "single_run_E_rel_change_05ms_vs_1ms": -1.6541944275810367e-10,
+  "note": "one arm only: a per-run time-step sensitivity, not the protocol 9 paired dE_rel check"
+ },
+ "end": "2026-10-28T06:20:54+0700"
+}

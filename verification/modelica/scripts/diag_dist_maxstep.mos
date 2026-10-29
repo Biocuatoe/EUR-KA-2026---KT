@@ -1,0 +1,7 @@
+setCommandLineOptions("--unitChecking"); getErrorString();
+loadFile("../modelica/EurekaPlant/package.mo"); getErrorString();
+loadFile("../modelica/EurekaController/package.mo"); getErrorString();
+mkdir("cases_ctl"); getErrorString();
+mkdir("cases_ctl/DIAG_S1_fixed_maxstep1e-3"); cd("cases_ctl/DIAG_S1_fixed_maxstep1e-3");
+simulate(EurekaController.Cases.S1_fixed_soh080, startTime = 0, stopTime = 324.91, numberOfIntervals = 32491, tolerance = 1e-12, method = "dassl", outputFormat = "csv", fileNamePrefix = "DIAG_S1_fixed_maxstep1e-3", variableFilter = "^(time|v|dist|E_chem|ctrl\.k_ctrl)$", simflags = "-maxStepSize=0.001"); getErrorString();
+cd("../..");

@@ -1,0 +1,30 @@
+﻿{
+    "label":  "diag_ida_ev2",
+    "time":  "2026-10-23T23:46:19",
+    "exit_code":  0,
+    "project_root":  "D:\\EURÉKA 2026 - KT",
+    "letter":  "Y",
+    "cleanup":  {
+                    "alias_created":  true,
+                    "alias_removed":  true,
+                    "alias_still_mapped":  false,
+                    "other_mappings_unchanged":  true,
+                    "env_restored":  true
+                },
+    "steps":  [
+                  {
+                      "name":  "version",
+                      "command":  "omc --version",
+                      "exit_code":  0,
+                      "seconds":  0.04,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-234616-diag_ida_ev2-version.out.txt"
+                  },
+                  {
+                      "name":  "diag_ida_events",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\diag_ida_events.mos",
+                      "exit_code":  0,
+                      "seconds":  2.88,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-234616-diag_ida_ev2-diag_ida_events.out.txt"
+                  }
+              ]
+}

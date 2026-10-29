@@ -25,6 +25,25 @@ htmlcov/
 /artifacts/
 /logs/
 
+# OpenModelica verification (verification/): regenerable tool output only. Evidence is not hidden
+# here. Solver-status logs, failure records, sources, scripts, reports and result tables under
+# verification/ are tracked. Tiers and the verification procedure: verification/evidence-storage-guide.md
+/verification/omc-userdata/
+/verification/openmodelica-smoke/out/
+/verification/modelica-build/cases/
+/verification/modelica-build/cases_ctl/
+/verification/modelica-build/cases_v0.1.0_when_pre/
+/verification/modelica-build/launcher-smoke/
+/verification/modelica-build/tmp/
+
+# Tier B raw evidence: kept in the project, outside Git history (too large for plain Git, no LFS
+# remote). Listed with sizes and SHA-256 in the tracked verification/evidence-preservation-inventory.csv
+/verification/modelica-build/python_reference/
+/verification/modelica-build/logs/*_single_PT_*_cvode_*.out.txt
+/verification/controller-crosscheck-runs/raw/
+/verification/controller-crosscheck-runs/python_reference/
+/verification/evidence-archive/
+
 # The working thesis is the author's own document, not a project output. The copy
 # audited on 2026-10-23 is frozen at data/raw/report/EUREKA-2026-KT.docx.
 /EURÉKA 2026 - KT.docx

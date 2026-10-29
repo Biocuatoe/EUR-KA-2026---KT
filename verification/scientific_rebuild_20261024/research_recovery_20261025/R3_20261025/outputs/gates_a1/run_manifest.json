@@ -1,0 +1,34 @@
+{
+ "start": "2026-10-25T15:48:30",
+ "amendment_sha256": "51a2e93b7ab4dca04fd5e1a0eb314cf9ab486dc97f9789cb2d7129c2e53d1e64",
+ "protocol_sha256": "d9e82f8906224ca97aa02deddd5b674f8a33d3ebfb9b5d1564df130aaa3bae56",
+ "code": {
+  "build_hash_manifest.py": "ada7ee8c198f46a46b76cc9aba97d3aee9905c9c14ac7d3a0bb0f38aec6130c9",
+  "check_m2_regen_split.py": "6bf6da8bb19bb5a46938948faa3a5b6d27906e9eeb5077d3fa7c5d39b8daea29",
+  "derive_m1_curve.py": "88850e03469777f5aa7bc6cf0566ccfa221f20ce464da238a4e5abaa70de92b8",
+  "describe_band_paths.py": "cf84f7dd0cd5eb7bc37742ab4b4234b381a5cd1fb8832199dcdacc0e53a5fa55",
+  "evaluate_gates.py": "c7447e65df3949fee42e52112800a0f45b334700154635aa86ace5dc6116fe22",
+  "extract_fastsim_source.py": "d5006c00c1ffb85c69958c247cd9e4bd27fb29b220af1eaeeba45ad0f5f0b4fc",
+  "extract_motor_curve.py": "8a2faf6668c785ce32cbd0aab5a77c90a4bcc525e40363fa65e066e7bc676452",
+  "precheck_feasibility.py": "2cd1a7c664bc20dbb3fdec1b04db06c9a4842b996628b3b0370f4af575ff05a6",
+  "probe_fastsim_regen.py": "0ab52f8666519067284aa7c8e8bb3e61cb12529f1e114201243df9748e3db8a0",
+  "probe_fastsim_regen_rule.py": "a6bbbbbe8874e082d94e8987b5aaea9b4cff6aeb9ed09f0c5cf6738b8930c703",
+  "r3_lib.py": "c2403adc2c7ef7a7ecc662f0dcfd3c107a43204ee73c28bd46f782b73cba1c97",
+  "run_gates.py": "d870e096cbad828661c65682dfbd4e18ecc00bdace989af084e10def465ca85a",
+  "run_gates_a1.py": "0a5d74d7a09d7d4f410c5c754fb6aa2d31db4cdd2c6109a8860649a871f56938",
+  "test_r3.py": "10eb3ecd0618ee87f47e2874e588305302c67e1b3bfdcc5f9eece31f71eea538",
+  "test_r3_supplementary.py": "0dab137ecdca717954a09de64638a887103acb88e9db694ffda8825d5a6b489b",
+  "test_r3_v1_additions.py": "3985e0d97d5523a7bec121884209258a855577fb2d578c911f167b9b88fb213f"
+ },
+ "python": "3.14.7 (main, Sep  1 2026, 14:17:30) [MSC v.1944 64 bit (AMD64)]",
+ "numpy": "2.5.4",
+ "end": "2026-10-25T15:59:32",
+ "n_tasks": 27,
+ "n_errors": 0,
+ "outputs": {
+  "band_rows.csv": "2deb32b8540c53b45d620b8a8079e9b7e2760dcfcf02d6bad3578690891ceec5",
+  "errors.csv": "3ca8356884708c900fd9e511fb2a01873014b45473e5209f1c2d819986d35454",
+  "task_times.csv": "ab01964382eedb5c3248b673603f6e3b78ff3bd06e3e3ea0ed04fe7961664d9c",
+  "vsi_rows.csv": "67de0ad05cb28f702f3db1af91ce704e30f925ad58fe8990e38feb5935f61518"
+ }
+}

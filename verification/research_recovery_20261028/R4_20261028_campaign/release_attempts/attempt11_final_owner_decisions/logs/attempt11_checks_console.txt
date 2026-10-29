@@ -1,0 +1,41 @@
+{
+ "dry_run_dir": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release_attempts\\attempt11_final_owner_decisions\\dry_run_20261029_082618",
+ "schedule_passed": true,
+ "counts": {
+  "NOM": 12,
+  "P3": 12,
+  "INS": 12,
+  "CNV": 6,
+  "SEN": 128
+ },
+ "config": {
+  "path": "config/campaign_config_v14_DRAFT.json",
+  "sha256": "f16d69cfd243b2a6472780faa6fcd27485d928084da41cc7b287b3de6330cc0b",
+  "current": true,
+  "schedule_sha256_matches": true
+ },
+ "sensitivity": {
+  "table": "config/sensitivity_draws_v1.csv",
+  "table_sha256": "d1e42f31c5feb69c139b78fcdeb8d066be4aec8748708c539a210d24c008c703",
+  "regenerates_identically": true
+ },
+ "draft_amendment_2_status": "DRAFT",
+ "draft_amendment_2_errors": [],
+ "draft_amendment_2_sha256": "ac376c0b362c2e99a9d3777fa849205844487e0be50a41dd1c5f1b2410b5ae1b",
+ "campaign_may_start": false,
+ "readiness_blockers": [
+  "no issued amendment 2 at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+  "code review: 0 critical and 6 major findings not resolved or accepted by the owner",
+  "code review not yet performed or its closure not yet accepted by the owner: independent read-only AI review of rev14 (owner decisions I-6b and the relabelling scope of 2026-10-29, fixes of R10-1 to R10-4, candidate rev12) on release attempt 11, and the owner's acceptance of the closure of the rev7 to rev14 review (an AI-agent review is not a human independent audit)"
+ ],
+ "campaign_blockers": [
+  "no issued amendment 2 at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+  "protocol 10.1 gate record: pre-run gate record logs/pre_run_hashes.txt is missing",
+  "no campaign authorisation record campaign_authorization.json (protocol approval is not campaign authorisation)",
+  "campaign must run once, from the released copy in R4_20261028_campaign (AMB-15), not from attempt11_final_owner_decisions (protocol 10.1)",
+  "code review: 0 critical and 6 major findings not resolved or accepted by the owner",
+  "code review not yet performed or its closure not yet accepted by the owner: independent read-only AI review of rev14 (owner decisions I-6b and the relabelling scope of 2026-10-29, fixes of R10-1 to R10-4, candidate rev12) on release attempt 11, and the owner's acceptance of the closure of the rev7 to rev14 review (an AI-agent review is not a human independent audit)"
+ ],
+ "campaign_authorization_exists": false,
+ "issued_amendment_2_exists": false
+}

@@ -1,0 +1,8 @@
+189409 files walked; pre-audit outside third-party trees: 2
+    {'path': 'EURÉKA 2026 - KT.docx', 'mtime': '2026-09-21T12:20:02+07:00', 'size': 434945}
+    {'path': 'data/raw/report/EUREKA-2026-KT.docx', 'mtime': '2026-09-21T12:20:02+07:00', 'size': 434945}
+pre-audit in third-party trees: {'tools/OpenModelica/tools': 115331, 'tools/OpenModelica/include': 976, 'tools/OpenModelica/share': 792, 'tools/OpenModelica/lib': 601, 'tools/OpenModelica/bin': 411, 'tools/OpenModelica/icons': 8}
+name hits: 11 ['.venv/Lib/site-packages/mpmath/tests/test_visualization.py', '.venv/Lib/site-packages/mpmath/visualization.py', '.venv/Lib/site-packages/scipy/stats/_sensitivity_analysis.py', '.venv/Lib/site-packages/scipy/stats/tests/test_sensitivity_analysis.py', 'cache/uv/archive-v0/3z0Ab5CvWX6i7gdc/mpmath/tests/test_visualization.py', 'cache/uv/archive-v0/3z0Ab5CvWX6i7gdc/mpmath/visualization.py', 'cache/uv/archive-v0/Qv-l3lwF81Isdt0m/scipy/stats/_sensitivity_analysis.py', 'cache/uv/archive-v0/Qv-l3lwF81Isdt0m/scipy/stats/tests/test_sensitivity_analysis.py', 'scripts/audit_report.py', 'tools/OpenModelica/tools/msys/ucrt64/lib/python3.14/site-packages/scipy/stats/_sensitivity_analysis.py', 'tools/OpenModelica/tools/msys/ucrt64/lib/python3.14/site-packages/scipy/stats/tests/test_sensitivity_analysis.py']
+provenance-type files outside: {'.docx': 2, '.csv': 186, '.json': 456, '.npz': 60, '.py': 100, '.yaml': 7, '.log': 145, '.c': 2478, '.h': 944, '.bib': 1}
+claim-string files: 41 of which pre-audit: 0
+first reflog entry: 2026-10-23T13:45:04+07:00

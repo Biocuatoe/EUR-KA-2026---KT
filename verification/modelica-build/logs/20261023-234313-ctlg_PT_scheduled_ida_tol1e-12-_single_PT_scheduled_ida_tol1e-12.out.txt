@@ -1,0 +1,26 @@
+true
+""
+true
+""
+true
+""
+true
+""
+true
+"Y:/verification/modelica-build/cases_ctl/PT_scheduled_ida_tol1e-12"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases_ctl/PT_scheduled_ida_tol1e-12/PT_scheduled_ida_tol1e-12_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 122.31, numberOfIntervals = 12231, tolerance = 1e-12, method = 'ida', fileNamePrefix = 'PT_scheduled_ida_tol1e-12', options = '', outputFormat = 'csv', variableFilter = '^(time|v|v_ref|T|T_ref|T_lim|T_cmd|a|F_fb|F_net|I|P_batt|P_e|P_m|SoC|V1|E_chem|E_rr|E_aero|E_fb|E_gear|E_visc|E_mi|E_R0|E_R1|E_regen|dist|Ah|closure|ctrl\\\\.u|ctrl\\\\.z|ctrl\\\\.z_used|ctrl\\\\.e_k|ctrl\\\\.T_lim_k|ctrl\\\\.sat_k|ctrl\\\\.k_ctrl|ctrl\\\\.se2)$', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0089539,
+    timeBackend = 0.0556522,
+    timeSimCode = 0.0109122,
+    timeTemplates = 0.0336238,
+    timeCompile = 2.3024863,
+    timeSimulation = 2.1681392,
+    timeTotal = 4.5800856
+end SimulationResult;
+""
+"Y:/verification/modelica-build"

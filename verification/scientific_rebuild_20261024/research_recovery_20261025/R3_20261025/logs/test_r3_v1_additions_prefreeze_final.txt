@@ -1,0 +1,10 @@
+    band_dp_tab vs band_dp, 3 models x 3 mu: max path difference 0.0e+00 m/s
+PASS test_band_tables_equal_band_dp
+    tab bisection = original bisection; dual bound 1192.639 <= exact 1199.657 <= found 1210.521 J
+PASS test_band_min_energy_tab_and_bound
+    feasible reference: track_dp returns it with zero error
+PASS test_track_dp_feasible_reference_is_itself
+    infeasible reference: track_dp feasible, squared error 11.250 equals exhaustive minimum over 28561 paths
+PASS test_track_dp_global_and_feasible_on_infeasible_reference
+    eco time-constrained: dual bound 1888.12 <= exact 1901.99 <= found 1901.99 J (time 23.00 <= 23.40 s)
+PASS test_eco_solver_bound

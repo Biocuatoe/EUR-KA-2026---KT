@@ -1,0 +1,34 @@
+true
+""
+true
+""
+true
+""
+"Check of WrongUnitForce completed successfully.
+Class WrongUnitForce has 1 equation(s) and 1 variable(s).
+1 of these are trivial equation(s)."
+"[Y:/verification/modelica/negative_fixtures/NegativeFixtures.mo:9:3-9:8:writable] Warning: The following equation is INCONSISTENT due to specified unit information: F = P
+Warning: The units of following sub-expressions need to be equal:
+- sub-expression \"P\" has unit \"W\"
+- sub-expression \"F\" has unit \"N\"
+"
+"Check of WrongTractionUnits completed successfully.
+Class WrongTractionUnits has 1 equation(s) and 1 variable(s).
+1 of these are trivial equation(s)."
+"[Y:/verification/modelica/negative_fixtures/NegativeFixtures.mo:18:3-18:20:writable] Warning: The following equation is INCONSISTENT due to specified unit information: F = G * T * omega / r_w
+Warning: The units of following sub-expressions need to be equal:
+- sub-expression \"G * T * omega / r_w\" has unit \"km.s-3.g\"
+- sub-expression \"F\" has unit \"N\"
+"
+"Check of NegCoastDownWrongBranch completed successfully.
+Class NegCoastDownWrongBranch has 5 equation(s) and 5 variable(s).
+0 of these are trivial equation(s)."
+""
+"Check of WrongUnitChargeIntegral completed successfully.
+Class WrongUnitChargeIntegral has 1 equation(s) and 1 variable(s).
+1 of these are trivial equation(s)."
+"[Y:/verification/modelica/negative_fixtures/NegativeFixtures.mo:42:3-42:13:writable] Warning: The following equation is INCONSISTENT due to specified unit information: der(q) = I
+Warning: The units of following sub-expressions need to be equal:
+- sub-expression \"I\" has unit \"A\"
+- sub-expression \"der(q)\" has unit \"3600.0A\"
+"

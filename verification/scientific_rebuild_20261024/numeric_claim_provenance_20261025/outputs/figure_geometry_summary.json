@@ -1,0 +1,256 @@
+{
+ "source_sha256": "01363a069eeb005851f6d62ac4b9da9e3fd13a742bebbfdfc14c802f0eddff8c",
+ "figure11": {
+  "calibration": {
+   "frame_width_emu": 2467256.0,
+   "frame_height_emu": 2049714.0,
+   "x_tick_emu": [
+    0.0,
+    328967.0,
+    657935.0,
+    986902.0,
+    1315870.0,
+    1644837.0,
+    1973805.0,
+    2302772.0
+   ],
+   "y_grid_emu": [
+    0.0,
+    683238.0,
+    1366476.0,
+    2049714.0
+   ],
+   "emu_per_200_cycles": 328967.4285714286,
+   "emu_per_10_pct": 683238.0,
+   "x_axis_end_cycles": 1500.0001737036928,
+   "legend_samples_top_to_bottom": [
+    "Fixed Controller",
+    "Adaptive LQR",
+    "Pareto Optimal"
+   ],
+   "legend_text_in_docx": "Fixed Controller Adaptive LQR Pareto Optimal (para 3193)"
+  },
+  "points_per_curve": 52,
+  "abscissa_spacing_cycles": [
+   7.537,
+   15.074,
+   30.149,
+   30.15,
+   30.151
+  ],
+  "readout": {
+   "fade_pp_at_500_cycles": {
+    "Fixed Controller": 1.2502112555584228,
+    "Adaptive LQR": 1.050156278380034,
+    "Pareto Optimal": 0.8750913668176002,
+    "relative_reduction_adaptive_vs_fixed_pct": 16.00169381686071,
+    "relative_reduction_pareto_vs_fixed_pct": 30.00452020192943
+   },
+   "fade_pp_at_1000_cycles": {
+    "Fixed Controller": 3.0001276298754833,
+    "Adaptive LQR": 2.5000839522637115,
+    "Pareto Optimal": 2.000052329962531,
+    "relative_reduction_adaptive_vs_fixed_pct": 16.6674135004225,
+    "relative_reduction_pareto_vs_fixed_pct": 33.33442517425366
+   },
+   "fade_pp_at_1500_cycles": {
+    "Fixed Controller": 5.249795825173663,
+    "Adaptive LQR": 4.349831244749268,
+    "Pareto Optimal": 3.3748854718268007,
+    "relative_reduction_adaptive_vs_fixed_pct": 17.1428491772749,
+    "relative_reduction_pareto_vs_fixed_pct": 35.71396709099331
+   }
+  },
+  "fits": {
+   "Fixed Controller": {
+    "a*N": {
+     "coef": [
+      0.0031601425183383452
+     ],
+     "max_abs_resid_pp": 0.509702537455456,
+     "rms_resid_pp": 0.2669526972124681
+    },
+    "a*N + b*N^2": {
+     "coef": [
+      0.001999973945485443,
+      1.0000160716136156e-06
+     ],
+     "max_abs_resid_pp": 1.6371209335203085e-05,
+     "rms_resid_pp": 7.715829643829253e-06
+    },
+    "a*sqrt(N)": {
+     "coef": [
+      0.09779103118904407
+     ],
+     "max_abs_resid_pp": 1.462413609108407,
+     "rms_resid_pp": 0.8105364259943654
+    },
+    "a*sqrt(N) + b*N": {
+     "coef": [
+      -0.043362012830964816,
+      0.004482577272353726
+     ],
+     "max_abs_resid_pp": 0.20548301948323022,
+     "rms_resid_pp": 0.11354230045169858
+    }
+   },
+   "Adaptive LQR": {
+    "a*N": {
+     "coef": [
+      0.002628108674839002
+     ],
+     "max_abs_resid_pp": 0.4077684369146728,
+     "rms_resid_pp": 0.21356438870656996
+    },
+    "a*N + b*N^2": {
+     "coef": [
+      0.0016999641210719107,
+      8.000212143872826e-07
+     ],
+     "max_abs_resid_pp": 1.2456666324878185e-05,
+     "rms_resid_pp": 6.923758317247504e-06
+    },
+    "a*sqrt(N)": {
+     "coef": [
+      0.08138156525780166
+     ],
+     "max_abs_resid_pp": 1.1979768341222572,
+     "rms_resid_pp": 0.6661624171395093
+    },
+    "a*sqrt(N) + b*N": {
+     "coef": [
+      -0.03469005432010075,
+      0.003686070020646803
+     ],
+     "max_abs_resid_pp": 0.16438970713035594,
+     "rms_resid_pp": 0.09083382087582328
+    }
+   },
+   "Pareto Optimal": {
+    "a*N": {
+     "coef": [
+      0.002080063696716126
+     ],
+     "max_abs_resid_pp": 0.25486923533920747,
+     "rms_resid_pp": 0.13348010191297088
+    },
+    "a*N + b*N^2": {
+     "coef": [
+      0.0014999630992931375,
+      5.000220951935757e-07
+     ],
+     "max_abs_resid_pp": 1.8286593977623333e-05,
+     "rms_resid_pp": 7.862938812274198e-06
+    },
+    "a*sqrt(N)": {
+     "coef": [
+      0.06463987683510025
+     ],
+     "max_abs_resid_pp": 0.87142562487373,
+     "rms_resid_pp": 0.49406573194423586
+    },
+    "a*sqrt(N) + b*N": {
+     "coef": [
+      -0.021681786594820004,
+      0.0027413048672749693
+     ],
+     "max_abs_resid_pp": 0.10275400276535018,
+     "rms_resid_pp": 0.05677072492077098
+    }
+   }
+  },
+  "ratio_to_fixed": {
+   "Adaptive LQR": {
+    "min": 0.828571508227251,
+    "max": 0.8464698447092732
+   },
+   "Pareto Optimal": {
+    "min": 0.642860329090067,
+    "max": 0.7324395088479646
+   }
+  },
+  "cycles_where_reduction_equals_15.3pct": 125.7,
+  "reduction_range_pct_over_10_to_1500_cycles": [
+   15.06816551064688,
+   17.1428491772749
+  ]
+ },
+ "figure9": {
+  "calibration": {
+   "emu_per_Whkm": 27756.1875,
+   "emu_per_unit_y": 461190.0
+  },
+  "front_vertices": [
+   [
+    120.0,
+    4.2
+   ],
+   [
+    125.0,
+    3.8
+   ],
+   [
+    130.0,
+    3.4
+   ],
+   [
+    135.0,
+    3.1
+   ],
+   [
+    140.0,
+    2.8
+   ],
+   [
+    145.0,
+    2.6
+   ],
+   [
+    150.0,
+    2.4
+   ],
+   [
+    155.0,
+    2.2
+   ],
+   [
+    160.0,
+    2.1
+   ],
+   [
+    165.0,
+    2.0
+   ],
+   [
+    170.0,
+    1.9
+   ],
+   [
+    175.0,
+    1.8
+   ]
+  ],
+  "markers": [
+   [
+    68580,
+    130.005,
+    3.4
+   ],
+   [
+    68580,
+    145.005,
+    2.6
+   ],
+   [
+    91440,
+    130.006,
+    3.4
+   ],
+   [
+    91440,
+    145.006,
+    2.6
+   ]
+  ]
+ }
+}

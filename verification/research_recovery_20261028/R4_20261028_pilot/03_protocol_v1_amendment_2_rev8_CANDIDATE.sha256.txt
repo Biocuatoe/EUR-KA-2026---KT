@@ -1,0 +1,4 @@
+SHA-256 of 03_protocol_v1_amendment_2_rev8_CANDIDATE.md (candidate rev8): f6430bf5512cb56065a2465bcfda1c4c42e244b80f73fcd3e88d985ac8811f7c
+Recorded 2026-10-28 19:00:12 +0700 as an integrity identifier of the candidate text only.
+Status: CANDIDATE - DRAFT - NOT APPROVED FOR RELEASE. Not issued, not frozen, not approved. Owner rulings I-1 to I-6 implemented; no owner decision on its content is open (section 9).
+Parents: protocol v1 f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab; amendment 1 7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2; supersedes candidate rev7 0e3ef3112c979237e7079f176b21dd4f2ce682c7ab435f36f33321ffe67a5996 (unchanged).

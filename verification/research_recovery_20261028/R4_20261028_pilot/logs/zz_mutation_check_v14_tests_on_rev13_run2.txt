@@ -1,0 +1,137 @@
+r4h3.checks <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev13_attempt10_20261029_0629\code\r4h3\checks.py
+r4h3.campaign <- D:\EURÉKA 2026 - KT\verification\research_recovery_20261028\R4_20261028_pilot\archive\rev13_attempt10_20261029_0629\code\r4h3\campaign.py
+F.........FFFFF.                                                         [100%]
+================================== FAILURES ===================================
+_ test_i6b_an_attempted_run_that_raised_is_condition_error_never_run_missing __
+
+tmp_path = WindowsPath('C:/Users/HLC/AppData/Local/Temp/pytest-of-HLC/pytest-308/test_i6b_an_attempted_run_that0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021673F26060>
+
+    def test_i6b_an_attempted_run_that_raised_is_condition_error_never_run_missing(tmp_path, monkeypatch):
+        task = _task()
+        design = _design(task)
+        monkeypatch.setattr(*_arm("B3", "raise"))
+        c = _cond("I6BR")
+        r = _run(c, design, task, tmp_path / "raise")
+>       assert r["qs_vs_dyn_pair_status"] == CE and r["qs_vs_dyn_pair_status_before_error"] == MISSING
+E       AssertionError: assert ('NOT_EVALUABLE_RUN_MISSING' == 'NOT_EVALUABL...NDITION_ERROR'
+E         
+E         - NOT_EVALUABLE_CONDITION_ERROR
+E         + NOT_EVALUABLE_RUN_MISSING)
+
+code\tests\test_owner_decisions_v14.py:79: AssertionError
+____ test_r10_4_fold_failed_with_fewer_conditions_than_rows_does_not_raise ____
+
+    def test_r10_4_fold_failed_with_fewer_conditions_than_rows_does_not_raise():
+        c = type("C", (), {"run_ids": {"B0": "x0", "B3": "x3"}})()
+        rows = [dict(status=checks.COMPARABLE, qs_vs_dyn_pair_status=NA_PROFILE, qs_vs_dyn_pair_reason="x") for _ in range(2)]
+>       campaign.fold_failed(rows, "injected", [c], set())                                    # one condition, two rows
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+code\tests\test_owner_decisions_v14.py:203: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+cond_rows = [{'status': 'RECOMPUTATION_DISAGREEMENT', 'qs_vs_dyn_pair_status': 'NOT_APPLICABLE_PROFILE_UNAVAILABLE', 'qs_vs_dyn_pa...r_status': 'NOT_APPLICABLE_PROFILE_UNAVAILABLE', 'qs_vs_dyn_pair_reason': 'x', 'status_in_process': 'COMPARABLE', ...}]
+reason = 'injected'
+conds = [<test_owner_decisions_v14.C object at 0x0000021673FA6270>]
+executed = set()
+
+    def fold_failed(cond_rows, reason: str, conds=None, executed=None) -> None:
+        """Fail-closed fallback when fold_separate_recomputation itself raised (review R5-8): no condition stays COMPARABLE,
+        none is eligible for the paired endpoint, no QS-vs-dynamic PASS, FAIL or REPORTED_ONLY stands unconfirmed (its label
+        is kept in qs_vs_dyn_pair_status_before_error, review R9-2), and no NOT_APPLICABLE_* label of a pair with an executed
+        run stands over the exception (owner ruling I-6, reviews R8-9, R9-6; conds and executed as in the fold)."""
+        for i, r in enumerate(cond_rows):
+            r.setdefault("status_in_process", r["status"])
+            r["separate_recomputation"] = f"not applied: the fold raised ({reason})"
+            if r["status"] == checks.COMPARABLE:
+                r["status"] = "RECOMPUTATION_DISAGREEMENT"
+            r["paired_endpoint_eligible"] = False
+            ps = r.get("qs_vs_dyn_pair_status")
+            if ps in ("PASS", "FAIL", "REPORTED_ONLY"):
+                r["qs_vs_dyn_pair_status_in_process"] = ps
+                r["qs_vs_dyn_pair_status"] = checks.QS_RUN_INVALID
+                if not r.get("qs_vs_dyn_pair_status_before_error"):
+                    r["qs_vs_dyn_pair_status_before_error"] = ps
+            _na_pair_not_evaluable(r, f"the recomputation fold raised ({reason})",
+>                                  conds[i].run_ids.values() if conds is not None else None, executed)
+                                   ^^^^^^^^
+E           IndexError: list index out of range
+
+archive\rev13_attempt10_20261029_0629\code\r4h3\campaign.py:1066: IndexError
+_ test_r10_1_the_block_states_only_owner_decisions_as_rulings_and_labels_the_implementer_reading _
+
+    def test_r10_1_the_block_states_only_owner_decisions_as_rulings_and_labels_the_implementer_reading():
+        b = campaign.IMPLEMENTED_2["AMB_29_condition_error"]
+        marks = ["owner ruling 2026-10-28 (AMB-29(d)):", "Owner ruling I-6 (2026-10-28):", "Owner decision I-6b (2026-10-29):",
+                 "Owner decision (2026-10-29) on a failure of the separate recomputation or its fold:",
+                 "As applied under these rulings:", "Implementer reading (not an owner ruling), for the owner's confirmation:"]
+>       pos = [b.index(m) for m in marks]
+               ^^^^^^^^^^
+E       ValueError: substring not found
+
+code\tests\test_owner_decisions_v14.py:215: ValueError
+________ test_r10_3_the_candidate_states_counts_and_lineage_accurately ________
+
+    def test_r10_3_the_candidate_states_counts_and_lineage_accurately():
+        text = campaign.DRAFT_AMENDMENT_2.read_text(encoding="utf-8")
+>       assert "six of its notes" not in text and "(one MINOR finding and three notes)" in text.splitlines()[2]
+E       assert ('six of its notes' not in '# Amendment...."\n}\n```\n'
+E         
+E         'six of its notes' is contained here:
+E           MINOR and six of its notes (§12). The review of release attempt 9 verified the rev9 fixes of the attempt-8 findings.
+E         ?           ++++++++++++++++
+E           
+E           | Item | Value |
+E           |---|---|...
+E         
+E         ...Full output truncated (397 lines hidden), use '-vv' to show)
+
+code\tests\test_owner_decisions_v14.py:249: AssertionError
+_ test_review_status_v13_keeps_the_six_major_findings_open_pending_owner_acceptance _
+
+    def test_review_status_v13_keeps_the_six_major_findings_open_pending_owner_acceptance():
+        rv = json.loads(campaign.REVIEW_STATUS.read_text(encoding="utf-8"))
+>       assert campaign.REVIEW_STATUS.name == "code_review_status_v13.json"
+E       AssertionError: assert 'code_review_status_v11.json' == 'code_review_status_v13.json'
+E         
+E         - code_review_status_v13.json
+E         ?                      ^
+E         + code_review_status_v11.json
+E         ?                      ^
+
+code\tests\test_owner_decisions_v14.py:268: AssertionError
+___ test_rev12_candidate_matches_the_code_and_earlier_candidates_are_pinned ___
+
+    def test_rev12_candidate_matches_the_code_and_earlier_candidates_are_pinned():
+        for n, h in ((10, "5479f0e81b981c7977ea5a416762972d2a332d4fdb75beee7ad8379ade399804"),
+                     (11, "162b688d2a1665831705bc3a1bc68273f5ede15cc87b0d226837cf4f015998e9")):
+            assert frozen.sha256(campaign.PILOT_DIR / f"03_protocol_v1_amendment_2_rev{n}_CANDIDATE.md") == h, n
+>       assert campaign.DRAFT_AMENDMENT_2.name == "03_protocol_v1_amendment_2_rev12_CANDIDATE.md"
+E       AssertionError: assert '03_protocol_..._CANDIDATE.md' == '03_protocol_..._CANDIDATE.md'
+E         
+E         - 03_protocol_v1_amendment_2_rev12_CANDIDATE.md
+E         ?                                ^
+E         + 03_protocol_v1_amendment_2_rev10_CANDIDATE.md
+E         ?                                ^
+
+code\tests\test_owner_decisions_v14.py:283: AssertionError
+=================================== PASSES ====================================
+=========================== short test summary info ===========================
+PASSED code\tests\test_owner_decisions_v14.py::test_i6b_a_genuinely_absent_run_energy_stays_on_the_missing_run_path
+PASSED code\tests\test_owner_decisions_v14.py::test_i6b_neither_label_counts_as_pass_and_an_exception_overrides_a_pass
+PASSED code\tests\test_owner_decisions_v14.py::test_after_a_recomputation_or_fold_failure_only_executed_na_pairs_are_relabelled[exit4]
+PASSED code\tests\test_owner_decisions_v14.py::test_after_a_recomputation_or_fold_failure_only_executed_na_pairs_are_relabelled[launch]
+PASSED code\tests\test_owner_decisions_v14.py::test_after_a_recomputation_or_fold_failure_only_executed_na_pairs_are_relabelled[unreadable]
+PASSED code\tests\test_owner_decisions_v14.py::test_after_a_recomputation_or_fold_failure_only_executed_na_pairs_are_relabelled[fold_failed]
+PASSED code\tests\test_owner_decisions_v14.py::test_without_a_recomputation_failure_no_na_pair_is_relabelled
+PASSED code\tests\test_owner_decisions_v14.py::test_r10_2_after_a_process_failure_a_pair_without_an_executed_run_keeps_its_label_in_the_executor
+PASSED code\tests\test_owner_decisions_v14.py::test_r10_2_the_accounting_rejects_an_unknown_pair_status
+PASSED code\tests\test_owner_decisions_v14.py::test_campaign_mode_stays_blocked_in_rev14
+FAILED code\tests\test_owner_decisions_v14.py::test_i6b_an_attempted_run_that_raised_is_condition_error_never_run_missing
+FAILED code\tests\test_owner_decisions_v14.py::test_r10_4_fold_failed_with_fewer_conditions_than_rows_does_not_raise
+FAILED code\tests\test_owner_decisions_v14.py::test_r10_1_the_block_states_only_owner_decisions_as_rulings_and_labels_the_implementer_reading
+FAILED code\tests\test_owner_decisions_v14.py::test_r10_3_the_candidate_states_counts_and_lineage_accurately
+FAILED code\tests\test_owner_decisions_v14.py::test_review_status_v13_keeps_the_six_major_findings_open_pending_owner_acceptance
+FAILED code\tests\test_owner_decisions_v14.py::test_rev12_candidate_matches_the_code_and_earlier_candidates_are_pinned
+6 failed, 10 passed in 169.89s (0:02:49)

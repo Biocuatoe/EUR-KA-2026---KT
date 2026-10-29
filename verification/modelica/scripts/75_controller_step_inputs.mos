@@ -1,0 +1,10 @@
+setCommandLineOptions("--unitChecking"); getErrorString();
+loadFile("../modelica/EurekaPlant/package.mo"); getErrorString();
+loadFile("../modelica/EurekaController/package.mo"); getErrorString();
+mkdir("cases_ctl"); getErrorString();
+mkdir("cases_ctl/U_step_original"); cd("cases_ctl/U_step_original");
+simulate(EurekaController.Tests.ControllerUnitStepOriginal, startTime = 0, stopTime = 10.0, numberOfIntervals = 1000, tolerance = 1e-10, method = "dassl", outputFormat = "csv", fileNamePrefix = "U_step_original", simflags = ""); getErrorString();
+cd("../..");
+mkdir("cases_ctl/U_step_semantics"); cd("cases_ctl/U_step_semantics");
+simulate(EurekaController.Tests.ControllerStepSemantics, startTime = 0, stopTime = 12.0, numberOfIntervals = 1200, tolerance = 1e-10, method = "dassl", outputFormat = "csv", fileNamePrefix = "U_step_semantics", simflags = ""); getErrorString();
+cd("../..");

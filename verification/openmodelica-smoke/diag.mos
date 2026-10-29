@@ -1,0 +1,6 @@
+getInstallationDirectoryPath();
+cd("D:/EURÉKA 2026 - KT/tools/OpenModelica/tools/msys/ucrt64/bin");
+cd("D:/");
+cd("D:/EURÉKA 2026 - KT/verification");
+cd("D:/EURÉKA 2026 - KT/tools/OpenModelica/bin");
+getErrorString();

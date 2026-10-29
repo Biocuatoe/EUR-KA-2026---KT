@@ -1,0 +1,66 @@
+{
+ "all_checks_true": true,
+ "legacy_hits_need_inspection": 12
+}
+[
+ {
+  "file": "code/r4h3/campaign.py",
+  "line": 789,
+  "text": "\"recompute_protocol_ok\", \"credited\")})                # protocol 10.3 (CR-A11)"
+ },
+ {
+  "file": "code/r4h3/closedloop.py",
+  "line": 1,
+  "text": "\"\"\"Component C: fixed-LQR closed loop with 1 ms traces (protocol v1 2.1, 4, 10.3)."
+ },
+ {
+  "file": "code/r4h3/closedloop.py",
+  "line": 24,
+  "text": "TRACE_DT = 1e-3                    # every trace is sampled at 1 ms (protocol 10.3; change VC-02)"
+ },
+ {
+  "file": "code/r4h3/evaluator.py",
+  "line": 152,
+  "text": "# spec[\"dt_s\"] is the trace sample step (1 ms for every run, protocol 10.3); refuse any other spacing so that"
+ },
+ {
+  "file": "code/r4h3/frozen.py",
+  "line": 1,
+  "text": "\"\"\"Frozen inputs of the H3 pilot and their hash checks (protocol v1 sections 2.1, 2.3, 10.1)."
+ },
+ {
+  "file": "code/r4h3/frozen.py",
+  "line": 40,
+  "text": "R3_LIB: \"c2403adc2c7ef7a7ecc662f0dcfd3c107a43204ee73c28bd46f782b73cba1c97\",     # protocol 2.1"
+ },
+ {
+  "file": "code/r4h3/planner.py",
+  "line": 63,
+  "text": "\"\"\"Time-domain knots: segment k departs at ks_k h, follows the DP speeds, then rests (protocol 5.3).\"\"\""
+ },
+ {
+  "file": "code/r4h3/traces.py",
+  "line": 1,
+  "text": "\"\"\"Component F: raw-trace schema r4h3-trace-v1, writer and reader (protocol v1 10.3)."
+ },
+ {
+  "file": "code/r4h3/validator.py",
+  "line": 72,
+  "text": "# rest intervals of the task: at rest throughout (protocol 5.3, 9a)"
+ },
+ {
+  "file": "code/tests/test_frozen_and_task.py",
+  "line": 1,
+  "text": "\"\"\"Frozen inputs, nominal parameters and the sampled task (protocol 2.1, 2.2, 2.4, 3).\"\"\""
+ },
+ {
+  "file": "code/tests/test_regressions_v2.py",
+  "line": 87,
+  "text": "# ---- VC-02: 0.5 ms runs, traced every second step (protocol 10.3)"
+ },
+ {
+  "file": "code/tests/test_validator.py",
+  "line": 77,
+  "text": "# protocol 5.2-5.3: t_k <= T_k, departure at the reference time, then rest until the next departure"
+ }
+]

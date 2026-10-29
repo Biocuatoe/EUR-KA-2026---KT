@@ -1,0 +1,22 @@
+{
+ "written": "2026-10-29T09:55:27+0700",
+ "running_from": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release_attempts\\attempt12_final_owner_decisions",
+ "campaign_dir": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign",
+ "readiness_gate": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release_attempts\\attempt12_final_owner_decisions\\logs\\readiness_gate_v1.json",
+ "readiness_blockers": [
+  "no issued amendment 2 at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+  "code review: 0 critical and 7 major findings not resolved or accepted by the owner",
+  "code review not yet performed or its closure not yet accepted by the owner: independent read-only AI review of rev15 (fixes of R11-1 to R11-9, candidate rev13) on release attempt 12, and the owner's acceptance of the closure of the rev7 to rev15 review (an AI-agent review is not a human independent audit)"
+ ],
+ "campaign_blockers": [
+  "no issued amendment 2 at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+  "protocol 10.1 gate record: pre-run gate record logs/pre_run_hashes.txt is missing",
+  "no campaign authorisation record campaign_authorization.json (protocol approval is not campaign authorisation)",
+  "campaign must run once, from the released copy in R4_20261028_campaign (AMB-15), not from attempt12_final_owner_decisions (protocol 10.1)",
+  "code review: 0 critical and 7 major findings not resolved or accepted by the owner",
+  "code review not yet performed or its closure not yet accepted by the owner: independent read-only AI review of rev15 (fixes of R11-1 to R11-9, candidate rev13) on release attempt 12, and the owner's acceptance of the closure of the rev7 to rev15 review (an AI-agent review is not a human independent audit)"
+ ],
+ "campaign_authorization_exists": false,
+ "issued_amendment_2_exists": false,
+ "note": "preconditions() only; run_campaign() was not called (campaign mode not invoked)"
+}

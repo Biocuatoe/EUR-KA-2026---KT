@@ -1,0 +1,220 @@
+Excerpts from: Tawfik M.I., Ali A.M., Asfoor M.Sh. (2024). A combined trade-off strategy of battery degradation,
+charge retention, and driveability for electric vehicles. Scientific Reports 14:21995. doi:10.1038/s41598-024-71711-w
+Licence: CC BY 4.0 (stated in the article). Excerpts reproduced with attribution for audit traceability.
+Retrieved: 2026-10-25 from https://www.nature.com/articles/s41598-024-71711-w.pdf (HTTP 200, application/pdf, 2,229,149 bytes, 16 pages)
+PDF SHA-256: 5bb89362afaf139a115ab4fd1911e711d24b92fc93d46d2e4ddc7e812c532114
+Text extraction: pdftotext -layout (MinGW64). Line numbers below are lines of that text file. Layout artefacts (dropped Greek symbols) are left as extracted.
+The PDF itself is kept outside the project (session scratchpad) and is not part of this record.
+
+----- text lines 9,27 -----
+       for electric vehicles
+                  Mohammed I. Tawfik2,3*, Ahmed Ali1,3* & Mostafa Asfoor1,3
+                    Electric vehicles are considered as an emerging solution to mitigate the environmental footprint of
+                    transportation sector. Therefore, researchers and automotive developers devote significant efforts to
+                    enhance the performance of electric vehicles to promote broader adoption of such technology. One
+                    of the critical challenges of the electric vehicle is limited battery lifetime and entailed range anxiety.
+                    In his context, development of counter-aging control strategies based on precise battery modeling
+                    is regarded as an emerging approach that has a significant potential to address battery degradation
+                    challenges. This paper presents a combined trade-off strategy to minimize battery degradation while
+                    maintaining acceptable driving performance and charge retention in electric vehicles. A battery aging
+                    model has been developed and integrated into a full vehicle model. An optimal control problem has
+                    been formulated to tackle the afore-mentioned challenges. Non-dominant sorting genetic algorithms
+                    have been implemented to yield the optimal solution through the Pareto-front of three contending
+                    objectives, based upon which an online simulation has been conducted considering three standard
+                    driving cycles. The results reveal the ability of the proposed strategy to prolong the life cycle of the
+                    battery and extend the driving range by 25 % and 8 % respectively with minimal influence of 0.6 % on
+                    the driveability.
+
+----- text lines 185,204 -----
+                                  Problem statement and main contribution
+                                      Based on the conducted review of recent works, the following gaps in the literature can be put forward: first, the
+                                      inclusion of multiple objectives (3+ objectives) in cost function formulation calculation has been rarely consid-
+                                      ered. This aspect is crucial to be investigated since it puts forth the intra-dependency and contradiction between
+                                      lifetime prolongation and other performance measures. Second, considering experimentally validated degrada-
+                                      tion models into the optimization process has been limited in literature. Besides, considering the driveability
+                                      while implementing strategies to mitigate battery aging and reduce energy consumption has not been tested
+                                      under various types of driving cycles. The latter aspect is significant to ensure the ability of any BMS to fulfill the
+                                      driving requirements at different types of roads. Addressing the aforementioned gaps in research contributes
+                                      to the ability to develop and achieve efficient vehicular control systems, that are capable of tackling undesired
+                                      degradation of EV-batteries and ensure sufficient driving performance.
+                                          To this aim, this study proposes a multi-objective optimization strategy with two main goals: minimizing the
+                                      battery degradation rate and maximize the vehicle's driving range. Moreover, The proposed strategy takes into
+                                      account the driveability performance of the vehicle over realistic driving cycles. A high-fidelity vehicle model has
+                                      been implemented comprising longitudinal dynamics, battery performance and aging, and supervisory control
+                                      module. A multi-objective optimization problem is formulated to minimize the capacity loss of the batteries and
+                                      retain efficient energy consumption and driving performance. The formulated problem is solved using NSGA-II
+                                      realizing an optimal trade-off solution that achieves balanced minimal values of considered objectives. In this
+                                      study, the operating temperature is set between 23C and 25C and the operating range of SoC is set to 20 %­90 %
+
+----- text lines 376,416 -----
+                   specs, electric motor, and battery model are listed in Table 1. Vehicle speed and acceleration, tractive force, and
+                   aerodynamic resistance are determined and updated at each time step.
+                   Battery aging model
+                   In this work, a semi-empirical model is applied to the battery to evaluate the capacity loss. The model is based on
+                   damage accumulation, which utilizes the concept of accumulated charge throughput by establishing a connection
+                   between EoL and Ah-throughput. The underlying concept is that a battery, when subjected to various operational
+                   parameters such as temperature , state of charge SoC, and C-rate Ic, can attain a cumulative throughput before
+                   reaching its E oL50.
+                       This model employs the normalized capacity loss, denoted as Qloss[%], as an indicator for evaluating battery
+                   degradation as
+                                                            Qloss(Ic,  , SoC, Ah) = funct (Ic,  , SoC) · Ahz ,                             (18)
+                   where Ah is the accumulated charge throughput, which refers to the total amount of charge that is capable of
+                   flowing into and out of the b attery51. The power law exponent, denoted as z, represents the Ah throughput
+                   dependence and Ic is defined as
+                                                                                       Ic  =  |Ibatt | .                                   (19)
+                                                                                              Qbatt
+                   As for funct (Ic,  , SoC), it is a non-linear severity factor function that can be expressed as
+                                        funct               (Ic ,    ,  SoC)  =  (  ·  SOC    +  )  ·  exp     (    -Ea +  · Ic     )  ),  (20)
+                                                                                                                  Rg · (273.15 +
+                   where Ea is the activation energy equal to 31,500 [Jmol-1]52, Rg is the universal gas constant,  is the Ic depend-
+                   ence,  and  define SoC dependence. To identify the model parameters in Eq. (20), Onori et al. conducted an
+                   approach based on nonlinear least squares is to evaluate the experimental data obtained f rom52 for three profiles
+                   of lithium iron phosphate batteries (LiFePO4). These batteries were subjected to several constant operating condi-
+                   tions, including temperature, C-rate, and SoC. The nonlinear identification toolbox from MATLAB is employed
+                   for the objective of identifying the model parameters through minimization of the overall e rror51.
+                       The values of z for the three profiles show a high degree of proximity. Therefore, the average value of z (=0.57)
+                   is selected as the basis for further identification of the aging model. The optimal values of variables  and  are
+                   shown in Table 2. The most suitable value of , which yields the best fit, is determined to be 152.5.
+                       The battery aging model is developed to evaluate the degradation of a battery considering the three key-
+                   parameters that influence degradation rate, namely: SoC, C-rate, and temperature, which can be expressed as
+
+----- text lines 410,425 -----
+                       The values of z for the three profiles show a high degree of proximity. Therefore, the average value of z (=0.57)
+                   is selected as the basis for further identification of the aging model. The optimal values of variables  and  are
+                   shown in Table 2. The most suitable value of , which yields the best fit, is determined to be 152.5.
+                       The battery aging model is developed to evaluate the degradation of a battery considering the three key-
+                   parameters that influence degradation rate, namely: SoC, C-rate, and temperature, which can be expressed as
+                   Parameters                               Value
+                   Gross vehicle weight                     1620 [Kg]
+                   Related motor torque                     250 [Nm]
+                   Related motor power                      125 [kW]
+                   Battery capacity                         18.8 [kWh]
+                   Vehicle frontal area (A)                 2.38 [m2]
+                   Aerodynamic drag coefficient (Cd)        0.29
+                   Rolling resistance coefficient (C roll)  0.02
+
+----- text lines 548,562 -----
+                                           Min.   360.7        360.3
+                                                  53.27        53.27
+                   Table3.Simulation results compared to ANL dyno test results.
+Scientific Reports | (2024) 14:21995 |     https://doi.org/10.1038/s41598-024-71711-w                               8
+Vol:.(1234567890)
+www.nature.com/scientificreports/
+    The battery cell being tested is LiFePO4 (ANR26650) from A123 systems, characterized by a nominal voltage
+of about 3.3V cell and a nominal capacity of 2.3 Ah. The specified operating conditions are defined in terms of the
+average SoC = 42 [%], average C-rate Ic = 3 [1/h], and average battery temperature  = 38 [C]55. The results of
+capacity model that has been identified is closely correspond to experimental data points as illustrated in Fig. 8.
+
+----- text lines 640,690 -----
+                   on-going extension of our research, yet not presented in this manuscript.
+                       If the objective is to optimize all parameters, the optimization process might become quite complex, resulting
+                   in a substantial computational burden and prolonged computing time. Furthermore, it is possible that it may not
+                   provide an optimal solution36. Therefore, the authors select one of the powertrain system's parameters as a variable
+                   for optimization, which significantly influences the optimization objectives. These parameters refer to the battery
+                   current and the change of the current over time. The current extracted from the powertrain depends mainly on
+                   the power required to propel the vehicle and spontaneously affects the battery degradation rate. Therefore, the
+                   control variables in x can be described as
+                                                                                               x= i           i  ,                                                     (27)
+                                                                                                           t
+                   where                i  is  battery  current  and     i  is  change  of  current  over  time.    The  control  variables  are  subjected  to  constraints
+                                                                      t
+                                                                                            i  imax and                                                                (28)
+                                                                                               t i  t imax.                                                            (29)
+                   The depicted battery aging model in Eq. (21) gives an insight into the set of variable that influence the capac-
+                   ity loss rate of batteries, including the operating SOC, cell temperature, current flow dynamics, DOD, and the
+                   remaining throughput of the battery. In this contribution, a particular focus has been given to the current flow
+                   dynamics, represented in [i ,                      t  i],    which  proved  a  significant    potential  to  mitigate  battery  d egradation37,38.  The
+                   operating temperature of the battery is another efficient variable to reduce battery degradation; however, it highly
+                   influences the required cooling power, which directly accelerates the depletion rate of the battery. Thus, deploying
+                   further influencing variables on capacity loss is considered as a short-term upgrade of our work.
+                   Solving algorithm
+                   In this work, NSGA-II have been considered as the solving algorithm, which is well-recognized as an efficient
+                   solver for complex vehicular control p roblems59. The simplification of the NSGA-II results in several benefits,
+                   including enhanced computational efficiency and improved convergence of the solution set60. Additionally, it has
+                   the capability to extend solution sets to cover the entirety of the Pareto domain, guaranteeing both uniformity
+                   and diversity within the solution sets. The setting parameters of utilized NSGA-II are detailed in Table 4.
+                       The algorithm starts by generating a stochastic initial population. Subsequently, it utilizes the individuals from
+                   the current generation to create the next population. This is achieved by selecting individuals with the best fitness
+                   values as elite and choosing parents with high expectations followed by the subsequent production of offspring
+                   from these parents. The problem has been computed in the same MATLAB environment, which enabled further
+                   analysis of battery capacity loss, charge retention, and vehicle performance. Eventually the algorithm finds the
+                   best values of control variables to mitigate the battery degradation rate and drop of the SoC while maintaining
+                   the required power for vehicle propulsion. Then the minimum values for the three objectives are identified by
+                   defining the total cost function as the summation of equally-weighed objectives.
+
+----- text lines 735,790 -----
+on  the                                 Pareto  front  at imax  =  110  [A]  and  t  imax  =  1000  [A/s],  which  reflects   the  achieved  results  in  the  sequel.
+Results analysis and discussion
+In this section, the models are integrated with the optimization algorithm and simulated under a specified set
+of driving cycles to verify the proposed optimization strategy. The specified driving scenario comprises three
+standard driving cycles, namely: urban dynamometer driving Schedule (UDDS), highway fuel economy driv-
+ing Schedule (HWFET), and US06. The UDDS reflects in-city driving conditions, while the HWFET pertains
+Scientific Reports | (2024) 14:21995 |                 https://doi.org/10.1038/s41598-024-71711-w                                                                   11
+                                                                                                                                                               Vol.:(0123456789)
+www.nature.com/scientificreports/
+                                      to highway driving conditions below 96 km/h. On the other hand, US06 is a driving schedule characterized by
+                                      high acceleration and aggressive behaviors. the total distance of the combined drive cycle is 53.27 km, which can
+                                      be assumed as a one-day drive. The ambient temperature variation is considered to be between 23C to 25C.
+                                          For a one-day trip, Fig. 12 illustrates the degradation of the battery for the optimized and not optimized
+                                      models. In the case of the unoptimized model, it can be observed that the rate of battery capacity loss signifi-
+                                      cantly increases over the US06. This is assigned to the higher acceleration characteristics of the US06 cycle in
+                                      comparison to the HWFET and UDDS cycles. The reason for this is that the US06 cycle imposes greater demands
+                                      on the powertrain of the vehicle, resulting in a substantial discharge of charge from the battery and requiring a
+                                      higher C-rate. As a result, this leads to an increase in battery capacity degradation.
+                                          However, in the case of the optimization strategy employed in the models, the curve experiences a decrease
+                                      during the whole trip, especially during the US06 cycle. It concludes that the implemented optimiztion approach
+                                      decreased the battery capacity loss by 15.8 % after only one-day trip that endured nearly 80 minutes over 53.27
+                                      km. Due to the nonlinearity of battery degradation rate, the percentage of mitigated capacity loss is anticipated
+                                      increase over long periods of driving and operation.
+                                          It should be pointed out clearly that above-mentioned results have been achieved for only one repetition of the
+                                      driving scenario (including 3 standard driving cycles) for approximately 4800 seconds (1.3 hours). The absolute
+                                      loss rate after such a short period is negligible using any control strategy. To investigate the achievable reduction
+                                      in capacity loss, the model has been simulated considering a continuous repetition of the driving scenario on
+                                      daily basis for nearly 2900 days until reaching the EoL of the battery as shown in Fig. 13.
+                                          It can be perceived from the illustrated results that the driving range has been extended by 8% owing to the
+                                      proposed optimization strategy. Furthermore, the optimization strategy has been able to yield a reduction of
+                                      energy consumption by 13 %. Additionally, the optimization approach has demonstrated satisfactory results
+                                      regarding driveability performance, as shown in Fig. 14.
+                                          It can be seen from the figure that the vehicle speed in the optimized model follows the drive cycle speed very
+                                      well. Given that the relative error percentage between the two speeds is 0.6%, it satisfies the objectives that have
+                                      been established. The simulation results of the optimized model and conventional model are reported in Table 5.
+                                          In order to identify the battery life cycle, the simulations are conducted based on the following assumptions:
+                                      (1) the driving cycle remains the same for every trip; (2) one-day driving consists of two UUDS, one US06, and
+                                      one HWFET, then it is replicated until the SoC reaches 20%; (3) The vehicle covers 53.27 Km per day; (4) the SoC
+                                      window set between 90% and 20% to avoid over-charge and over-discharge; (5) driving conditions are the same
+                                      for each day; (6) one year consists of 365 days; (7) The ambient temperature variation between 23C and 25C;
+                                      (8) the simulation will run until the battery reaches to its EoL when it degrades to 80% of its initial c apacity61.
+                   0.012                                                                                                                  Not Optimized model
+                    0.01                                                                                                                  Optimized model
+                   0.008
+
+----- text lines 825,835 -----
+Fig.14.Comparison of vehicle speed in optimization mode to drive cycle speed over time.
+Data                                                   Normal model      Optimized model  Improvement [%]
+Capacity loss (Q loss) [%]                             0.012             0.0101           15.8
+Driving range [Km]                                     164.5             177.6            8
+Energy consumption [WH/Km]                             171.3             149.2            13
+Table5.Optimization results compared to normal condition results.
+    Figures 15 and 16 show the battery degradation curve form the initial capacity of the battery to reaching
+
+----- text lines 880,903 -----
+                                      results and experimental dynamometer testing results has been conducted to verify the accuracy of both longi-
+                                      tudinal dynamics and battery aging results. An optimal control problem has been formulated comprising three
+                                      conflicting objectives, namely: capacity loss, on-board charge retention, and driveability. Non-dominant sorting
+                                      genetic algorithms have been implemented to solve the optimization problem based on establishing the Pareto-
+                                      front amongst objectives and yielding the optimal solution considering the normalized minima of all objectives.
+                                          For the testing procedures, three standard driving cycles (US06, HWFET, and UDDS) have been combined
+                                      to form a daily driving scenario representing urban, mixed, and highway trip conditions. On daily basis, the
+                                      implemented optimal solution proved the ability to reduce battery degradation and energy consumption by
+                                      15.8 % and 13 % respectively. The daily driving range has been accordingly extended by 8 % with minimal impact
+                                      of 0.6 % on driveability. Moreover, an extended test has been conducted to yield the end-of-life of the battery
+                                      after nearly 2900 days. On the long-term, the proposed method has been able to achieve up to 25 % extension
+                                      of battery, preserving < 1 % mitigation of driveability.
+                                          The proposed strategy in this work proved a significant potential at address multiple vital challenges of electric
+                                      vehicles: battery degradation, energy/range anxiety, and driveability. The generic optimization problem, based
+                                      on a high-fidelity driveline and battery degradation model, conduce to further investigation of design variables
+                                      and customized objectives. Next steps of this work include real-time applicability of proposed strategy for limited
+                                      time-horizons and the analysis of other features influencing the battery aging process.
+                               Data availability
+                                      The datasets used and/or analyzed during the current study available from the corresponding author on reason-
+                                      able request.

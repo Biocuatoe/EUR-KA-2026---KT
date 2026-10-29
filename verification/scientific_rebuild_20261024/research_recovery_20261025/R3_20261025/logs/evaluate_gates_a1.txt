@@ -1,0 +1,67 @@
+﻿{
+ "M0": {
+  "G-A": {
+   "decision": "FAIL-certified-on-grid",
+   "n_qualifying": 4,
+   "best_found_pct": 0.0052177548886755964,
+   "best_max_pct": 0.006715136964219326
+  },
+  "G-B": {
+   "decision": "PASS",
+   "n_qualifying": 9,
+   "best_found_pct": 4.930244058754251,
+   "best_max_pct": 4.930244058754207
+  },
+  "G-C": {
+   "decision": "NO QUALIFYING SCENARIO",
+   "n_qualifying": 0,
+   "best_found_pct": null,
+   "best_max_pct": null
+  },
+  "H-C S_max(5%) all < 1 %": false
+ },
+ "M1": {
+  "G-A": {
+   "decision": "FAIL-certified-on-grid",
+   "n_qualifying": 6,
+   "best_found_pct": 0.05687583017426334,
+   "best_max_pct": 0.07854465384252718
+  },
+  "G-B": {
+   "decision": "PASS",
+   "n_qualifying": 9,
+   "best_found_pct": 6.438100505831801,
+   "best_max_pct": 6.451252416175446
+  },
+  "G-C": {
+   "decision": "NO QUALIFYING SCENARIO",
+   "n_qualifying": 0,
+   "best_found_pct": null,
+   "best_max_pct": null
+  },
+  "H-C S_max(5%) all < 1 %": false
+ },
+ "M2": {
+  "G-A": {
+   "decision": "FAIL-certified-on-grid",
+   "n_qualifying": 8,
+   "best_found_pct": 0.0038574251629674983,
+   "best_max_pct": 0.0042046007144525
+  },
+  "G-B": {
+   "decision": "PASS",
+   "n_qualifying": 12,
+   "best_found_pct": 5.1967572295653515,
+   "best_max_pct": 5.196994547465383
+  },
+  "G-C": {
+   "decision": "NO QUALIFYING SCENARIO",
+   "n_qualifying": 0,
+   "best_found_pct": null,
+   "best_max_pct": null
+  },
+  "H-C S_max(5%) all < 1 %": false
+ }
+}
+robustness triggers: []
+EXIT=0

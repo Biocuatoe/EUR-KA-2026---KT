@@ -1,0 +1,4 @@
+SHA-256 of 03_protocol_v1_amendment_1_rev2_CANDIDATE.md (rev2): 42a7a9f51afae7c059373b9048ed9b09c6b87c975705e54c485f2f6bfc133369
+Recorded 2026-10-28 07:17:11 +0700 as an integrity identifier of the candidate text only.
+Status: READY FOR OWNER APPROVAL - NOT APPROVED, NOT ISSUED, NOT FROZEN.
+rev1 (unchanged): 03_protocol_v1_amendment_1_DRAFT.md f4ffc4b752e93dc3eedd6efc8b1bb03f490bc12d65ade36ce17cb2b3e84cb69e

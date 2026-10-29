@@ -1,0 +1,108 @@
+{
+ "fastsim_version": "3.1.0",
+ "vehicle_resource": "2022_Renault_Zoe_ZE50_R135.yaml",
+ "fields": {
+  "pt_type/BEV/em/eff_interp_achieved/data/grid": [
+   {
+    "v": 1,
+    "dim": [
+     11
+    ],
+    "data": [
+     0.0,
+     0.02,
+     0.04,
+     0.06,
+     0.08,
+     0.1,
+     0.2,
+     0.4,
+     0.6,
+     0.8,
+     1.0
+    ]
+   }
+  ],
+  "pt_type/BEV/em/eff_interp_achieved/data/values/v": 1,
+  "pt_type/BEV/em/eff_interp_achieved/data/values/dim": [
+   11
+  ],
+  "pt_type/BEV/em/eff_interp_achieved/data/values/data": [
+   0.84,
+   0.86,
+   0.88,
+   0.9,
+   0.91,
+   0.92,
+   0.9400000000000001,
+   0.95,
+   0.95,
+   0.9400000000000001,
+   0.93
+  ],
+  "pt_type/BEV/em/eff_interp_achieved/strategy": "Linear",
+  "pt_type/BEV/em/eff_interp_achieved/extrapolate": "Error",
+  "pt_type/BEV/em/eff_interp_at_max_input/data/grid": [
+   {
+    "v": 1,
+    "dim": [
+     11
+    ],
+    "data": [
+     0.0,
+     0.023255813953488372,
+     0.045454545454545456,
+     0.06666666666666667,
+     0.0879120879120879,
+     0.10869565217391304,
+     0.2127659574468085,
+     0.4210526315789474,
+     0.631578947368421,
+     0.851063829787234,
+     1.075268817204301
+    ]
+   }
+  ],
+  "pt_type/BEV/em/eff_interp_at_max_input/data/values/v": 1,
+  "pt_type/BEV/em/eff_interp_at_max_input/data/values/dim": [
+   11
+  ],
+  "pt_type/BEV/em/eff_interp_at_max_input/data/values/data": [
+   0.84,
+   0.86,
+   0.88,
+   0.9,
+   0.91,
+   0.92,
+   0.9400000000000001,
+   0.95,
+   0.95,
+   0.9400000000000001,
+   0.93
+  ],
+  "pt_type/BEV/em/eff_interp_at_max_input/strategy/values_transform": "Reciprocal",
+  "pt_type/BEV/em/eff_interp_at_max_input/strategy/inner": "Linear",
+  "pt_type/BEV/em/eff_interp_at_max_input/extrapolate": "Error",
+  "pt_type/BEV/em/pwr_out_max_watts": 100000.0,
+  "pt_type/BEV/em/state/eff": 0.0,
+  "pt_type/BEV/em/state/eff_fwd_at_max_input": 0.0,
+  "pt_type/BEV/em/state/eff_at_max_regen": 0.0
+ },
+ "top_level_keys": [
+  "name",
+  "min_fastsim_version",
+  "doc",
+  "year",
+  "make",
+  "model",
+  "trim",
+  "pt_type",
+  "chassis",
+  "cabin",
+  "hvac",
+  "mass_kilograms",
+  "pwr_aux_base_watts",
+  "save_interval",
+  "state"
+ ]
+}

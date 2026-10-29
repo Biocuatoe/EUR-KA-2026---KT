@@ -1,0 +1,44 @@
+true
+""
+true
+""
+true
+""
+true
+""
+true
+"Y:/verification/modelica-build/cases_ctl/U_step_original"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases_ctl/U_step_original/U_step_original_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 10.0, numberOfIntervals = 1000, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'U_step_original', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.00361,
+    timeBackend = 0.0144993,
+    timeSimCode = 0.0021464,
+    timeTemplates = 0.0301343,
+    timeCompile = 2.8625663,
+    timeSimulation = 0.1302649,
+    timeTotal = 3.0438953
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases_ctl/U_step_semantics"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases_ctl/U_step_semantics/U_step_semantics_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 12.0, numberOfIntervals = 1200, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'U_step_semantics', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0068517,
+    timeBackend = 0.0107273,
+    timeSimCode = 0.0024542,
+    timeTemplates = 0.0368096,
+    timeCompile = 3.3536536,
+    timeSimulation = 0.1349658,
+    timeTotal = 3.5458279
+end SimulationResult;
+""
+"Y:/verification/modelica-build"

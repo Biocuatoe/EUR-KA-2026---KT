@@ -1,0 +1,243 @@
+{
+ "generated": "2026-10-28T16:41:23+0700",
+ "mode": "dry run (no run executed, no plant evaluated)",
+ "frozen_and_upstream": {
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_preflight\\03_R4_protocol_v1.md": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\research_recovery_20261025\\R3_20261025\\code\\r3_lib.py": "c2403adc2c7ef7a7ecc662f0dcfd3c107a43204ee73c28bd46f782b73cba1c97",
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\research_recovery_20261025\\R3_20261025\\data\\motor_curve_m1_derived.json": "f872faa0ff96d12d26eb5c935bb145062c3ac649e4eb327136f0fa9a0868d1d9",
+  "D:\\EUR\u00c9KA 2026 - KT\\src\\eureka\\plant.py": "e5701bce018f37bebba525dfc58d0e347c63cc1a5b385badf74fe6d0ea772907",
+  "D:\\EUR\u00c9KA 2026 - KT\\src\\eureka\\controllers.py": "2d57b757407dac725891219aa93102ce8be20294a97723fb35ea862ac76d8660",
+  "D:\\EUR\u00c9KA 2026 - KT\\src\\eureka\\params.py": "192ad65933b2786910104f3755601938758a161f603e2cce02d9eaa74907369e",
+  "D:\\EUR\u00c9KA 2026 - KT\\src\\eureka\\cycles.py": "f09ed877efe3aece1d4990c79d55c4902999758ef67ab2603591703ae49b8cec",
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\src\\rebuild\\model.py": "2050111b0860d1552c180b25ffbfbdb16c098c0e262632be6ecdb95d876003de",
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\src\\rebuild\\run.py": "7336a295f407134f6d7aa38ba1749edcb3aea9cdbddf7114c2f8a7bbdb185001",
+  "D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\configs\\R1.yaml": "b33d9667dacd69884c6443f7f71c229972eabb7a99eec6ae0649dfebbb980858",
+  "D:\\EUR\u00c9KA 2026 - KT\\configs\\parameters.yaml": "0efe2d1a413a51d425043691c857807b021d62908935adfda9b757de6f9f374f",
+  "D:\\EUR\u00c9KA 2026 - KT\\configs\\cycles\\profiles.yaml": "90a496a36c618e216693a3d819b84739f10e6c35167c23a91b63478ef28be0a6"
+ },
+ "schedule": {
+  "checks": {
+   "total_is_170": true,
+   "counts_per_set_equal_protocol_10_6": true,
+   "run_ids_unique": true,
+   "condition_ids_unique": true,
+   "every_condition_has_B0_and_B3": true,
+   "run_ids_official_format": true,
+   "cycles_only_S1_S2": true,
+   "S1_only_in_INS": true,
+   "P3_only_in_P3_set": true,
+   "half_ms_only_in_CNV": true,
+   "CNV_has_1ms_counterpart_in_NOM": true,
+   "CNV_is_S2_LEVE_P1_all_motors": true,
+   "SEN_is_32_draws_x_M0_M1_on_S2_LEVE_P1": true,
+   "no_M2_in_SEN": true,
+   "every_profile_designed_on_P1": true,
+   "smoke_runs_not_reused_D4": true,
+   "numerics_equal_protocol": true,
+   "no_planner_parameter_selection_job": true
+  },
+  "passed": true,
+  "counts_per_set": {
+   "NOM": 12,
+   "P3": 12,
+   "INS": 12,
+   "CNV": 6,
+   "SEN": 128
+  },
+  "n_runs": 170,
+  "n_conditions": 85,
+  "n_planner_jobs": 82,
+  "smoke_run_ids_excluded": [
+   "H3-slice-S1-M0-L-R1-P1-B0-dt1ms",
+   "H3-slice-S1-M0-L-R1-P1-B3-dt1ms"
+  ]
+ },
+ "canonical_cycle_inputs": {
+  "S1_source_segments.json": "88a04c905fdd6a3b109e0189af0347c8d6525347ae4812228e7838162cb8d6fd",
+  "S1_knots_from_yaml.csv": "e0cdb1f4a4627838a8e691d4516492e604b01be85c2afa34c1ec98be8fd120ec",
+  "S2_source_segments.json": "49093326473eb4d33dde34400a6dc741949d192e48fe25c81f1467683a0f2d13",
+  "S2_knots_from_yaml.csv": "4bf394980e928f075f7f82135aa11beba1b97b95a2d1e18ae030ea3c448dde6c",
+  "cycle_inputs_manifest.json": "3d3d6e93d19842141691d041e2363dd8f3f9fef73b362ebcd6ae2ef8b6de7ea5",
+  "S1_sampled_h1.csv": "87151e5c30c02f5f6784732a5dd619fc6c39e90913d4afcf06292de2c1f2b7da",
+  "S2_sampled_h1.csv": "def9d757dc0923afe20a91dca487c84527daff2bef5421c34aef1a61f0a6e990"
+ },
+ "campaign_config": {
+  "path": "config/campaign_config_v9_DRAFT.json",
+  "sha256": "f0719937d8c42714910b6c001f3db65757949f0855693063bf2001e08e5a597a",
+  "current": true,
+  "schedule_sha256_matches": true
+ },
+ "sensitivity": {
+  "table": "config/sensitivity_draws_v1.csv",
+  "table_sha256": "d1e42f31c5feb69c139b78fcdeb8d066be4aec8748708c539a210d24c008c703",
+  "regenerates_identically": true
+ },
+ "draft_amendment": {
+  "path": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_pilot\\03_protocol_v1_amendment_1_rev2_CANDIDATE.md",
+  "exists": true,
+  "errors": [],
+  "open": [],
+  "decisions": {
+   "amendment": "R4 protocol v1 amendment 1 (candidate rev2)",
+   "status": "DRAFT",
+   "applies_to_protocol_sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+   "D1_extra_stop_rule": "reject",
+   "D1_rest_threshold_ms": 1e-09,
+   "D2_p3_profiles": "B0 tracks v_b designed on P1; B3 tracks S-eco designed on P1; both run on the P3 plant",
+   "D2_gain_design_state": "P1",
+   "D3_arrival_rule": "arrival no later than the reference arrival, then at rest until the reference departure",
+   "D3_timing_tolerance_s": 0.0,
+   "D4_smoke_runs_count_toward_campaign": false,
+   "D5_p3_infeasible_rule": "run and retain both arms; classify the condition infeasible; no paired energy difference",
+   "canonical_sampled_cycles_sha256": {
+    "S1": "87151e5c30c02f5f6784732a5dd619fc6c39e90913d4afcf06292de2c1f2b7da",
+    "S2": "def9d757dc0923afe20a91dca487c84527daff2bef5421c34aef1a61f0a6e990"
+   },
+   "recompute_gate": [
+    "E_chem_rel",
+    "E_DC_rel",
+    "distance_rel",
+    "trip_time_abs_s",
+    "I_over_protocol_abs_As",
+    "rmse_rel",
+    "stop_ok_equal",
+    "complete_equal",
+    "tracking_ok_equal",
+    "constraint_ok_equal"
+   ],
+   "recompute_tolerances": {
+    "E_chem_rel": 0.0001,
+    "E_DC_rel": 0.0001,
+    "distance_rel": 1e-06,
+    "trip_time_abs_s": 1e-09,
+    "I_over_protocol_abs_As": 1e-06,
+    "rmse_rel": 1e-09,
+    "flags": "identical"
+   },
+   "planned_runs": {
+    "NOM": 12,
+    "P3": 12,
+    "INS": 12,
+    "CNV": 6,
+    "SEN": 128,
+    "total": 170
+   },
+   "AMB_14_sensitivity_gain_basis": "nominal_P1",
+   "AMB_15_campaign_directory": "R4_20261028_campaign",
+   "AMB_24_p3_feasibility": "dynamic_8_2_decides; QS screen diagnostic only",
+   "numerical_check_order": [
+    "frozen_and_input_hashes",
+    "planner_unit_tests",
+    "infrastructure_readiness",
+    "planner_optimality",
+    "planner_grid_convergence",
+    "independent_recomputation",
+    "qs_vs_dynamic",
+    "dynamic_time_step",
+    "baseline_sanity"
+   ],
+   "note": "Not approved. status DRAFT until the owner issues it as APPROVED in R4_20261028_campaign/release/."
+  },
+  "sha256": "42a7a9f51afae7c059373b9048ed9b09c6b87c975705e54c485f2f6bfc133369",
+  "status": "DRAFT"
+ },
+ "draft_amendment_2": {
+  "path": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_pilot\\03_protocol_v1_amendment_2_rev6_CANDIDATE.md",
+  "exists": true,
+  "errors": [],
+  "open": [],
+  "decisions": {
+   "amendment": "R4 protocol v1 amendment 2 (N-A2, AMB-29(a)-(d), AMB-30, AMB-31, AMB-32), candidate rev6",
+   "status": "DRAFT",
+   "applies_to_protocol_sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+   "amends_amendment_1_sha256": "7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2",
+   "N_A2_applicability": "protocol 9 QS-vs-dynamic applies to a pair only if both the B0 and the B3 profile pass the QS feasibility screen (QSPlant.step) on the condition's evaluated plant",
+   "N_A2_not_applicable_label": "NOT_APPLICABLE_QS_INFEASIBLE",
+   "N_A2_not_applicable_is_pass": false,
+   "N_A2_not_applicable_is_fail": false,
+   "N_A2_qs_energy_of_ineligible_pairs_used_for_acceptance": false,
+   "N_A2_thresholds": {
+    "M0_max_abs_pct": 1.0,
+    "M1_max_abs_pct": 1.0,
+    "M2": "reported only"
+   },
+   "N_A2_applicable_failure": "the M0/M1 motor branch is INCONCLUSIVE (protocol 9, unchanged)",
+   "N_A2_no_eligible_comparison": "the M0/M1 motor branch is INCONCLUSIVE with respect to this criterion",
+   "N_A2_dynamic_8_2_independent": true,
+   "N_A2_failed_check_record": "every failing piece with its failed QSPlant.step sub-check(s) (drive torque, battery discriminant, discharge current) and their values at each Gauss node",
+   "AMB_29_profile_unavailable": "owner ruling 2026-10-28: the condition keeps its explicit PROFILE_UNAVAILABLE or BASELINE_UNAVAILABLE status and counts in every planned-run, feasibility and verdict denominator; never COMPARABLE, never a paired comparison, never removed; only the pair's QS-vs-dynamic check is NOT_APPLICABLE_PROFILE_UNAVAILABLE (its applicability condition is objectively unmet), which is not a pass",
+   "AMB_29_eligible_run_missing": "owner ruling 2026-10-28 (AMB-29(b)): NOT_EVALUABLE_RUN_MISSING (class NOT_EVALUABLE) -> the M0/M1 branch is INCONCLUSIVE for this criterion; M2 stays reported only; the pair stays in every planned-run denominator and every available energy trace is kept for diagnostics",
+   "AMB_29_qs_energy_undefined": "owner ruling 2026-10-28 (AMB-29(c)): QS energy per reference km <= 0 -> NOT_EVALUABLE_QS_UNDEFINED -> the M0/M1 branch is INCONCLUSIVE for this criterion; M2 stays reported only; the raw values and the exact non-positive term are recorded; no percentage, replacement denominator, epsilon, absolute value or substitute threshold; the runs' dynamic result is unaffected and protocol 8.2 still applies to it. Reading I-5 (amendment 2 section 9): the owner's QS_COMPARISON_NOT_EVALUABLE is the NOT_EVALUABLE class",
+   "AMB_29_condition_error": "owner ruling 2026-10-28 (AMB-29(d)): an exception before or during the pair evaluation, including the QS screen -> NOT_EVALUABLE_CONDITION_ERROR (eligibility unknown; NOT_APPLICABLE_PROFILE_UNAVAILABLE if a profile is missing) -> the M0/M1 branch is INCONCLUSIVE for this criterion; M2 stays reported only; both dynamic arms still run and are classified by protocol 8.2 alone; the error, traceback, traces and run IDs are kept (errors.csv, conditions/, traces/); no retry, automatic replacement or substitute run; a rerun only under the protocol and an explicitly authorised procedure with a distinct run ID. Reading I-6 (amendment 2 section 9): an exception inside one run makes the condition ERROR and leaves a QS-eligible pair NOT_EVALUABLE_RUN_MISSING unless a valid arm FAILs",
+   "AMB_30_branch_scope": "owner ruling 2026-10-28 (strict): an applicable FAIL or a NOT_EVALUABLE_* pair in any preregistered set (NOM, P3, INS, CNV, SEN) makes the M0/M1 branch INCONCLUSIVE, counted per set, never averaged; a required PASS must come from the held-out nominal S2 set NOM; a PASS in another set, the in-sample S1 set INS included, never substitutes; missing held-out nominal evidence blocks PASS. Readings (amendment 2 section 9, confirmed only by approving the amendment): I-1 the required PASS is at least one of the motor's two NOM cells, and a NOM cell that is NOT_APPLICABLE_QS_INFEASIBLE is not missing evidence; I-2 a NOM cell that is absent, duplicated, not evaluable, or whose condition has no profile lacks evidence; a planned pair missing from the record blocks PASS",
+   "AMB_31_energy_of_invalid_runs": "owner ruling 2026-10-28: energy of a run failing protocol 8.2, or not confirmed by its recomputation, is diagnostic only (energy_roles.csv DIAGNOSTIC_ONLY_*): never confirmatory, never credited to the paired endpoint, never used by the QS-vs-dynamic check. Reading I-4 (amendment 2 section 9): both the in-process and the separate recomputation must confirm the run",
+   "AMB_31_invalid_arm_label": "NOT_EVALUABLE_RUN_INVALID (owner ruling AMB-29(b): M0/M1 branch INCONCLUSIVE; M2 stays reported only)",
+   "paired_endpoint_rule": "a paired energy comparison exists only for a condition whose final status is COMPARABLE: both arms complete the task and pass every protocol 8.2 criterion and the separate recomputation",
+   "h3_verdict_denominators": "fixed by protocol 8.1: 6 nominal S2 P1 cells and 32 draws per M0/M1; a missing, profile-failed, invalid or non-comparable cell or draw is never removed and never counts toward SUPPORTED",
+   "AMB_32_not_supported_needs_all_nominal_cells": "owner ruling 2026-10-28: NOT SUPPORTED requires a comparable pair in all six nominal cells; a nominal cell that is missing, invalid or not evaluable makes the H3 verdict INCONCLUSIVE, recorded with its reason; no negative finding is inferred from missing data",
+   "pair_statuses": [
+    "PASS",
+    "FAIL",
+    "REPORTED_ONLY",
+    "NOT_APPLICABLE_QS_INFEASIBLE",
+    "NOT_APPLICABLE_PROFILE_UNAVAILABLE",
+    "NOT_EVALUABLE_RUN_MISSING",
+    "NOT_EVALUABLE_QS_UNDEFINED",
+    "NOT_EVALUABLE_CONDITION_ERROR",
+    "NOT_EVALUABLE_RUN_INVALID"
+   ],
+   "pair_status_classes": {
+    "PASS": [
+     "PASS"
+    ],
+    "FAIL": [
+     "FAIL"
+    ],
+    "REPORTED_ONLY": [
+     "REPORTED_ONLY"
+    ],
+    "NOT_APPLICABLE": [
+     "NOT_APPLICABLE_QS_INFEASIBLE",
+     "NOT_APPLICABLE_PROFILE_UNAVAILABLE"
+    ],
+    "NOT_EVALUABLE": [
+     "NOT_EVALUABLE_RUN_MISSING",
+     "NOT_EVALUABLE_QS_UNDEFINED",
+     "NOT_EVALUABLE_CONDITION_ERROR",
+     "NOT_EVALUABLE_RUN_INVALID"
+    ]
+   },
+   "non_positive_denominator_rule": "AMB-29(c) ruling for the QS-vs-dynamic ratio (e_QS), and reading I-3 (amendment 2 section 9) for the other relative saving percentages (paired dE_rel, B0 energy per reference km; planner S_found, S_max and grid dS, E(v_b)): none is computed with a denominator <= 0 or not finite; the value is not evaluable and the exact term and the raw values are recorded. The recomputation and shortfall tolerance comparisons of amendment 1 are not saving percentages and are unchanged",
+   "record_invariant": "every scheduled condition and run has exactly one record (no drop, retry or replacement); a violation is recorded in errors.csv and the manifest",
+   "separate_recomputation_exit_codes": "0 every recomputed run passes; 1 a run fails a protocol check; 3 independence violation or refusal; 4 exception. Only 0 and 1 are results: any other exit leaves every run unconfirmed and is recorded in errors.csv with its stderr; a fold that raises leaves no condition COMPARABLE",
+   "planned_runs": {
+    "NOM": 12,
+    "P3": 12,
+    "INS": 12,
+    "CNV": 6,
+    "SEN": 128,
+    "total": 170
+   },
+   "note": "CANDIDATE rev6 - DRAFT - NOT APPROVED FOR RELEASE. Values must equal the implementation."
+  },
+  "sha256": "0dcb767e97e19f40c00735d9efaecf8d21c396c23952b70e60ccb21a3f711e1f",
+  "status": "DRAFT"
+ },
+ "issued_amendment_2_present": false,
+ "issued_amendment_present": true,
+ "estimate": {
+  "basis": "smoke-test runs (S1, 324 s, 1 ms): trace bytes and runtime scaled by cycle duration and 1/dt",
+  "available": true,
+  "smoke_runtime_s_mean": 203.53903985023499,
+  "est_dynamic_runtime_h": 6.774164546455866,
+  "est_trace_GB": 3.7664396189629628,
+  "disk_free_GB": 342.671364096,
+  "disk_ok": true
+ },
+ "blockers": [
+  "no issued amendment 2 at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+  "code review: 0 critical and 2 major findings not resolved or accepted by the owner",
+  "code review not yet performed or its closure not yet accepted by the owner: independent read-only verification of the rev9 fixes for review R5 (R5-1 to R5-14) on release attempt 6 (checks.py, campaign.py, recompute_from_traces.py, tests/test_review_fixes_v9.py and the changed tests, candidate rev6), and the owner's acceptance of the closure of the rev7 to rev9 review (an AI-agent review is not a human independent audit)"
+ ],
+ "campaign_may_start": false
+}

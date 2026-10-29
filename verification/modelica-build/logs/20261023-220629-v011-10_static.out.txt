@@ -1,0 +1,188 @@
+true
+""
+true
+""
+true
+"Y:/verification/modelica-build/cases/B1_eq_20kmh"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/B1_eq_20kmh/B1_eq_20kmh_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 1.0, numberOfIntervals = 100, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'B1_eq_20kmh', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = '-override=v_init=5.555555555555555,T_init=3.737107988033914,T_hold=3.737107988033914'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.004273,
+    timeBackend = 0.0256363,
+    timeSimCode = 0.0074852,
+    timeTemplates = 0.0150641,
+    timeCompile = 1.9262997,
+    timeSimulation = 0.0908803,
+    timeTotal = 2.0699454
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/B1_eq_30kmh"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/B1_eq_30kmh/B1_eq_30kmh_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 1.0, numberOfIntervals = 100, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'B1_eq_30kmh', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = '-override=v_init=8.333333333333334,T_init=4.609469080302414,T_hold=4.609469080302414'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0031471,
+    timeBackend = 0.0214241,
+    timeSimCode = 0.0092113,
+    timeTemplates = 0.0185517,
+    timeCompile = 1.9386715,
+    timeSimulation = 0.0911848,
+    timeTotal = 2.0824716
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/B1_eq_50kmh"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/B1_eq_50kmh/B1_eq_50kmh_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 1.0, numberOfIntervals = 100, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'B1_eq_50kmh', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = '-override=v_init=13.88888888888889,T_init=7.323643623180661,T_hold=7.323643623180661'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0067517,
+    timeBackend = 0.0211659,
+    timeSimCode = 0.0052316,
+    timeTemplates = 0.0217701,
+    timeCompile = 1.9234978,
+    timeSimulation = 0.0927545,
+    timeTotal = 2.0714428
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/B2_motoring_v10_T10"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/B2_motoring_v10_T10/B2_motoring_v10_T10_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 0.01, numberOfIntervals = 1, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'B2_motoring_v10_T10', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = '-override=v_init=10.0,T_init=10.0,T_hold=10.0'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0067798,
+    timeBackend = 0.0214122,
+    timeSimCode = 0.0052391,
+    timeTemplates = 0.0201656,
+    timeCompile = 1.9987167,
+    timeSimulation = 0.089936,
+    timeTotal = 2.1425546
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/B2_motoring_v3_T60"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/B2_motoring_v3_T60/B2_motoring_v3_T60_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 0.01, numberOfIntervals = 1, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'B2_motoring_v3_T60', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = '-override=v_init=3.0,T_init=60.0,T_hold=60.0'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0030992,
+    timeBackend = 0.0251791,
+    timeSimCode = 0.0078183,
+    timeTemplates = 0.0116297,
+    timeCompile = 1.9547678,
+    timeSimulation = 0.0894082,
+    timeTotal = 2.0921878
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/B2_regen_v10_Tm20"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/B2_regen_v10_Tm20/B2_regen_v10_Tm20_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 0.01, numberOfIntervals = 1, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'B2_regen_v10_Tm20', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = '-override=v_init=10.0,T_init=-20.0,T_hold=-20.0'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0030343,
+    timeBackend = 0.0252314,
+    timeSimCode = 0.0052565,
+    timeTemplates = 0.0164526,
+    timeCompile = 1.9169369,
+    timeSimulation = 0.0815522,
+    timeTotal = 2.0487306
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/B2_regen_v20_Tm40"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/B2_regen_v20_Tm40/B2_regen_v20_Tm40_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 0.01, numberOfIntervals = 1, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'B2_regen_v20_Tm40', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = '-override=v_init=20.0,T_init=-40.0,T_hold=-40.0'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0031014,
+    timeBackend = 0.0250853,
+    timeSimCode = 0.0054456,
+    timeTemplates = 0.0137993,
+    timeCompile = 1.8941061,
+    timeSimulation = 0.0882287,
+    timeTotal = 2.0300375
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/B3_limit_v13"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/B3_limit_v13/B3_limit_v13_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 0.01, numberOfIntervals = 1, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'B3_limit_v13', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = '-override=v_init=13.0,T_init=0.0,T_hold=1000.0'",
+    messages = "LOG_STDOUT        | warning | You are overriding T_init with a small value or zero.
+|                 | |       | This could lead to numerically dirty solutions or divisions by zero if not tearingStrictness=veryStrict.
+LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0032341,
+    timeBackend = 0.0227837,
+    timeSimCode = 0.0101225,
+    timeTemplates = 0.0187552,
+    timeCompile = 1.9370493,
+    timeSimulation = 0.082106,
+    timeTotal = 2.074355
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/B3_limit_v2"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/B3_limit_v2/B3_limit_v2_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 0.01, numberOfIntervals = 1, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'B3_limit_v2', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = '-override=v_init=2.0,T_init=0.0,T_hold=1000.0'",
+    messages = "LOG_STDOUT        | warning | You are overriding T_init with a small value or zero.
+|                 | |       | This could lead to numerically dirty solutions or divisions by zero if not tearingStrictness=veryStrict.
+LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0071056,
+    timeBackend = 0.0212986,
+    timeSimCode = 0.0062378,
+    timeTemplates = 0.0188727,
+    timeCompile = 1.8926409,
+    timeSimulation = 0.090788,
+    timeTotal = 2.0372196
+end SimulationResult;
+""
+"Y:/verification/modelica-build"
+true
+"Y:/verification/modelica-build/cases/E_B1_eq_30kmh_wrong_eta_g"
+record SimulationResult
+    resultFile = "Y:/verification/modelica-build/cases/E_B1_eq_30kmh_wrong_eta_g/E_B1_eq_30kmh_wrong_eta_g_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 1.0, numberOfIntervals = 100, tolerance = 1e-10, method = 'dassl', fileNamePrefix = 'E_B1_eq_30kmh_wrong_eta_g', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = '-override=v_init=8.333333333333334,T_init=4.609469080302414,T_hold=4.609469080302414,eta_g=0.98'",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.0063449,
+    timeBackend = 0.0228349,
+    timeSimCode = 0.0052638,
+    timeTemplates = 0.0198491,
+    timeCompile = 2.1202522,
+    timeSimulation = 0.1001826,
+    timeTotal = 2.275033
+end SimulationResult;
+""
+"Y:/verification/modelica-build"

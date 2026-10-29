@@ -1,0 +1,30 @@
+﻿{
+    "label":  "ctl_step",
+    "time":  "2026-10-23T23:22:53",
+    "exit_code":  0,
+    "project_root":  "D:\\EURÉKA 2026 - KT",
+    "letter":  "Y",
+    "cleanup":  {
+                    "alias_created":  true,
+                    "alias_removed":  true,
+                    "alias_still_mapped":  false,
+                    "other_mappings_unchanged":  true,
+                    "env_restored":  true
+                },
+    "steps":  [
+                  {
+                      "name":  "version",
+                      "command":  "omc --version",
+                      "exit_code":  0,
+                      "seconds":  0.07,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-232246-ctl_step-version.out.txt"
+                  },
+                  {
+                      "name":  "75_controller_step_inputs",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\75_controller_step_inputs.mos",
+                      "exit_code":  0,
+                      "seconds":  6.78,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-232246-ctl_step-75_controller_step_inputs.out.txt"
+                  }
+              ]
+}

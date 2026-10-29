@@ -1,3 +1,8 @@
 * text=auto
 *.ps1 text eol=crlf
 *.png binary
+# Byte-exact storage for the verification evidence: its SHA-256 chain (frozen protocol, sources, result tables) must not change with line-ending conversion
+verification/** -text
+audit/** -text
+/technical-claim-matrix.csv -text
+/technical-foundation-audit.md -text

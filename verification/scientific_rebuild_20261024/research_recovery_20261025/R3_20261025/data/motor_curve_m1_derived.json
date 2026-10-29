@@ -1,0 +1,48 @@
+{
+ "branch": "M1 (M-curve)",
+ "quantity": "combined motor + power-electronics efficiency vs mechanical output-power fraction (FASTSim ElectricMachine)",
+ "frac": [
+  0.0,
+  0.02,
+  0.04,
+  0.06,
+  0.08,
+  0.1,
+  0.2,
+  0.4,
+  0.6,
+  0.8,
+  1.0
+ ],
+ "eff": [
+  0.84,
+  0.86,
+  0.88,
+  0.9,
+  0.91,
+  0.92,
+  0.9400000000000001,
+  0.95,
+  0.95,
+  0.9400000000000001,
+  0.93
+ ],
+ "p_rated_W": 18000.0,
+ "source": {
+  "package": "fastsim 3.1.0",
+  "resource": "2022_Renault_Zoe_ZE50_R135.yaml",
+  "field": "pt_type/BEV/em/eff_interp_achieved (strategy Linear, extrapolate Error)",
+  "source_pwr_out_max_W": 100000.0,
+  "module_sha256": "18da0cec61c78d1be690fbdfcbd5881d3b610fae57cddc377e26bd9a72c2ce40",
+  "embedded_yaml_sha256": "ed882ffab297a02f1558a6c89a0f0c6fd0fca1ff40d98b64c858a9d6d8180141",
+  "extraction_json": "motor_curve_fastsim.json",
+  "extraction_json_sha256": "75947bba8bce5fc7f23e8745561aa9258c52a761071ea4129d04edc791ab7448"
+ },
+ "transformation": [
+  "x = |P_m| / 18000 W (source normalises by its own 100 kW pwr_out_max)",
+  "eta values unchanged; linear interpolation on the source grid",
+  "motoring P_e = P_m / eta(x); regeneration P_e = P_m * eta(x) (R3 assumption; FASTSim 3.1.0 uses eta(0) in regeneration)",
+  "x > 1 does not occur (torque/power envelope); clamped to eta(1) if it did"
+ ],
+ "status": "illustrative generic shape; not a measurement of the Zoe machine or of the thesis motor"
+}

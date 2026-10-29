@@ -1,0 +1,274 @@
+{
+ "written": "2026-10-28T15:21:10+0700",
+ "attempt": "D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release_attempts\\attempt5_owner_rulings",
+ "dry_run": "dry_run_20261028_152102",
+ "note": "no run executed, no plant evaluated, no arm-to-arm energy difference computed",
+ "schedule": {
+  "runs": 170,
+  "equals_170": true,
+  "counts_per_set": {
+   "NOM": 12,
+   "P3": 12,
+   "INS": 12,
+   "CNV": 6,
+   "SEN": 128
+  },
+  "counts_equal_protocol_10_6": true,
+  "run_ids_unique": true,
+  "all_official_prefix": true,
+  "every_condition_has_B0_and_B3": true,
+  "dry_run_schedule_checks": {
+   "total_is_170": true,
+   "counts_per_set_equal_protocol_10_6": true,
+   "run_ids_unique": true,
+   "condition_ids_unique": true,
+   "every_condition_has_B0_and_B3": true,
+   "run_ids_official_format": true,
+   "cycles_only_S1_S2": true,
+   "S1_only_in_INS": true,
+   "P3_only_in_P3_set": true,
+   "half_ms_only_in_CNV": true,
+   "CNV_has_1ms_counterpart_in_NOM": true,
+   "CNV_is_S2_LEVE_P1_all_motors": true,
+   "SEN_is_32_draws_x_M0_M1_on_S2_LEVE_P1": true,
+   "no_M2_in_SEN": true,
+   "every_profile_designed_on_P1": true,
+   "smoke_runs_not_reused_D4": true,
+   "numerics_equal_protocol": true,
+   "no_planner_parameter_selection_job": true
+  },
+  "dry_run_schedule_passed": true,
+  "smoke_run_ids": [
+   "H3-slice-S1-M0-L-R1-P1-B0-dt1ms",
+   "H3-slice-S1-M0-L-R1-P1-B3-dt1ms"
+  ],
+  "smoke_runs_excluded": true,
+  "s2_rows_all_held_out": true,
+  "s1_only_in_INS": true,
+  "every_profile_designed_on_P1": true,
+  "planner_jobs_only_profiles_or_grid": true,
+  "planner_numerics_equal_protocol": true,
+  "canonical_cycles_verified": {
+   "S1_source_segments.json": "88a04c905fdd6a3b109e0189af0347c8d6525347ae4812228e7838162cb8d6fd",
+   "S1_knots_from_yaml.csv": "e0cdb1f4a4627838a8e691d4516492e604b01be85c2afa34c1ec98be8fd120ec",
+   "S2_source_segments.json": "49093326473eb4d33dde34400a6dc741949d192e48fe25c81f1467683a0f2d13",
+   "S2_knots_from_yaml.csv": "4bf394980e928f075f7f82135aa11beba1b97b95a2d1e18ae030ea3c448dde6c",
+   "cycle_inputs_manifest.json": "3d3d6e93d19842141691d041e2363dd8f3f9fef73b362ebcd6ae2ef8b6de7ea5",
+   "S1_sampled_h1.csv": "87151e5c30c02f5f6784732a5dd619fc6c39e90913d4afcf06292de2c1f2b7da",
+   "S2_sampled_h1.csv": "def9d757dc0923afe20a91dca487c84527daff2bef5421c34aef1a61f0a6e990"
+  },
+  "sen_gain_text_all_fixed_P1": true,
+  "sen_gain_equal_nominal_P1_for_all_32_draws": true,
+  "sen_draws_checked": 32,
+  "sensitivity_gain_basis": "nominal_P1"
+ },
+ "qs_vs_dynamic_distinct": {
+  "condition_statuses": [
+   "PROFILE_UNAVAILABLE",
+   "BASELINE_UNAVAILABLE",
+   "ERROR",
+   "BASELINE_INFEASIBLE_ON_P3",
+   "ECO_INFEASIBLE_ON_P3",
+   "B0_INVALID_EXCLUDED",
+   "INVALID_COMPARISON",
+   "RECOMPUTATION_DISAGREEMENT",
+   "COMPARABLE"
+  ],
+  "pair_qs_statuses": [
+   "PASS",
+   "FAIL",
+   "REPORTED_ONLY",
+   "NOT_APPLICABLE_QS_INFEASIBLE",
+   "NOT_APPLICABLE_PROFILE_UNAVAILABLE",
+   "NOT_EVALUABLE_RUN_MISSING",
+   "NOT_EVALUABLE_QS_UNDEFINED",
+   "NOT_EVALUABLE_CONDITION_ERROR",
+   "NOT_EVALUABLE_RUN_INVALID"
+  ],
+  "vocabularies_disjoint": true,
+  "classify_pair_parameters": [
+   "b0",
+   "b3",
+   "eco_profile_ok",
+   "baseline_ok",
+   "pstate"
+  ],
+  "classify_pair_body_names": [
+   "COMPARABLE",
+   "arm_comparable",
+   "b0",
+   "b3",
+   "baseline_ok",
+   "eco_profile_ok",
+   "get",
+   "pstate"
+  ],
+  "classify_pair_reads_no_qs_name": true,
+  "implemented_2_dynamic_8_2_independent": true
+ },
+ "paired_endpoint": {
+  "energy_role_cases": 72,
+  "confirmatory_only_if_executed_valid_confirmed_and_COMPARABLE": true,
+  "paired_delta_refuses": [
+   "PROFILE_UNAVAILABLE",
+   "BASELINE_UNAVAILABLE",
+   "ERROR",
+   "BASELINE_INFEASIBLE_ON_P3",
+   "ECO_INFEASIBLE_ON_P3",
+   "B0_INVALID_EXCLUDED",
+   "INVALID_COMPARISON",
+   "RECOMPUTATION_DISAGREEMENT"
+  ],
+  "paired_delta_refuses_every_non_COMPARABLE_status": true
+ },
+ "reporting_tests": {
+  "junit_cases": 248,
+  "by_prefix": {
+   "test_missing_profile_and_invalid_arm_accounting": {
+    "tests.test_owner_rulings_v8::test_missing_profile_and_invalid_arm_accounting": "passed"
+   },
+   "test_planned_run_and_feasibility_denominators_stay_fixed": {
+    "tests.test_owner_rulings_v8::test_planned_run_and_feasibility_denominators_stay_fixed": "passed"
+   },
+   "test_no_situation_yields_a_pass_by_omission": {
+    "tests.test_owner_rulings_v8::test_no_situation_yields_a_pass_by_omission": "passed"
+   },
+   "test_amb29d_evaluation_exceptions_are_kept_without_retry": {
+    "tests.test_owner_rulings_v8::test_amb29d_evaluation_exceptions_are_kept_without_retry_or_replacement": "passed"
+   },
+   "test_valid_dynamic_energy_is_kept_when_only_the_qs_comparison_is_not_evaluable": {
+    "tests.test_owner_rulings_v8::test_valid_dynamic_energy_is_kept_when_only_the_qs_comparison_is_not_evaluable": "passed"
+   },
+   "test_amb29c_non_positive_qs_energy": {
+    "tests.test_owner_rulings_v8::test_amb29c_non_positive_qs_energy_keeps_raw_values_and_computes_no_percentage": "passed",
+    "tests.test_owner_rulings_v8::test_amb29c_non_positive_qs_energy_in_the_executor": "passed"
+   },
+   "test_a_missing_required_nominal_cell": {
+    "tests.test_owner_rulings_v8::test_a_missing_required_nominal_cell": "passed"
+   },
+   "test_amb30_": {
+    "tests.test_owner_rulings_v8::test_amb30_an_s1_pass_with_the_nominal_s2_cells_missing_is_inconclusive": "passed",
+    "tests.test_owner_rulings_v8::test_amb30_an_s1_pass_with_a_failed_nominal_s2_check_is_inconclusive": "passed",
+    "tests.test_owner_rulings_v8::test_amb30_a_nominal_pass_with_a_failure_in_another_preregistered_set_is_inconclusive[P3]": "passed",
+    "tests.test_owner_rulings_v8::test_amb30_a_nominal_pass_with_a_failure_in_another_preregistered_set_is_inconclusive[INS]": "passed",
+    "tests.test_owner_rulings_v8::test_amb30_a_nominal_pass_with_a_failure_in_another_preregistered_set_is_inconclusive[CNV]": "passed",
+    "tests.test_owner_rulings_v8::test_amb30_a_nominal_pass_with_a_failure_in_another_preregistered_set_is_inconclusive[SEN]": "passed",
+    "tests.test_owner_rulings_v8::test_amb30_all_required_checks_pass": "passed"
+   },
+   "test_amb29a_planned_run_and_feasibility_denominators": {
+    "tests.test_owner_rulings_v7::test_amb29a_planned_run_and_feasibility_denominators": "passed"
+   },
+   "test_amb31_": {
+    "tests.test_owner_rulings_v7::test_amb31_both_arms_valid_is_eligible_for_the_paired_endpoint": "passed",
+    "tests.test_owner_rulings_v7::test_amb31_an_arm_failing_8_2_keeps_its_energy_as_diagnostic_only": "passed",
+    "tests.test_owner_rulings_v7::test_amb31_an_incomplete_arm": "passed",
+    "tests.test_owner_rulings_v7::test_amb31_invalid_energy_never_passes_or_fails_the_qs_check": "passed",
+    "tests.test_owner_rulings_v7::test_amb31_an_unconfirmed_recomputation_demotes_a_qs_result": "passed",
+    "tests.test_owner_rulings_v7::test_amb31_crediting_an_invalid_arm_changes_no_status_role_denominator_or_verdict": "passed"
+   },
+   "test_case9_denominator": {
+    "tests.test_amendment2::test_case9_denominator_and_exclusion_accounting": "passed"
+   },
+   "test_case10_records_are_preserved": {
+    "tests.test_amendment2::test_case10_records_are_preserved_and_accounting_written": "passed"
+   },
+   "test_campaign_execution_stays_blocked": {
+    "tests.test_owner_rulings_v8::test_campaign_execution_stays_blocked_without_a_separate_authorization": "passed"
+   }
+  },
+  "every_prefix_found": true,
+  "all_passed": true
+ },
+ "legacy_numbers": {
+  "protocol_line_12": "the thesis's 12.5 %, 15.3 %, +/- 2.1 %, +/- 2.8 % and every other legacy number are not targets",
+  "also_scanned": [
+   "10.3",
+   "5.3"
+  ],
+  "hits_in_code": [
+   {
+    "file": "code/r4h3/campaign.py",
+    "line": 730,
+    "text": "\"recompute_protocol_ok\", \"credited\")})                # protocol 10.3 (CR-A11)"
+   },
+   {
+    "file": "code/r4h3/closedloop.py",
+    "line": 1,
+    "text": "\"\"\"Component C: fixed-LQR closed loop with 1 ms traces (protocol v1 2.1, 4, 10.3)."
+   },
+   {
+    "file": "code/r4h3/closedloop.py",
+    "line": 24,
+    "text": "TRACE_DT = 1e-3                    # every trace is sampled at 1 ms (protocol 10.3; change VC-02)"
+   },
+   {
+    "file": "code/r4h3/evaluator.py",
+    "line": 152,
+    "text": "# spec[\"dt_s\"] is the trace sample step (1 ms for every run, protocol 10.3); refuse any other spacing so that"
+   },
+   {
+    "file": "code/r4h3/frozen.py",
+    "line": 1,
+    "text": "\"\"\"Frozen inputs of the H3 pilot and their hash checks (protocol v1 sections 2.1, 2.3, 10.1)."
+   },
+   {
+    "file": "code/r4h3/frozen.py",
+    "line": 40,
+    "text": "R3_LIB: \"c2403adc2c7ef7a7ecc662f0dcfd3c107a43204ee73c28bd46f782b73cba1c97\",     # protocol 2.1"
+   },
+   {
+    "file": "code/r4h3/planner.py",
+    "line": 63,
+    "text": "\"\"\"Time-domain knots: segment k departs at ks_k h, follows the DP speeds, then rests (protocol 5.3).\"\"\""
+   },
+   {
+    "file": "code/r4h3/traces.py",
+    "line": 1,
+    "text": "\"\"\"Component F: raw-trace schema r4h3-trace-v1, writer and reader (protocol v1 10.3)."
+   },
+   {
+    "file": "code/r4h3/validator.py",
+    "line": 72,
+    "text": "# rest intervals of the task: at rest throughout (protocol 5.3, 9a)"
+   },
+   {
+    "file": "code/tests/test_frozen_and_task.py",
+    "line": 1,
+    "text": "\"\"\"Frozen inputs, nominal parameters and the sampled task (protocol 2.1, 2.2, 2.4, 3).\"\"\""
+   },
+   {
+    "file": "code/tests/test_regressions_v2.py",
+    "line": 87,
+    "text": "# ---- VC-02: 0.5 ms runs, traced every second step (protocol 10.3)"
+   },
+   {
+    "file": "code/tests/test_validator.py",
+    "line": 77,
+    "text": "# protocol 5.2-5.3: t_k <= T_k, departure at the reference time, then rest until the next departure"
+   }
+  ],
+  "acceptance_constants": {
+   "QS_DYN_MAX_PCT": 1.0,
+   "GRID_MAX_PP": 0.2,
+   "OPTIMALITY_PP": 0.2,
+   "TIMESTEP_MAX_PP": 0.01,
+   "H3_SEN_DRAWS": 32,
+   "H3_SEN_MIN": 29
+  },
+  "acceptance_constants_equal_protocol": true
+ },
+ "fail_closed": {
+  "campaign_authorization_exists": false,
+  "issued_amendment_2_exists": false,
+  "campaign_blockers": [
+   "no issued amendment 2 at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+   "protocol 10.1 gate record: pre-run gate record logs/pre_run_hashes.txt is missing",
+   "no campaign authorisation record campaign_authorization.json (protocol approval is not campaign authorisation)",
+   "campaign must run once, from the released copy in R4_20261028_campaign (AMB-15), not from attempt5_owner_rulings (protocol 10.1)",
+   "code review not yet performed or its closure not yet accepted by the owner: independent read-only review of the rev7 and rev8 changes (owner rulings AMB-29(a)-(d), AMB-30, AMB-31, AMB-32: checks.py, campaign.py, tests/test_owner_rulings_v7.py, tests/test_owner_rulings_v8.py, 03_protocol_v1_amendment_2_rev5_CANDIDATE.md; release attempt 5), and the owner's acceptance of its closure (an AI-agent review is not a human independent audit)"
+  ],
+  "run_campaign_called": false
+ },
+ "all_checks_true": true,
+ "legacy_hits_need_inspection": 12
+}

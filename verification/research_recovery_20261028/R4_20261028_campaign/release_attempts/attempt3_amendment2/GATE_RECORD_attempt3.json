@@ -1,0 +1,162 @@
+{
+ "record": "release attempt 3 gate record (amendment 2 readiness package). NOT a release, NOT the protocol 10.1 gate",
+ "written": "2026-10-28T11:43:14+0700",
+ "campaign_status": "BLOCKED",
+ "attempt_directory": "R4_20261028_campaign/release_attempts/attempt3_amendment2/",
+ "protocol_v1": {
+  "path": "R4_20261028_preflight/03_R4_protocol_v1.md",
+  "sha256": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab"
+ },
+ "amendment_1": {
+  "path": "R4_20261028_campaign/release/03_R4_protocol_v1_amendment_1.md",
+  "sha256": "7720fed75bb678e47a229d00aff154e0aa14607c051f4a1163cc9bf67b6abee2",
+  "status": "APPROVED (issued 2026-10-28; unchanged)",
+  "approval_record_sha256": "03f835e9311410095e4447840ecb2b02d95c50279527df5fdf2f6d334e15eecd"
+ },
+ "amendment_2": {
+  "draft_path": "R4_20261028_pilot/03_protocol_v1_amendment_2_DRAFT.md",
+  "draft_sha256": "fdaf193de510488733f0e0899d50def86cbeafabdbecdd3bc7a144099b6f492c",
+  "revision": "rev3",
+  "status": "DRAFT - NOT APPROVED FOR RELEASE",
+  "dry_run_reading": {
+   "status": "DRAFT",
+   "errors": []
+  },
+  "issued_copy_present": false,
+  "approval_record_present": false
+ },
+ "source": {
+  "pilot_readiness_gate": {
+   "path": "R4_20261028_pilot/logs/readiness_gate_v7.json",
+   "sha256": "0fd8606a6ad7b17d3513d458d40fa4aa91ea370d7ff7fc4447559a63e0568365",
+   "junit": {
+    "tests": 216,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+   },
+   "junit_sha256": "e7a04c66dca7b2d42da55a18f9565929852565a5f96c8c1a4503ef8b78370eea"
+  },
+  "copy_verification": {
+   "files_copied": 58,
+   "copy_mismatches": [],
+   "gate_code_files": 50,
+   "gate_mismatches": [],
+   "summary_sha256": "85c76ea0b35a13c1024659c5aa202075093da735c97acd31919e65f7acfb6edd",
+   "rows_sha256": "6a567223a1dccf9ae5da4adc9f3cee34f1340a1b1458ead6c55599e78bf78134"
+  }
+ },
+ "attempt_tests": {
+  "log": "logs/pytest_release_attempt3.txt",
+  "junit": "logs/pytest_release_attempt3.xml",
+  "tests": 216,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "junit_sha256": "885e14737a1e9ca3b464a34059966530dd310e54c712bad6646fe69bb8a47a4f",
+  "attempt_readiness_gate": {
+   "path": "logs/readiness_gate_v1.json",
+   "sha256": "348d36f441f8430d1641407baf3f3f041040b619ce4283deea16cf703e775f95"
+  }
+ },
+ "independent_review": {
+  "status_file": {
+   "path": "config/code_review_status_v4.json",
+   "sha256": "91d15a69b2a6bf321ca1822b0de0554c1bbc1a4ed7578394d5691c1ac92a1b3b"
+  },
+  "reports": [
+   "R4_20261028_pilot/review/N-A2_review_agent_report_20261028.md",
+   "R4_20261028_pilot/review/N-A2_verification_agent_report_20261028.md",
+   "R4_20261028_pilot/review/N-A2_verification2_agent_report_20261028.md",
+   "R4_20261028_pilot/review/N-A2_verification3_agent_report_20261028.md"
+  ],
+  "scope": "the changed pilot source and the amendment 2 draft (read-only agent); the attempt copy is byte-identical to that source (copy_verification)",
+  "open_critical": 0,
+  "open_major": 0,
+  "owner_decisions_pending_through_amendment_2": [
+   "AMB-29(a)-(d)",
+   "AMB-30",
+   "AMB-31"
+  ]
+ },
+ "dry_run": {
+  "path": "dry_run_20261028_114044/",
+  "dry_run_json_sha256": "73a5f619f6f96d131dd325ee2e2f68f2acf5a26fd08bbf96ce9aa5f64ec493c3",
+  "schedule_170_csv_sha256": "6011e3572ed6f99b0f306251de28580574b54ea18df495286baf8f4917a77dfc",
+  "counts_per_set": {
+   "NOM": 12,
+   "P3": 12,
+   "INS": 12,
+   "CNV": 6,
+   "SEN": 128
+  },
+  "total_runs": 170,
+  "schedule_passed": true,
+  "schedule_identical_to_attempt_2": true,
+  "planner_jobs_identical_to_attempt_2": true,
+  "config": {
+   "path": "config/campaign_config_v6_DRAFT.json",
+   "sha256": "f1d0fba15d73c75b124f2fc45e37f93a5d12bf4d7b42ae77f787dedb9f758167",
+   "current": true,
+   "schedule_sha256_matches": true
+  },
+  "sensitivity_table_regenerates": true
+ },
+ "preconditions": {
+  "record": "logs/preconditions_attempt3.json",
+  "sha256": "f5291b4eecab9766e5fcb61d2b812d6f1c10b642b27625c09342ed712b2e2800",
+  "readiness_blockers": [
+   "no issued amendment 2 at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)"
+  ],
+  "campaign_mode_blockers": [
+   "no issued amendment 2 at D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_campaign\\release\\03_R4_protocol_v1_amendment_2.md (N-A2 ruling not yet approved)",
+   "protocol 10.1 gate record: pre-run gate record logs/pre_run_hashes.txt is missing",
+   "no campaign authorisation record campaign_authorization.json (protocol approval is not campaign authorisation)",
+   "campaign must run once, from the released copy in R4_20261028_campaign (AMB-15), not from attempt3_amendment2 (protocol 10.1)"
+  ]
+ },
+ "gate_criteria": [
+  {
+   "criterion": "1. amendment 2 approved by the owner and issued",
+   "met": false,
+   "evidence": "no release/03_R4_protocol_v1_amendment_2.md and no release/amendment_2_approval.json"
+  },
+  {
+   "criterion": "2. new release attempt passes all mandatory tests and independent reviews",
+   "met": true,
+   "evidence": "attempt tests 216/216 (logs/pytest_release_attempt3.xml); review: no open CRITICAL or MAJOR finding (verification 3). Owner decisions AMB-29/30/31 remain, carried by criterion 1"
+  },
+  {
+   "criterion": "3. final release manifest and protocol hashes verified",
+   "met": false,
+   "evidence": "this attempt's manifest (zz_sha256_manifest_attempt3.csv) and the protocol and amendment 1 hashes are verified; the FINAL release manifest only exists after promotion to the campaign root"
+  },
+  {
+   "criterion": "4. all release criteria met, incl. promotion to the campaign root with its own protocol 10.1 gate",
+   "met": false,
+   "evidence": "not promoted; the campaign root still holds release attempt 2 (amendment 1 only), unchanged; no protocol 10.1 gate for this code"
+  },
+  {
+   "criterion": "5. separate explicit owner authorisation (release/campaign_authorization.json)",
+   "met": false,
+   "evidence": "absent; no code path writes it"
+  }
+ ],
+ "prior_attempts": {
+  "attempt_1": "release_attempts/attempt1/ (183 passed, 1 failed: test defect; preserved)",
+  "attempt_2": {
+   "location": "campaign root (code/, config/, inputs/, logs/, release/)",
+   "scope": "amendment 1 only",
+   "manifest": "zz_sha256_manifest_release.csv",
+   "manifest_sha256": "eae902275b363357674be7aed8a8b37162b687cd72ced0033dbfb84dfaff32e4",
+   "manifest_rows_verified": "122/122, no unlisted file (2026-10-28, this task)",
+   "pre_run_hashes_sha256": "b4108d85c2bc35937e7c067aa922cca44e9b24f8d0a3e0a0286cf07fd7d69759",
+   "gate_record_sha256": "c25b2cfcd899f9ea7ce1bc2e4583c6879007a5b1a9cd71e2f9cf0f790b41f8e8",
+   "status": "preserved unchanged; superseded for campaign use once amendment 2 is issued"
+  }
+ },
+ "official_outputs_present": false,
+ "campaign_mode_invoked": false,
+ "campaign_authorization_created": false,
+ "arm_to_arm_energy_differences_computed": false
+}

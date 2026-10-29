@@ -1,0 +1,30 @@
+﻿{
+    "label":  "unitneg2",
+    "time":  "2026-10-23T22:03:43",
+    "exit_code":  0,
+    "project_root":  "D:\\EURÉKA 2026 - KT",
+    "letter":  "Y",
+    "cleanup":  {
+                    "alias_created":  true,
+                    "alias_removed":  true,
+                    "alias_still_mapped":  false,
+                    "other_mappings_unchanged":  true,
+                    "env_restored":  true
+                },
+    "steps":  [
+                  {
+                      "name":  "version",
+                      "command":  "omc --version",
+                      "exit_code":  0,
+                      "seconds":  0.04,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220343-unitneg2-version.out.txt"
+                  },
+                  {
+                      "name":  "50_unit_negative",
+                      "command":  "omc Y:\\verification\\modelica\\scripts\\50_unit_negative.mos",
+                      "exit_code":  0,
+                      "seconds":  0.12,
+                      "stdout_file":  "D:\\EURÉKA 2026 - KT\\verification\\modelica-build\\logs\\20261023-220343-unitneg2-50_unit_negative.out.txt"
+                  }
+              ]
+}

@@ -1,0 +1,38 @@
+frozen inputs verified: {
+"D:\\EUR\u00c9KA 2026 - KT\\verification\\research_recovery_20261028\\R4_20261028_preflight\\03_R4_protocol_v1.md": "f9826318836f7a866bb66bbaa67305851798cac998582de2a4be182afa772dab",
+"D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\research_recovery_20261025\\R3_20261025\\code\\r3_lib.py": "c2403adc2c7ef7a7ecc662f0dcfd3c107a43204ee73c28bd46f782b73cba1c97",
+"D:\\EUR\u00c9KA 2026 - KT\\verification\\scientific_rebuild_20261024\\research_recovery_20261025\\R3_20261025\\data\\motor_curve_m1_derived.json": "f872faa0ff96d12d26eb5c935bb145062c3ac649e4eb327136f0fa9a0868d1d9"
+}
+pre-run gate ok: {'tests': 67, 'failures': 0, 'errors': 0, 'skipped': 0}
+task S1: d_ref 2161.026984 m, T_ref 324.0 s, 5 rest intervals, 4 segments; cycle definition 324.910714 s / 2161.047270 m (AMB-01)
+baseline task: equals reference True W 3.0 | valid True []
+S-eco: valid True [] | extra-stop knots 0
+H3-slice-S1-M0-L-R1-P1-B0-dt1ms: 205 s, sim valid True (), complete True, tracking True, stops True (5 tested), constraints True, recomputation True
+    E_chem_rel: 6.063818784985542e-07 (tol 0.0001) ok
+    E_DC_rel: 6.076896658997362e-07 (tol 0.0001) ok
+    E_pos_rel: 3.24908487266019e-07 (tol 0.0001) ok
+    friction_abs_Wh: 3.469916221021663e-08 (tol 1e-06) ok
+    distance_rel: 1.5329359191204274e-11 (tol 1e-06) ok
+    trip_time_abs_s: 0.0 (tol 1e-09) ok
+    rmse_rel: 2.0077650797431796e-15 (tol 1e-09) ok
+    max_err_rel: 0.0 (tol 1e-09) ok
+    I_over_window_abs_As: 0.0 (tol 0.0001) ok
+    current_recompute_abs_A: 0.0 (tol 1e-09) ok
+    friction_power_recompute_abs_W: 0.0 (tol 1e-09) ok
+    stop_ok_equal: True (tol None) ok
+H3-slice-S1-M0-L-R1-P1-B3-dt1ms: 202 s, sim valid True (), complete True, tracking True, stops True (5 tested), constraints True, recomputation True
+    E_chem_rel: 6.08636210385469e-07 (tol 0.0001) ok
+    E_DC_rel: 6.089396433867483e-07 (tol 0.0001) ok
+    E_pos_rel: 3.392672262058388e-07 (tol 0.0001) ok
+    friction_abs_Wh: 0.0 (tol 1e-06) ok
+    distance_rel: 8.409041602846302e-11 (tol 1e-06) ok
+    trip_time_abs_s: 0.0 (tol 1e-09) ok
+    rmse_rel: 2.816316373377652e-15 (tol 1e-09) ok
+    max_err_rel: 0.0 (tol 1e-09) ok
+    I_over_window_abs_As: 0.0 (tol 0.0001) ok
+    current_recompute_abs_A: 0.0 (tol 1e-09) ok
+    friction_power_recompute_abs_W: 0.0 (tol 1e-09) ok
+    stop_ok_equal: True (tol None) ok
+no energy difference between the arms is computed (smoke test)
+status: PASS
+exit=0

@@ -1,0 +1,73 @@
+﻿> uv pip install --dry-run --python "D:\EURÉKA 2026 - KT\verification\python-env\Scripts\python.exe" --no-config fastsim
+Using Python 3.14.7 environment at: D:\EURÉKA 2026 - KT\verification\python-env
+Resolved 14 packages in 1.20s
+Would download 5 packages
+Would install 14 packages
+ + fastsim==3.1.0
+ + msgpack==1.2.3
+ + narwhals==2.27.1
+ + numpy==2.5.4
+ + packaging==26.3
+ + pandas==3.1.0
+ + plotly==6.9.0
+ + polars==1.44.2
+ + polars-runtime-32==1.44.2
+ + python-dateutil==3.0.0
+ + pyyaml==6.0.3
+ + six==1.17.0
+ + typing-extensions==4.16.0
+ + tzdata==2026.5
+[exit 0]
+
+> uv pip install --python "D:\EURÉKA 2026 - KT\verification\python-env\Scripts\python.exe" --no-config fastsim==3.1.0
+Using Python 3.14.7 environment at: D:\EURÉKA 2026 - KT\verification\python-env
+Resolved 14 packages in 7ms
+Downloading plotly (9.5MiB)
+Downloading polars-runtime-32 (48.9MiB)
+Downloading fastsim (11.7MiB)
+ Downloaded plotly
+ Downloaded fastsim
+ Downloaded polars-runtime-32
+Prepared 5 packages in 7.75s
+Installed 14 packages in 446ms
+ + fastsim==3.1.0
+ + msgpack==1.2.3
+ + narwhals==2.27.1
+ + numpy==2.5.4
+ + packaging==26.3
+ + pandas==3.1.0
+ + plotly==6.9.0
+ + polars==1.44.2
+ + polars-runtime-32==1.44.2
+ + python-dateutil==3.0.0
+ + pyyaml==6.0.3
+ + six==1.17.0
+ + typing-extensions==4.16.0
+ + tzdata==2026.5
+[exit 0]
+
+> uv pip freeze --python "D:\EURÉKA 2026 - KT\verification\python-env\Scripts\python.exe"
+Using Python 3.14.7 environment at: D:\EURÉKA 2026 - KT\verification\python-env
+fastsim==3.1.0
+msgpack==1.2.3
+narwhals==2.27.1
+numpy==2.5.4
+packaging==26.3
+pandas==3.1.0
+pip==26.2.2
+plotly==6.9.0
+polars==1.44.2
+polars-runtime-32==1.44.2
+python-dateutil==3.0.0
+pyyaml==6.0.3
+six==1.17.0
+typing-extensions==4.16.0
+tzdata==2026.5
+[exit 0]
+
+> uv pip check --python "D:\EURÉKA 2026 - KT\verification\python-env\Scripts\python.exe"
+Using Python 3.14.7 environment at: python-env
+Checked 15 packages in 4ms
+All installed packages are compatible
+[exit 0]
+
